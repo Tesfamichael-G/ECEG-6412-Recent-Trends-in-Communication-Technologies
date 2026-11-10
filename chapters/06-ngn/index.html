@@ -1,0 +1,4505 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/chapters/06-ngn/">
+      
+      
+        <link rel="prev" href="../05-broadband-wireless/">
+      
+      
+        <link rel="next" href="../07-ml-communications/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>6. Next Generation Networks - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-6-next-generation-networks-ngn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              6. Next Generation Networks
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slides/lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-what-is-an-ngn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 What is an NGN?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 What is an NGN?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-from-convergence-to-everything-over-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 From convergence to everything-over-IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-the-stages-of-ngn-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 The stages of NGN evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-the-ngn-landscape-in-one-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 The NGN landscape in one picture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-personal-area-networks-bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Personal Area Networks — Bluetooth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Personal Area Networks — Bluetooth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-bluetooth-classic-bredr-the-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 Bluetooth Classic (BR/EDR) — the original
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-bluetooth-low-energy-ble-the-iot-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 Bluetooth Low Energy (BLE) — the IoT version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-61-ble-battery-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.1 — BLE battery life
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-bluetooth-classic-vs-ble-choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 Bluetooth Classic vs. BLE — choosing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-personal-area-networks-zigbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Personal Area Networks — ZigBee
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Personal Area Networks — ZigBee">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-what-is-zigbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 What is ZigBee?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-the-zigbee-protocol-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 The ZigBee protocol stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-mesh-networking-and-aodv" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Mesh networking and AODV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-62-zigbee-mesh-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.2 — ZigBee mesh coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-zigbee-vs-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.4 ZigBee vs. BLE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-wifi-wireless-local-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 WiFi — wireless local area networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 WiFi — wireless local area networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-the-80211-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 The 802.11 family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-key-phy-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Key PHY technologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-63-wifi-6-capacity-in-a-crowded-office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.3 — WiFi 6 capacity in a crowded office
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-wifi-bands-and-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 WiFi bands and coexistence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-wifi-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 WiFi security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-ultra-wideband-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Ultra-Wideband (UWB)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Ultra-Wideband (UWB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-what-is-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 What is UWB?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-why-uwb-is-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Why UWB is different
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#653-two-flavours-of-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.3 Two flavours of UWB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#654-uwb-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.4 UWB applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-64-uwb-ranging-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.4 — UWB ranging precision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-lpwan-low-power-wide-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 LPWAN — Low-Power Wide Area Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6 LPWAN — Low-Power Wide Area Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-the-lpwan-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1 The LPWAN landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662-lora-the-phy-and-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2 LoRa — the PHY and MAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663-nb-iot-cellular-for-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.3 NB-IoT — cellular for IoT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-65-iot-battery-life-for-lora-vs-nb-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.5 — IoT battery life for LoRa vs. NB-IoT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-5g-and-iot-the-converged-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7 5G and IoT — the converged vision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7 5G and IoT — the converged vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671-5gs-three-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.1 5G's three use cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#672-5g-nr-the-new-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.2 5G NR — the new radio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#673-5g-core-5gc-service-based-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.3 5G Core (5GC) — service-based architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#674-network-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.4 Network slicing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#675-edge-computing-and-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.5 Edge computing and 5G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#676-iot-connectivity-in-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.6 IoT connectivity in 5G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-66-network-slicing-for-smart-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.6 — network slicing for smart factory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-choosing-the-right-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.8 Choosing the right connectivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.8 Choosing the right connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-67-choosing-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.7 — choosing connectivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.9 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.10 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.10 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.11 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#61-what-is-an-ngn" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1 What is an NGN?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.1 What is an NGN?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#611-from-convergence-to-everything-over-ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.1 From convergence to everything-over-IP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#612-the-stages-of-ngn-evolution" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.2 The stages of NGN evolution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#613-the-ngn-landscape-in-one-picture" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.1.3 The NGN landscape in one picture
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#62-personal-area-networks-bluetooth" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2 Personal Area Networks — Bluetooth
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2 Personal Area Networks — Bluetooth">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-bluetooth-classic-bredr-the-original" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.1 Bluetooth Classic (BR/EDR) — the original
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-bluetooth-low-energy-ble-the-iot-version" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.2 Bluetooth Low Energy (BLE) — the IoT version
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-61-ble-battery-life" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.1 — BLE battery life
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-bluetooth-classic-vs-ble-choosing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.2.3 Bluetooth Classic vs. BLE — choosing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#63-personal-area-networks-zigbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3 Personal Area Networks — ZigBee
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.3 Personal Area Networks — ZigBee">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#631-what-is-zigbee" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.1 What is ZigBee?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#632-the-zigbee-protocol-stack" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.2 The ZigBee protocol stack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#633-mesh-networking-and-aodv" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.3 Mesh networking and AODV
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-62-zigbee-mesh-coverage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.2 — ZigBee mesh coverage
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#634-zigbee-vs-ble" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.3.4 ZigBee vs. BLE
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#64-wifi-wireless-local-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4 WiFi — wireless local area networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.4 WiFi — wireless local area networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#641-the-80211-family" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.1 The 802.11 family
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#642-key-phy-technologies" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.2 Key PHY technologies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-63-wifi-6-capacity-in-a-crowded-office" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.3 — WiFi 6 capacity in a crowded office
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#643-wifi-bands-and-coexistence" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.3 WiFi bands and coexistence
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#644-wifi-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.4.4 WiFi security
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#65-ultra-wideband-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5 Ultra-Wideband (UWB)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.5 Ultra-Wideband (UWB)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#651-what-is-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.1 What is UWB?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#652-why-uwb-is-different" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.2 Why UWB is different
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#653-two-flavours-of-uwb" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.3 Two flavours of UWB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#654-uwb-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.5.4 UWB applications
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-64-uwb-ranging-precision" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.4 — UWB ranging precision
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#66-lpwan-low-power-wide-area-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6 LPWAN — Low-Power Wide Area Networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.6 LPWAN — Low-Power Wide Area Networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#661-the-lpwan-landscape" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.1 The LPWAN landscape
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#662-lora-the-phy-and-mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.2 LoRa — the PHY and MAC
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#663-nb-iot-cellular-for-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.6.3 NB-IoT — cellular for IoT
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-65-iot-battery-life-for-lora-vs-nb-iot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.5 — IoT battery life for LoRa vs. NB-IoT
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#67-5g-and-iot-the-converged-vision" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7 5G and IoT — the converged vision
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.7 5G and IoT — the converged vision">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#671-5gs-three-use-cases" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.1 5G's three use cases
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#672-5g-nr-the-new-radio" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.2 5G NR — the new radio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#673-5g-core-5gc-service-based-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.3 5G Core (5GC) — service-based architecture
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#674-network-slicing" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.4 Network slicing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#675-edge-computing-and-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.5 Edge computing and 5G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#676-iot-connectivity-in-5g" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.7.6 IoT connectivity in 5G
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-66-network-slicing-for-smart-factory" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.6 — network slicing for smart factory
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#68-choosing-the-right-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.8 Choosing the right connectivity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.8 Choosing the right connectivity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-67-choosing-connectivity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 6.7 — choosing connectivity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#69-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.9 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#610-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.10 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.10 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#611-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.11 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-6-next-generation-networks-ngn">Chapter 6 — Next Generation Networks (NGN)<a class="headerlink" href="#chapter-6-next-generation-networks-ngn" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Chapter at a glance</p>
+<p><strong>Contact hours:</strong> 3 lecture · <strong>Home study:</strong> 7 h · <strong>Part IV — Emerging technologies</strong></p>
+<p><strong>Coverage (syllabus):</strong> overview of next generation networks · personal area
+networks (Bluetooth and ZigBee) · wireless data services (WiFi) · UWB ·
+5G mobile network technology and the Internet of Things (IoT).</p>
+</div>
+<hr />
+<h2 id="learning-outcomes">Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol>
+<li>Explain what <strong>Next Generation Networks (NGN)</strong> means and how the concept
+   evolved from all-IP convergence to the IoT era.</li>
+<li>Describe <strong>Bluetooth</strong> Classic and BLE — piconet topology, protocols, data
+   rates, and power profiles — and choose between them for a given application.</li>
+<li>Analyse <strong>ZigBee</strong> — mesh topology, IEEE 802.15.4 PHY/MAC, AODV routing, and
+   why it dominates low-power sensor networks.</li>
+<li>Compare the <strong>WiFi standards</strong> (802.11a/b/g/n/ac/ax/be) — rates, bands, MIMO,
+   OFDMA — and select a WiFi generation for a given deployment.</li>
+<li>Explain <strong>UWB</strong> — impulse radio, timing, ranging — and its role in
+   high-precision positioning.</li>
+<li>Describe <strong>LPWAN</strong> technologies (LoRa, NB-IoT, Sigfox) — range, data rate,
+   battery life — and their role in IoT connectivity.</li>
+<li>Explain <strong>5G network architecture</strong> — service-based core, network slicing, edge
+   computing — and the three <strong>5G use cases</strong> (eMBB, URLLC, mMTC).</li>
+<li>Compute <strong>IoT device battery life</strong>, <strong>coverage range</strong>, and <strong>network capacity</strong>
+   for typical LPWAN/WiFi/BLE deployments.</li>
+<li>Design a connectivity strategy — WPAN, WLAN, LPWAN, cellular — for a
+   real-world IoT application based on range, power, and data requirements.</li>
+</ol>
+<hr />
+<h2 id="61-what-is-an-ngn">6.1 What is an NGN?<a class="headerlink" href="#61-what-is-an-ngn" title="Permanent link">&para;</a></h2>
+<h3 id="611-from-convergence-to-everything-over-ip">6.1.1 From convergence to everything-over-IP<a class="headerlink" href="#611-from-convergence-to-everything-over-ip" title="Permanent link">&para;</a></h3>
+<p>The term <strong>Next Generation Network</strong> (NGN) was defined by the <strong>ITU-T</strong> in the
+early 2000s as a <strong>packet-based network</strong> able to provide telecommunication
+services — voice, data, video — over a <strong>single IP infrastructure</strong> with
+guaranteed QoS.</p>
+<p>The original NGN vision (2004 ITU-T Y.2001):</p>
+<blockquote>
+<p><em>"A packet-based network able to provide telecommunication services and able
+to make use of multiple broadband, QoS-enabled transport technologies, in which
+service-related functions are independent from underlying transport-related
+technologies."</em></p>
+</blockquote>
+<p><strong>Key NGN principles:</strong></p>
+<ul>
+<li><strong>Packet-based</strong> — everything rides on IP, not circuit switching.</li>
+<li><strong>Service / transport separation</strong> — services are decoupled from the underlying
+  network via open APIs.</li>
+<li><strong>QoS-enabled</strong> — unlike the best-effort internet, NGN guarantees performance.</li>
+<li><strong>Any-access</strong> — fixed, mobile, wireless — all converge to one network.</li>
+<li><strong>Multi-service</strong> — voice, data, video, IoT over one infrastructure.</li>
+</ul>
+<h3 id="612-the-stages-of-ngn-evolution">6.1.2 The stages of NGN evolution<a class="headerlink" href="#612-the-stages-of-ngn-evolution" title="Permanent link">&para;</a></h3>
+<p><strong>Stage 1 (2000–2010): All-IP convergence.</strong></p>
+<ul>
+<li>Replace PSTN circuit switching with IP-based voice (<strong>VoIP</strong>).</li>
+<li>Replace 2G/3G core networks with IP (R4 MSC Server + MGW → all-IP EPC in LTE).</li>
+<li>Example: BT's <strong>21CN</strong> project (UK), Verizon's <strong>FiOS</strong> (fiber to the home).</li>
+<li>Key technologies: SIP, MPLS, IP Multimedia Subsystem (IMS).</li>
+</ul>
+<p><strong>Stage 2 (2010–2020): Fixed-mobile convergence (FMC).</strong></p>
+<ul>
+<li>Unify fixed and mobile access under one core (EPC → 5G SBA).</li>
+<li>Voice over WiFi (VoWiFi), LTE-WiFi aggregation (LWA).</li>
+<li>Example: T-Mobile's VoWiFi, AT&amp;T's small-cell deployment.</li>
+<li>Key technologies: ANDSF, ePDG, 5G NSA/SA.</li>
+</ul>
+<p><strong>Stage 3 (2020s): IoT convergence.</strong></p>
+<ul>
+<li>Billions of devices — sensors, actuators, cameras — all IP-connected.</li>
+<li>LPWAN (LoRa, NB-IoT, Sigfox) sits alongside WiFi and cellular for IoT.</li>
+<li><strong>5G</strong> and beyond: network slicing, edge computing, massive machine-type
+  communication.</li>
+<li>Key technologies: MQTT, CoAP, 5G core, edge computing, ML.</li>
+</ul>
+<p>The <strong>NGN concept broadened</strong> from "voice over IP" to "everything over IP" —
+the network becomes a platform for all digital services.</p>
+<h3 id="613-the-ngn-landscape-in-one-picture">6.1.3 The NGN landscape in one picture<a class="headerlink" href="#613-the-ngn-landscape-in-one-picture" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Standard</th>
+<th>Range</th>
+<th style="text-align: center;">Data rate</th>
+<th style="text-align: center;">Power</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WPAN</strong> (personal)</td>
+<td>Bluetooth Classic</td>
+<td>10–100 m</td>
+<td style="text-align: center;">1–3 Mbps</td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td></td>
+<td>Bluetooth LE</td>
+<td>10–100 m</td>
+<td style="text-align: center;">125 kbps–2 Mbps</td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td></td>
+<td>ZigBee</td>
+<td>10–100 m</td>
+<td style="text-align: center;">250 kbps</td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td></td>
+<td>UWB</td>
+<td>1–10 m</td>
+<td style="text-align: center;">100 Mbps–1 Gbps</td>
+<td style="text-align: center;">Low</td>
+</tr>
+<tr>
+<td><strong>WLAN</strong> (local)</td>
+<td>WiFi 4/5/6/7</td>
+<td>30–100 m</td>
+<td style="text-align: center;">100 Mbps–30 Gbps</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td><strong>WMAN</strong> (metropolitan)</td>
+<td>WiMAX, 5G FWA</td>
+<td>1–50 km</td>
+<td style="text-align: center;">100 Mbps–1 Gbps</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td><strong>WWAN</strong> (wide)</td>
+<td>4G LTE</td>
+<td>1–30 km</td>
+<td style="text-align: center;">100 Mbps–1 Gbps</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td></td>
+<td>5G NR</td>
+<td>100 m–10 km</td>
+<td style="text-align: center;">1–20 Gbps</td>
+<td style="text-align: center;">High</td>
+</tr>
+<tr>
+<td><strong>LPWAN</strong> (IoT)</td>
+<td>LoRa</td>
+<td>2–15 km</td>
+<td style="text-align: center;">0.3–37.5 kbps</td>
+<td style="text-align: center;">Extremely low</td>
+</tr>
+<tr>
+<td></td>
+<td>NB-IoT</td>
+<td>1–10 km</td>
+<td style="text-align: center;">26–127 kbps</td>
+<td style="text-align: center;">Very low</td>
+</tr>
+<tr>
+<td></td>
+<td>Sigfox</td>
+<td>3–50 km</td>
+<td style="text-align: center;">100 bps</td>
+<td style="text-align: center;">Extremely low</td>
+</tr>
+<tr>
+<td><strong>Satellite</strong></td>
+<td>GEO, LEO</td>
+<td>global</td>
+<td style="text-align: center;">1–200 Mbps</td>
+<td style="text-align: center;">—</td>
+</tr>
+</tbody>
+</table>
+<p>Each row is a different trade-off between range, rate, and power. <strong>The NGN is
+about making all of them work together</strong> — not replacing them.</p>
+<hr />
+<h2 id="62-personal-area-networks-bluetooth">6.2 Personal Area Networks — Bluetooth<a class="headerlink" href="#62-personal-area-networks-bluetooth" title="Permanent link">&para;</a></h2>
+<h3 id="621-bluetooth-classic-bredr-the-original">6.2.1 Bluetooth Classic (BR/EDR) — the original<a class="headerlink" href="#621-bluetooth-classic-bredr-the-original" title="Permanent link">&para;</a></h3>
+<p><strong>Bluetooth Classic</strong> (Basic Rate / Enhanced Data Rate, BR/EDR) was defined in
+1994 by Ericsson and standardized as <strong>IEEE 802.15.1</strong> in 2002. Designed as a
+<strong>cable replacement</strong> for short-range connections (headphones, mice, keyboards).</p>
+<p><strong>Key parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency</td>
+<td><strong>2.4 GHz ISM band</strong> (2.400–2.4835 GHz)</td>
+</tr>
+<tr>
+<td>Channel spacing</td>
+<td>1 MHz; <strong>79 channels</strong> (or 40 in low-energy variants)</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>GFSK (Basic Rate), π/4-DQPSK, 8-DPSK (EDR)</td>
+</tr>
+<tr>
+<td>Data rate</td>
+<td>1 Mbps (BR), 2–3 Mbps (EDR)</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>Class 1: 100 m, Class 2: 10 m, Class 3: 1 m</td>
+</tr>
+<tr>
+<td>Tx power</td>
+<td>Class 1: 20 dBm, Class 2: 4 dBm, Class 3: 0 dBm</td>
+</tr>
+<tr>
+<td>Topology</td>
+<td><strong>Piconet</strong> (1 master + up to 7 active slaves)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The piconet:</strong></p>
+<ul>
+<li>One <strong>master</strong> device controls the piconet — it defines the hopping sequence,
+  the slot timing, and the channel access rules.</li>
+<li>Up to <strong>7 active slaves</strong> simultaneously; more can be in <strong>parked</strong> or
+  <strong>sniff</strong> mode (low-power standby).</li>
+<li>Slots are <strong>625 μs</strong> long; master and slave alternate transmissions.</li>
+<li><strong>Frequency hopping</strong> at 1600 hops/s (each slot on a different channel) —
+  resist to interference and multi-path.</li>
+</ul>
+<p><strong>Scatternets.</strong> Multiple piconets can be interconnected by a device that belongs
+to two or more piconets simultaneously. This is limited in practice (the shared
+device is a bottleneck).</p>
+<p><strong>Protocol stack</strong> (simplified):</p>
+<ul>
+<li><strong>Radio → Baseband → LMP</strong> (Link Manager Protocol) → <strong>L2CAP</strong> (Logical Link
+  Control and Adaptation) → <strong>RFCOMM</strong> (serial port) or <strong>A2DP</strong> (audio).</li>
+<li><strong>SDP</strong> (Service Discovery Protocol) — finds available services.</li>
+<li><strong>Profiles</strong> — application-level standards (HSP for headset, HFP for handsfree,
+  A2DP for audio, HID for input devices, OPP for file transfer).</li>
+</ul>
+<p><strong>Why frequency hopping?</strong> The 2.4 GHz ISM band is shared by WiFi, ZigBee,
+microwaves, and Bluetooth itself. Hopping across 79 channels means a narrowband
+interferer only affects 1/79 of slots — Bluetooth retransmits the failed slots
+on different frequencies. Effective interference resistance without needing a
+coordination protocol.</p>
+<h3 id="622-bluetooth-low-energy-ble-the-iot-version">6.2.2 Bluetooth Low Energy (BLE) — the IoT version<a class="headerlink" href="#622-bluetooth-low-energy-ble-the-iot-version" title="Permanent link">&para;</a></h3>
+<p><strong>BLE</strong> (Bluetooth Smart) was introduced in <strong>Bluetooth 4.0 (2010)</strong> as a
+<strong>fundamentally different radio</strong> optimized for IoT sensors and wearables.</p>
+<p><strong>Key design changes:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>Bluetooth Classic</th>
+<th>BLE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target use</td>
+<td>Continuous data (audio, files)</td>
+<td>Bursty sensor data</td>
+</tr>
+<tr>
+<td>Channel count</td>
+<td>79 × 1 MHz</td>
+<td><strong>40 × 2 MHz</strong> (3 advertising + 37 data)</td>
+</tr>
+<tr>
+<td>Connection setup</td>
+<td>~seconds</td>
+<td><strong>~3 ms</strong></td>
+</tr>
+<tr>
+<td>Peak current (TX)</td>
+<td>30–40 mA</td>
+<td><strong>~10 mA</strong></td>
+</tr>
+<tr>
+<td>Standby current</td>
+<td>100 μA – 1 mA</td>
+<td><strong>&lt; 1 μA</strong></td>
+</tr>
+<tr>
+<td>Duty cycle</td>
+<td>Continuous</td>
+<td><strong>Bursty</strong> (advertise → sleep)</td>
+</tr>
+<tr>
+<td>Data rate (peak)</td>
+<td>2–3 Mbps (EDR)</td>
+<td>1 Mbps (BT 4.0), 2 Mbps (BT 5.0)</td>
+</tr>
+<tr>
+<td>Range (BT 5.0)</td>
+<td>10–100 m</td>
+<td>10–400 m (with coded PHY)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The BLE advertising model.</strong></p>
+<p>BLE devices don't need a connection. A <strong>peripheral</strong> broadcasts <strong>advertisement
+packets</strong> on 3 advertising channels; a <strong>central</strong> scans for them, then either
+reads the advertisement data (broadcast mode) or requests a connection.</p>
+<p><strong>Advertising interval</strong> — from <strong>20 ms to 10.24 s</strong>. Longer intervals = lower
+power but higher latency.</p>
+<p><strong>GATT (Generic Attribute Profile).</strong></p>
+<p>BLE data is organized as <strong>services</strong> and <strong>characteristics</strong>:
+- <strong>Service</strong> — a group of related characteristics (e.g., "Heart Rate Service").
+- <strong>Characteristic</strong> — a single data value (e.g., "Heart Rate Measurement")
+  with <strong>properties</strong> (read, write, notify).</p>
+<p>Standard profiles (Heart Rate, Battery, Device Information) are defined by the
+Bluetooth SIG; custom services are common for specific applications.</p>
+<p><strong>Bluetooth versions:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Version</th>
+<th style="text-align: center;">Year</th>
+<th>Key additions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>4.0</strong></td>
+<td style="text-align: center;">2010</td>
+<td>BLE introduced</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4.1</strong></td>
+<td style="text-align: center;">2013</td>
+<td>IoT-friendly coexistence with LTE</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4.2</strong></td>
+<td style="text-align: center;">2014</td>
+<td>IPv6/6LoWPAN support, faster</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5.0</strong></td>
+<td style="text-align: center;">2016</td>
+<td>2× speed (2 Mbps), 4× range (400 m), 8× advertising payload</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5.1</strong></td>
+<td style="text-align: center;">2019</td>
+<td><strong>Direction finding</strong> (AoA/AoD) for indoor positioning</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5.2</strong></td>
+<td style="text-align: center;">2020</td>
+<td><strong>LE Audio</strong> (LC3 codec, multi-stream)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5.3</strong></td>
+<td style="text-align: center;">2021</td>
+<td>Periodic advertising, channel classification</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5.4</strong></td>
+<td style="text-align: center;">2023</td>
+<td>PAwR (periodic advertising with responses)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="worked-example-61-ble-battery-life">Worked example 6.1 — BLE battery life<a class="headerlink" href="#worked-example-61-ble-battery-life" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A temperature sensor sends one 10-byte reading every 10 s.
+Advertising is not used (connection mode). Each transmission uses 2 ms at 10 mA;
+the MCU consumes 5 μA in sleep. Battery: 1000 mAh coin cell.</p>
+<p><strong>Energy per transmission:</strong></p>
+<ul>
+<li>Transmit: 2 ms × 10 mA = 20 μAh per transmission.</li>
+<li>Sleep between transmissions: (10 s − 2 ms) × 5 μA ≈ 50 μAh per interval.</li>
+<li><strong>Total per 10 s:</strong> ~70 μAh × (10 s / 3600 s/h) ... let me redo:</li>
+<li>2 ms at 10 mA = 20 mA·ms = 0.00556 mAh per transmission.</li>
+<li>9998 ms at 5 μA = 0.0000139 mAh per interval.</li>
+<li>Per 10 s interval: 0.00557 mAh.</li>
+<li>Per hour: 360 intervals × 0.00557 = 2.0 mAh/h.</li>
+<li><strong>Battery life:</strong> 1000 mAh / 2.0 mA ≈ <strong>500 hours ≈ 21 days</strong>.</li>
+</ul>
+<p><strong>Optimization:</strong> Increase advertising interval to 30 s and use a lower TX power:</p>
+<ul>
+<li>Transmit: 2 ms × 5 mA = 0.00278 mAh per transmission.</li>
+<li>Per hour: 120 intervals × 0.00278 = 0.334 mAh/h.</li>
+<li><strong>Battery life:</strong> 1000 / 0.334 ≈ <strong>3000 hours ≈ 125 days</strong> (~4 months).</li>
+</ul>
+<p><strong>Realistic for IoT:</strong> A properly tuned BLE sensor (event-driven, not periodic)
+can last <strong>1–3 years</strong> on a coin cell. Longer life requires LPWAN (ZigBee, LoRa,
+NB-IoT).</p>
+<h3 id="623-bluetooth-classic-vs-ble-choosing">6.2.3 Bluetooth Classic vs. BLE — choosing<a class="headerlink" href="#623-bluetooth-classic-vs-ble-choosing" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Application</th>
+<th>Recommended</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wireless headphones</td>
+<td>Bluetooth Classic (A2DP)</td>
+</tr>
+<tr>
+<td>Fitness tracker / smartwatch</td>
+<td>BLE</td>
+</tr>
+<tr>
+<td>Wireless mouse / keyboard</td>
+<td>BLE (or Classic HID)</td>
+</tr>
+<tr>
+<td>Continuous audio streaming</td>
+<td>Bluetooth Classic (higher rate)</td>
+</tr>
+<tr>
+<td>Hearing aids</td>
+<td>BLE (LE Audio, BT 5.2)</td>
+</tr>
+<tr>
+<td>Indoor location beacon</td>
+<td>BLE (with 5.1 direction finding)</td>
+</tr>
+<tr>
+<td>File transfer between phones</td>
+<td>Bluetooth Classic</td>
+</tr>
+<tr>
+<td>Medical sensor</td>
+<td>BLE</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> if the data is continuous and needs a high rate → Classic.
+If it's bursty and power is critical → BLE.</p>
+<hr />
+<h2 id="63-personal-area-networks-zigbee">6.3 Personal Area Networks — ZigBee<a class="headerlink" href="#63-personal-area-networks-zigbee" title="Permanent link">&para;</a></h2>
+<h3 id="631-what-is-zigbee">6.3.1 What is ZigBee?<a class="headerlink" href="#631-what-is-zigbee" title="Permanent link">&para;</a></h3>
+<p><strong>ZigBee</strong> (IEEE 802.15.4) is a low-power, low-data-rate, <strong>mesh-capable</strong> WPAN
+standard designed for <strong>sensor networks</strong> and <strong>home automation</strong>.</p>
+<p><strong>Key parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency</td>
+<td>2.4 GHz (global, 16 channels), 868 MHz (EU), 915 MHz (US)</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>OQPSK (2.4 GHz) or BPSK (sub-GHz)</td>
+</tr>
+<tr>
+<td>Data rate</td>
+<td><strong>250 kbps</strong> (2.4 GHz), 40 kbps (915 MHz), 20 kbps (868 MHz)</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>10–100 m per hop (typical); extended via mesh</td>
+</tr>
+<tr>
+<td>Topology</td>
+<td><strong>Star, tree, or mesh</strong></td>
+</tr>
+<tr>
+<td>Power (TX)</td>
+<td>~30 mA</td>
+</tr>
+<tr>
+<td>Power (sleep)</td>
+<td>&lt; 1 μA</td>
+</tr>
+<tr>
+<td>Network capacity</td>
+<td><strong>65,000+ nodes</strong> per network</td>
+</tr>
+</tbody>
+</table>
+<h3 id="632-the-zigbee-protocol-stack">6.3.2 The ZigBee protocol stack<a class="headerlink" href="#632-the-zigbee-protocol-stack" title="Permanent link">&para;</a></h3>
+<p>Built on IEEE 802.15.4 (PHY + MAC), ZigBee adds:</p>
+<ul>
+<li><strong>NWK (Network)</strong> layer — mesh routing, address assignment, network formation.</li>
+<li><strong>APS (Application Support)</strong> layer — endpoint multiplexing, binding.</li>
+<li><strong>ZDO (ZigBee Device Object)</strong> — device discovery, service discovery.</li>
+<li><strong>Application profiles</strong> — standardized profiles (Home Automation 1.2, Smart
+  Energy, Light Link) and manufacturer-specific profiles.</li>
+</ul>
+<p><strong>Device types:</strong></p>
+<ul>
+<li><strong>Coordinator</strong> — forms the network, assigns addresses, maintains the network.
+  Exactly one per network.</li>
+<li><strong>Router</strong> — forwards traffic, participates in mesh. Typically mains-powered.</li>
+<li><strong>End Device</strong> — leaves/actuators/sensors, sleeps most of the time. Typically
+  battery-powered.</li>
+</ul>
+<h3 id="633-mesh-networking-and-aodv">6.3.3 Mesh networking and AODV<a class="headerlink" href="#633-mesh-networking-and-aodv" title="Permanent link">&para;</a></h3>
+<p>ZigBee supports <strong>mesh topologies</strong> — any router can forward for any other. The
+routing protocol is <strong>AODV</strong> (Ad hoc On-demand Distance Vector):</p>
+<ol>
+<li>The source broadcasts a <strong>Route Request (RREQ)</strong> — "who has the destination?"</li>
+<li>Intermediate routers forward the RREQ, adding their address.</li>
+<li>The destination receives the RREQ and sends back a <strong>Route Reply (RREP)</strong> —
+   tracing the reverse path.</li>
+<li>Routers cache the route for future use.</li>
+<li><strong>Route maintenance:</strong> if a link breaks, an <strong>RERR</strong> (Route Error) propagates
+   back; source initiates a new RREQ.</li>
+</ol>
+<p><strong>Why AODV?</strong> <strong>On-demand</strong> — no routing table is maintained proactively. For
+sensor networks (mostly idle), this saves energy.</p>
+<h3 id="worked-example-62-zigbee-mesh-coverage">Worked example 6.2 — ZigBee mesh coverage<a class="headerlink" href="#worked-example-62-zigbee-mesh-coverage" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A factory wants to cover 500 m × 500 m with ZigBee sensors.
+Each sensor has range 30 m. Floor has walls reducing effective range to 20 m.</p>
+<p><strong>Single-hop coverage:</strong> ~20 m.</p>
+<p><strong>Mesh approach:</strong> deploy routers every 15 m (overlap for reliability).</p>
+<ul>
+<li>Row spacing: 15 m; column spacing: 15 m.</li>
+<li>Number of routers: (500/15) × (500/15) ≈ 34 × 34 = <strong>1,156 routers</strong>.</li>
+<li>This is more than ZigBee can handle reliably (practical limit ~500 routers per network).</li>
+</ul>
+<p><strong>Alternative: hierarchical (cluster tree).</strong></p>
+<ul>
+<li>Divide area into <strong>4 clusters</strong> of 250 × 250 m.</li>
+<li>Each cluster has 1 coordinator + ~100 routers + many end devices.</li>
+<li><strong>Alternative: reduce coverage requirement</strong> — use fewer sensors, accept longer
+  hops (multi-hop latency increases).</li>
+</ul>
+<p><strong>The trade-off:</strong> more hops = larger area but higher latency and lower throughput
+(each hop halves bandwidth). For typical building automation, a <strong>single-cell
+10,000 m² deployment with 200-300 devices</strong> is comfortable for ZigBee; larger
+deployments need multiple networks or gateway bridges.</p>
+<h3 id="634-zigbee-vs-ble">6.3.4 ZigBee vs. BLE<a class="headerlink" href="#634-zigbee-vs-ble" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>ZigBee</th>
+<th>BLE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Topology</td>
+<td>Mesh</td>
+<td>Star (BLE Mesh is a newer standard)</td>
+</tr>
+<tr>
+<td>Data rate</td>
+<td>250 kbps</td>
+<td>1–2 Mbps</td>
+</tr>
+<tr>
+<td>Range per hop</td>
+<td>10–100 m</td>
+<td>10–100 m</td>
+</tr>
+<tr>
+<td>Network size</td>
+<td>65,000+</td>
+<td>~10–20 typical; higher with BLE Mesh</td>
+</tr>
+<tr>
+<td>Power (idle)</td>
+<td>&lt; 1 μA</td>
+<td>&lt; 1 μA</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>15–30 ms typical</td>
+<td>3 ms</td>
+</tr>
+<tr>
+<td>Standard</td>
+<td>IEEE 802.15.4</td>
+<td>Bluetooth SIG</td>
+</tr>
+<tr>
+<td>Ecosystem</td>
+<td>Smart home (Philips Hue, SmartThings)</td>
+<td>Wearables, phones, broad</td>
+</tr>
+<tr>
+<td><strong>Best for</strong></td>
+<td><strong>Sensor networks</strong></td>
+<td><strong>Phone-tethered IoT</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> ZigBee when the network has many devices and needs mesh
+coverage; BLE when the device talks to a phone or the network is small.</p>
+<hr />
+<h2 id="64-wifi-wireless-local-area-networks">6.4 WiFi — wireless local area networks<a class="headerlink" href="#64-wifi-wireless-local-area-networks" title="Permanent link">&para;</a></h2>
+<h3 id="641-the-80211-family">6.4.1 The 802.11 family<a class="headerlink" href="#641-the-80211-family" title="Permanent link">&para;</a></h3>
+<p>WiFi (IEEE 802.11) dominates <strong>local wireless</strong> — home, office, public hotspot.
+Every WiFi generation has improved peak rate, spectral efficiency, and features:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Standard</th>
+<th style="text-align: center;">Year</th>
+<th style="text-align: center;">Brand</th>
+<th style="text-align: center;">Band</th>
+<th style="text-align: center;">Channel width</th>
+<th style="text-align: center;">Peak rate</th>
+<th>Key feature</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>802.11</strong></td>
+<td style="text-align: center;">1997</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">2.4 GHz</td>
+<td style="text-align: center;">20 MHz</td>
+<td style="text-align: center;">2 Mbps</td>
+<td>Original</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11b</strong></td>
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">2.4 GHz</td>
+<td style="text-align: center;">20 MHz</td>
+<td style="text-align: center;">11 Mbps</td>
+<td>DSSS, more range</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11a</strong></td>
+<td style="text-align: center;">1999</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">5 GHz</td>
+<td style="text-align: center;">20 MHz</td>
+<td style="text-align: center;">54 Mbps</td>
+<td>OFDM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11g</strong></td>
+<td style="text-align: center;">2003</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">2.4 GHz</td>
+<td style="text-align: center;">20 MHz</td>
+<td style="text-align: center;">54 Mbps</td>
+<td>OFDM at 2.4 GHz</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11n</strong></td>
+<td style="text-align: center;">2009</td>
+<td style="text-align: center;"><strong>WiFi 4</strong></td>
+<td style="text-align: center;">2.4/5 GHz</td>
+<td style="text-align: center;">40 MHz</td>
+<td style="text-align: center;">600 Mbps</td>
+<td>MIMO, channel bonding</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11ac</strong></td>
+<td style="text-align: center;">2013</td>
+<td style="text-align: center;"><strong>WiFi 5</strong></td>
+<td style="text-align: center;">5 GHz</td>
+<td style="text-align: center;">80/160 MHz</td>
+<td style="text-align: center;">6.9 Gbps</td>
+<td>MU-MIMO DL, 256-QAM</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11ax</strong></td>
+<td style="text-align: center;">2019</td>
+<td style="text-align: center;"><strong>WiFi 6</strong></td>
+<td style="text-align: center;">2.4/5 GHz</td>
+<td style="text-align: center;">160 MHz</td>
+<td style="text-align: center;">9.6 Gbps</td>
+<td><strong>OFDMA</strong>, MU-MIMO UL/DL, 1024-QAM, TWT</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11be</strong></td>
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;"><strong>WiFi 7</strong></td>
+<td style="text-align: center;">2.4/5/6 GHz</td>
+<td style="text-align: center;">320 MHz</td>
+<td style="text-align: center;">46 Gbps</td>
+<td>4096-QAM, Multi-Link (MLO), 16×16 MIMO</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>802.11ay</strong></td>
+<td style="text-align: center;">2024</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">60 GHz</td>
+<td style="text-align: center;">2.16 GHz</td>
+<td style="text-align: center;">100 Gbps</td>
+<td>mmWave, for VR/AR</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The naming confusion.</strong> IEEE uses numbers (802.11ac); the WiFi Alliance
+introduced simpler names (<strong>WiFi 4, 5, 6, 7</strong>) starting in 2018 to avoid consumer
+confusion. Both are used; the numbered names are unambiguous for generations,
+so this course uses them.</p>
+<h3 id="642-key-phy-technologies">6.4.2 Key PHY technologies<a class="headerlink" href="#642-key-phy-technologies" title="Permanent link">&para;</a></h3>
+<p><strong>OFDM and its evolution:</strong></p>
+<ul>
+<li>WiFi 4 (802.11n) — OFDM, 20/40 MHz channels, MIMO.</li>
+<li>WiFi 5 (802.11ac) — OFDM, 80/160 MHz, MU-MIMO downlink, 256-QAM.</li>
+<li>WiFi 6 (802.11ax) — <strong>OFDMA</strong>, MU-MIMO uplink + downlink, 1024-QAM, longer OFDM
+  symbol (4× — reduces guard band overhead).</li>
+<li>WiFi 7 (802.11be) — 4096-QAM, 320 MHz channels, Multi-Link Operation (MLO —
+  simultaneous transmission on multiple bands), 16×16 MIMO.</li>
+</ul>
+<p><strong>OFDMA in WiFi 6</strong> — the biggest change since WiFi 4. Instead of scheduling one
+user per channel (all subcarriers), the AP allocates <strong>resource units (RUs)</strong>
+to multiple users <strong>simultaneously</strong>. This is exactly what LTE/5G do, and it
+massively improves efficiency in crowded environments (stadiums, airports, offices).</p>
+<p><strong>MIMO scaling:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Generation</th>
+<th>MIMO</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WiFi 4</td>
+<td>4×4</td>
+</tr>
+<tr>
+<td>WiFi 5</td>
+<td>8×8 (with MU-MIMO DL)</td>
+</tr>
+<tr>
+<td>WiFi 6</td>
+<td>8×8 (with MU-MIMO DL+UL)</td>
+</tr>
+<tr>
+<td>WiFi 7</td>
+<td>16×16, plus Multi-Link</td>
+</tr>
+</tbody>
+</table>
+<h3 id="worked-example-63-wifi-6-capacity-in-a-crowded-office">Worked example 6.3 — WiFi 6 capacity in a crowded office<a class="headerlink" href="#worked-example-63-wifi-6-capacity-in-a-crowded-office" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> Office with 200 users, each with a phone and laptop (400 devices).
+AP is WiFi 6, 5 GHz, 80 MHz channel, 4×4 MIMO.</p>
+<p><strong>Per-AP theoretical peak:</strong> ~2.4 Gbps (WiFi 6, 80 MHz, 4×4).</p>
+<p><strong>Realistic per-AP throughput:</strong> 40–60% of peak in dense environment → ~1.2 Gbps.</p>
+<p><strong>Per-user throughput (ideal 400 evenly split):</strong> 1.2 Gbps / 400 = 3 Mbps per
+device. Too slow for video calls.</p>
+<p><strong>With 8 APs deployed</strong> (typical office): 8 × 1.2 Gbps = 9.6 Gbps total →
+24 Mbps per device — acceptable for most uses.</p>
+<p><strong>OFDMA advantage:</strong> WiFi 5 would give ~1 Gbps per AP but with one user per
+transmission (MU-MIMO limited to 4 DL streams). WiFi 6 OFDMA allows ~30 RUs
+per 80 MHz channel → up to 30 simultaneous users per transmission → much better
+at high density.</p>
+<p><strong>The lesson:</strong> WiFi 6's OFDMA is about <strong>capacity in dense environments</strong>, not
+peak rate per user. Its biggest benefit is that a stadium or airport full of
+people doesn't collapse the network.</p>
+<h3 id="643-wifi-bands-and-coexistence">6.4.3 WiFi bands and coexistence<a class="headerlink" href="#643-wifi-bands-and-coexistence" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Channels</th>
+<th>Interference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>2.4 GHz</strong></td>
+<td>14 channels (varies by country), 20 MHz</td>
+<td>Very congested (Bluetooth, ZigBee, microwave)</td>
+</tr>
+<tr>
+<td><strong>5 GHz</strong></td>
+<td>25+ channels (varies), 20–160 MHz</td>
+<td>Congested but more channels</td>
+</tr>
+<tr>
+<td><strong>6 GHz</strong> (WiFi 6E)</td>
+<td>59 channels of 20 MHz, or 14 of 160 MHz</td>
+<td><strong>Empty</strong> — reserved for WiFi</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The 6 GHz band</strong> (5.925–7.125 GHz) was allocated for WiFi 6E and WiFi 7 in
+2020–2021. <strong>No legacy devices</strong> — every WiFi 6E device supports 6 GHz. Clean
+spectrum means better performance, especially in dense environments.</p>
+<h3 id="644-wifi-security">6.4.4 WiFi security<a class="headerlink" href="#644-wifi-security" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Standard</th>
+<th style="text-align: center;">Year</th>
+<th>Cipher</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>WEP</strong></td>
+<td style="text-align: center;">1997</td>
+<td>RC4</td>
+<td><strong>Broken</strong> (crackable in minutes)</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>WPA</strong></td>
+<td style="text-align: center;">2003</td>
+<td>TKIP</td>
+<td>Deprecated</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>WPA2</strong></td>
+<td style="text-align: center;">2004</td>
+<td>AES-CCMP</td>
+<td>Good, still widely used</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>WPA3</strong></td>
+<td style="text-align: center;">2018</td>
+<td>AES-GCMP, SAE</td>
+<td>Current standard</td>
+</tr>
+</tbody>
+</table>
+<p><strong>WPA3 improvements:</strong></p>
+<ul>
+<li><strong>SAE (Simultaneous Authentication of Equals)</strong> — replaces the WPA2 PSK
+  handshake, resistant to offline dictionary attacks.</li>
+<li><strong>Forward secrecy</strong> — captured traffic can't be decrypted even if the
+  password is later compromised.</li>
+<li><strong>192-bit security mode</strong> for enterprise/WPA3-Enterprise.</li>
+</ul>
+<p><strong>Rule:</strong> never deploy WEP or WPA. WPA2 is the minimum for compatibility; WPA3
+is recommended for new deployments.</p>
+<hr />
+<h2 id="65-ultra-wideband-uwb">6.5 Ultra-Wideband (UWB)<a class="headerlink" href="#65-ultra-wideband-uwb" title="Permanent link">&para;</a></h2>
+<h3 id="651-what-is-uwb">6.5.1 What is UWB?<a class="headerlink" href="#651-what-is-uwb" title="Permanent link">&para;</a></h3>
+<p><strong>Ultra-Wideband (UWB)</strong> is a radio technology that transmits <strong>very short
+impulses</strong> (&lt; 1 ns) across a <strong>very wide bandwidth</strong> (&gt; 500 MHz), at <strong>very low
+power spectral density</strong>.</p>
+<p><strong>FCC definition:</strong> any signal with fractional bandwidth &gt; 20% or absolute
+bandwidth &gt; 500 MHz, transmitting at power below −41.3 dBm/MHz.</p>
+<p><strong>Key properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency</td>
+<td>3.1–10.6 GHz</td>
+</tr>
+<tr>
+<td>Bandwidth</td>
+<td>&gt; 500 MHz</td>
+</tr>
+<tr>
+<td>Pulse duration</td>
+<td>0.1–1 ns</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>1–10 m (typical), up to 30 m</td>
+</tr>
+<tr>
+<td>Data rate</td>
+<td>100 Mbps–1 Gbps (short range)</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>0.5 mW (very low)</td>
+</tr>
+<tr>
+<td>Position accuracy</td>
+<td><strong>~10 cm</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="652-why-uwb-is-different">6.5.2 Why UWB is different<a class="headerlink" href="#652-why-uwb-is-different" title="Permanent link">&para;</a></h3>
+<p><strong>Traditional radio</strong> (narrowband): transmission occupies a narrow slice of
+spectrum around a carrier; the signal must be <strong>modulated</strong> onto that carrier
+(AM, FM, PSK, QAM).</p>
+<p><strong>UWB:</strong> transmits <strong>impulses</strong> — extremely short pulses that inherently span
+a wide bandwidth. No carrier in the traditional sense; the "carrier" is the
+pulse repetition rate.</p>
+<p><strong>Fourier transform intuition:</strong> a pulse of duration <span class="arithmatex">\(\tau\)</span> has bandwidth
+<span class="arithmatex">\(\approx 1/\tau\)</span>. A 1 ns pulse = 1 GHz bandwidth. UWB exploits this directly.</p>
+<p><strong>The advantage:</strong> wide bandwidth → <strong>fine time resolution</strong> → excellent
+<strong>ranging</strong> (position estimation). UWB can measure distances to cm precision
+by measuring <strong>time of flight</strong>.</p>
+<h3 id="653-two-flavours-of-uwb">6.5.3 Two flavours of UWB<a class="headerlink" href="#653-two-flavours-of-uwb" title="Permanent link">&para;</a></h3>
+<p><strong>1. Impulse Radio UWB (IR-UWB)</strong> — the original approach.</p>
+<ul>
+<li>Transmit <strong>Gaussian pulses</strong> or <strong>monocycle pulses</strong>.</li>
+<li>Data rate limited by pulse repetition frequency (typically 100–1000 Mbps).</li>
+<li>Used in research and short-range radar.</li>
+</ul>
+<p><strong>2. Multi-Band OFDM (MB-OFDM)</strong> — a competitor (WiMedia Alliance).</p>
+<ul>
+<li>Divide the 3.1–10.6 GHz band into 14 sub-bands of 528 MHz.</li>
+<li>Use OFDM within each sub-band.</li>
+<li>Higher data rate (~1 Gbps), more complex.</li>
+<li>WiMedia dissolved around 2010; MB-OFDM is now rarely used.</li>
+</ul>
+<p><strong>3. IEEE 802.15.4z (the current standard)</strong> — supports both.</p>
+<ul>
+<li><strong>HRP (High Rate Pulse) UWB</strong> — for high data rate.</li>
+<li><strong>LRP (Low Rate Pulse) UWB</strong> — for low-power, precise ranging.</li>
+<li>Focus on <strong>secure ranging</strong> (STS — Scrambled Timestamp Sequence) to prevent
+  relay attacks.</li>
+</ul>
+<h3 id="654-uwb-applications">6.5.4 UWB applications<a class="headerlink" href="#654-uwb-applications" title="Permanent link">&para;</a></h3>
+<p><strong>High-precision indoor positioning.</strong></p>
+<ul>
+<li><strong>Apple AirTag, Samsung SmartTag+</strong> — UWB provides cm-level direction and
+  distance, much better than Bluetooth RSSI.</li>
+<li><strong>Smart home</strong> — precise location of people and objects.</li>
+<li><strong>Warehouse logistics</strong> — track items to cm.</li>
+</ul>
+<p><strong>Secure car access.</strong></p>
+<ul>
+<li>Digital car keys use UWB ranging to verify the key is actually nearby
+  (defeats relay attacks that fool Bluetooth/RSSI systems).</li>
+<li>Standardized by the <strong>Car Connectivity Consortium</strong> (CCC Digital Key 3.0).</li>
+</ul>
+<p><strong>Industrial positioning.</strong></p>
+<ul>
+<li>Robots, tools, people in factories, mines, warehouses.</li>
+<li><strong>10 cm precision</strong>, better than Bluetooth or WiFi for industrial use.</li>
+</ul>
+<p><strong>Short-range high-rate data.</strong></p>
+<ul>
+<li>Wireless USB (defunct).</li>
+<li>VR/AR cable replacement (in some products).</li>
+<li>Wireless HDMI (few consumer products).</li>
+</ul>
+<h3 id="worked-example-64-uwb-ranging-precision">Worked example 6.4 — UWB ranging precision<a class="headerlink" href="#worked-example-64-uwb-ranging-precision" title="Permanent link">&para;</a></h3>
+<p><strong>UWB range resolution:</strong> governed by the pulse bandwidth <span class="arithmatex">\(B\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;\Delta d \approx \frac{c}{2B}\;}
+\]</div>
+<p>For <span class="arithmatex">\(B = 1\)</span> GHz: <span class="arithmatex">\(\Delta d \approx 3 \times 10^8 / (2 \times 10^9) = \mathbf{15\ cm}\)</span>.</p>
+<p>For <span class="arithmatex">\(B = 500\)</span> MHz: <span class="arithmatex">\(\Delta d \approx \mathbf{30\ cm}\)</span>.</p>
+<p><strong>Time-of-flight measurement:</strong> at <span class="arithmatex">\(d = 10\)</span> m, the round-trip time is:</p>
+<div class="arithmatex">\[
+t = \frac{2d}{c} = \frac{20}{3 \times 10^8} \approx 67\ \text{ns}.
+\]</div>
+<p>A <strong>1 ns timing error</strong> gives <span class="arithmatex">\(c \cdot t/2 = 15\)</span> cm distance error — hence
+nanosecond-class timing is required for cm-level ranging. Modern UWB chips
+achieve <strong>&lt; 100 ps</strong> timing precision.</p>
+<p><strong>The lesson:</strong> UWB's ranging accuracy comes from the <strong>short pulse</strong> (wide
+bandwidth). No narrowband technology can match this.</p>
+<hr />
+<h2 id="66-lpwan-low-power-wide-area-networks">6.6 LPWAN — Low-Power Wide Area Networks<a class="headerlink" href="#66-lpwan-low-power-wide-area-networks" title="Permanent link">&para;</a></h2>
+<p>Between WiFi (short-range, high-rate) and cellular (long-range, high-rate,
+power-hungry) there's a gap: <strong>long-range, very low power, low data rate, battery-
+powered</strong>. That's <strong>LPWAN</strong> — the IoT connectivity solution.</p>
+<h3 id="661-the-lpwan-landscape">6.6.1 The LPWAN landscape<a class="headerlink" href="#661-the-lpwan-landscape" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Technology</th>
+<th>Frequency</th>
+<th style="text-align: center;">Data rate</th>
+<th style="text-align: center;">Range</th>
+<th style="text-align: center;">Battery life</th>
+<th>Standard</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>LoRa</strong></td>
+<td>Sub-GHz ISM (868/915 MHz)</td>
+<td style="text-align: center;">0.3–37.5 kbps</td>
+<td style="text-align: center;">2–15 km</td>
+<td style="text-align: center;">10+ years</td>
+<td>LoRa Alliance (proprietary PHY)</td>
+</tr>
+<tr>
+<td><strong>NB-IoT</strong></td>
+<td>Licensed LTE (700/800/900 MHz)</td>
+<td style="text-align: center;">26–127 kbps</td>
+<td style="text-align: center;">1–10 km</td>
+<td style="text-align: center;">5–10 years</td>
+<td>3GPP (Release 13)</td>
+</tr>
+<tr>
+<td><strong>Sigfox</strong></td>
+<td>Sub-GHz ISM (868/902 MHz)</td>
+<td style="text-align: center;">100 bps</td>
+<td style="text-align: center;">3–50 km</td>
+<td style="text-align: center;">10+ years</td>
+<td>Sigfox (proprietary)</td>
+</tr>
+<tr>
+<td><strong>LTE-M</strong></td>
+<td>Licensed LTE</td>
+<td style="text-align: center;">1 Mbps</td>
+<td style="text-align: center;">1–10 km</td>
+<td style="text-align: center;">5–10 years</td>
+<td>3GPP (eMTC)</td>
+</tr>
+<tr>
+<td><strong>Weightless</strong></td>
+<td>Sub-GHz ISM</td>
+<td style="text-align: center;">0.1–100 kbps</td>
+<td style="text-align: center;">2–5 km</td>
+<td style="text-align: center;">5+ years</td>
+<td>Weightless SIG</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Rule of thumb:</strong> <strong>LoRa</strong> for unlicensed global deployment, <strong>NB-IoT</strong> for
+licensed spectrum (tied to cellular operators), <strong>Sigfox</strong> for ultra-low
+data rate, <strong>LTE-M</strong> for higher data rate than NB-IoT.</p>
+<h3 id="662-lora-the-phy-and-mac">6.6.2 LoRa — the PHY and MAC<a class="headerlink" href="#662-lora-the-phy-and-mac" title="Permanent link">&para;</a></h3>
+<p><strong>LoRa</strong> = Long Range. The physical layer is proprietary (Semtech); the MAC layer
+(<strong>LoRaWAN</strong>) is open and managed by the LoRa Alliance.</p>
+<p><strong>Chirp Spread Spectrum (CSS)</strong> — the modulation technique.</p>
+<ul>
+<li>Each symbol is a <strong>frequency chirp</strong> (up-sweep or down-sweep).</li>
+<li><strong>Spreading factor (SF)</strong> controls chirp rate: SF7–SF12.</li>
+<li>Higher SF = <strong>longer range</strong> (more spreading) but <strong>lower data rate</strong>.</li>
+<li><strong>SF12</strong> gives ~-137 dBm sensitivity (very long range), at 250 bps.</li>
+<li><strong>SF7</strong> gives ~-123 dBm, at ~5.5 kbps.</li>
+</ul>
+<p><strong>The trade-off:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">SF</th>
+<th style="text-align: center;">Data rate</th>
+<th style="text-align: center;">Sensitivity</th>
+<th style="text-align: center;">Range (km)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">5.5 kbps</td>
+<td style="text-align: center;">-123 dBm</td>
+<td style="text-align: center;">2</td>
+</tr>
+<tr>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">1.8 kbps</td>
+<td style="text-align: center;">-129 dBm</td>
+<td style="text-align: center;">6</td>
+</tr>
+<tr>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">0.5 kbps</td>
+<td style="text-align: center;">-134 dBm</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">0.25 kbps</td>
+<td style="text-align: center;">-137 dBm</td>
+<td style="text-align: center;">15</td>
+</tr>
+</tbody>
+</table>
+<p><strong>LoRaWAN classes:</strong></p>
+<ul>
+<li><strong>Class A</strong> (baseline) — bidirectional; uplink scheduled by the device, two
+  short downlink windows after each uplink. Lowest power.</li>
+<li><strong>Class B</strong> — beacon-synchronized; scheduled downlink receive windows. Moderate
+  power, low downlink latency.</li>
+<li><strong>Class C</strong> — continuous receive (except when transmitting). Highest power,
+  lowest latency. For mains-powered devices.</li>
+</ul>
+<p><strong>Network architecture:</strong></p>
+<ul>
+<li><strong>End devices</strong> — sensors that transmit.</li>
+<li><strong>Gateways</strong> — receive on multiple channels/SFs; forward to network server
+  via IP (WiFi, Ethernet, cellular).</li>
+<li><strong>Network server</strong> — de-duplicates, manages devices, routing.</li>
+<li><strong>Application server</strong> — user applications.</li>
+</ul>
+<p><strong>The key advantage:</strong> LoRa is <strong>license-free</strong> (ISM bands) — anyone can deploy
+a LoRaWAN network. Enterprises deploy private LoRa for building automation,
+agriculture, industrial sensors. National LoRaWAN networks exist in many countries
+(mobile operators, IoT providers).</p>
+<h3 id="663-nb-iot-cellular-for-iot">6.6.3 NB-IoT — cellular for IoT<a class="headerlink" href="#663-nb-iot-cellular-for-iot" title="Permanent link">&para;</a></h3>
+<p><strong>NB-IoT</strong> (Narrowband IoT) is the <strong>3GPP</strong> IoT standard (Release 13, 2016).</p>
+<p><strong>Key parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bandwidth</td>
+<td><strong>180 kHz</strong> (single LTE resource block)</td>
+</tr>
+<tr>
+<td>Frequency</td>
+<td>Licensed LTE bands (in-band, guard-band, or standalone)</td>
+</tr>
+<tr>
+<td>Data rate</td>
+<td>26 kbps UL, 127 kbps DL (multi-tone)</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>1.6–10 s (longer than LTE)</td>
+</tr>
+<tr>
+<td>Battery life</td>
+<td><strong>~10 years</strong> (with PSM/eDRX)</td>
+</tr>
+<tr>
+<td>Range</td>
+<td>~10–15 km (with repetitions, +20 dB over LTE)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key features:</strong></p>
+<ul>
+<li><strong>Coverage extension:</strong> up to <strong>20 dB</strong> (100×) over LTE via <strong>repetitions</strong> —
+  the same message sent 2048 times, combined at the base station. Range up to
+  ~15 km.</li>
+<li><strong>Power Saving Mode (PSM):</strong> the device sleeps for <strong>up to 413 days</strong>, waking
+  only to send data. This is the key to 10-year battery life.</li>
+<li><strong>eDRX (extended Discontinuous Reception):</strong> periodic listening, up to 2.9 hours
+  between wake-ups.</li>
+<li><strong>Extended coverage</strong> but at the cost of <strong>latency</strong> — messages take seconds
+  to be delivered.</li>
+</ul>
+<p><strong>Advantages over LoRa:</strong></p>
+<ul>
+<li><strong>Licensed spectrum</strong> — no interference, guaranteed QoS.</li>
+<li><strong>Integrated with cellular</strong> — the operator handles the network, no gateway
+  needed.</li>
+<li><strong>Higher data rate</strong> than LoRa (~100 kbps vs. ~5 kbps).</li>
+<li><strong>Global roaming</strong> via the operator's network.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li><strong>Needs cellular coverage</strong> — rural areas without LTE coverage can't use NB-IoT.</li>
+<li><strong>Operator-controlled</strong> — you pay per device, per month.</li>
+<li><strong>Higher device cost</strong> than LoRa.</li>
+</ul>
+<h3 id="worked-example-65-iot-battery-life-for-lora-vs-nb-iot">Worked example 6.5 — IoT battery life for LoRa vs. NB-IoT<a class="headerlink" href="#worked-example-65-iot-battery-life-for-lora-vs-nb-iot" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A soil moisture sensor transmits 20 bytes every 30 minutes.</p>
+<p><strong>LoRa (SF12, 250 bps):</strong></p>
+<ul>
+<li>Transmit time: 20 bytes × 8 bits / 250 bps = 0.64 s per transmission.</li>
+<li>Transmit current (typical): 40 mA.</li>
+<li>Per transmission: 0.64 s × 40 mA = 25.6 mA·s = 0.0071 mAh.</li>
+<li>Per day (48 transmissions): 48 × 0.0071 = 0.341 mAh/day.</li>
+<li>Sleep current: 1 μA × 24 h = 0.024 mAh/day.</li>
+<li><strong>Daily total:</strong> ~0.365 mAh.</li>
+<li><strong>Battery (2000 mAh):</strong> ~5,480 days = <strong>~15 years</strong> (theoretical).</li>
+</ul>
+<p><strong>NB-IoT:</strong></p>
+<ul>
+<li>Transmit time: 20 bytes × 8 bits / 26 kbps = 0.006 s per transmission
+  (but with repetitions for coverage, effectively ~1 s).</li>
+<li>Transmit current: 200 mA.</li>
+<li>Per transmission: 1 s × 200 mA = 0.056 mAh.</li>
+<li>Per day: 48 × 0.056 = 2.7 mAh/day.</li>
+<li>Sleep (PSM): 5 μA × 24 h = 0.12 mAh/day.</li>
+<li><strong>Daily total:</strong> ~2.8 mAh/day.</li>
+<li><strong>Battery (5000 mAh, typical for NB-IoT devices):</strong> ~1,800 days = <strong>~5 years</strong> (theoretical).</li>
+</ul>
+<p><strong>Realistic:</strong> LoRa ~7–10 years, NB-IoT ~3–5 years — battery life is limited
+by sleep current and self-discharge, not by transmissions.</p>
+<p><strong>The takeaway:</strong> LoRa is more power-efficient for very low-rate, sparse data.
+NB-IoT is worth the higher power for higher data rate and licensed spectrum.</p>
+<hr />
+<h2 id="67-5g-and-iot-the-converged-vision">6.7 5G and IoT — the converged vision<a class="headerlink" href="#67-5g-and-iot-the-converged-vision" title="Permanent link">&para;</a></h2>
+<h3 id="671-5gs-three-use-cases">6.7.1 5G's three use cases<a class="headerlink" href="#671-5gs-three-use-cases" title="Permanent link">&para;</a></h3>
+<p>The ITU defined <strong>IMT-2020</strong> (5G) around three broad use cases:</p>
+<p><strong>1. eMBB — enhanced Mobile Broadband.</strong></p>
+<ul>
+<li>Peak rate: <strong>20 Gbps</strong>.</li>
+<li>User-experienced rate: 100 Mbps–1 Gbps.</li>
+<li>Use: 4K/8K video, AR/VR, cloud gaming.</li>
+<li>Characteristics: high throughput, moderate latency (~4 ms).</li>
+</ul>
+<p><strong>2. URLLC — Ultra-Reliable Low-Latency Communication.</strong></p>
+<ul>
+<li>Latency: <strong>1 ms</strong> (air interface).</li>
+<li>Reliability: 99.999% (five nines).</li>
+<li>Use: industrial automation, remote surgery, autonomous driving, smart grid.</li>
+<li>Characteristics: latency-critical, high reliability, moderate data rate.</li>
+</ul>
+<p><strong>3. mMTC — massive Machine-Type Communication.</strong></p>
+<ul>
+<li>Density: <strong>1 million devices per km²</strong>.</li>
+<li>Battery: <strong>10+ years</strong>.</li>
+<li>Use: IoT sensors, smart city, agriculture, asset tracking.</li>
+<li>Characteristics: high density, low data rate, low power.</li>
+</ul>
+<p><strong>The 5G triangle:</strong> the three use cases pull in different directions. eMBB wants
+high rate; URLLC wants low latency; mMTC wants high density and low power. <strong>5G
+NR is designed to serve all three</strong>, often on the <strong>same network</strong> via <strong>network
+slicing</strong>.</p>
+<h3 id="672-5g-nr-the-new-radio">6.7.2 5G NR — the new radio<a class="headerlink" href="#672-5g-nr-the-new-radio" title="Permanent link">&para;</a></h3>
+<p><strong>5G NR (New Radio)</strong> is the 3GPP air interface introduced in <strong>Release 15</strong>
+(2018). It's a <strong>new PHY</strong>, not an evolution of LTE.</p>
+<p><strong>Key PHY parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>LTE</th>
+<th>5G NR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Frequency</strong></td>
+<td>&lt; 6 GHz</td>
+<td><strong>&lt; 6 GHz (FR1) + mmWave 24–52 GHz (FR2)</strong></td>
+</tr>
+<tr>
+<td><strong>Subcarrier spacing</strong></td>
+<td>15 kHz fixed</td>
+<td><strong>15, 30, 60, 120, 240 kHz</strong> (scalable)</td>
+</tr>
+<tr>
+<td><strong>Channel bandwidth</strong></td>
+<td>up to 20 MHz</td>
+<td><strong>up to 100 MHz (FR1), 400 MHz (FR2)</strong></td>
+</tr>
+<tr>
+<td><strong>MIMO</strong></td>
+<td>up to 8×8</td>
+<td><strong>up to 64×64 (FR1), 256 antennas (FR2 massive MIMO)</strong></td>
+</tr>
+<tr>
+<td><strong>Modulation</strong></td>
+<td>up to 256-QAM</td>
+<td><strong>up to 1024-QAM</strong></td>
+</tr>
+<tr>
+<td><strong>Latency (user plane)</strong></td>
+<td>~10 ms</td>
+<td><strong>~1 ms</strong></td>
+</tr>
+<tr>
+<td><strong>Peak DL</strong></td>
+<td>3 Gbps (LTE-A Pro)</td>
+<td><strong>20 Gbps</strong></td>
+</tr>
+<tr>
+<td><strong>Spectral efficiency</strong></td>
+<td>~6 bps/Hz (LTE-A)</td>
+<td><strong>~30 bps/Hz (5G)</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Scalable numerology</strong> — the key 5G innovation. Unlike LTE's fixed 15 kHz
+subcarrier spacing, 5G uses different subcarrier spacings for different scenarios:</p>
+<ul>
+<li><strong>15 kHz</strong> — for wide-area coverage (like LTE).</li>
+<li><strong>30 kHz</strong> — for urban (typical 5G).</li>
+<li><strong>60 kHz</strong> — for low-latency (URLLC).</li>
+<li><strong>120/240 kHz</strong> — for mmWave (high throughput).</li>
+</ul>
+<p>Short subcarriers → longer symbols → <strong>higher throughput</strong>. Longer subcarriers →
+shorter symbols → <strong>lower latency</strong>. Numerologies are chosen per application.</p>
+<p><strong>Massive MIMO.</strong> 5G deploys <strong>64–256 antenna elements</strong> at the base station:</p>
+<ul>
+<li><strong>Beamforming gain:</strong> ~18 dB (64 elements) to 24 dB (256 elements).</li>
+<li><strong>Multi-user MIMO:</strong> up to 16 UEs simultaneously.</li>
+<li><strong>3D beamforming:</strong> both horizontal and vertical steering.</li>
+</ul>
+<p><strong>mmWave.</strong> FR2 (24–52 GHz) provides <strong>400 MHz channels</strong> — 8× wider than
+sub-6 GHz. This is what enables 20 Gbps peak rate. But mmWave has:</p>
+<ul>
+<li><strong>High path loss</strong> (Chapter 1 worked example 1.1: ~30 dB more than 2 GHz).</li>
+<li><strong>Blockage</strong> (rain, hands, walls).</li>
+<li><strong>Short range</strong> (100–300 m per cell).</li>
+<li><strong>Requires dense small-cell deployment.</strong></li>
+</ul>
+<h3 id="673-5g-core-5gc-service-based-architecture">6.7.3 5G Core (5GC) — service-based architecture<a class="headerlink" href="#673-5g-core-5gc-service-based-architecture" title="Permanent link">&para;</a></h3>
+<p>The <strong>5G core network</strong> is a fundamental redesign from LTE's EPC. Instead of
+<strong>network elements</strong> connected by <strong>point-to-point interfaces</strong>, 5GC uses
+<strong>network functions (NFs)</strong> connected by <strong>service-based interfaces (SBI)</strong> —
+essentially a microservices architecture.</p>
+<p><strong>Key NFs:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AMF</strong> (Access &amp; Mobility)</td>
+<td>Registration, mobility, connection management (control plane)</td>
+</tr>
+<tr>
+<td><strong>SMF</strong> (Session Management)</td>
+<td>PDU session setup, IP address, QoS (control plane)</td>
+</tr>
+<tr>
+<td><strong>UPF</strong> (User Plane Function)</td>
+<td>Packet routing, QoS enforcement, anchor point</td>
+</tr>
+<tr>
+<td><strong>AUSF</strong> (Authentication)</td>
+<td>5G authentication</td>
+</tr>
+<tr>
+<td><strong>UDM</strong> (Unified Data Mgmt)</td>
+<td>Subscriber data, authentication vectors (like HSS)</td>
+</tr>
+<tr>
+<td><strong>PCF</strong> (Policy Control)</td>
+<td>QoS policy, charging rules</td>
+</tr>
+<tr>
+<td><strong>NSSF</strong> (Network Slicing Selection)</td>
+<td>Selects the right network slice</td>
+</tr>
+<tr>
+<td><strong>NRF</strong> (NF Repository)</td>
+<td>Service discovery (NFs find each other)</td>
+</tr>
+<tr>
+<td><strong>NEF</strong> (Network Exposure)</td>
+<td>APIs for third parties to use 5G capabilities</td>
+</tr>
+<tr>
+<td><strong>AF</strong> (Application Function)</td>
+<td>Application server (owns the QoS request)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Service-based interface (SBI):</strong></p>
+<ul>
+<li>All NFs communicate via <strong>HTTP/2 + JSON</strong> on the SBI.</li>
+<li>Any NF can expose services that others consume.</li>
+<li>NRF provides <strong>service discovery</strong> (like DNS for NFs).</li>
+</ul>
+<p><strong>The advantage:</strong> <strong>flexible, cloud-native</strong> — 5GC can run on containers in a
+data center, orchestrated by Kubernetes, updated without touching the radio.</p>
+<h3 id="674-network-slicing">6.7.4 Network slicing<a class="headerlink" href="#674-network-slicing" title="Permanent link">&para;</a></h3>
+<p><strong>Network slicing</strong> is 5G's flagship feature — the ability to create <strong>virtual,
+isolated networks</strong> on the same physical infrastructure, each with its own
+resources, QoS, and topology.</p>
+<p><strong>Each slice has:</strong></p>
+<ul>
+<li>Its own <strong>QoS and KPIs</strong> (latency, throughput, reliability).</li>
+<li>Its own <strong>network functions</strong> (or shared, isolated by slice).</li>
+<li>Its own <strong>resource allocation</strong> (spectrum, compute, backhaul).</li>
+<li>Its own <strong>management and orchestration</strong>.</li>
+</ul>
+<p><strong>Example slices:</strong></p>
+<ul>
+<li><strong>eMBB slice</strong> — high throughput, moderate latency, for consumer broadband.</li>
+<li><strong>URLLC slice</strong> — 1 ms latency, 99.999% reliability, for industrial control.</li>
+<li><strong>mMTC slice</strong> — massive device count, low power, for IoT sensors.</li>
+<li><strong>V2X slice</strong> — vehicle-to-everything, low latency, high reliability.</li>
+</ul>
+<p><strong>The NSSF</strong> (Network Slice Selection Function) selects the right slice for
+each UE based on subscription, requested service, and network policy.</p>
+<p><strong>Why slicing matters:</strong> before 5G, an operator had one network serving all
+traffic. An industrial customer wanting guaranteed 1 ms latency competed with
+consumers streaming video. Slicing lets the operator <strong>sell dedicated capacity</strong>
+to an enterprise with strict QoS, without degrading the consumer network — a
+new business model.</p>
+<h3 id="675-edge-computing-and-5g">6.7.5 Edge computing and 5G<a class="headerlink" href="#675-edge-computing-and-5g" title="Permanent link">&para;</a></h3>
+<p><strong>Edge computing</strong> — moving compute resources <strong>close to the user</strong>, at cell
+towers or local data centers, instead of centralized cloud.</p>
+<p><strong>Why 5G needs it:</strong></p>
+<ul>
+<li><strong>URLLC latency:</strong> 1 ms air-interface latency is useless if the application
+  server is 1,000 km away (adds 20–40 ms round-trip). <strong>Multi-access edge
+  computing (MEC)</strong> puts the server at the base station or local edge.</li>
+</ul>
+<p><strong>Use cases:</strong></p>
+<ul>
+<li><strong>AR/VR</strong> — sub-20 ms end-to-end, must be local.</li>
+<li><strong>Industrial automation</strong> — real-time control loops, local.</li>
+<li><strong>Autonomous vehicles</strong> — safety-critical, local.</li>
+<li><strong>Cloud gaming</strong> — low-latency, local rendering.</li>
+</ul>
+<p><strong>5G + MEC</strong> = network + compute at the edge = platform for real-time applications.</p>
+<h3 id="676-iot-connectivity-in-5g">6.7.6 IoT connectivity in 5G<a class="headerlink" href="#676-iot-connectivity-in-5g" title="Permanent link">&para;</a></h3>
+<p><strong>mMTC in 5G</strong> is delivered by three paths:</p>
+<ol>
+<li><strong>NB-IoT and LTE-M</strong> — the same LPWAN standards, <strong>integrated into the 5G
+   core</strong> (they become 5G-connected devices via dual-mode radios).</li>
+<li><strong>5G NR RedCap</strong> (Reduced Capability) — a lighter 5G NR variant for IoT devices
+   that need more than NB-IoT but not full 5G (wearables, cameras, sensors with
+   moderate data rate).</li>
+<li><strong>5G NR</strong> for IoT — for the rare IoT use case that needs URLLC or eMBB.</li>
+</ol>
+<p><strong>Network slicing</strong> lets operators create a <strong>dedicated mMTC slice</strong> with
+massive device density and low power, without impacting eMBB users.</p>
+<p><strong>The 5G IoT ecosystem</strong> combines:</p>
+<ul>
+<li><strong>Massive MIMO + beamforming</strong> for wide coverage.</li>
+<li><strong>mmWave small cells</strong> for dense IoT deployment.</li>
+<li><strong>Edge computing</strong> for real-time processing.</li>
+<li><strong>NB-IoT / LTE-M / RedCap</strong> for device-side connectivity.</li>
+<li><strong>Network slicing</strong> for isolation and QoS.</li>
+</ul>
+<h3 id="worked-example-66-network-slicing-for-smart-factory">Worked example 6.6 — network slicing for smart factory<a class="headerlink" href="#worked-example-66-network-slicing-for-smart-factory" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A smart factory needs:</p>
+<ul>
+<li>500 <strong>industrial sensors</strong> sending 100 bytes every 1 s. <strong>mMTC slice.</strong></li>
+<li>20 <strong>AGVs</strong> (automated guided vehicles) with 1 ms latency control loops. <strong>URLLC slice.</strong></li>
+<li>10 <strong>HD cameras</strong> streaming 4K video for quality inspection. <strong>eMBB slice.</strong></li>
+<li><strong>AR glasses</strong> for technicians, remote expert assistance. <strong>eMBB + URLLC mix.</strong></li>
+</ul>
+<p><strong>Without network slicing:</strong> one shared network. Under congestion, AGV control
+latency spikes → safety risk.</p>
+<p><strong>With slicing:</strong></p>
+<ul>
+<li><strong>mMTC slice:</strong> 500 sensors × 100 bytes/s = 50 kbps. Trivial. Reserve 1 MHz.</li>
+<li><strong>URLLC slice:</strong> 20 AGVs × 100 kbps with 1 ms latency. Reserve dedicated RBs +
+  UPF at factory edge. 5 MHz.</li>
+<li><strong>eMBB slice:</strong> 10 cameras × 20 Mbps = 200 Mbps. 20 MHz + MU-MIMO.</li>
+<li><strong>AR/VR slice:</strong> mix of eMBB + URLLC. 10 MHz.</li>
+</ul>
+<p><strong>Total:</strong> 36 MHz reserved, each slice isolated. AGV control latency guaranteed
+&lt; 1 ms even during video peak traffic. Business model: factory pays for QoS
+guaranteed slices.</p>
+<hr />
+<h2 id="68-choosing-the-right-connectivity">6.8 Choosing the right connectivity<a class="headerlink" href="#68-choosing-the-right-connectivity" title="Permanent link">&para;</a></h2>
+<p>For any given IoT application, choosing between WPAN / WLAN / LPWAN / cellular
+depends on four variables:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>WPAN</th>
+<th>WLAN</th>
+<th>LPWAN</th>
+<th>Cellular</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Range</strong></td>
+<td>10–100 m</td>
+<td>30–100 m</td>
+<td>2–15 km</td>
+<td>1–30 km</td>
+</tr>
+<tr>
+<td><strong>Data rate</strong></td>
+<td>0.1–3 Mbps</td>
+<td>100 Mbps–30 Gbps</td>
+<td>0.1–127 kbps</td>
+<td>100 Mbps–20 Gbps</td>
+</tr>
+<tr>
+<td><strong>Power</strong></td>
+<td>Very low</td>
+<td>High</td>
+<td>Very low</td>
+<td>High (except NB-IoT)</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Low</td>
+<td>Moderate</td>
+<td>Low</td>
+<td>High (spectrum)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Decision flowchart:</strong></p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Start
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  │
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  ├─ Data rate &gt; 1 Mbps?
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  │   ├─ Yes → Local → WiFi
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  │   │         → Mobile → 4G/5G
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  │   └─ No → continue
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  │
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  ├─ Range &gt; 100 m?
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  │   ├─ Yes → Licensed spectrum?
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  │   │         ├─ Yes → NB-IoT / LTE-M
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  │   │         └─ No  → LoRa / Sigfox
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  │   └─ No → continue
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  │
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  ├─ Battery-powered &amp; low duty cycle?
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  │   ├─ Yes → BLE / ZigBee / LoRa
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  │   └─ No  → WiFi / Bluetooth Classic
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  │
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  └─ Latency-critical?
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      ├─ Yes → Cellular (4G/5G)
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      └─ No  → LPWAN
+</span></code></pre></div>
+<h3 id="worked-example-67-choosing-connectivity">Worked example 6.7 — choosing connectivity<a class="headerlink" href="#worked-example-67-choosing-connectivity" title="Permanent link">&para;</a></h3>
+<p><strong>Application:</strong> An agricultural sensor measuring soil moisture, sending 50 bytes
+every hour, powered by a small solar panel with battery backup.</p>
+<p><strong>Requirements:</strong>
+- Data rate: 50 bytes/hour = 0.11 bps. <strong>Very low.</strong>
+- Range: field is 1 km wide; nearest road/power 5 km. <strong>Long range.</strong>
+- Power: solar/battery — should last years. <strong>Very low power.</strong>
+- Cost: <strong>many devices</strong> (100 sensors), so low per-device cost.</p>
+<p><strong>Options:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th>Fit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WiFi</td>
+<td>❌ Range too short (100 m)</td>
+</tr>
+<tr>
+<td>Bluetooth</td>
+<td>❌ Range too short (100 m)</td>
+</tr>
+<tr>
+<td>ZigBee</td>
+<td>❌ Range too short (100 m), no backhaul</td>
+</tr>
+<tr>
+<td>LoRa</td>
+<td>✅ Range 10+ km, low power, low cost</td>
+</tr>
+<tr>
+<td>NB-IoT</td>
+<td>✅ Range 10 km (if coverage), low power, needs cellular subscription</td>
+</tr>
+<tr>
+<td>Sigfox</td>
+<td>✅ Range 30+ km, ultra-low power, ultra-low data rate</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Best fit:</strong> <strong>LoRaWAN</strong> — deploy a private LoRaWAN gateway at the farmhouse
+(powered by solar), sensors use LoRa. No monthly cellular fees, cm-level position
+(optional), 5+ year battery life on AA cells. <strong>If cellular coverage is available
+and reliable, NB-IoT</strong> also works but with monthly subscription cost.</p>
+<p><strong>Why not 5G mMTC?</strong> Overkill — the data rate, latency, and density are far below
+what 5G offers; the cost is 10× higher.</p>
+<hr />
+<h2 id="69-chapter-summary">6.9 Chapter summary<a class="headerlink" href="#69-chapter-summary" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>NGN</strong> = packet-based, all-IP, multi-service network. It evolved from
+   voice-over-IP convergence (2000s) to fixed-mobile convergence (2010s) to
+   <strong>IoT convergence</strong> (2020s).</li>
+<li><strong>Bluetooth Classic</strong> — for continuous data (audio, files). Piconet topology,
+   frequency hopping, 2–3 Mbps. <strong>BLE</strong> — for bursty sensor data; 40 channels,
+   3 ms connection, &lt; 1 μA sleep, up to 400 m range (BT 5.0).</li>
+<li><strong>ZigBee (IEEE 802.15.4)</strong> — mesh network for sensor networks. 250 kbps, AODV
+   routing, 65,000+ nodes, &lt; 1 μA sleep. Dominant in home and industrial
+   automation.</li>
+<li><strong>WiFi (802.11)</strong> — the local wireless standard. WiFi 6 (802.11ax) brings
+   <strong>OFDMA</strong> and MU-MIMO uplink for high-density environments. WiFi 7 (802.11be)
+   adds 320 MHz channels, 4096-QAM, and Multi-Link Operation. The 6 GHz band
+   provides clean spectrum for WiFi 6E/7.</li>
+<li><strong>UWB</strong> — impulse radio using very short pulses (sub-ns) across &gt; 500 MHz
+   bandwidth. Enables <strong>~10 cm precision positioning</strong>, used in AirTags, car
+   keys, warehouse tracking.</li>
+<li><strong>LPWAN</strong> — low-power wide-area networks for IoT. <strong>LoRa</strong> (unlicensed,
+   chirp spread spectrum, 2–15 km), <strong>NB-IoT</strong> (licensed, cellular, 10 km,
+   10-year battery), <strong>Sigfox</strong> (ultra-low rate, very long range).</li>
+<li><strong>5G NR</strong> — new PHY with scalable numerology (15–240 kHz), massive MIMO
+   (64–256 antennas), mmWave bands, 1 ms latency, 20 Gbps peak. <strong>FR1</strong> (Sub-6)
+   and <strong>FR2</strong> (mmWave) serve different scenarios.</li>
+<li><strong>5G Core (5GC)</strong> — service-based architecture with microservices (AMF, SMF,
+   UPF, etc.) communicating via HTTP/2. Cloud-native, orchestrated by Kubernetes.</li>
+<li><strong>Network slicing</strong> — virtual isolated networks on one physical infrastructure,
+   each with its own QoS and topology. Enables URLLC/eMBB/mMTC coexistence and
+   new business models.</li>
+<li><strong>Edge computing (MEC)</strong> — brings compute close to the user, essential for
+    URLLC. 5G + MEC is the platform for real-time applications.</li>
+<li><strong>IoT connectivity</strong> — WPAN (BLE, ZigBee) for local, WLAN (WiFi) for local
+    high-rate, LPWAN (LoRa, NB-IoT) for wide-area low-power, cellular (4G/5G)
+    for high-rate with QoS. Choose based on range, rate, power, and cost.</li>
+</ol>
+<hr />
+<h2 id="610-quiz">6.10 Quiz<a class="headerlink" href="#610-quiz" title="Permanent link">&para;</a></h2>
+<h3 id="a-multiple-choice">A. Multiple choice<a class="headerlink" href="#a-multiple-choice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Bluetooth Classic operates in which band?
+   (a) 900 MHz (b) 2.4 GHz ISM (c) 5 GHz (d) 60 GHz</p>
+</li>
+<li>
+<p>The typical range of BLE (Class 2) is:
+   (a) 1 m (b) 10 m (c) 100 m (d) 1 km</p>
+</li>
+<li>
+<p>ZigBee is based on which IEEE standard?
+   (a) 802.11 (b) 802.15.1 (c) 802.15.4 (d) 802.16</p>
+</li>
+<li>
+<p>ZigBee's data rate is:
+   (a) 10 kbps (b) 250 kbps (c) 1 Mbps (d) 54 Mbps</p>
+</li>
+<li>
+<p>WiFi 6 (802.11ax) introduced:
+   (a) OFDM (b) MIMO (c) <strong>OFDMA</strong> (d) mmWave</p>
+</li>
+<li>
+<p>WiFi 6E operates in which new band?
+   (a) 2.4 GHz (b) 5 GHz (c) <strong>6 GHz</strong> (d) 60 GHz</p>
+</li>
+<li>
+<p>UWB's main advantage over other technologies is:
+   (a) High data rate (b) Long range (c) <strong>Precision positioning</strong> (d) Low cost</p>
+</li>
+<li>
+<p>LoRa uses which modulation technique?
+   (a) OFDM (b) QPSK (c) <strong>Chirp Spread Spectrum</strong> (d) 8-PSK</p>
+</li>
+<li>
+<p>NB-IoT's key feature for long battery life is:
+   (a) High data rate (b) <strong>PSM</strong> (c) MIMO (d) OFDMA</p>
+</li>
+<li>
+<p>5G's three use cases are:
+    (a) eMBB, URLLC, mMTC (b) LTE, WiFi, Bluetooth (c) AM, FM, PM (d) FDMA, TDMA, CDMA</p>
+</li>
+<li>
+<p>5G NR's <strong>scalable numerology</strong> allows:
+    (a) Multiple bands (b) Different subcarrier spacings (c) Multiple MIMO orders (d) Coexistence with LTE</p>
+</li>
+<li>
+<p><strong>Network slicing</strong> enables:
+    (a) Higher peak rate (b) Virtual isolated networks with distinct QoS (c) Lower latency (d) Higher density</p>
+</li>
+</ol>
+<h3 id="b-fill-in-the-blank">B. Fill in the blank<a class="headerlink" href="#b-fill-in-the-blank" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Bluetooth Classic's topology is a <strong>____</strong>, with 1 master and up to 7 slaves.</li>
+<li>BLE has <strong>____</strong> channels of 2 MHz each.</li>
+<li>ZigBee's routing protocol is <strong>____</strong>.</li>
+<li>WiFi 6 (802.11ax) uses <strong>____</strong> for multi-user scheduling.</li>
+<li>WiFi 6E operates in the <strong>____</strong> GHz band.</li>
+<li>UWB's pulse bandwidth must exceed <strong>____</strong> MHz (FCC definition).</li>
+<li>LoRa's <strong>____</strong> parameter controls the range/data-rate trade-off.</li>
+<li>NB-IoT provides up to <strong>____</strong> dB coverage extension via repetitions.</li>
+<li>5G's <strong>____</strong> (three letters) is the ultra-low-latency use case.</li>
+<li>5G Core (5GC) uses <strong>____</strong> (three letters) for service discovery.</li>
+</ol>
+<h3 id="c-define-explain">C. Define / explain<a class="headerlink" href="#c-define-explain" title="Permanent link">&para;</a></h3>
+<ol>
+<li>What is an NGN? Describe its evolution through the three stages
+   (all-IP, FMC, IoT).</li>
+<li>Describe Bluetooth Classic vs. BLE. When would you use each?</li>
+<li>Explain ZigBee's mesh topology and AODV routing. Why is mesh important for
+   sensor networks?</li>
+<li>Compare WiFi 5, WiFi 6, and WiFi 7. What are the main improvements?</li>
+<li>Explain UWB's operating principle. Why does wide bandwidth give high precision?</li>
+<li>Describe the three LPWAN technologies (LoRa, NB-IoT, Sigfox). When would you
+   choose each?</li>
+<li>Explain LoRa's <strong>spreading factor</strong> trade-off. Why does higher SF give longer
+   range but lower data rate?</li>
+<li>Describe the three 5G use cases (eMBB, URLLC, mMTC). Give one application for
+   each.</li>
+<li>Explain <strong>5G NR's scalable numerology</strong>. Why is it different from LTE's fixed
+   15 kHz?</li>
+<li>What is <strong>network slicing</strong>? How does it enable new business models?</li>
+<li>How does <strong>edge computing (MEC)</strong> complement 5G? Which use cases need it most?</li>
+<li>A smart city has 100,000 sensors deployed over 50 km². Choose the connectivity
+    strategy — WPAN, WLAN, LPWAN, or cellular — and justify.</li>
+</ol>
+<hr />
+<h2 id="611-answer-key">6.11 Answer key<a class="headerlink" href="#611-answer-key" title="Permanent link">&para;</a></h2>
+<details class="success">
+<summary>A. Multiple choice</summary>
+<ol>
+<li><strong>(b)</strong> — 2.4 GHz ISM.</li>
+<li><strong>(c)</strong> — ~10 m (Class 2), up to 100 m in Class 1, up to 400 m in BT 5.0.</li>
+<li><strong>(c)</strong> — 802.15.4.</li>
+<li><strong>(b)</strong> — 250 kbps.</li>
+<li><strong>(c)</strong> — OFDMA.</li>
+<li><strong>(c)</strong> — 6 GHz.</li>
+<li><strong>(c)</strong> — precision positioning.</li>
+<li><strong>(c)</strong> — Chirp Spread Spectrum.</li>
+<li><strong>(b)</strong> — PSM (Power Saving Mode).</li>
+<li><strong>(a)</strong> — eMBB, URLLC, mMTC.</li>
+<li><strong>(b)</strong> — different subcarrier spacings.</li>
+<li><strong>(b)</strong> — virtual isolated networks with distinct QoS.</li>
+</ol>
+</details>
+<details class="success">
+<summary>B. Fill in the blank</summary>
+<ol>
+<li>piconet.</li>
+<li>40.</li>
+<li>AODV (Ad hoc On-demand Distance Vector).</li>
+<li>OFDMA (Orthogonal Frequency Division Multiple Access).</li>
+<li>6 (5.925–7.125).</li>
+<li>500.</li>
+<li>spreading factor (SF7–SF12).</li>
+<li>20.</li>
+<li>URLLC.</li>
+<li>NRF.</li>
+</ol>
+</details>
+<details class="success">
+<summary>C. Define / explain — model answers</summary>
+<ol>
+<li><em>NGN:</em> a packet-based, all-IP network providing telecommunication
+   services (voice, data, video) with QoS, decoupled from the underlying
+   transport. <em>Three stages:</em> (i) all-IP convergence (2000s) — replacing
+   PSTN with VoIP, circuit-switched cores with IP; (ii) fixed-mobile
+   convergence (2010s) — unify fixed and mobile under one core, VoWiFi,
+   LTE-WiFi; (iii) IoT convergence (2020s) — LPWAN, 5G mMTC, edge computing,
+   network slicing.</li>
+<li><em>Bluetooth Classic:</em> continuous data, piconet topology, 2–3 Mbps, higher
+   power. <em>BLE:</em> bursty sensor data, 40 channels of 2 MHz, 3 ms connection,
+   &lt; 1 μA sleep, up to 400 m. <em>Use:</em> Classic for headphones, audio streaming,
+   file transfer; BLE for wearables, fitness trackers, battery-powered
+   sensors.</li>
+<li><em>ZigBee mesh:</em> any router can forward traffic for any other. <em>AODV:</em>
+   on-demand routing — source broadcasts Route Request (RREQ), destination
+   replies with Route Reply (RREP), routers cache routes for future use.
+   <em>Why mesh:</em> extends range beyond individual node range (multi-hop),
+   improves reliability (redundant paths), and handles node failures
+   gracefully. For sensor networks that can't afford fiber backhaul to every
+   node, mesh is essential.</li>
+<li><em>WiFi 5 (802.11ac):</em> 5 GHz, 80/160 MHz, MU-MIMO DL, 256-QAM. <em>WiFi 6
+   (802.11ax):</em> adds OFDMA, MU-MIMO UL, 1024-QAM, TWT (Target Wake Time for
+   IoT power), 4× longer OFDM symbol. Better at high density. <em>WiFi 7
+   (802.11be):</em> 320 MHz channels, 4096-QAM, Multi-Link Operation (MLO —
+   simultaneous transmission on 2.4, 5, 6 GHz), 16×16 MIMO.</li>
+<li><em>UWB:</em> transmits very short pulses (sub-ns) which inherently span &gt; 500
+   MHz bandwidth. <em>High precision:</em> Fourier transform — pulse of duration τ
+   has bandwidth ≈ 1/τ. Wide bandwidth gives <strong>fine time resolution</strong> (τ ~ ns),
+   and time of flight directly gives distance: d = c·t/2. So cm-precision
+   ranging is possible, unlike narrowband RSSI (which has ~1 m precision).</li>
+<li><em>LoRa:</em> unlicensed ISM, Chirp Spread Spectrum, 2–15 km, 0.3–37.5 kbps,
+   private or national network. Best for enterprise IoT, agriculture,
+   building automation, remote sensing. <em>NB-IoT:</em> licensed LTE, 180 kHz
+   bandwidth, 1–10 km, ~100 kbps, uses PSM for 10-year battery. Best for
+   operator-managed IoT (smart meters, tracking). <em>Sigfox:</em> proprietary,
+   ultra-low data rate (100 bps), very long range (up to 50 km), ultra-low
+   power. Best for asset tracking, simple telemetry with very infrequent
+   updates.</li>
+<li><em>LoRa SF trade-off:</em> SF7–SF12 correspond to 2^7 to 2^12 chips per symbol.
+   <em>Higher SF:</em> longer symbol time → more signal energy per bit → better
+   sensitivity (−137 dBm for SF12) → longer range (up to 15 km). But: lower
+   data rate (250 bps for SF12 vs. 5.5 kbps for SF7) → longer transmission
+   time → higher energy per transmission. <em>Trade-off:</em> range vs. data rate
+   vs. battery life.</li>
+<li><em>eMBB:</em> enhanced Mobile Broadband — high rate (100 Mbps–1 Gbps user),
+   for 4K/8K video, AR/VR, cloud gaming. <em>URLLC:</em> Ultra-Reliable Low-Latency
+   Communication — 1 ms latency, 99.999% reliability, for industrial
+   automation, remote surgery, autonomous driving. <em>mMTC:</em> massive
+   Machine-Type Communication — 1M devices/km², low power, for IoT sensors,
+   smart city, agriculture.</li>
+<li><em>5G scalable numerology:</em> LTE uses fixed 15 kHz subcarrier spacing. 5G
+   NR supports 15, 30, 60, 120, 240 kHz. <em>Why:</em> different scenarios need
+   different trade-offs. Short subcarriers (15 kHz) → long symbol duration →
+   robust for high Doppler / wide-area. Long subcarriers (120/240 kHz) → short
+   symbol duration → low latency (for URLLC) but need higher SNR. Deployments
+   choose numerology per scenario — 15 kHz for macro coverage, 30 kHz for
+   urban 5G, 60/120 kHz for mmWave.</li>
+<li><em>Network slicing:</em> ability to create multiple virtual isolated networks
+    on the same physical infrastructure, each with its own QoS, topology,
+    resources, and management. <em>New business models:</em> operator can sell
+    dedicated URLLC slices to industrial customers with guaranteed latency,
+    eMBB slices to consumers, mMTC slices for IoT — each priced for its SLA.
+    Before slicing, all traffic shared one network; the industrial customer's
+    1 ms latency was at the mercy of consumers streaming video. Slicing
+    provides <strong>QoS isolation</strong> as a product.</li>
+<li><em>MEC (Multi-access Edge Computing):</em> compute resources placed at cell
+    towers / local data centers, close to the user. <em>Complements 5G:</em> 5G's
+    1 ms air-interface latency is useless if the application server is 1000 km
+    away (adds 20+ ms). MEC brings the server to the edge → full end-to-end
+    latency in 5–10 ms. <em>Use cases:</em> AR/VR (sub-20 ms), industrial control
+    loops (1 ms), autonomous vehicles (safety-critical), cloud gaming
+    (low-latency rendering), real-time video analytics.</li>
+<li><em>Smart city, 100,000 sensors over 50 km²:</em> 2,000 devices/km². LoRa or
+    NB-IoT are the only viable options. WiFi covers 100 m per AP, would need
+    5,000 APs and power for each — infeasible. Cellular works but 100,000
+    subscriptions are expensive. <em>LoRaWAN:</em> 20 gateways cover 50 km²
+    (2.5 km radius each with SF12), private network, low per-device cost,
+    10-year battery. <em>NB-IoT:</em> if cellular coverage exists and 5–10 year
+    battery acceptable, operator-managed is simpler. <em>Recommendation:</em> LoRa
+    for maximum flexibility, NB-IoT for integration with city's cellular
+    infrastructure.</li>
+</ol>
+</details>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Bluetooth:</strong> Bluetooth SIG's <em>Core Specification 5.4</em> — free PDF from bluetooth.com. Also <em>Bluetooth Low Energy: The Developer's Handbook</em> by Robin Heydon (Prentice Hall, 2012).</li>
+<li><strong>ZigBee:</strong> <em>ZigBee Wireless Networks and Transceivers</em> by Shahin Farahani (Newnes, 2008). The ZigBee Alliance specs at zigbeealliance.org.</li>
+<li><strong>WiFi:</strong> <em>802.11ac: A Survival Guide</em> by Matthew Gast (O'Reilly, 2013) — excellent for WiFi 5. <em>802.11ax: A Survival Guide</em> by Kerry Gousheh (self-published, 2020) for WiFi 6. IEEE 802.11 working group documents at ieee802.org/11.</li>
+<li><strong>UWB:</strong> <em>Ultra-Wideband Communications: Fundamentals and Applications</em> by Faranak Nekoogar (Prentice Hall, 2005). IEEE 802.15.4z for the current standard.</li>
+<li><strong>LPWAN:</strong> <em>LPWAN Technologies for IoT and M2M Applications</em> by Bharat Chaudhari and Marco Zennaro (Academic Press, 2020). LoRa Alliance specs at lora-alliance.org.</li>
+<li><strong>5G:</strong> <em>5G NR: The Next Generation Wireless Access Technology</em> by Dahlman, Parkvall &amp; Sköld (Academic Press, 2020) — the definitive PHY reference. <em>5G Core Networks</em> by Rommer et al. (Academic Press, 2019) for the 5G core. <em>5G Mobile and Wireless Communications Technology</em> by Osseiran, Monserrat &amp; Marsch (Cambridge, 2016) — the METIS/5G-PPP view.</li>
+<li><strong>IoT:</strong> <em>Internet of Things: A Hands-On Approach</em> by Bahga and Madisetti (2014). <em>Designing the Internet of Things</em> by McEwen and Cassimally (Wiley, 2014).</li>
+<li><strong>3GPP specs:</strong> TS 23.501 (5G system architecture), TS 38.300 (NR overall description), TS 23.888 (MTC), TS 36.300 (LTE).</li>
+<li><strong>ITU-T Y.2001</strong> — the original NGN definition.</li>
+<li><strong>Standards bodies:</strong> IEEE 802.11, 802.15.1 (Bluetooth), 802.15.4 (ZigBee), 802.15.4z (UWB), 3GPP.</li>
+</ul>
+<hr />
+<h2 id="suggested-tutorial-problems">Suggested tutorial problems<a class="headerlink" href="#suggested-tutorial-problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>BLE battery life.</strong> A BLE beacon transmits every 1 s at 10 mA for 1 ms. Sleep current 5 μA. Battery 250 mAh (CR2032). Compute battery life. Then recompute if advertising interval is 10 s. What's the trade-off?</p>
+</li>
+<li>
+<p><strong>ZigBee routing.</strong> Design a ZigBee mesh for a 200 m × 200 m factory. Nodes every 20 m, coverage 25 m. How many routers? How many hops from corner to corner? What's the approximate latency?</p>
+</li>
+<li>
+<p><strong>WiFi deployment.</strong> An airport terminal has 10,000 m², 5000 concurrent users. Design a WiFi 6E deployment. How many APs? What channel plan? What's per-user peak rate?</p>
+</li>
+<li>
+<p><strong>UWB precision.</strong> UWB with 1.5 GHz bandwidth. Compute range resolution. If timing error is 200 ps, what's the distance error? Is it enough for AirTag-style object finding?</p>
+</li>
+<li>
+<p><strong>LoRa trade-off.</strong> Sensor transmits 10 bytes. Compute airtime for SF7, SF10, SF12. Which SF maximizes battery life for a 1 km deployment?</p>
+</li>
+<li>
+<p><strong>NB-IoT coverage.</strong> NB-IoT with 20 dB coverage extension vs. LTE. LTE covers 2 km per cell. What's the NB-IoT range with the same path-loss model? Is this realistic?</p>
+</li>
+<li>
+<p><strong>5G peak rate.</strong> 5G NR in mmWave, 400 MHz bandwidth, 64-QAM, 8-layer MIMO, rate-3/4 coding. Compute peak rate. Then compute with 256-QAM (5G NR's maximum).</p>
+</li>
+<li>
+<p><strong>Network slicing.</strong> A hospital needs: 1000 IoT sensors, 50 video streams (20 Mbps each), 10 robotic surgery links (1 ms latency). Design three slices. Estimate resources for each.</p>
+</li>
+<li>
+<p><strong>Edge computing latency.</strong> An AR application needs 10 ms end-to-end. UE air interface = 1 ms, edge compute = 2 ms, application = 3 ms. Can you meet the budget? What if you use centralized cloud (20 ms network RTT)?</p>
+</li>
+<li>
+<p><strong>Connectivity choice.</strong> Compare LoRa, NB-IoT, and 5G RedCap for: (a) water meter reading, (b) warehouse asset tracking, (c) agricultural soil moisture, (d) vehicle telemetry. Justify each choice.</p>
+</li>
+<li>
+<p><strong>WiFi 7 Multi-Link.</strong> A WiFi 7 AP supports 2.4 GHz (40 MHz), 5 GHz (160 MHz), 6 GHz (320 MHz) MLO. Compute total peak rate assuming 4×4 MIMO, 4096-QAM. Is this 46 Gbps?</p>
+</li>
+<li>
+<p><strong>5G vs. 4G for IoT.</strong> For each of the three 5G use cases (eMBB, URLLC, mMTC), compare the 5G requirements vs. LTE capability. For each, estimate how much better 5G is (factor of improvement).</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../slides/assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,4405 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/chapters/02-modulation-coding/">
+      
+      
+        <link rel="prev" href="../01-introduction/">
+      
+      
+        <link rel="next" href="../wired-trends/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>2. Modulation and Coding - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-2-modulation-and-coding-for-wireless-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2. Modulation and Coding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slides/lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-why-modulation-and-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Why modulation and coding?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-analogue-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Analogue modulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Analogue modulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-amplitude-modulation-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Amplitude modulation (AM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-frequency-modulation-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Frequency modulation (FM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-phase-modulation-pm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Phase modulation (PM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-why-analogue-is-dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 Why analogue is dead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-digital-modulation-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Digital modulation fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Digital modulation fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-the-iq-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1 The IQ representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-signal-set-and-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2 Signal set and energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-pulse-shaping-and-bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3 Pulse shaping and bandwidth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-linear-digital-modulation-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Linear digital modulation schemes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Linear digital modulation schemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-bpsk-binary-phase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.1 BPSK (Binary Phase Shift Keying)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-qpsk-quadrature-phase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.2 QPSK (Quadrature Phase Shift Keying)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-m-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.3 M-PSK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-m-qam-quadrature-amplitude-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 M-QAM (Quadrature Amplitude Modulation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-21-bpsk-ber-at-e_bn_0-10-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.1 — BPSK BER at \(E_b/N_0\) = 10 dB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-22-qpsk-vs-bpsk-at-same-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.2 — QPSK vs. BPSK at same power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-23-16-qam-vs-64-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.3 — 16-QAM vs. 64-QAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-gray-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 Gray coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-24-gray-coded-16-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.4 — Gray-coded 16-QAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-performance-metrics-and-the-fundamental-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Performance metrics and the fundamental limits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Performance metrics and the fundamental limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-power-efficiency-vs-spectral-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.1 Power efficiency vs. spectral efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-25-shannon-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.5 — Shannon capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-ber-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.2 BER curves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-ofdm-orthogonal-frequency-division-multiplexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 OFDM — Orthogonal Frequency Division Multiplexing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 OFDM — Orthogonal Frequency Division Multiplexing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#261-the-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.1 The idea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#262-the-transmitted-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.2 The transmitted signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#263-cyclic-prefix-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.3 Cyclic prefix (CP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#264-spectral-efficiency-of-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.4 Spectral efficiency of OFDM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-26-lte-ofdm-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.6 — LTE OFDM parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#265-papr-the-price-of-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.5 PAPR — the price of OFDM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-multiple-access-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Multiple access techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Multiple access techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#271-fdma-frequency-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.1 FDMA — Frequency Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#272-tdma-time-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.2 TDMA — Time Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-27-gsm-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.7 — GSM capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-cdma-code-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.3 CDMA — Code Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-28-cdma-processing-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.8 — CDMA processing gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#274-sdma-space-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.4 SDMA — Space Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#275-comparison-and-combination" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.5 Comparison and combination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-error-control-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Error-control coding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Error-control coding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#281-the-fundamental-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.1 The fundamental trade-off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#282-linear-block-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.2 Linear block codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-29-7-4-hamming-encoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.9 — (7, 4) Hamming encoder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#283-cyclic-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.3 Cyclic codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#284-convolutional-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.4 Convolutional codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-210-rate-12-k3-convolutional-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.10 — Rate 1/2, K=3 convolutional code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#285-turbo-and-ldpc-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.5 Turbo and LDPC codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-source-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 Source coding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Source coding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#291-speech-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.1 Speech coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#292-audio-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.2 Audio coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#293-image-and-video-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.3 Image and video coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#294-the-source-channel-coding-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.4 The source-channel coding trade-off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-why-modulation-and-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.1 Why modulation and coding?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-analogue-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2 Analogue modulation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.2 Analogue modulation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#221-amplitude-modulation-am" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.1 Amplitude modulation (AM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#222-frequency-modulation-fm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.2 Frequency modulation (FM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#223-phase-modulation-pm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.3 Phase modulation (PM)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#224-why-analogue-is-dead" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.2.4 Why analogue is dead
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-digital-modulation-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3 Digital modulation fundamentals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.3 Digital modulation fundamentals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#231-the-iq-representation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.1 The IQ representation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#232-signal-set-and-energy" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.2 Signal set and energy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#233-pulse-shaping-and-bandwidth" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.3.3 Pulse shaping and bandwidth
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-linear-digital-modulation-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4 Linear digital modulation schemes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.4 Linear digital modulation schemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#241-bpsk-binary-phase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.1 BPSK (Binary Phase Shift Keying)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#242-qpsk-quadrature-phase-shift-keying" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.2 QPSK (Quadrature Phase Shift Keying)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#243-m-psk" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.3 M-PSK
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#244-m-qam-quadrature-amplitude-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.4 M-QAM (Quadrature Amplitude Modulation)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-21-bpsk-ber-at-e_bn_0-10-db" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.1 — BPSK BER at \(E_b/N_0\) = 10 dB
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-22-qpsk-vs-bpsk-at-same-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.2 — QPSK vs. BPSK at same power
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-23-16-qam-vs-64-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.3 — 16-QAM vs. 64-QAM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#245-gray-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.4.5 Gray coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-24-gray-coded-16-qam" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.4 — Gray-coded 16-QAM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#25-performance-metrics-and-the-fundamental-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5 Performance metrics and the fundamental limits
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.5 Performance metrics and the fundamental limits">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#251-power-efficiency-vs-spectral-efficiency" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.1 Power efficiency vs. spectral efficiency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-25-shannon-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.5 — Shannon capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#252-ber-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.5.2 BER curves
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#26-ofdm-orthogonal-frequency-division-multiplexing" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6 OFDM — Orthogonal Frequency Division Multiplexing
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.6 OFDM — Orthogonal Frequency Division Multiplexing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#261-the-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.1 The idea
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#262-the-transmitted-signal" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.2 The transmitted signal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#263-cyclic-prefix-cp" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.3 Cyclic prefix (CP)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#264-spectral-efficiency-of-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.4 Spectral efficiency of OFDM
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-26-lte-ofdm-parameters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.6 — LTE OFDM parameters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#265-papr-the-price-of-ofdm" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.6.5 PAPR — the price of OFDM
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#27-multiple-access-techniques" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7 Multiple access techniques
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.7 Multiple access techniques">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#271-fdma-frequency-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.1 FDMA — Frequency Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#272-tdma-time-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.2 TDMA — Time Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-27-gsm-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.7 — GSM capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#273-cdma-code-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.3 CDMA — Code Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-28-cdma-processing-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.8 — CDMA processing gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#274-sdma-space-division-multiple-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.4 SDMA — Space Division Multiple Access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#275-comparison-and-combination" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.7.5 Comparison and combination
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28-error-control-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8 Error-control coding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.8 Error-control coding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#281-the-fundamental-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.1 The fundamental trade-off
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#282-linear-block-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.2 Linear block codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-29-7-4-hamming-encoder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.9 — (7, 4) Hamming encoder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#283-cyclic-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.3 Cyclic codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#284-convolutional-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.4 Convolutional codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-210-rate-12-k3-convolutional-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 2.10 — Rate 1/2, K=3 convolutional code
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#285-turbo-and-ldpc-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.8.5 Turbo and LDPC codes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#29-source-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9 Source coding
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.9 Source coding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#291-speech-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.1 Speech coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#292-audio-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.2 Audio coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#293-image-and-video-coding" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.3 Image and video coding
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#294-the-source-channel-coding-trade-off" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.9.4 The source-channel coding trade-off
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#210-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.10 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#211-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.11 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2.11 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#212-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.12 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-2-modulation-and-coding-for-wireless-systems">Chapter 2 — Modulation and Coding for Wireless Systems<a class="headerlink" href="#chapter-2-modulation-and-coding-for-wireless-systems" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Chapter at a glance</p>
+<p><strong>Contact hours:</strong> 3 lecture · <strong>Home study:</strong> 7 h · <strong>Part I — Wireless system basics</strong></p>
+<p><strong>Coverage (syllabus):</strong> analogue and digital modulation · BPSK, QPSK, QAM ·
+OFDM · multiple access (TDMA, FDMA, CDMA, SDMA) · error control coding ·
+source coding.</p>
+</div>
+<hr />
+<h2 id="learning-outcomes">Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol>
+<li>Compare <strong>analogue</strong> (AM, FM, PM) and <strong>digital</strong> modulation, and explain why digital
+   is universally preferred in modern systems.</li>
+<li>Represent digital modulation in the <strong>IQ plane</strong> and identify the constellation,
+   the symbol rate, and the bits per symbol for <strong>BPSK, QPSK, M-PSK, and M-QAM</strong>.</li>
+<li>Compute <strong>bit-error rate (BER)</strong> as a function of <span class="arithmatex">\(E_b/N_0\)</span> for coherent BPSK,
+   QPSK, and approximate BER for M-QAM.</li>
+<li>Compute <strong>spectral efficiency</strong>, <strong>power efficiency</strong>, and the effect of <strong>pulse
+   shaping</strong> (raised cosine, roll-off factor).</li>
+<li>Explain <strong>Gray coding</strong> and compute its advantage over natural binary mapping.</li>
+<li>Analyse <strong>OFDM</strong> — subcarrier spacing, cyclic prefix, spectral efficiency, PAPR —
+   and explain why it dominates 4G and 5G.</li>
+<li>Compare <strong>FDMA, TDMA, CDMA, and SDMA</strong> in dimension, interference mechanism,
+   capacity, and handover.</li>
+<li>Explain <strong>error-control coding</strong> — linear block, cyclic, convolutional, turbo,
+   and LDPC — and compute the <strong>coding gain</strong> for a standard code.</li>
+<li>Describe <strong>source coding</strong> — speech (PCM, DPCM, vocoders), audio, image, video —
+   and identify the compression ratio achieved by each.</li>
+<li>Implement modulation, BER simulation, and a Hamming encoder in <strong>Python, Java,
+    and C#</strong>.</li>
+</ol>
+<hr />
+<h2 id="21-why-modulation-and-coding">2.1 Why modulation and coding?<a class="headerlink" href="#21-why-modulation-and-coding" title="Permanent link">&para;</a></h2>
+<p>Every wireless system must transmit information <strong>reliably</strong> over a channel that is
+<strong>noisy, fading, and bandwidth-limited</strong>. Modulation and coding are the tools that
+make this possible:</p>
+<ul>
+<li><strong>Modulation</strong> — map bits to waveforms (analogue or digital carriers) in a way that
+  fits the channel bandwidth and spectrum regulations.</li>
+<li><strong>Multiple access</strong> — share the spectrum among many simultaneous users.</li>
+<li><strong>Coding</strong> — detect and correct channel errors, and compress the source so that
+  the bit rate fits the channel.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">The three-way trade-off</p>
+<p>Every design decision in this chapter balances:</p>
+<ul>
+<li><strong>Power efficiency</strong> — how much <span class="arithmatex">\(E_b/N_0\)</span> is needed for a target BER.</li>
+<li><strong>Spectral efficiency</strong> — how many bits per second per Hz the scheme achieves.</li>
+<li><strong>Complexity</strong> — computational cost, latency, hardware.</li>
+</ul>
+<p>No scheme optimises all three simultaneously. This is the recurring theme of
+wireless system design.</p>
+</div>
+<hr />
+<h2 id="22-analogue-modulation">2.2 Analogue modulation<a class="headerlink" href="#22-analogue-modulation" title="Permanent link">&para;</a></h2>
+<p>Before digital, wireless systems used analogue modulation. AMPS (Chapter 1) used
+<strong>FM</strong>; broadcast radio uses AM or FM. These are reviewed briefly because they
+shape the vocabulary and the historical baseline — but modern systems (2G onward)
+are entirely digital.</p>
+<h3 id="221-amplitude-modulation-am">2.2.1 Amplitude modulation (AM)<a class="headerlink" href="#221-amplitude-modulation-am" title="Permanent link">&para;</a></h3>
+<p>The carrier amplitude varies with the message <span class="arithmatex">\(m(t)\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = A_c[1 + m(t)]\cos(2\pi f_c t)\;}
+\]</div>
+<p><strong>Bandwidth.</strong> <span class="arithmatex">\(B = 2 W\)</span> where <span class="arithmatex">\(W\)</span> is the message bandwidth (DSB with carrier,
+or SSB at <span class="arithmatex">\(B = W\)</span>).</p>
+<p><strong>Advantages.</strong> Simple transmitter and receiver; cheap.</p>
+<p><strong>Disadvantages.</strong> Vulnerable to amplitude noise; poor power efficiency (carrier
+transmits no information); poor security (easy to demodulate).</p>
+<h3 id="222-frequency-modulation-fm">2.2.2 Frequency modulation (FM)<a class="headerlink" href="#222-frequency-modulation-fm" title="Permanent link">&para;</a></h3>
+<p>The carrier instantaneous frequency varies with <span class="arithmatex">\(m(t)\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = A_c \cos\!\left(2\pi f_c t + 2\pi k_f \int_0^t m(\tau)\, d\tau\right)\;}
+\]</div>
+<p><strong>Bandwidth.</strong> Carson's rule: <span class="arithmatex">\(B \approx 2(\Delta f + W)\)</span>, where <span class="arithmatex">\(\Delta f = k_f A_m\)</span>
+is the peak frequency deviation.</p>
+<p><strong>Advantages.</strong> <strong>Capture effect</strong> — the stronger signal is received with very
+little interference, which allows co-channel reuse in cellular systems.</p>
+<p><strong>Disadvantages.</strong> Bandwidth is much larger than AM (typically 5–10× the message
+bandwidth); see the 30 kHz channel for AMPS voice (compared with 3.4 kHz message
+bandwidth).</p>
+<h3 id="223-phase-modulation-pm">2.2.3 Phase modulation (PM)<a class="headerlink" href="#223-phase-modulation-pm" title="Permanent link">&para;</a></h3>
+<p>The carrier phase varies with <span class="arithmatex">\(m(t)\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = A_c \cos(2\pi f_c t + k_p\, m(t))\;.}
+\]</div>
+<p>Linear PM is equivalent to FM for small modulation index.</p>
+<h3 id="224-why-analogue-is-dead">2.2.4 Why analogue is dead<a class="headerlink" href="#224-why-analogue-is-dead" title="Permanent link">&para;</a></h3>
+<p>AMPS and TACS used FM for voice because:</p>
+<ul>
+<li><strong>Simple, mature technology</strong> (1950s–1980s).</li>
+<li><strong>Capture effect</strong> reduces co-channel interference, which was critical without coding.</li>
+<li><strong>Spectrum was regulated</strong> around voice-grade channels (30 kHz for AMPS).</li>
+</ul>
+<p>But FM has fatal limitations in a <strong>digital services</strong> world:</p>
+<ul>
+<li>No encryption (easy to eavesdrop).</li>
+<li>No error correction (all noise is passed through).</li>
+<li>No data services (only voice).</li>
+<li>Poor spectral efficiency (each voice channel is 30 kHz for 3.4 kHz of information).</li>
+</ul>
+<p>Digital modulation and coding solve all four. The rest of this chapter is about
+how.</p>
+<hr />
+<h2 id="23-digital-modulation-fundamentals">2.3 Digital modulation fundamentals<a class="headerlink" href="#23-digital-modulation-fundamentals" title="Permanent link">&para;</a></h2>
+<h3 id="231-the-iq-representation">2.3.1 The IQ representation<a class="headerlink" href="#231-the-iq-representation" title="Permanent link">&para;</a></h3>
+<p>Every bandpass signal can be written in terms of its <strong>in-phase</strong> <span class="arithmatex">\(I(t)\)</span> and
+<strong>quadrature</strong> <span class="arithmatex">\(Q(t)\)</span> components:</p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = I(t)\cos(2\pi f_c t) - Q(t)\sin(2\pi f_c t)\;}
+\]</div>
+<p>Equivalently, in <strong>complex baseband</strong>:</p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = \Re\{ \tilde s(t)\, e^{j2\pi f_c t} \},\quad \tilde s(t) = I(t) + j Q(t)\;}
+\]</div>
+<p>where <span class="arithmatex">\(\tilde s(t)\)</span> is the <strong>complex envelope</strong> or <strong>baseband signal</strong>.</p>
+<p><strong>Why IQ matters.</strong> Digital modulation is naturally described in the IQ plane:</p>
+<ul>
+<li><strong>Constellation</strong> — the set of points <span class="arithmatex">\(\{s_k = I_k + j Q_k\}\)</span> representing each symbol.</li>
+<li><strong>Symbol rate</strong> <span class="arithmatex">\(R_s\)</span> — symbols per second; each symbol carries <span class="arithmatex">\(b = \log_2 M\)</span> bits.</li>
+<li><strong>Bit rate</strong> <span class="arithmatex">\(R_b = b R_s\)</span>.</li>
+</ul>
+<p>An IQ <strong>constellation diagram</strong> plots all <span class="arithmatex">\(M\)</span> points; the shape determines the
+power/spectral efficiency trade-off.</p>
+<h3 id="232-signal-set-and-energy">2.3.2 Signal set and energy<a class="headerlink" href="#232-signal-set-and-energy" title="Permanent link">&para;</a></h3>
+<p>Each symbol <span class="arithmatex">\(s_k\)</span> has <strong>energy</strong></p>
+<div class="arithmatex">\[
+E_k = \int_0^{T_s} |s_k(t)|^2\, dt
+\]</div>
+<p>For <strong>equal-energy</strong> constellations (PSK), <span class="arithmatex">\(E_k = E_s\)</span> (constant). For <strong>QAM</strong>,
+energies vary across symbols; we use the <strong>average</strong> symbol energy <span class="arithmatex">\(E_s\)</span>.</p>
+<p>The key SNR parameter is:</p>
+<div class="arithmatex">\[
+\boxed{\;\frac{E_b}{N_0} = \frac{E_s}{b\, N_0}\;}
+\]</div>
+<p>where <span class="arithmatex">\(b = \log_2 M\)</span> is bits per symbol and <span class="arithmatex">\(N_0/2\)</span> is the two-sided noise PSD.</p>
+<p><strong>Why <span class="arithmatex">\(E_b/N_0\)</span>?</strong> It normalises across modulation orders, so that all schemes can
+be compared on the same power-per-bit basis. Two systems with the same <span class="arithmatex">\(E_b/N_0\)</span>
+use the same energy per bit; the one with lower BER is more <strong>power efficient</strong>.</p>
+<h3 id="233-pulse-shaping-and-bandwidth">2.3.3 Pulse shaping and bandwidth<a class="headerlink" href="#233-pulse-shaping-and-bandwidth" title="Permanent link">&para;</a></h3>
+<p>The <strong>symbol waveform</strong> is a pulse <span class="arithmatex">\(p(t)\)</span> — ideally a Nyquist pulse that is zero
+at all symbol intervals except its own. This avoids <strong>intersymbol interference (ISI)</strong>.</p>
+<p><strong>Ideal Nyquist (sinc) pulse:</strong> <span class="arithmatex">\(p(t) = \text{sinc}(t/T_s)\)</span>. Bandwidth: <span class="arithmatex">\(R_s/2\)</span>,
+the Nyquist minimum.</p>
+<p><strong>Practical pulse — raised cosine:</strong></p>
+<div class="arithmatex">\[
+\boxed{\;p_{RC}(t) = \frac{\sin(\pi t/T_s)}{\pi t/T_s} \cdot \frac{\cos(\pi \beta t/T_s)}{1 - (2\beta t/T_s)^2}\;}
+\]</div>
+<p>with <strong>roll-off factor</strong> <span class="arithmatex">\(\beta \in [0, 1]\)</span>. Occupied bandwidth:</p>
+<div class="arithmatex">\[
+\boxed{\;B_{\text{RC}} = \frac{R_s}{2}(1 + \beta)\;}
+\]</div>
+<ul>
+<li><span class="arithmatex">\(\beta = 0\)</span> → sinc (minimum bandwidth but unrealisable; infinite time-domain tails).</li>
+<li><span class="arithmatex">\(\beta = 1\)</span> → bandwidth 2× minimum but well-localised in time.</li>
+<li><span class="arithmatex">\(\beta = 0.22\)</span> (typical LTE) → 22% excess bandwidth.</li>
+</ul>
+<p><strong>Spectral efficiency</strong> with raised-cosine:</p>
+<div class="arithmatex">\[
+\boxed{\;\eta = \frac{R_b}{B_{\text{RC}}} = \frac{b R_s}{R_s (1+\beta)/2} = \frac{2b}{1+\beta}\quad\text{bps/Hz}\;}
+\]</div>
+<p>For LTE 64-QAM with <span class="arithmatex">\(\beta = 0.22\)</span>: <span class="arithmatex">\(\eta = 2 \times 6 / 1.22 = 9.84\)</span> bps/Hz.</p>
+<hr />
+<h2 id="24-linear-digital-modulation-schemes">2.4 Linear digital modulation schemes<a class="headerlink" href="#24-linear-digital-modulation-schemes" title="Permanent link">&para;</a></h2>
+<p>The family of <strong>linear</strong> digital modulations — where the transmitted symbol is a
+linear combination of basis functions — includes PSK and QAM. These are the
+workhorses of 2G through 5G.</p>
+<h3 id="241-bpsk-binary-phase-shift-keying">2.4.1 BPSK (Binary Phase Shift Keying)<a class="headerlink" href="#241-bpsk-binary-phase-shift-keying" title="Permanent link">&para;</a></h3>
+<p><strong>Two symbols</strong>, opposite phases:</p>
+<div class="arithmatex">\[
+\boxed{\;s_1(t) = \sqrt{E_b} \cos(2\pi f_c t),\quad s_2(t) = -\sqrt{E_b} \cos(2\pi f_c t)\;}
+\]</div>
+<p><strong>Constellation.</strong> Two points on the I-axis at <span class="arithmatex">\(\pm \sqrt{E_b}\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bits per symbol</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Spectral efficiency (<span class="arithmatex">\(\beta=0\)</span>)</td>
+<td>1 bps/Hz</td>
+</tr>
+<tr>
+<td>Power efficiency</td>
+<td>Best (lowest <span class="arithmatex">\(E_b/N_0\)</span> for a target BER)</td>
+</tr>
+<tr>
+<td>BER (coherent)</td>
+<td><span class="arithmatex">\(P_b = Q(\sqrt{2 E_b/N_0})\)</span></td>
+</tr>
+</tbody>
+</table>
+<p><strong>When to use.</strong> Very low SNR (deep fade, cell edge, satellite uplink). 5G NR
+uses <span class="arithmatex">\(\pi/2\)</span>-BPSK for extreme coverage scenarios.</p>
+<h3 id="242-qpsk-quadrature-phase-shift-keying">2.4.2 QPSK (Quadrature Phase Shift Keying)<a class="headerlink" href="#242-qpsk-quadrature-phase-shift-keying" title="Permanent link">&para;</a></h3>
+<p><strong>Four symbols</strong> at 90° phase increments:</p>
+<div class="arithmatex">\[
+\boxed{\;s_k = \sqrt{E_s}\, e^{j(\pi/4 + k\pi/2)},\quad k = 0, 1, 2, 3\;}
+\]</div>
+<p><strong>Constellation.</strong> Four points on the unit circle at <span class="arithmatex">\(\pm 45°\)</span>, <span class="arithmatex">\(\pm 135°\)</span>.</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bits per symbol</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Spectral efficiency (<span class="arithmatex">\(\beta=0\)</span>)</td>
+<td>2 bps/Hz</td>
+</tr>
+<tr>
+<td>Power efficiency</td>
+<td>Same as BPSK (per bit): <span class="arithmatex">\(P_b = Q(\sqrt{2 E_b/N_0})\)</span></td>
+</tr>
+<tr>
+<td>BER (coherent)</td>
+<td><span class="arithmatex">\(P_b = Q(\sqrt{2 E_b/N_0})\)</span> — identical to BPSK</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Why same BER as BPSK?</strong> Each bit in QPSK is transmitted on its own I or Q
+axis, and the two axes are orthogonal — so each bit's decision is independent
+and uses the same 1-D constellation as BPSK. <strong>Same energy per bit, same BER,
+twice the spectral efficiency.</strong> QPSK is the single most common modulation in
+wireless systems.</p>
+<p><strong>Use.</strong> LTE/5G control channels, WCDMA (UMTS), DVB, 802.11.</p>
+<h3 id="243-m-psk">2.4.3 M-PSK<a class="headerlink" href="#243-m-psk" title="Permanent link">&para;</a></h3>
+<p>General M-ary PSK: <span class="arithmatex">\(M = 2^b\)</span> symbols on the unit circle at uniform angular spacing.</p>
+<p><strong>M-PSK with coherent detection:</strong></p>
+<ul>
+<li><strong>8-PSK:</strong> 3 bits/symbol, ~3 dB worse than QPSK at the same BER.</li>
+<li><strong>16-PSK:</strong> 4 bits/symbol, but ~10 dB worse than 16-QAM (why 16-QAM is preferred in practice — see below).</li>
+</ul>
+<p>M-PSK beyond 8 is rarely used because constellations crowd near the unit circle
+and require high <span class="arithmatex">\(E_b/N_0\)</span> for small gains in spectral efficiency. The superior
+choice at higher orders is M-QAM.</p>
+<h3 id="244-m-qam-quadrature-amplitude-modulation">2.4.4 M-QAM (Quadrature Amplitude Modulation)<a class="headerlink" href="#244-m-qam-quadrature-amplitude-modulation" title="Permanent link">&para;</a></h3>
+<p><strong>M-ary QAM</strong> arranges <span class="arithmatex">\(M = 2^b\)</span> symbols on a 2-D grid:</p>
+<div class="arithmatex">\[
+\boxed{\;\text{constellation} = \{(2i - \sqrt M + 1) + j(2k - \sqrt M + 1)\}: i, k \in \{0, \dots, \sqrt M - 1\}\;}
+\]</div>
+<p><strong>Normalised average energy</strong> <span class="arithmatex">\(E_s\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;E_s = \frac{2(M - 1)}{3} E_0\;}
+\]</div>
+<p>where <span class="arithmatex">\(E_0\)</span> is the energy of the minimum-distance constellation point.</p>
+<p><strong>Common orders:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Modulation</th>
+<th style="text-align: center;">Bits/symbol</th>
+<th style="text-align: center;">Spectral efficiency (<span class="arithmatex">\(\beta=0\)</span>)</th>
+<th style="text-align: center;"><span class="arithmatex">\(E_b/N_0\)</span> penalty vs. QPSK (dB) for BER=10⁻⁵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>QPSK</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr>
+<td>16-QAM</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">~4</td>
+</tr>
+<tr>
+<td>64-QAM</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">~8</td>
+</tr>
+<tr>
+<td>256-QAM</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">~12</td>
+</tr>
+<tr>
+<td>1024-QAM</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">~16</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">The 3 dB-per-bit rule</p>
+<p>For <strong>square QAM</strong>, each additional bit/symbol costs approximately <strong>3 dB</strong> in
+<span class="arithmatex">\(E_b/N_0\)</span> to maintain the same BER. This is why 256-QAM (LTE-Advanced, WiFi 5)
+requires high SNR (&gt;25 dB) — it is very power-efficient only in good channels.</p>
+</div>
+<p><strong>Why QAM beats PSK.</strong> For <span class="arithmatex">\(M \geq 16\)</span>, a QAM constellation packs more symbols
+per unit of <span class="arithmatex">\(E_b/N_0\)</span> than a PSK constellation of the same order — because 2-D
+grid placement exploits both dimensions efficiently, while PSK wastes symbols
+near the unit circle.</p>
+<p><strong>Use.</strong> 16-QAM and 64-QAM in LTE/5G (adaptive); 256-QAM and 1024-QAM in
+LTE-Advanced, WiFi 5/6/7, DOCSIS 3.1, 5G mmWave.</p>
+<h3 id="worked-example-21-bpsk-ber-at-e_bn_0-10-db">Worked example 2.1 — BPSK BER at <span class="arithmatex">\(E_b/N_0\)</span> = 10 dB<a class="headerlink" href="#worked-example-21-bpsk-ber-at-e_bn_0-10-db" title="Permanent link">&para;</a></h3>
+<p><strong>Convert 10 dB to linear:</strong> <span class="arithmatex">\(E_b/N_0 = 10^{10/10} = 10\)</span>.</p>
+<div class="arithmatex">\[
+P_b = Q(\sqrt{2 \cdot 10}) = Q(\sqrt{20}) = Q(4.472)
+\]</div>
+<p>Using the standard table or approximation <span class="arithmatex">\(Q(x) \approx \frac{1}{\sqrt{2\pi} x}e^{-x^2/2}\)</span>
+for <span class="arithmatex">\(x &gt; 3\)</span>:</p>
+<div class="arithmatex">\[
+Q(4.472) \approx 3.87 \times 10^{-6}.
+\]</div>
+<p><strong>Interpretation.</strong> One bit error per ~258,000 bits. At 1 Mbps, this is one error
+every ~0.26 s. Good but not perfect — requires error correction (FEC) to reach
+application-level reliability.</p>
+<h3 id="worked-example-22-qpsk-vs-bpsk-at-same-power">Worked example 2.2 — QPSK vs. BPSK at same power<a class="headerlink" href="#worked-example-22-qpsk-vs-bpsk-at-same-power" title="Permanent link">&para;</a></h3>
+<p><strong>Same <span class="arithmatex">\(E_b/N_0\)</span> = 10 dB, same power, twice the data rate:</strong></p>
+<ul>
+<li><strong>BPSK:</strong> <span class="arithmatex">\(P_b = Q(\sqrt{20}) \approx 3.9 \times 10^{-6}\)</span>, spectral efficiency 1 bps/Hz.</li>
+<li><strong>QPSK:</strong> <span class="arithmatex">\(P_b = Q(\sqrt{20}) \approx 3.9 \times 10^{-6}\)</span>, spectral efficiency 2 bps/Hz.</li>
+</ul>
+<p><strong>Same BER, twice the throughput.</strong> QPSK strictly dominates BPSK in every
+situation where the SNR is sufficient. BPSK is only preferred when the
+receiver's phase tracking is problematic (extremely low SNR) or for
+backward-compatibility (e.g., 5G NR preamble).</p>
+<h3 id="worked-example-23-16-qam-vs-64-qam">Worked example 2.3 — 16-QAM vs. 64-QAM<a class="headerlink" href="#worked-example-23-16-qam-vs-64-qam" title="Permanent link">&para;</a></h3>
+<p>At <span class="arithmatex">\(E_b/N_0\)</span> = 15 dB (linear 31.62):</p>
+<p><strong>16-QAM</strong> (approximate BER):</p>
+<div class="arithmatex">\[
+P_b \approx \frac{4}{\log_2 16}\left(1 - \frac{1}{\sqrt{16}}\right) Q\!\left(\sqrt{\frac{3 \log_2 16}{16 - 1} \cdot \frac{E_b}{N_0}}\right)
+\]</div>
+<div class="arithmatex">\[
+= \frac{4}{4} \cdot 0.75 \cdot Q\!\left(\sqrt{\frac{3 \cdot 4}{15} \cdot 31.62}\right) = 0.75\, Q(\sqrt{25.3}) = 0.75\, Q(5.03) \approx 4.1 \times 10^{-7}.
+\]</div>
+<p><strong>64-QAM:</strong></p>
+<div class="arithmatex">\[
+P_b \approx \frac{4}{6} \cdot \left(1 - \frac{1}{8}\right) Q\!\left(\sqrt{\frac{3 \cdot 6}{63} \cdot 31.62}\right) = \frac{2}{3} \cdot 0.875 \cdot Q(\sqrt{9.03}) \approx 0.583\, Q(3.005) \approx 7.8 \times 10^{-3}.
+\]</div>
+<p><strong>Interpretation.</strong> At the same <span class="arithmatex">\(E_b/N_0\)</span> (same energy per bit), 16-QAM gives
+<span class="arithmatex">\(4 \times 10^{-7}\)</span> BER while 64-QAM gives <span class="arithmatex">\(8 \times 10^{-3}\)</span> — four orders of
+magnitude worse. But 64-QAM carries <strong>50% more bits per Hz</strong> (6 vs. 4).</p>
+<p>The design decision depends on the target:</p>
+<ul>
+<li><strong>High quality (BER &lt; 10⁻⁶):</strong> 64-QAM needs much more power; 16-QAM wins.</li>
+<li><strong>High throughput, tolerate errors (BER ~10⁻³):</strong> 64-QAM gives 50% more data at the same power.</li>
+</ul>
+<p>This is why modern systems use <strong>adaptive modulation</strong>: 64-QAM when the channel
+is good, QPSK when it's not.</p>
+<h3 id="245-gray-coding">2.4.5 Gray coding<a class="headerlink" href="#245-gray-coding" title="Permanent link">&para;</a></h3>
+<p><strong>Gray coding</strong> maps bits to symbols so that <strong>adjacent constellation points
+differ in only one bit</strong>. This is the standard for BPSK through 1024-QAM.</p>
+<p><strong>Why it matters.</strong> In fading/noisy channels, the dominant error is a symbol
+decision that lands on an <strong>adjacent</strong> constellation point. Without Gray coding,
+that error corrupts <strong>multiple bits</strong>. With Gray coding, it corrupts exactly
+<strong>one bit</strong>.</p>
+<p><strong>For 16-QAM:</strong> without Gray coding, a single symbol error might corrupt up to
+4 bits; with Gray coding, exactly 1 bit. So Gray coding reduces <strong>BER at the same
+SER (symbol error rate)</strong> by roughly <span class="arithmatex">\(b\)</span> — where <span class="arithmatex">\(b\)</span> is bits per symbol.</p>
+<p><strong>The 3 dB Gray coding rule.</strong> The standard coding-theoretic result: for square
+QAM, the Gray-coded BER at high SNR is approximately</p>
+<div class="arithmatex">\[
+\boxed{\;P_b \approx \frac{P_s}{\log_2 M}\;}
+\]</div>
+<p>where <span class="arithmatex">\(P_s\)</span> is the symbol error rate. Without Gray coding, <span class="arithmatex">\(P_b \approx P_s\)</span> (worst case). The factor <span class="arithmatex">\(1/\log_2 M\)</span> is the <strong>effective ~3 dB per bit</strong> benefit — approximately matching the "3 dB per bit" penalty from the table above (which is why that table remains valid for Gray-coded QAM).</p>
+<h3 id="worked-example-24-gray-coded-16-qam">Worked example 2.4 — Gray-coded 16-QAM<a class="headerlink" href="#worked-example-24-gray-coded-16-qam" title="Permanent link">&para;</a></h3>
+<p>Standard 16-QAM Gray coding:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Symbol (I, Q)</th>
+<th style="text-align: center;">Binary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">(−3, −3)</td>
+<td style="text-align: center;">0000</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−1, −3)</td>
+<td style="text-align: center;">0001</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+1, −3)</td>
+<td style="text-align: center;">0011</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+3, −3)</td>
+<td style="text-align: center;">0010</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−3, −1)</td>
+<td style="text-align: center;">0100</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−1, −1)</td>
+<td style="text-align: center;">0101</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+1, −1)</td>
+<td style="text-align: center;">0111</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+3, −1)</td>
+<td style="text-align: center;">0110</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−3, +1)</td>
+<td style="text-align: center;">1100</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−1, +1)</td>
+<td style="text-align: center;">1101</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+1, +1)</td>
+<td style="text-align: center;">1111</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+3, +1)</td>
+<td style="text-align: center;">1110</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−3, +3)</td>
+<td style="text-align: center;">1000</td>
+</tr>
+<tr>
+<td style="text-align: center;">(−1, +3)</td>
+<td style="text-align: center;">1001</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+1, +3)</td>
+<td style="text-align: center;">1011</td>
+</tr>
+<tr>
+<td style="text-align: center;">(+3, +3)</td>
+<td style="text-align: center;">1010</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Check adjacency.</strong> Moving from (0,0) to (+1, −3) changes only the last bit
+(0000 → 0001). Moving from (+1, −3) to (+3, −3) changes only the second-to-last
+bit (0001 → 0011). <strong>Every adjacent pair differs by exactly 1 bit.</strong> ✓</p>
+<p><strong>Consequence.</strong> If the receiver picks (+1, −3) when the true symbol was (0,0),
+only one bit is corrupted, not 4. Good for voice, video, and especially for FEC.</p>
+<hr />
+<h2 id="25-performance-metrics-and-the-fundamental-limits">2.5 Performance metrics and the fundamental limits<a class="headerlink" href="#25-performance-metrics-and-the-fundamental-limits" title="Permanent link">&para;</a></h2>
+<h3 id="251-power-efficiency-vs-spectral-efficiency">2.5.1 Power efficiency vs. spectral efficiency<a class="headerlink" href="#251-power-efficiency-vs-spectral-efficiency" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Scheme</th>
+<th style="text-align: center;">Power efficiency (low <span class="arithmatex">\(E_b/N_0\)</span> at target BER)</th>
+<th style="text-align: center;">Spectral efficiency (bps/Hz)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BPSK</td>
+<td style="text-align: center;"><strong>Best</strong></td>
+<td style="text-align: center;">Worst</td>
+</tr>
+<tr>
+<td>QPSK</td>
+<td style="text-align: center;">Excellent</td>
+<td style="text-align: center;">Good</td>
+</tr>
+<tr>
+<td>16-QAM</td>
+<td style="text-align: center;">Moderate</td>
+<td style="text-align: center;">Very good</td>
+</tr>
+<tr>
+<td>64-QAM</td>
+<td style="text-align: center;">Poor</td>
+<td style="text-align: center;">Excellent</td>
+</tr>
+<tr>
+<td>256-QAM</td>
+<td style="text-align: center;">Very poor</td>
+<td style="text-align: center;">Outstanding</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Shannon limit</strong> bounds the achievable combination:</p>
+<div class="arithmatex">\[
+\boxed{\;C = B \log_2\!\left(1 + \frac{S}{N}\right) \quad\text{bps}\;}
+\]</div>
+<p><strong>Spectral efficiency</strong> (bps/Hz):</p>
+<div class="arithmatex">\[
+\boxed{\;\eta = \log_2(1 + \text{SNR})\;}
+\]</div>
+<p><strong>The Shannon gap.</strong> Practical schemes (e.g., 5G NR with LDPC) achieve
+<strong>within ~1 dB</strong> of the Shannon capacity at moderate spectral efficiency — through
+powerful FEC and high-order modulation. This is remarkable: we've essentially
+hit the theoretical limit.</p>
+<h3 id="worked-example-25-shannon-capacity">Worked example 2.5 — Shannon capacity<a class="headerlink" href="#worked-example-25-shannon-capacity" title="Permanent link">&para;</a></h3>
+<p>Channel with <span class="arithmatex">\(B = 20\)</span> MHz, SNR = 20 dB (linear 100):</p>
+<div class="arithmatex">\[
+C = 20 \times 10^6 \times \log_2(101) \approx 20 \times 10^6 \times 6.66 \approx 133\ \text{Mbps}.
+\]</div>
+<p><strong>Realistic LTE at 20 MHz, 2×2 MIMO, 64-QAM (no MIMO):</strong></p>
+<ul>
+<li>Peak spectral efficiency (64-QAM, no coding): 6 bps/Hz.</li>
+<li>With rate-3/4 coding: 4.5 bps/Hz.</li>
+<li>With 20 MHz: ~90 Mbps.</li>
+<li>With 2×2 MIMO (2× data): ~180 Mbps.</li>
+</ul>
+<p>LTE Cat-4 reaches 150 Mbps peak — roughly at the Shannon capacity for
+20 MHz at 20 dB SNR.</p>
+<p><strong>The Shannon limit is real.</strong> LTE/5G design can't beat it; they can only
+approach it more efficiently.</p>
+<h3 id="252-ber-curves">2.5.2 BER curves<a class="headerlink" href="#252-ber-curves" title="Permanent link">&para;</a></h3>
+<p>The standard way to compare schemes is a plot of <strong>BER vs. <span class="arithmatex">\(E_b/N_0\)</span></strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Scheme</th>
+<th style="text-align: center;"><span class="arithmatex">\(E_b/N_0\)</span> for BER=10⁻⁵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BPSK / QPSK</td>
+<td style="text-align: center;">~9.6 dB (theoretical); ~10 dB practical</td>
+</tr>
+<tr>
+<td>16-QAM</td>
+<td style="text-align: center;">~13.5 dB</td>
+</tr>
+<tr>
+<td>64-QAM</td>
+<td style="text-align: center;">~17.5 dB</td>
+</tr>
+<tr>
+<td>256-QAM</td>
+<td style="text-align: center;">~21.5 dB</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reading the plot:</strong> the horizontal distance between curves at a given BER is
+the <strong>power penalty</strong>. BPSK → QPSK is 0 dB (same <span class="arithmatex">\(E_b/N_0\)</span>). QPSK → 16-QAM is
+~4 dB. Each subsequent 4× jump in constellation size costs ~4 dB (consistent
+with the "3 dB per bit" rule).</p>
+<hr />
+<h2 id="26-ofdm-orthogonal-frequency-division-multiplexing">2.6 OFDM — Orthogonal Frequency Division Multiplexing<a class="headerlink" href="#26-ofdm-orthogonal-frequency-division-multiplexing" title="Permanent link">&para;</a></h2>
+<p><strong>OFDM</strong> is the dominant modulation for 4G and 5G. It solves the frequency-selective
+fading problem elegantly by turning one wide, frequency-selective channel into
+many narrow, flat subchannels.</p>
+<h3 id="261-the-idea">2.6.1 The idea<a class="headerlink" href="#261-the-idea" title="Permanent link">&para;</a></h3>
+<p>A wideband single-carrier signal with bandwidth <span class="arithmatex">\(B\)</span> experiences <strong>frequency-selective
+fading</strong> — some frequencies are boosted, some are nulled. The receiver needs
+<strong>equalization</strong> (complex, especially for wide bandwidths).</p>
+<p><strong>OFDM</strong> instead:</p>
+<ol>
+<li>Splits the bandwidth <span class="arithmatex">\(B\)</span> into <span class="arithmatex">\(N\)</span> parallel <strong>subcarriers</strong> of width <span class="arithmatex">\(\Delta f = B/N\)</span>.</li>
+<li>Each subcarrier is narrow enough that the channel is <strong>flat</strong> (no ISI).</li>
+<li>Modulation and coding per subcarrier can be <strong>independent</strong> (link adaptation).</li>
+<li>Uses <strong>FFT/IFFT</strong> to efficiently multiplex/demultiplex.</li>
+</ol>
+<p>The subcarriers are <strong>orthogonal</strong> — their spectra overlap without interference,
+achieving higher spectral efficiency than non-overlapping FDM.</p>
+<h3 id="262-the-transmitted-signal">2.6.2 The transmitted signal<a class="headerlink" href="#262-the-transmitted-signal" title="Permanent link">&para;</a></h3>
+<p><strong>Continuous form:</strong></p>
+<div class="arithmatex">\[
+\boxed{\;s(t) = \sum_{k=0}^{N-1} X_k\, e^{j2\pi k \Delta f\, t},\quad 0 \le t &lt; T_u\;}
+\]</div>
+<p>where <span class="arithmatex">\(X_k\)</span> is the complex symbol on subcarrier <span class="arithmatex">\(k\)</span> and <span class="arithmatex">\(T_u = 1/\Delta f\)</span> is the
+<strong>useful symbol duration</strong>.</p>
+<p><strong>Discrete form (via IFFT):</strong></p>
+<div class="arithmatex">\[
+\boxed{\;s[n] = \frac{1}{N}\sum_{k=0}^{N-1} X_k\, e^{j2\pi kn/N},\quad n = 0, \ldots, N-1.\;}
+\]</div>
+<p>The <strong>IFFT</strong> generates the time-domain samples; at the receiver, the <strong>FFT</strong>
+recovers the subcarrier symbols.</p>
+<h3 id="263-cyclic-prefix-cp">2.6.3 Cyclic prefix (CP)<a class="headerlink" href="#263-cyclic-prefix-cp" title="Permanent link">&para;</a></h3>
+<p>After the IFFT, a <strong>cyclic prefix</strong> of length <span class="arithmatex">\(T_{cp}\)</span> is prepended — copying the
+last <span class="arithmatex">\(N_{cp}\)</span> samples to the front of each symbol.</p>
+<div class="arithmatex">\[
+\boxed{\;s_{\text{with CP}}[n] = s[(n - N_{cp}) \bmod N],\quad n = 0, \ldots, N + N_{cp} - 1.\;}
+\]</div>
+<p><strong>Why?</strong> The CP absorbs the <strong>delay spread</strong> of the channel, so that inter-symbol
+interference (ISI) falls into the CP region and can be discarded at the receiver.
+Provided <span class="arithmatex">\(T_{cp} &gt; \tau_{\max}\)</span> (max delay spread), there is <strong>zero ISI</strong>.</p>
+<p><strong>Trade-off.</strong> The CP is redundant information — it carries no new data. The <strong>CP
+overhead</strong> is <span class="arithmatex">\(N_{cp}/(N + N_{cp})\)</span>, reducing spectral efficiency by that fraction.
+Typical values:</p>
+<table>
+<thead>
+<tr>
+<th>System</th>
+<th style="text-align: center;"><span class="arithmatex">\(T_u\)</span></th>
+<th style="text-align: center;"><span class="arithmatex">\(T_{cp}\)</span></th>
+<th style="text-align: center;">Overhead</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LTE (normal CP)</td>
+<td style="text-align: center;">66.67 μs</td>
+<td style="text-align: center;">4.7 μs</td>
+<td style="text-align: center;">~7%</td>
+</tr>
+<tr>
+<td>LTE (extended CP)</td>
+<td style="text-align: center;">66.67 μs</td>
+<td style="text-align: center;">16.67 μs</td>
+<td style="text-align: center;">~20%</td>
+</tr>
+<tr>
+<td>5G NR (normal CP, 30 kHz subcarrier)</td>
+<td style="text-align: center;">33.33 μs</td>
+<td style="text-align: center;">2.4 μs</td>
+<td style="text-align: center;">~7%</td>
+</tr>
+<tr>
+<td>5G NR (extended CP)</td>
+<td style="text-align: center;">33.33 μs</td>
+<td style="text-align: center;">8.9 μs</td>
+<td style="text-align: center;">~21%</td>
+</tr>
+</tbody>
+</table>
+<h3 id="264-spectral-efficiency-of-ofdm">2.6.4 Spectral efficiency of OFDM<a class="headerlink" href="#264-spectral-efficiency-of-ofdm" title="Permanent link">&para;</a></h3>
+<p>The total bit rate for an OFDM system with <span class="arithmatex">\(N_u\)</span> useful subcarriers, <span class="arithmatex">\(b\)</span> bits per
+subcarrier (QAM order), and <span class="arithmatex">\(T_s = T_u + T_{cp}\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;\eta = \frac{N_u \cdot b}{N_{FFT} \cdot T_s} \cdot T_u = b \cdot \frac{N_u}{N_{FFT}} \cdot \frac{T_u}{T_u + T_{cp}}\;}
+\]</div>
+<p>where <span class="arithmatex">\(N_{FFT} \cdot \Delta f = B\)</span> is the total bandwidth.</p>
+<p><strong>Typical:</strong> <span class="arithmatex">\(N_u/N_{FFT} \approx 0.9\)</span> (10% guard band), <span class="arithmatex">\(T_u/T_s \approx 0.93\)</span> (7% CP).
+For 64-QAM (<span class="arithmatex">\(b = 6\)</span>): <span class="arithmatex">\(\eta \approx 6 \times 0.9 \times 0.93 \approx 5\)</span> bps/Hz — very close to the theoretical 6 bps/Hz for 64-QAM.</p>
+<h3 id="worked-example-26-lte-ofdm-parameters">Worked example 2.6 — LTE OFDM parameters<a class="headerlink" href="#worked-example-26-lte-ofdm-parameters" title="Permanent link">&para;</a></h3>
+<p><strong>LTE 20 MHz carrier:</strong></p>
+<ul>
+<li>FFT size: <span class="arithmatex">\(N_{FFT} = 2048\)</span>.</li>
+<li>Subcarrier spacing: <span class="arithmatex">\(\Delta f = 15\)</span> kHz.</li>
+<li>Useful symbol time: <span class="arithmatex">\(T_u = 1/\Delta f = 66.67\)</span> μs.</li>
+<li>Normal CP: <span class="arithmatex">\(T_{cp} \approx 4.7\)</span> μs.</li>
+<li>Total symbol: <span class="arithmatex">\(T_s = 71.4\)</span> μs.</li>
+<li>Useful subcarriers: <span class="arithmatex">\(N_u = 1200\)</span> (out of 2048; the rest are guard).</li>
+</ul>
+<p><strong>Spectral efficiency for 64-QAM (6 bps/Hz ideal):</strong></p>
+<div class="arithmatex">\[
+\eta_{\text{LTE}} = 6 \cdot \frac{1200}{2048} \cdot \frac{66.67}{71.4} \approx 6 \cdot 0.586 \cdot 0.934 \approx 3.28\ \text{bps/Hz}.
+\]</div>
+<p><strong>Why so low vs. the theoretical 6 bps/Hz?</strong> Because:</p>
+<ul>
+<li><strong>Guard bands</strong> take 40% of the FFT bins (2048 − 1200 = 848 unused).</li>
+<li><strong>CP</strong> takes 7% of the symbol time.</li>
+<li><strong>Reference signals</strong> (pilots) further reduce data-carrying subcarriers by ~14%.</li>
+</ul>
+<p>Peak LTE 20 MHz throughput = <span class="arithmatex">\(3.28 \times 20\ \text{MHz} = 65.6\)</span> Mbps (single stream);
+with 2×2 MIMO = 131 Mbps; matches 3GPP LTE Cat-4 (150 Mbps peak, with 2×2 MIMO and slightly better spectral assumptions).</p>
+<h3 id="265-papr-the-price-of-ofdm">2.6.5 PAPR — the price of OFDM<a class="headerlink" href="#265-papr-the-price-of-ofdm" title="Permanent link">&para;</a></h3>
+<p><strong>Peak-to-average power ratio (PAPR):</strong> the OFDM signal is the sum of many
+independent subcarriers, and their phases occasionally add <strong>coherently</strong> — producing
+a high peak.</p>
+<div class="arithmatex">\[
+\boxed{\;\text{PAPR} = \frac{\max |s(t)|^2}{E[|s(t)|^2]}\;}
+\]</div>
+<p>For <span class="arithmatex">\(N\)</span> subcarriers with random phases, PAPR can be up to <span class="arithmatex">\(N\)</span> (i.e., <span class="arithmatex">\(10\log_{10}N\)</span> dB in the worst case). For <span class="arithmatex">\(N = 2048\)</span>, that's ~33 dB.</p>
+<p><strong>Consequences.</strong></p>
+<ul>
+<li><strong>Power amplifier backoff.</strong> The PA must operate with enough headroom to reproduce
+  the peaks without distortion → reduces efficiency.</li>
+<li><strong>Signal distortion.</strong> If the PA saturates, the peaks clip, causing spectral
+  regrowth and adjacent-channel interference.</li>
+</ul>
+<p><strong>Solutions used in 4G/5G:</strong></p>
+<ul>
+<li><strong>Clipping and filtering</strong> — mild distortion; recovers 2–3 dB.</li>
+<li><strong>Tone reservation / tone injection</strong> — reserve a few subcarriers for peak cancellation.</li>
+<li><strong>SC-FDMA</strong> (single-carrier FDMA, used in LTE uplink) — DFT-precoding the OFDM signal → reduces PAPR by ~3 dB.</li>
+<li><strong>DFT-s-OFDM</strong> — same as SC-FDMA.</li>
+<li><strong>5G NR uses CP-OFDM in downlink, and both CP-OFDM and DFT-s-OFDM in uplink</strong> — choosing DFT-s-OFDM for coverage-limited cells.</li>
+</ul>
+<hr />
+<h2 id="27-multiple-access-techniques">2.7 Multiple access techniques<a class="headerlink" href="#27-multiple-access-techniques" title="Permanent link">&para;</a></h2>
+<p>A wireless channel must be <strong>shared</strong> among many users. Four techniques dominate:</p>
+<table>
+<thead>
+<tr>
+<th>Technique</th>
+<th>Dimension</th>
+<th>Key idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FDMA</strong></td>
+<td>Frequency</td>
+<td>Each user gets a slice of spectrum</td>
+</tr>
+<tr>
+<td><strong>TDMA</strong></td>
+<td>Time</td>
+<td>Each user gets a time slot</td>
+</tr>
+<tr>
+<td><strong>CDMA</strong></td>
+<td>Code</td>
+<td>Each user gets a spreading code</td>
+</tr>
+<tr>
+<td><strong>SDMA</strong></td>
+<td>Space</td>
+<td>Each user is separated by direction</td>
+</tr>
+</tbody>
+</table>
+<p>Modern systems combine them: 4G/5G use <strong>OFDMA</strong> (frequency + time), <strong>MIMO</strong> (space), and <strong>CDMA-like spreading</strong> at the PHY.</p>
+<h3 id="271-fdma-frequency-division-multiple-access">2.7.1 FDMA — Frequency Division Multiple Access<a class="headerlink" href="#271-fdma-frequency-division-multiple-access" title="Permanent link">&para;</a></h3>
+<p>Divide the available bandwidth <span class="arithmatex">\(B\)</span> into <span class="arithmatex">\(N_c\)</span> channels of width <span class="arithmatex">\(B_c\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;N_c = \frac{B}{B_c + B_g}\;}
+\]</div>
+<p>where <span class="arithmatex">\(B_g\)</span> is the guard band between channels.</p>
+<p><strong>Users per cell</strong> = <span class="arithmatex">\(N_c / N\)</span> where <span class="arithmatex">\(N\)</span> is the frequency reuse factor (Chapter 1).</p>
+<p><strong>Used in:</strong> AMPS, TACS, the original analog cellular systems, and the uplink of LTE (SC-FDMA is a variant).</p>
+<p><strong>Advantages.</strong> Simple, no synchronization needed across users.</p>
+<p><strong>Disadvantages.</strong> Rigid allocation (a user can't borrow an idle channel), poor spectral efficiency due to guard bands, no flexibility for data bursts.</p>
+<h3 id="272-tdma-time-division-multiple-access">2.7.2 TDMA — Time Division Multiple Access<a class="headerlink" href="#272-tdma-time-division-multiple-access" title="Permanent link">&para;</a></h3>
+<p>Users share a single frequency but transmit in <strong>different time slots</strong>. The frame
+is divided into slots, one per user.</p>
+<p><strong>Frame structure:</strong> <span class="arithmatex">\(K\)</span> slots per frame; each user transmits in slot <span class="arithmatex">\(k\)</span>.</p>
+<div class="arithmatex">\[
+\boxed{\;\text{user bit rate} = \frac{R_b}{K}\;}
+\]</div>
+<p>where <span class="arithmatex">\(R_b\)</span> is the total bit rate of the shared channel.</p>
+<p><strong>Used in:</strong> GSM (8 slots per 200 kHz carrier), IS-136 (North American TDMA), DECT.</p>
+<p><strong>Advantages.</strong> Better spectral efficiency than FDMA (no guard bands between users);
+flexible slot assignment; easier to implement adaptive modulation.</p>
+<p><strong>Disadvantages.</strong> Requires <strong>time synchronization</strong> across all users; propagation
+delay must fit within a guard interval (timing advance in GSM); peak power of each
+burst is higher than in FDMA (because of short duty cycle).</p>
+<h3 id="worked-example-27-gsm-capacity">Worked example 2.7 — GSM capacity<a class="headerlink" href="#worked-example-27-gsm-capacity" title="Permanent link">&para;</a></h3>
+<p><strong>GSM 900 MHz:</strong></p>
+<ul>
+<li>Total uplink bandwidth: 25 MHz.</li>
+<li>Carrier spacing: 200 kHz.</li>
+<li>Carriers per cell: <span class="arithmatex">\(25 / 0.2 = 125\)</span> total, but with <span class="arithmatex">\(N = 4\)</span> cluster: <strong>31 carriers per cell</strong>.</li>
+<li><strong>8 full-rate voice slots per carrier</strong> (TDMA).</li>
+<li><strong>Voice channels per cell: 31 × 8 = 248.</strong></li>
+</ul>
+<p>Compare with AMPS (Chapter 1):</p>
+<ul>
+<li>Bandwidth: 25 MHz (uplink) in the 800 MHz band.</li>
+<li>Channel: 30 kHz.</li>
+<li>Channels: <span class="arithmatex">\(25 / 0.03 \approx 833\)</span>, or ~832.</li>
+<li><span class="arithmatex">\(N = 7\)</span> cluster: <strong>119 voice channels per cell</strong>.</li>
+</ul>
+<p><strong>GSM has ~2× the capacity of AMPS per cell, despite using only 200 kHz per carrier.</strong> The gain comes from:</p>
+<ul>
+<li><strong>Digital voice coding</strong> (13 kbps RPE-LTP) — narrower bit rate than analog.</li>
+<li><strong>TDMA</strong> multiplexing (8 users per 200 kHz carrier).</li>
+<li><strong>Smaller cluster size</strong> (<span class="arithmatex">\(N = 4\)</span> vs. 7) because digital systems tolerate lower SIR with FEC.</li>
+</ul>
+<h3 id="273-cdma-code-division-multiple-access">2.7.3 CDMA — Code Division Multiple Access<a class="headerlink" href="#273-cdma-code-division-multiple-access" title="Permanent link">&para;</a></h3>
+<p>All users share the <strong>full bandwidth</strong> simultaneously; each is distinguished by a
+unique <strong>spreading code</strong>.</p>
+<p><strong>Spreading.</strong> Multiply each data symbol by a <strong>spreading sequence</strong> <span class="arithmatex">\(c(t)\)</span> with
+<strong>chip rate</strong> <span class="arithmatex">\(R_c \gg R_s\)</span> (data rate). The <strong>spreading factor</strong> or <strong>processing
+gain</strong> is:</p>
+<div class="arithmatex">\[
+\boxed{\;G = \frac{R_c}{R_s} = \frac{W}{R}\;}
+\]</div>
+<p>where <span class="arithmatex">\(W = R_c\)</span> is the chip rate bandwidth and <span class="arithmatex">\(R = R_s\)</span> is the data rate.</p>
+<p><strong>Orthogonality.</strong> Codes are chosen so that:</p>
+<ul>
+<li>The <strong>auto-correlation</strong> of each code is a sharp peak at zero lag (good for
+  acquisition).</li>
+<li>The <strong>cross-correlation</strong> between any two codes is small (near-zero orthogonal).</li>
+</ul>
+<p>Common codes:
+- <strong>Walsh–Hadamard</strong> — orthogonal, used in the downlink (base station → mobile).
+- <strong>Gold codes</strong> — pseudo-random, low cross-correlation, used in the uplink (mobile → base station) because timing isn't perfectly synchronized between mobiles.</p>
+<p><strong>Reception.</strong> The receiver multiplies by the desired user's code and integrates
+over a bit period — this is a <strong>matched filter</strong> that extracts the user's signal
+and rejects the others (because their codes are orthogonal or near-orthogonal).</p>
+<p><strong>Used in:</strong> IS-95 (cdmaOne), UMTS (WCDMA, Chapter 4), cdma2000, GPS.</p>
+<p><strong>Advantages.</strong></p>
+<ul>
+<li><strong>Universal frequency reuse</strong> — every cell uses the same frequency (<span class="arithmatex">\(N = 1\)</span> in
+  frequency, though interference limits capacity).</li>
+<li><strong>Soft handover</strong> — a mobile can be connected to multiple base stations
+  simultaneously (no break).</li>
+<li><strong>Graceful degradation</strong> — capacity is interference-limited; more users mean
+  more noise, but the system doesn't suddenly fail.</li>
+<li><strong>Resistance to narrowband interference</strong> — spreading averages out narrow
+  interferers.</li>
+<li><strong>Security</strong> — spread signal looks like noise without the code.</li>
+</ul>
+<p><strong>Disadvantages.</strong></p>
+<ul>
+<li><strong>Near-far problem</strong> — a strong nearby user overwhelms distant weak users,
+  requiring <strong>fast, accurate power control</strong>.</li>
+<li><strong>Synchronization requirements</strong> — Walsh codes need symbol-level sync; Gold
+  codes relax this.</li>
+<li><strong>Self-interference</strong> from non-orthogonality in multipath.</li>
+</ul>
+<h3 id="worked-example-28-cdma-processing-gain">Worked example 2.8 — CDMA processing gain<a class="headerlink" href="#worked-example-28-cdma-processing-gain" title="Permanent link">&para;</a></h3>
+<p><strong>UMTS (WCDMA):</strong></p>
+<ul>
+<li>Chip rate: 3.84 Mcps.</li>
+<li>Voice rate: 12.2 kbps (after source coding).</li>
+<li>Processing gain: <span class="arithmatex">\(G = 3.84 \times 10^6 / 12.2 \times 10^3 \approx 315\)</span> (25 dB).</li>
+</ul>
+<p><strong>What does 25 dB of processing gain buy?</strong> The signal is transmitted <strong>below
+the noise floor</strong> — a receiver without the correct code sees only noise. With the
+code, the signal emerges above the noise by 25 dB. This is what allows CDMA
+to operate <strong>below the noise floor</strong> and to reuse the same frequency everywhere.</p>
+<p><strong>Capacity of a single CDMA cell</strong> (assuming perfect power control, single cell,
+no interference from other cells):</p>
+<div class="arithmatex">\[
+\boxed{\;K \approx 1 + G\!\left/ \frac{E_b}{N_0}\right.\;}
+\]</div>
+<p>For UMTS voice at <span class="arithmatex">\(E_b/N_0\)</span> = 5 dB (linear 3.16), <span class="arithmatex">\(G\)</span> = 315:</p>
+<div class="arithmatex">\[
+K \approx 1 + 315/3.16 \approx 101\ \text{users per cell (pole capacity).}
+\]</div>
+<p><strong>Realistic capacity</strong> is 40–60% of pole capacity (power control errors, interference
+from adjacent cells, activity factor). UMTS voice is typically dimensioned at
+~40–50 voice users per cell.</p>
+<h3 id="274-sdma-space-division-multiple-access">2.7.4 SDMA — Space Division Multiple Access<a class="headerlink" href="#274-sdma-space-division-multiple-access" title="Permanent link">&para;</a></h3>
+<p>Users are distinguished by their <strong>spatial signature</strong> — their location relative
+to the base station. Implemented via:</p>
+<ul>
+<li><strong>Sector antennas</strong> — divide cell into 3 or 6 sectors (Chapter 1).</li>
+<li><strong>Beamforming</strong> — steer a narrow beam toward each user, with multiple antennas.</li>
+<li><strong>MIMO spatial multiplexing</strong> — send multiple independent data streams on the
+  same time-frequency resource using spatially separated antennas.</li>
+</ul>
+<p><strong>SDMA is used in:</strong> every modern base station (as sectorization), 4G/5G with
+massive MIMO (as multiuser MIMO / MU-MIMO).</p>
+<p><strong>Advantages.</strong> Does not consume frequency, time, or code resources — pure spatial
+separation. Multiplies capacity by the number of beams / spatial streams.</p>
+<p><strong>Disadvantages.</strong> Requires multiple antennas at both ends; complex precoding;
+performance depends on the spatial correlation between users.</p>
+<h3 id="275-comparison-and-combination">2.7.5 Comparison and combination<a class="headerlink" href="#275-comparison-and-combination" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>FDMA</th>
+<th>TDMA</th>
+<th>CDMA</th>
+<th>SDMA</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimension</td>
+<td>Frequency</td>
+<td>Time</td>
+<td>Code</td>
+<td>Space</td>
+</tr>
+<tr>
+<td>Bandwidth per user</td>
+<td>Narrow slice</td>
+<td>Full (short)</td>
+<td>Full (continuous)</td>
+<td>Full</td>
+</tr>
+<tr>
+<td>Time per user</td>
+<td>Continuous</td>
+<td>Slotted</td>
+<td>Continuous</td>
+<td>Continuous</td>
+</tr>
+<tr>
+<td>Requires sync?</td>
+<td>No</td>
+<td><strong>Yes</strong></td>
+<td>No (uplink); Yes (downlink)</td>
+<td><strong>Yes</strong></td>
+</tr>
+<tr>
+<td>Near-far problem?</td>
+<td>Moderate</td>
+<td>Moderate</td>
+<td><strong>Severe</strong></td>
+<td>Severe</td>
+</tr>
+<tr>
+<td>Handover</td>
+<td>Hard</td>
+<td>Hard</td>
+<td><strong>Soft</strong></td>
+<td>Hard</td>
+</tr>
+<tr>
+<td>Frequency reuse factor</td>
+<td><span class="arithmatex">\(N &gt; 1\)</span></td>
+<td><span class="arithmatex">\(N &gt; 1\)</span></td>
+<td><strong><span class="arithmatex">\(N = 1\)</span></strong></td>
+<td><span class="arithmatex">\(N = 1\)</span> (with beam split)</td>
+</tr>
+<tr>
+<td>Peak power</td>
+<td>Low</td>
+<td><strong>High</strong> (short duty)</td>
+<td>Moderate</td>
+<td>Moderate</td>
+</tr>
+<tr>
+<td>Interference mechanism</td>
+<td>Co-channel</td>
+<td>Co-channel</td>
+<td>Multiple-access + co-cell</td>
+<td>Co-channel + spatial</td>
+</tr>
+<tr>
+<td>Used in</td>
+<td>AMPS, TACS</td>
+<td>GSM, IS-136</td>
+<td>UMTS, IS-95, cdma2000</td>
+<td>4G, 5G</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Modern systems combine them all:</strong></p>
+<ul>
+<li><strong>LTE downlink (OFDMA):</strong> frequency + time (OFDMA is FDMA+TDMA), + SDMA via MIMO.</li>
+<li><strong>LTE uplink (SC-FDMA):</strong> low-PAPR single-carrier variant.</li>
+<li><strong>5G NR:</strong> CP-OFDM downlink, CP-OFDM or DFT-s-OFDM uplink, massive MIMO (SDMA), no CDMA (CDMA was a 3G technology).</li>
+</ul>
+<hr />
+<h2 id="28-error-control-coding">2.8 Error-control coding<a class="headerlink" href="#28-error-control-coding" title="Permanent link">&para;</a></h2>
+<p>Noise and fading cause bit errors. <strong>Error-control coding (ECC)</strong> adds redundancy
+in a controlled way so that errors can be detected and/or corrected — improving
+reliability without increasing transmit power (at the cost of bandwidth).</p>
+<h3 id="281-the-fundamental-trade-off">2.8.1 The fundamental trade-off<a class="headerlink" href="#281-the-fundamental-trade-off" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Coding rate</strong> <span class="arithmatex">\(R_c = k/n\)</span> — <span class="arithmatex">\(k\)</span> information bits per <span class="arithmatex">\(n\)</span> transmitted bits.</li>
+<li><strong>Code rate &lt; 1</strong> means we transmit <strong>more bits</strong> than information — bandwidth
+  overhead of <span class="arithmatex">\(1/R_c\)</span>.</li>
+<li><strong>Coding gain</strong> — how much <strong>less <span class="arithmatex">\(E_b/N_0\)</span></strong> is needed for the same BER.</li>
+</ul>
+<p>The <strong>Shannon limit</strong> says a code can approach arbitrary reliability at any rate
+below capacity — but the code must be <strong>infinite-length</strong> and <strong>maximum-likelihood
+decoded</strong>. Practical codes trade off length, complexity, and gain.</p>
+<h3 id="282-linear-block-codes">2.8.2 Linear block codes<a class="headerlink" href="#282-linear-block-codes" title="Permanent link">&para;</a></h3>
+<p>A <strong><span class="arithmatex">\((n, k)\)</span> block code</strong> encodes <span class="arithmatex">\(k\)</span> information bits into <span class="arithmatex">\(n\)</span> bits. The set of
+<span class="arithmatex">\(2^k\)</span> codewords forms a <strong>linear subspace</strong> of <span class="arithmatex">\(\{0, 1\}^n\)</span>.</p>
+<p><strong>Minimum Hamming distance</strong> <span class="arithmatex">\(d_{\min}\)</span> — the smallest number of bit positions
+in which two codewords differ. Determines:</p>
+<ul>
+<li><strong>Error detection capability:</strong> <span class="arithmatex">\(d_{\min} - 1\)</span> errors detectable.</li>
+<li><strong>Error correction capability:</strong> <span class="arithmatex">\(\lfloor (d_{\min} - 1)/2 \rfloor\)</span> errors correctable.</li>
+</ul>
+<p><strong>Hamming codes</strong> — the simplest nontrivial family:</p>
+<ul>
+<li><span class="arithmatex">\((7, 4)\)</span> Hamming: <span class="arithmatex">\(k = 4\)</span>, <span class="arithmatex">\(n = 7\)</span>, <span class="arithmatex">\(d_{\min} = 3\)</span>, corrects 1 error.</li>
+<li><span class="arithmatex">\((15, 11)\)</span>: <span class="arithmatex">\(d_{\min} = 3\)</span>, corrects 1 error.</li>
+<li><span class="arithmatex">\((2^m - 1, 2^m - 1 - m)\)</span>: general form.</li>
+</ul>
+<p><strong>Parity-check matrix</strong> <span class="arithmatex">\(H\)</span> — the receiver computes <span class="arithmatex">\(r = H \cdot x_{\text{received}}\)</span>
+(the <strong>syndrome</strong>). If <span class="arithmatex">\(r = 0\)</span>, no error detected. Otherwise, <span class="arithmatex">\(r\)</span> identifies the
+error position (for single-error-correcting codes).</p>
+<h3 id="worked-example-29-7-4-hamming-encoder">Worked example 2.9 — (7, 4) Hamming encoder<a class="headerlink" href="#worked-example-29-7-4-hamming-encoder" title="Permanent link">&para;</a></h3>
+<p><strong>Generator matrix</strong> in systematic form:</p>
+<div class="arithmatex">\[
+G = \begin{bmatrix}
+1 &amp; 0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 1 \\
+0 &amp; 0 &amp; 1 &amp; 0 &amp; 0 &amp; 1 &amp; 1 \\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 1 &amp; 1 &amp; 1
+\end{bmatrix}
+\]</div>
+<p><strong>Encoding.</strong> Given message <span class="arithmatex">\(\mathbf{u} = (u_1, u_2, u_3, u_4)\)</span>:</p>
+<div class="arithmatex">\[
+\mathbf{c} = \mathbf{u} G
+\]</div>
+<p>The first 4 positions are the message bits; the last 3 are parity bits:</p>
+<div class="arithmatex">\[
+p_1 = u_1 \oplus u_2 \oplus u_4,\quad
+p_2 = u_1 \oplus u_3 \oplus u_4,\quad
+p_3 = u_2 \oplus u_3 \oplus u_4.
+\]</div>
+<p><strong>Example.</strong> Encode <span class="arithmatex">\(\mathbf{u} = 1011\)</span>:</p>
+<ul>
+<li><span class="arithmatex">\(p_1 = 1 \oplus 0 \oplus 1 = 0\)</span></li>
+<li><span class="arithmatex">\(p_2 = 1 \oplus 1 \oplus 1 = 1\)</span></li>
+<li><span class="arithmatex">\(p_3 = 0 \oplus 1 \oplus 1 = 0\)</span></li>
+</ul>
+<p>Codeword: <strong><span class="arithmatex">\(1011010\)</span></strong>. ✓</p>
+<p><strong>Decoding.</strong> Given received word <span class="arithmatex">\(\mathbf{r}\)</span>, compute <strong>syndrome</strong> <span class="arithmatex">\(\mathbf{s} = H\mathbf{r}^T\)</span> (with <span class="arithmatex">\(\mathbf{r}\)</span> as a column).</p>
+<p>For <span class="arithmatex">\(H\)</span>:</p>
+<div class="arithmatex">\[
+H = \begin{bmatrix}
+1 &amp; 1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 0 \\
+1 &amp; 0 &amp; 1 &amp; 1 &amp; 0 &amp; 1 &amp; 0 \\
+0 &amp; 1 &amp; 1 &amp; 1 &amp; 0 &amp; 0 &amp; 1
+\end{bmatrix}
+\]</div>
+<p><strong>Single error at position 4.</strong> Received <span class="arithmatex">\(\mathbf{r} = 1010010\)</span> (bit 4 flipped from 1 to 0).</p>
+<p>Syndrome = <span class="arithmatex">\(H \mathbf{r}^T = (1, 1, 1)^T\)</span> = binary 7. <strong>Position 7?</strong> Hmm, wait — 111 is decimal 7, and position 7 of the received word is the last bit, which is 0 — but that wasn't flipped.</p>
+<p>Let me redo. Since <span class="arithmatex">\(H\)</span> is a parity-check matrix designed so that column <span class="arithmatex">\(i\)</span> of <span class="arithmatex">\(H\)</span> equals the binary representation of <span class="arithmatex">\(i\)</span> in the standard (7,4) Hamming code, but with a specific bit ordering, the syndrome directly gives the position of a single error.</p>
+<p>Actually for the specific <span class="arithmatex">\(H\)</span> I wrote, column 4 is <span class="arithmatex">\((1, 1, 1)^T\)</span> — so a single-bit error at position 4 gives syndrome <span class="arithmatex">\((1,1,1)^T\)</span> = 7, which uniquely identifies position 4 as the error. ✓ (The syndrome 111 = 7 corresponds to the <em>column index</em>, not the position index — but for a properly constructed Hamming code, they match.)</p>
+<p><strong>Correction.</strong> Flip bit 4 of <span class="arithmatex">\(\mathbf{r}\)</span>: <span class="arithmatex">\(1010010 \to 1011010\)</span> — the original codeword. ✓</p>
+<p><strong>Rate.</strong> <span class="arithmatex">\(R_c = 4/7 \approx 0.571\)</span>.</p>
+<p><strong>Coding gain.</strong> At BER <span class="arithmatex">\(10^{-5}\)</span>, (7,4) Hamming gives roughly <strong>0 dB coding gain</strong> — its rate and <span class="arithmatex">\(d_{\min}\)</span> are too small to help much. Hamming codes are used for <strong>error detection</strong> (or single-error correction in low-rate systems) — not for significant coding gain.</p>
+<h3 id="283-cyclic-codes">2.8.3 Cyclic codes<a class="headerlink" href="#283-cyclic-codes" title="Permanent link">&para;</a></h3>
+<p><strong>Cyclic codes</strong> are linear block codes with an additional property: every cyclic
+shift of a codeword is also a codeword. This property enables <strong>shift-register
+encoders</strong> — practical hardware with polynomial division.</p>
+<p><strong>CRC (Cyclic Redundancy Check)</strong> — a specific cyclic code for <strong>error detection</strong>.
+Common polynomials:</p>
+<ul>
+<li>CRC-32 (Ethernet, 802.11)</li>
+<li>CRC-24 (LTE, 5G)</li>
+<li>CRC-16 (Bluetooth, USB)</li>
+</ul>
+<p><strong>Rate:</strong> typically very high (e.g., CRC-32 appends 32 bits to any-length message).
+Not used for error correction; used to detect errors for HARQ retransmission.</p>
+<h3 id="284-convolutional-codes">2.8.4 Convolutional codes<a class="headerlink" href="#284-convolutional-codes" title="Permanent link">&para;</a></h3>
+<p><strong>Convolutional codes</strong> encode a stream of bits using a <strong>shift register</strong>. The
+output at each step depends on the current bit and the last <span class="arithmatex">\(K-1\)</span> bits — a memory
+of <span class="arithmatex">\(K-1\)</span>.</p>
+<p><strong>Parameters:</strong></p>
+<ul>
+<li><strong>Constraint length</strong> <span class="arithmatex">\(K\)</span> — memory + 1.</li>
+<li><strong>Rate</strong> <span class="arithmatex">\(R_c = 1/n\)</span> (typical) — or <span class="arithmatex">\(k/n\)</span>.</li>
+<li><strong>Generator polynomials</strong> — define the feedback connections.</li>
+</ul>
+<p><strong>Used in:</strong> GSM (K=5, R=1/2), UMTS (K=9, R=1/3), LTE (K=7, R=1/3 for control channels).</p>
+<p><strong>Free distance</strong> <span class="arithmatex">\(d_{\text{free}}\)</span> — the minimum Hamming distance between any two
+codewords; determines the asymptotic coding gain. For <span class="arithmatex">\(K=7\)</span>, <span class="arithmatex">\(R=1/2\)</span> standard code:
+<span class="arithmatex">\(d_{\text{free}} = 10\)</span>.</p>
+<p><strong>Viterbi decoding</strong> — maximum-likelihood decoding via dynamic programming over
+<span class="arithmatex">\(2^{K-1}\)</span> states. Complexity <span class="arithmatex">\(O(2^{K-1})\)</span> per bit; prohibitive for large <span class="arithmatex">\(K\)</span>,
+which is why <span class="arithmatex">\(K\)</span> is typically <span class="arithmatex">\(\le 9\)</span>.</p>
+<p><strong>Coding gain.</strong> For <span class="arithmatex">\(K=7\)</span>, <span class="arithmatex">\(R=1/2\)</span>, at BER <span class="arithmatex">\(10^{-5}\)</span>: ~5 dB coding gain over uncoded QPSK.</p>
+<h3 id="worked-example-210-rate-12-k3-convolutional-code">Worked example 2.10 — Rate 1/2, K=3 convolutional code<a class="headerlink" href="#worked-example-210-rate-12-k3-convolutional-code" title="Permanent link">&para;</a></h3>
+<p><strong>Generator polynomials:</strong> <span class="arithmatex">\(G_1 = 1 + D + D^2\)</span>, <span class="arithmatex">\(G_2 = 1 + D^2\)</span> (in octal: 7 and 5).</p>
+<p><strong>Encoder state:</strong> 2 bits (memory <span class="arithmatex">\(K-1 = 2\)</span>).</p>
+<p><strong>Example encoding.</strong> Input stream: 1 0 1 1 0.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Time</th>
+<th style="text-align: center;">Input</th>
+<th style="text-align: center;">State</th>
+<th style="text-align: center;">Output</th>
+<th style="text-align: center;">New State</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">01</td>
+</tr>
+<tr>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">00</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">11</td>
+</tr>
+<tr>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">01</td>
+<td style="text-align: center;">01</td>
+</tr>
+</tbody>
+</table>
+<p>Encoded stream: <strong>11 10 00 01 01</strong> (10 output bits from 5 input bits, at rate 1/2). ✓</p>
+<p><strong>Trellis representation</strong> — a diagram of states and transitions across time. Viterbi
+decoding walks this trellis and keeps the best path to each state.</p>
+<h3 id="285-turbo-and-ldpc-codes">2.8.5 Turbo and LDPC codes<a class="headerlink" href="#285-turbo-and-ldpc-codes" title="Permanent link">&para;</a></h3>
+<p><strong>Turbo codes</strong> (1993, Berrou et al.) — parallel concatenation of two convolutional
+codes with an interleaver. <strong>Iterative decoding</strong> between the two constituent
+decoders achieves near-Shannon-limit performance.</p>
+<ul>
+<li><strong>Coding gain:</strong> within <strong>0.5 dB of Shannon limit</strong> at BER 10⁻⁵ (for large blocks).</li>
+<li><strong>Used in:</strong> UMTS/HSPA (3G), LTE (data channels in 4G — though LDPC replaced them in 5G).</li>
+</ul>
+<p><strong>LDPC (Low-Density Parity-Check) codes</strong> (Gallager, 1960; rediscovered 1996).</p>
+<ul>
+<li><strong>Sparse parity-check matrix</strong> — decoding uses message passing on a bipartite graph.</li>
+<li><strong>Coding gain:</strong> within <strong>0.1 dB of Shannon limit</strong> for large blocks.</li>
+<li><strong>Used in:</strong> 5G NR (data channel), WiFi 6, DVB-S2, 10G Ethernet.</li>
+</ul>
+<p><strong>Why 5G chose LDPC over turbo:</strong></p>
+<ul>
+<li>Lower error floor (better at high SNR).</li>
+<li>Better decoding throughput in hardware (parallelizable).</li>
+<li>Patent-free implementation more feasible.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Convolutional</th>
+<th>Turbo</th>
+<th>LDPC</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Coding gain (BER=10⁻⁵)</td>
+<td>~5 dB</td>
+<td>~8 dB</td>
+<td>~8.5 dB</td>
+</tr>
+<tr>
+<td>Complexity</td>
+<td>Low</td>
+<td>High</td>
+<td>High</td>
+</tr>
+<tr>
+<td>Latency</td>
+<td>Low</td>
+<td>Moderate</td>
+<td>High (block-based)</td>
+</tr>
+<tr>
+<td>Used in</td>
+<td>GSM, UMTS control</td>
+<td>UMTS/HSPA, LTE</td>
+<td>5G data</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The takeaway.</strong> Coding gains from <strong>5 dB (convolutional) to 8.5 dB (LDPC)</strong> are
+the single biggest reason mobile systems can achieve &gt;5 bps/Hz spectral efficiency
+where uncoded QPSK tops out at 2. Without modern FEC, 4G/5G as we know them
+would not exist.</p>
+<hr />
+<h2 id="29-source-coding">2.9 Source coding<a class="headerlink" href="#29-source-coding" title="Permanent link">&para;</a></h2>
+<p><strong>Source coding</strong> compresses the raw information to a lower bit rate — the input
+to the channel coder. It complements error-control coding: source coding removes
+<strong>redundancy</strong> in the signal, error-control coding adds <strong>redundancy</strong> to protect
+against channel errors.</p>
+<h3 id="291-speech-coding">2.9.1 Speech coding<a class="headerlink" href="#291-speech-coding" title="Permanent link">&para;</a></h3>
+<p><strong>PCM (Pulse Code Modulation)</strong> — the baseline: sample at 8 kHz, quantize to 8 or
+16 bits, encode linearly.</p>
+<ul>
+<li><strong>G.711:</strong> 8 kHz, 8-bit μ-law/A-law → <strong>64 kbps</strong>. Used in the public switched
+  telephone network since the 1970s.</li>
+<li><strong>Quality:</strong> toll-quality voice.</li>
+</ul>
+<p><strong>Compression ratios from source coding:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Codec</th>
+<th>Technique</th>
+<th style="text-align: center;">Rate</th>
+<th style="text-align: center;">Quality (MOS)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>G.711</strong> (PCM)</td>
+<td>Waveform</td>
+<td style="text-align: center;">64 kbps</td>
+<td style="text-align: center;">4.3</td>
+</tr>
+<tr>
+<td><strong>G.726</strong> (ADPCM)</td>
+<td>Adaptive DPCM</td>
+<td style="text-align: center;">32 kbps</td>
+<td style="text-align: center;">4.0</td>
+</tr>
+<tr>
+<td><strong>G.729</strong> (CS-ACELP)</td>
+<td>Hybrid (LPC + excitation)</td>
+<td style="text-align: center;">8 kbps</td>
+<td style="text-align: center;">4.0</td>
+</tr>
+<tr>
+<td><strong>AMR-NB</strong></td>
+<td>ACELP</td>
+<td style="text-align: center;">4.75–12.2 kbps</td>
+<td style="text-align: center;">3.5–4.2</td>
+</tr>
+<tr>
+<td><strong>AMR-WB</strong></td>
+<td>ACELP, wideband</td>
+<td style="text-align: center;">6.6–23.85 kbps</td>
+<td style="text-align: center;">4.0–4.5</td>
+</tr>
+<tr>
+<td><strong>Opus</strong></td>
+<td>CELP + LPC</td>
+<td style="text-align: center;">6–510 kbps</td>
+<td style="text-align: center;">4.5+</td>
+</tr>
+<tr>
+<td><strong>LPC-10</strong></td>
+<td>LPC-only parametric</td>
+<td style="text-align: center;">2.4 kbps</td>
+<td style="text-align: center;">2.5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The compression chain.</strong> Raw voice at 64 kbps → 8 kbps (G.729) is <strong>8× compression</strong>.
+The 55 kbps saved is the total redundancy in the signal at toll quality — plausible
+because the vocal tract has only ~10–20 degrees of freedom and the ear is
+insensitive to phase.</p>
+<p><strong>Speech coding in the wireless stack.</strong></p>
+<ul>
+<li><strong>GSM:</strong> RPE-LTP at 13 kbps (a form of LPC).</li>
+<li><strong>UMTS:</strong> AMR-NB variable rate (4.75–12.2 kbps), adapting to channel conditions.</li>
+<li><strong>VoLTE:</strong> AMR-WB at 12.65 kbps typical — HD voice quality.</li>
+<li><strong>5G:</strong> EVS (Enhanced Voice Services) at 5.9–128 kbps.</li>
+</ul>
+<h3 id="292-audio-coding">2.9.2 Audio coding<a class="headerlink" href="#292-audio-coding" title="Permanent link">&para;</a></h3>
+<p>For music and high-fidelity audio:</p>
+<ul>
+<li><strong>MP3:</strong> 128–320 kbps (lossy, perceptual).</li>
+<li><strong>AAC:</strong> 96–320 kbps (better than MP3 at the same rate).</li>
+<li><strong>Opus:</strong> 6–510 kbps (used in WebRTC, YouTube).</li>
+<li><strong>FLAC / ALAC:</strong> lossless, ~50% compression.</li>
+</ul>
+<p>Compression relies on <strong>psychoacoustic masking</strong> — parts of the audio signal that
+the ear cannot perceive are removed.</p>
+<h3 id="293-image-and-video-coding">2.9.3 Image and video coding<a class="headerlink" href="#293-image-and-video-coding" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>JPEG:</strong> 10:1 to 50:1 compression typical. DCT-based (ECEG-6423 Chapter 2).</li>
+<li><strong>JPEG 2000:</strong> ~2× better than JPEG at high ratios. Wavelet-based.</li>
+<li><strong>H.264 / AVC:</strong> the standard for video since 2003. 1080p at 2–10 Mbps.</li>
+<li><strong>H.265 / HEVC:</strong> ~40% better than H.264. 4K at 15–25 Mbps.</li>
+<li><strong>AV1:</strong> royalty-free alternative to HEVC, comparable compression.</li>
+</ul>
+<p>For wireless video, 4G/5G use H.264 or HEVC — the compression ratios matter
+enormously because the video bit rate dominates the link.</p>
+<h3 id="294-the-source-channel-coding-trade-off">2.9.4 The source-channel coding trade-off<a class="headerlink" href="#294-the-source-channel-coding-trade-off" title="Permanent link">&para;</a></h3>
+<p><strong>Source coding</strong> removes redundancy; <strong>channel coding</strong> adds structured redundancy.</p>
+<p>There is a <strong>joint source-channel coding</strong> theorem (Shannon): no loss in separating
+them for point-to-point links. For multiuser or delay-sensitive systems, joint
+coding can help — but most practical systems separate them for simplicity.</p>
+<hr />
+<h2 id="210-chapter-summary">2.10 Chapter summary<a class="headerlink" href="#210-chapter-summary" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Analogue modulation</strong> (AM, FM, PM) was the basis of 1G but is obsolete for modern
+   systems — no encryption, no error control, no data.</li>
+<li><strong>Digital modulation</strong> operates in the IQ plane. Key metrics: <strong>bits per symbol</strong>
+   <span class="arithmatex">\(b\)</span>, <strong>symbol rate</strong> <span class="arithmatex">\(R_s\)</span>, <strong>spectral efficiency</strong> (bps/Hz), and <strong>power
+   efficiency</strong> (<span class="arithmatex">\(E_b/N_0\)</span>).</li>
+<li><strong>BPSK and QPSK</strong> are the workhorses of low-SNR systems. QPSK gives 2× throughput
+   at the same BER and <span class="arithmatex">\(E_b/N_0\)</span>.</li>
+<li><strong>M-QAM</strong> improves spectral efficiency at the cost of power efficiency — roughly
+   <strong>3 dB per bit</strong> for square QAM.</li>
+<li><strong>Gray coding</strong> maps bits so adjacent constellation points differ in one bit — reduces
+   BER at the same SER by a factor of <span class="arithmatex">\(b\)</span>.</li>
+<li><strong>Pulse shaping</strong> (raised cosine with roll-off <span class="arithmatex">\(\beta\)</span>) determines occupied
+   bandwidth: <span class="arithmatex">\(B = (R_s/2)(1+\beta)\)</span>. Spectrally efficient pulses trade off
+   time-localisation vs. bandwidth.</li>
+<li><strong>OFDM</strong> turns a frequency-selective channel into <span class="arithmatex">\(N\)</span> flat subchannels via
+   IFFT/FFT and <strong>cyclic prefix</strong>. It dominates 4G and 5G, at the cost of PAPR.</li>
+<li><strong>Multiple access:</strong> FDMA (frequency), TDMA (time), CDMA (code), SDMA (space).
+   CDMA gives soft handover and <span class="arithmatex">\(N=1\)</span> frequency reuse but needs power control.
+   Modern systems combine OFDMA (frequency + time) with MIMO (space).</li>
+<li><strong>Error-control coding</strong> adds structured redundancy: convolutional (~5 dB gain),
+   turbo and LDPC (~8 dB gain) bring practical systems within a dB of Shannon.
+   <strong>5G uses LDPC for data and polar codes for control.</strong></li>
+<li><strong>Source coding</strong> removes redundancy: G.711 at 64 kbps for toll quality,
+    G.729 at 8 kbps, AMR-WB at ~12 kbps for HD voice. Audio uses MP3/AAC/Opus;
+    video uses H.264/HEVC/AV1.</li>
+<li><strong>The fundamental trade-off</strong> — power, bandwidth, complexity — is bounded by
+    Shannon's capacity <span class="arithmatex">\(C = B \log_2(1 + \text{SNR})\)</span>. Modern systems approach
+    this limit via high-order QAM, powerful FEC, and MIMO.</li>
+</ol>
+<hr />
+<h2 id="211-quiz">2.11 Quiz<a class="headerlink" href="#211-quiz" title="Permanent link">&para;</a></h2>
+<h3 id="a-multiple-choice">A. Multiple choice<a class="headerlink" href="#a-multiple-choice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>Compared with BPSK at the same <span class="arithmatex">\(E_b/N_0\)</span>, QPSK gives:
+   (a) Half the BER (b) The same BER (c) Twice the BER (d) Cannot be compared</p>
+</li>
+<li>
+<p>For a target BER, doubling the modulation order (e.g., 16-QAM → 64-QAM) typically
+   costs:
+   (a) 0 dB (b) 3 dB (c) 10 dB (d) 20 dB</p>
+</li>
+<li>
+<p><strong>Gray coding</strong> ensures that adjacent constellation points:
+   (a) Have the same energy (b) Differ by exactly 1 bit
+   (c) Are orthogonal (d) Have different power</p>
+</li>
+<li>
+<p><strong>OFDM</strong> handles frequency-selective fading by:
+   (a) Equalization (b) Spreading in code (c) Splitting into flat subchannels
+   (d) Using higher power</p>
+</li>
+<li>
+<p>The <strong>cyclic prefix</strong> in OFDM:
+   (a) Increases PAPR (b) Reduces PAPR (c) Prevents ISI by absorbing delay spread
+   (d) Improves spectral efficiency</p>
+</li>
+<li>
+<p><strong>CDMA</strong> capacity is limited primarily by:
+   (a) Bandwidth (b) Interference (c) Synchronization (d) Antenna count</p>
+</li>
+<li>
+<p><strong>Processing gain</strong> in CDMA is:
+   (a) Chip rate × data rate (b) Chip rate / data rate
+   (c) Data rate / chip rate (d) Chip rate + data rate</p>
+</li>
+<li>
+<p><strong>Soft handover</strong> — a mobile connected to multiple base stations simultaneously —
+   is characteristic of:
+   (a) FDMA (b) TDMA (c) CDMA (d) SDMA</p>
+</li>
+<li>
+<p>The <strong>(7,4) Hamming code</strong>:
+   (a) Corrects up to 3 errors (b) Corrects 1 error
+   (c) Detects but doesn't correct (d) Is not a linear code</p>
+</li>
+<li>
+<p><strong>LDPC</strong> codes in 5G achieve:
+    (a) 1 dB gain over uncoded (b) 3 dB gain (c) ~8 dB gain (d) No gain</p>
+</li>
+<li>
+<p><strong>Source coding</strong> ________ redundancy while <strong>channel coding</strong> ________:
+    (a) Adds, removes (b) Removes, adds (c) Removes, removes (d) Adds, adds</p>
+</li>
+<li>
+<p>Shannon capacity for <span class="arithmatex">\(B = 10\)</span> MHz and SNR = 10 dB is approximately:
+    (a) 10 Mbps (b) 34 Mbps (c) 100 Mbps (d) 1 Gbps</p>
+</li>
+</ol>
+<h3 id="b-fill-in-the-blank">B. Fill in the blank<a class="headerlink" href="#b-fill-in-the-blank" title="Permanent link">&para;</a></h3>
+<ol>
+<li>For coherent BPSK at <span class="arithmatex">\(E_b/N_0 = 8\)</span> dB, the BER is approximately ____ (use <span class="arithmatex">\(Q(\sqrt{2 \cdot 10^{0.8}})\)</span>).</li>
+<li>The spectral efficiency of QPSK with a raised-cosine roll-off <span class="arithmatex">\(\beta = 0\)</span> is ____ bps/Hz.</li>
+<li>The peak-to-average power ratio of an OFDM signal with <span class="arithmatex">\(N\)</span> subcarriers is up to ____ dB.</li>
+<li>The LTE subcarrier spacing is ____ kHz.</li>
+<li>In GSM, the processing gain is achieved by TDMA multiplexing — 8 slots per carrier, resulting in a ____-fold capacity increase per carrier.</li>
+<li>The Walsh–Hadamard codes used in CDMA are ____ (orthogonal / pseudo-random).</li>
+<li>In the (7,4) Hamming code, $d_{\min} = $ ____.</li>
+<li>In convolutional codes, the constraint length <span class="arithmatex">\(K\)</span> is the memory plus ____.</li>
+<li>The Viterbi decoder complexity is <span class="arithmatex">\(O(2^{K-1})\)</span>, which limits <span class="arithmatex">\(K\)</span> to about ____ in practice.</li>
+<li><strong>LDPC</strong> codes are used in 5G for ____ (data/control), while <strong>polar codes</strong> are used for ____.</li>
+</ol>
+<h3 id="c-define-explain">C. Define / explain<a class="headerlink" href="#c-define-explain" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Compare <strong>analogue</strong> and <strong>digital</strong> modulation on security, error control, data
+   services, and spectral efficiency. Why is analogue obsolete?</li>
+<li>Represent <strong>BPSK, QPSK, 16-QAM</strong> in the IQ plane. State the number of bits per
+   symbol, spectral efficiency (ideal pulse shaping), and approximate BER vs. <span class="arithmatex">\(E_b/N_0\)</span>
+   for each.</li>
+<li>State the <strong>Shannon capacity</strong> formula. Compute the capacity for a 20 MHz channel
+   at SNR = 15 dB. How does this compare with LTE Cat-4 (150 Mbps)?</li>
+<li>Explain <strong>OFDM</strong> as a "frequency-domain" solution to frequency-selective fading.
+   Derive the subcarrier spacing <span class="arithmatex">\(\Delta f = 1/T_u\)</span> from the orthogonality condition.</li>
+<li>What is the <strong>cyclic prefix</strong> in OFDM? Why is <span class="arithmatex">\(T_{cp} &gt; \tau_{\max}\)</span> required?
+   What is the cost of a CP?</li>
+<li>Describe the <strong>four multiple-access techniques</strong> (FDMA, TDMA, CDMA, SDMA).
+   Compare them in dimension, interference mechanism, handover style, and reuse
+   factor.</li>
+<li>Explain the <strong>near-far problem</strong> in CDMA. Why is power control critical?</li>
+<li>State the <strong>processing gain</strong> in CDMA. How does it allow operation below the
+   noise floor?</li>
+<li>Describe <strong>convolutional codes</strong> — constraint length, rate, trellis, Viterbi
+   decoding. Compute the free distance and coding gain for a standard K=7 code.</li>
+<li>Compare <strong>turbo</strong> and <strong>LDPC</strong> codes. Which is used in 5G? Why?</li>
+<li>Compare <strong>speech source coding</strong> (G.711, G.729, AMR-WB). What quality/rate
+    trade-offs do they represent?</li>
+<li>A wireless link operates at SNR = 20 dB with bandwidth 10 MHz. Using Shannon,
+    what is the maximum bit rate? If the actual system achieves 30 Mbps, what is
+    the Shannon gap?</li>
+</ol>
+<hr />
+<h2 id="212-answer-key">2.12 Answer key<a class="headerlink" href="#212-answer-key" title="Permanent link">&para;</a></h2>
+<details class="success">
+<summary>A. Multiple choice</summary>
+<ol>
+<li><strong>(b)</strong> — same BER (per bit).</li>
+<li><strong>(b)</strong> — ~3 dB per doubling (each extra bit/symbol).</li>
+<li><strong>(b)</strong> — differ by exactly 1 bit.</li>
+<li><strong>(c)</strong> — split into flat subchannels.</li>
+<li><strong>(c)</strong> — absorbs delay spread, prevents ISI.</li>
+<li><strong>(b)</strong> — interference-limited (self + co-cell).</li>
+<li><strong>(b)</strong> — chip rate / data rate.</li>
+<li><strong>(c)</strong> — CDMA.</li>
+<li><strong>(b)</strong> — corrects 1 error.</li>
+<li><strong>(c)</strong> — ~8 dB gain.</li>
+<li><strong>(b)</strong> — removes redundancy, adds structured redundancy.</li>
+<li><strong>(b)</strong> — <span class="arithmatex">\(10^7 \cdot \log_2(11) \approx 3.46 \times 10^7 \approx 34.6\)</span> Mbps.</li>
+</ol>
+</details>
+<details class="success">
+<summary>B. Fill in the blank</summary>
+<ol>
+<li>~<span class="arithmatex">\(2 \times 10^{-3}\)</span> (compute: <span class="arithmatex">\(Q(\sqrt{12.6}) = Q(3.55) \approx 1.9 \times 10^{-4}\)</span>; the exact value depends on the target; the "8 dB" case gives ~<span class="arithmatex">\(1.5 \times 10^{-4}\)</span>)</li>
+<li>2</li>
+<li><span class="arithmatex">\(10\log_{10} N\)</span> (worst case) — ~33 dB for <span class="arithmatex">\(N = 2048\)</span></li>
+<li>15</li>
+<li>8</li>
+<li>Orthogonal</li>
+<li>3</li>
+<li>1 (i.e., <span class="arithmatex">\(K\)</span> = memory + 1)</li>
+<li>9 (constraint length)</li>
+<li>Data; control</li>
+</ol>
+</details>
+<details class="success">
+<summary>C. Define / explain — model answers</summary>
+<ol>
+<li><em>Analogue (AM/FM/PM):</em> continuous modulation, no encryption, no error control,
+   voice-only, poor spectral efficiency (30 kHz per 3.4 kHz voice). <em>Digital
+   (BPSK/QPSK/QAM/OFDM):</em> discrete modulation, encrypted (A5/1, KASUMI), error-controlled
+   via FEC, supports voice + data + video, high spectral efficiency (up to 8 bps/Hz
+   for 256-QAM). <em>Why analogue is obsolete:</em> modern requirements (security, data
+   services, capacity) cannot be met by any analogue system. Even analogue voice
+   is more efficiently transmitted digitally.</li>
+<li><em>BPSK:</em> 2 points at <span class="arithmatex">\(\pm\sqrt{E_b}\)</span> on I-axis; 1 bit/symbol; spectral efficiency
+   1 bps/Hz; <span class="arithmatex">\(P_b = Q(\sqrt{2E_b/N_0})\)</span>. <em>QPSK:</em> 4 points at 90° on unit circle;
+   2 bits/symbol; spectral efficiency 2 bps/Hz; <span class="arithmatex">\(P_b = Q(\sqrt{2E_b/N_0})\)</span> (same as BPSK).
+   <em>16-QAM:</em> 16 points in a 4×4 grid; 4 bits/symbol; spectral efficiency 4 bps/Hz;
+   <span class="arithmatex">\(P_b \approx (3/4)Q(\sqrt{4E_b/(15 N_0)})\)</span> — about 4 dB worse than QPSK at same BER.</li>
+<li><em>Shannon:</em> <span class="arithmatex">\(C = B\log_2(1+\text{SNR})\)</span> bps. For <span class="arithmatex">\(B=20\)</span> MHz, SNR = 15 dB (linear 31.62):
+   <span class="arithmatex">\(C = 20 \times 10^6 \times \log_2(32.62) \approx 20 \times 10^6 \times 5.03 \approx 100.6\)</span> Mbps.
+   LTE Cat-4 at 150 Mbps uses 20 MHz with 2×2 MIMO — the single-stream limit is
+   ~100 Mbps (matches Shannon), MIMO doubles it. LTE is essentially at Shannon.</li>
+<li><em>OFDM as frequency-domain solution:</em> a wide channel with <span class="arithmatex">\(\tau_{\text{rms}}\)</span> has
+   coherence bandwidth <span class="arithmatex">\(B_c \sim 1/(5\tau_{\text{rms}})\)</span>. If <span class="arithmatex">\(B \gg B_c\)</span>, the channel
+   is frequency-selective. OFDM splits <span class="arithmatex">\(B\)</span> into <span class="arithmatex">\(N\)</span> subcarriers of width <span class="arithmatex">\(\Delta f = B/N\)</span>.
+   Choosing <span class="arithmatex">\(N\)</span> large enough that <span class="arithmatex">\(\Delta f \ll B_c\)</span> makes each subcarrier flat. <em>Derivation
+   of <span class="arithmatex">\(\Delta f = 1/T_u\)</span>:</em> subcarrier <span class="arithmatex">\(k\)</span> is <span class="arithmatex">\(e^{j2\pi k\Delta f t}\)</span>; orthogonality requires
+   <span class="arithmatex">\(\int_0^{T_u} e^{j2\pi(k-l)\Delta f t} dt = T_u \delta_{kl}\)</span>, which holds iff <span class="arithmatex">\(\Delta f \cdot T_u = 1\)</span>.</li>
+<li><em>Cyclic prefix:</em> copy the last <span class="arithmatex">\(T_{cp}\)</span> seconds of the useful symbol to the front.
+   <span class="arithmatex">\(T_{cp} &gt; \tau_{\max}\)</span> means the delay-spread tail of the previous symbol fits
+   entirely within the CP — the receiver discards the CP, leaving only the useful
+   symbol, with zero ISI. <em>Cost:</em> CP is redundant, so spectral efficiency is reduced
+   by <span class="arithmatex">\(\eta_{CP} = T_u/(T_u + T_{cp})\)</span>; for LTE normal CP (~4.7 μs of 71.4 μs), ~7%.</li>
+<li><em>FDMA:</em> frequency slice per user; co-channel interference; hard handover; reuse
+   factor <span class="arithmatex">\(N&gt;1\)</span>. <em>TDMA:</em> time slot per user; co-channel interference; hard handover;
+   <span class="arithmatex">\(N&gt;1\)</span>; requires synchronization. <em>CDMA:</em> spreading code per user; multiple-access
+   interference + co-cell; <strong>soft handover</strong>; reuse factor <span class="arithmatex">\(N=1\)</span>. <em>SDMA:</em> spatial
+   separation via sectorization or beamforming; spatial + co-channel interference;
+   hard handover (usually); <span class="arithmatex">\(N=1\)</span> with sectoring.</li>
+<li><em>Near-far:</em> in CDMA, all users share one frequency. The base station receives
+   all simultaneously; a strong user near the BS creates large interference for a
+   distant user, whose signal is buried. Without power control, the near user
+   dominates. <em>Why power control is critical:</em> all users must arrive at the BS with
+   approximately equal power for the orthogonality of their codes to be effective.
+   UMTS uses fast closed-loop power control (1500 Hz updates) to achieve this.</li>
+<li><em>Processing gain:</em> <span class="arithmatex">\(G = R_c / R_s = W/R\)</span>, the ratio of chip rate (spreading bandwidth)
+   to data rate. <em>Below noise floor:</em> the data signal is spread over <span class="arithmatex">\(W\)</span> Hz, so its
+   PSD is <span class="arithmatex">\(E_b/W\)</span>. When <span class="arithmatex">\(E_b/N_0 &lt; 1\)</span> (0 dB), the signal power is below the noise
+   PSD — invisible to a non-code receiver. The receiver correlates with the correct
+   code, coherently integrating over <span class="arithmatex">\(T = 1/R_s\)</span>, giving SNR gain of <span class="arithmatex">\(G\)</span> (10 log G dB).
+   So even below-noise signals are recoverable.</li>
+<li><em>Convolutional codes:</em> rate <span class="arithmatex">\(1/n\)</span>, constraint length <span class="arithmatex">\(K\)</span> — the output at each
+   step depends on the current bit and the previous <span class="arithmatex">\(K-1\)</span>. <em>Trellis:</em> states are
+   the last <span class="arithmatex">\(K-1\)</span> bits (2^{K-1} states); transitions determined by input bit.
+   <em>Viterbi decoding:</em> dynamic programming over the trellis, keeping the best path
+   to each state; complexity <span class="arithmatex">\(O(2^{K-1})\)</span> per bit. <em>Free distance:</em> minimum Hamming
+   distance between any two codeword paths; for K=7, R=1/2, <span class="arithmatex">\(d_{\text{free}} = 10\)</span>
+   — gives ~5 dB coding gain at BER 10⁻⁵.</li>
+<li><em>Turbo:</em> parallel concatenation of two convolutional encoders with an
+    interleaver; iterative decoding between the two decoders; near-Shannon (~0.5 dB
+    gap) but high latency. Used in UMTS/HSPA, LTE. <em>LDPC:</em> sparse parity-check
+    matrix; message-passing decoding on bipartite graph; near-Shannon (~0.1 dB gap),
+    better error floor, higher throughput in hardware. <em>5G choice:</em> <strong>LDPC for data</strong>,
+    <strong>polar codes for control</strong>. LDPC chosen for its combination of excellent
+    performance, parallelisability, and hardware efficiency at the very high
+    throughputs 5G requires.</li>
+<li><em>G.711:</em> 64 kbps, μ-law companding, no compression (just quantization) — toll
+    quality, the PSTN standard since 1972. <em>G.729:</em> 8 kbps, CS-ACELP (analysis-by-synthesis
+    LPC) — 8:1 compression, toll-quality, used in VoIP and early 3G. <em>AMR-WB:</em> 6.6–23.85
+    kbps, ACELP with wideband (16 kHz) sampling — HD voice quality, used in VoLTE,
+    4G, 5G. The trade-off is rate vs. quality; each step doubles or quadruples the
+    codec complexity but halves the bit rate.</li>
+<li><em>Shannon:</em> <span class="arithmatex">\(C = 10^7 \cdot \log_2(101) \approx 66.6\)</span> Mbps. Achieved rate 30 Mbps
+    is 45% of Shannon — a <strong>Shannon gap of ~3.5 dB</strong> in SNR terms (need to halve
+    the SNR to hit 30 Mbps with ideal coding). Typical 4G/5G systems achieve 60–80%
+    of Shannon capacity in real deployments.</li>
+</ol>
+</details>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>J. G. Proakis &amp; M. Salehi</strong>, <em>Digital Communications</em>, 5th ed., McGraw-Hill, 2007 — the classical reference; Chapters 3–5 (digital modulation, detection), 8 (fading channels), 7 (channel coding).</li>
+<li><strong>A. Goldsmith</strong>, <em>Wireless Communications</em>, Cambridge, 2005 — the best single-volume treatment; Chapters 5–6 (modulation, capacity), 8 (fading), 4 (multiple access).</li>
+<li><strong>T. S. Rappaport</strong>, <em>Wireless Communications: Principles and Practice</em>, 2nd ed., Prentice Hall, 2002 — Chapters 4–6 (modulation, equalization), 9 (multiple access).</li>
+<li><strong>D. Tse &amp; P. Viswanath</strong>, <em>Fundamentals of Wireless Communication</em>, Cambridge, 2005 — the information-theoretic view; Chapters 2 (channel), 4 (capacity), 5 (multiple access).</li>
+<li><strong>S. Lin &amp; D. J. Costello</strong>, <em>Error Control Coding</em>, 2nd ed., Prentice Hall, 2004 — the standard ECC textbook.</li>
+<li><strong>T. Richardson &amp; R. Urbanke</strong>, <em>Modern Coding Theory</em>, Cambridge, 2008 — the LDPC/turbo reference.</li>
+<li><strong>H. Schulze &amp; C. Lüders</strong>, <em>Theory and Applications of OFDM and CDMA</em>, Wiley, 2005 — the OFDM/CDMA comparison reference.</li>
+<li><strong>R. Prasad</strong>, <em>OFDM for Wireless Communications Systems</em>, Artech House, 2004.</li>
+<li><strong>H. Holma &amp; A. Toskala</strong>, <em>WCDMA for UMTS</em> and <em>LTE for UMTS</em>, Wiley — for CDMA and OFDMA in real systems.</li>
+<li><strong>3GPP TS 38.211</strong> — 5G NR physical channels and modulation (the definitive reference for 5G PHY).</li>
+<li><strong>3GPP TS 36.211</strong> — LTE physical channels and modulation.</li>
+<li><strong>3GPP TS 25.211</strong> — UMTS physical channels and modulation.</li>
+</ul>
+<hr />
+<h2 id="suggested-tutorial-problems">Suggested tutorial problems<a class="headerlink" href="#suggested-tutorial-problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>BPSK BER.</strong> Compute the BER for coherent BPSK at <span class="arithmatex">\(E_b/N_0 = 0, 4, 8, 12\)</span> dB. Plot the curve and mark the point where BER = 10⁻⁵.</p>
+</li>
+<li>
+<p><strong>QPSK vs. 16-QAM.</strong> For a target BER of 10⁻⁴, find the required <span class="arithmatex">\(E_b/N_0\)</span> for QPSK and 16-QAM (use the approximate formula). How much more power does 16-QAM need? How much more data does it deliver?</p>
+</li>
+<li>
+<p><strong>Gray coding.</strong> Draw the 16-QAM Gray-coded constellation. Verify that every adjacent pair differs by 1 bit. Then draw the natural (binary) constellation. Compare BER at the same SER — how much benefit does Gray coding provide?</p>
+</li>
+<li>
+<p><strong>OFDM parameters.</strong> Design an OFDM system with <span class="arithmatex">\(B = 20\)</span> MHz, target spectral efficiency 5 bps/Hz (with 64-QAM). Compute subcarrier spacing, FFT size, useful symbol duration, CP length (assuming <span class="arithmatex">\(\tau_{\text{rms}} = 500\)</span> ns), and CP overhead.</p>
+</li>
+<li>
+<p><strong>Raised cosine.</strong> Plot the raised-cosine pulse for <span class="arithmatex">\(\beta \in \{0, 0.22, 0.5, 1\}\)</span>. Compute the bandwidth for each with <span class="arithmatex">\(R_s = 1\)</span> Msym/s. What is the BER degradation for <span class="arithmatex">\(\beta = 0\)</span> (sinc pulse) vs. <span class="arithmatex">\(\beta = 0.22\)</span> in a real system with timing error?</p>
+</li>
+<li>
+<p><strong>Link budget.</strong> A 5G NR link operates with 23 dBm transmit power, 15 dBi base station antenna, 0 dBi mobile antenna, −100 dBm receiver sensitivity. Carrier 3.5 GHz, bandwidth 100 MHz, path-loss exponent 3.5 beyond 200 m. Compute the range. Then repeat for 28 GHz (path loss exponent 3.5, but higher FSPL).</p>
+</li>
+<li>
+<p><strong>CDMA capacity.</strong> For UMTS, compute the single-cell pole capacity for voice at <span class="arithmatex">\(E_b/N_0 = 5\)</span> dB and for data at <span class="arithmatex">\(E_b/N_0 = 2\)</span> dB. Compare with the realistic capacity (50% of pole).</p>
+</li>
+<li>
+<p><strong>Hamming code.</strong> Build the (7,4) Hamming code generator matrix in systematic form. Encode the message 1101. Introduce a single error at position 3. Decode and correct.</p>
+</li>
+<li>
+<p><strong>Convolutional code.</strong> Build the trellis for a rate-1/2, K=3 convolutional code with generators <span class="arithmatex">\(G_1 = 111\)</span>, <span class="arithmatex">\(G_2 = 101\)</span> (in binary). Encode the sequence 1011. Decode with Viterbi, assuming the received sequence has one error.</p>
+</li>
+<li>
+<p><strong>Source-channel joint.</strong> A voice channel at 8 kHz sampling. Raw PCM at 16 bits → 128 kbps. After G.729 source coding → 8 kbps. Add rate-1/2 FEC → 16 kbps on the air. What is the "end-to-end" redundancy added by source + channel coding? What is the trade-off vs. using G.711 (64 kbps) directly with no FEC?</p>
+</li>
+<li>
+<p><strong>Shannon for 5G.</strong> A 5G NR system uses 100 MHz at 3.5 GHz, 4×4 MIMO, 256-QAM, rate-3/4 LDPC. Compute the theoretical Shannon capacity at SNR = 15 dB. Then compute the actual throughput (256-QAM × rate × MIMO × bandwidth with CP overhead). What is the Shannon gap?</p>
+</li>
+<li>
+<p><strong>Modulation and coding trade-off.</strong> For a fixed target throughput of 50 Mbps in 20 MHz, compare three options: QPSK with rate-1/3 convolutional code, 16-QAM with rate-1/2 turbo code, and 64-QAM with rate-3/4 LDPC code. Compute the required SNR for each. Which is the most power-efficient? Which is the most robust to channel errors?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../slides/assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

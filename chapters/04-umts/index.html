@@ -1,0 +1,4180 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/chapters/04-umts/">
+      
+      
+        <link rel="prev" href="../03-gsm/">
+      
+      
+        <link rel="next" href="../05-broadband-wireless/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>4. UMTS - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-4-umts" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              4. UMTS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slides/lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-the-migration-path-from-gsm-to-umts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 The migration path from GSM to UMTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 The migration path from GSM to UMTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-why-a-new-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 Why a new system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-the-3g-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 The 3G standardization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-3g-variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 3G variants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-the-key-technology-shift-cdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 The key technology shift — CDMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 System architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 System architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-the-three-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 The three subsystems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-ue-user-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 UE — User Equipment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-utran-umts-terrestrial-radio-access-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 UTRAN — UMTS Terrestrial Radio Access Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-core-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 Core Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-41-iur-and-soft-handover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.1 — Iur and soft handover
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-the-wcdma-physical-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 The WCDMA physical layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 The WCDMA physical layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-frequency-and-chip-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 Frequency and chip rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-spreading-and-scrambling" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2 Spreading and scrambling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-orthogonal-variable-spreading-factor-ovsf-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3 Orthogonal Variable Spreading Factor (OVSF) codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-42-ovsf-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.2 — OVSF allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-processing-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 Processing gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5 Modulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-the-rake-receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 The Rake receiver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 The Rake receiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-why-multipath-is-bad-and-can-be-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Why multipath is bad — and can be good
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-the-rake-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 The Rake concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-43-rake-diversity-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.3 — Rake diversity gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-practical-rake-receiver-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 Practical Rake receiver details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-power-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Power control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Power control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 The goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-three-levels-of-power-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 Three levels of power control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-44-power-control-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.4 — power control budget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-power-control-in-the-downlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 Power control in the downlink
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-handover-in-umts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Handover in UMTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Handover in UMTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-types-of-handover" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.1 Types of handover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-the-active-set-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.2 The active set and events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-45-soft-handover-window-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.5 — soft handover window and trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-hsdpa-and-hsupa-the-35g-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 HSDPA and HSUPA — the 3.5G enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 HSDPA and HSUPA — the 3.5G enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-what-limited-r99s-data-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1 What limited R99's data rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-hsdpa-high-speed-downlink-packet-access-r5" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2 HSDPA (High-Speed Downlink Packet Access) — R5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-hsupa-high-speed-uplink-packet-access-r6" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.3 HSUPA (High-Speed Uplink Packet Access) — R6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-hspa-r7-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.4 HSPA+ (R7 and beyond)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-46-hsdpa-peak-rate-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.6 — HSDPA peak rate calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-47-hsupa-peak-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.7 — HSUPA peak rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#475-hspa-evolution-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.5 HSPA evolution summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#476-what-hspa-didnt-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.6 What HSPA didn't fix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-network-design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Network design considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Network design considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-coverage-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.1 Coverage planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.2 Capacity planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-48-uplink-capacity-for-mixed-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.8 — uplink capacity for mixed services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-umts-vs-gsm-a-summary-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9 UMTS vs. GSM — a summary comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.11 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#41-the-migration-path-from-gsm-to-umts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1 The migration path from GSM to UMTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 The migration path from GSM to UMTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411-why-a-new-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.1 Why a new system?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412-the-3g-standardization" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.2 The 3G standardization
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#413-3g-variants" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.3 3G variants
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#414-the-key-technology-shift-cdma" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.1.4 The key technology shift — CDMA
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#42-system-architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2 System architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 System architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421-the-three-subsystems" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.1 The three subsystems
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422-ue-user-equipment" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.2 UE — User Equipment
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423-utran-umts-terrestrial-radio-access-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.3 UTRAN — UMTS Terrestrial Radio Access Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#424-core-network" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.4 Core Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#425-interfaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.2.5 Interfaces
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-41-iur-and-soft-handover" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.1 — Iur and soft handover
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#43-the-wcdma-physical-layer" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3 The WCDMA physical layer
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.3 The WCDMA physical layer">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#431-frequency-and-chip-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.1 Frequency and chip rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#432-spreading-and-scrambling" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.2 Spreading and scrambling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#433-orthogonal-variable-spreading-factor-ovsf-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.3 Orthogonal Variable Spreading Factor (OVSF) codes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-42-ovsf-allocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.2 — OVSF allocation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#434-processing-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.4 Processing gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#435-modulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.3.5 Modulation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#44-the-rake-receiver" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4 The Rake receiver
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.4 The Rake receiver">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#441-why-multipath-is-bad-and-can-be-good" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.1 Why multipath is bad — and can be good
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#442-the-rake-concept" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.2 The Rake concept
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-43-rake-diversity-gain" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.3 — Rake diversity gain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#443-practical-rake-receiver-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.4.3 Practical Rake receiver details
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#45-power-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5 Power control
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.5 Power control">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#451-the-goal" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.1 The goal
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#452-three-levels-of-power-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.2 Three levels of power control
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-44-power-control-budget" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.4 — power control budget
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#453-power-control-in-the-downlink" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.5.3 Power control in the downlink
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#46-handover-in-umts" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6 Handover in UMTS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.6 Handover in UMTS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#461-types-of-handover" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.1 Types of handover
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#462-the-active-set-and-events" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.6.2 The active set and events
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-45-soft-handover-window-and-trade-offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.5 — soft handover window and trade-offs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#47-hsdpa-and-hsupa-the-35g-enhancements" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7 HSDPA and HSUPA — the 3.5G enhancements
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.7 HSDPA and HSUPA — the 3.5G enhancements">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#471-what-limited-r99s-data-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.1 What limited R99's data rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#472-hsdpa-high-speed-downlink-packet-access-r5" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.2 HSDPA (High-Speed Downlink Packet Access) — R5
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#473-hsupa-high-speed-uplink-packet-access-r6" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.3 HSUPA (High-Speed Uplink Packet Access) — R6
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#474-hspa-r7-and-beyond" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.4 HSPA+ (R7 and beyond)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-46-hsdpa-peak-rate-calculation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.6 — HSDPA peak rate calculation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-47-hsupa-peak-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.7 — HSUPA peak rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#475-hspa-evolution-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.5 HSPA evolution summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#476-what-hspa-didnt-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.7.6 What HSPA didn't fix
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#48-network-design-considerations" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8 Network design considerations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.8 Network design considerations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#481-coverage-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.1 Coverage planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#482-capacity-planning" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.8.2 Capacity planning
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-48-uplink-capacity-for-mixed-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 4.8 — uplink capacity for mixed services
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#49-umts-vs-gsm-a-summary-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.9 UMTS vs. GSM — a summary comparison
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#410-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.10 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#411-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.11 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.11 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#412-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.12 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-4-umts">Chapter 4 — UMTS<a class="headerlink" href="#chapter-4-umts" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Chapter at a glance</p>
+<p><strong>Contact hours:</strong> 3 lecture · <strong>Home study:</strong> 7 h · <strong>Part III — Wireless network trends</strong></p>
+<p><strong>Coverage (syllabus):</strong> migration path to UMTS · system architecture · the
+physical layer · coding and channel allocation · network design · 3.5G and
+3.75G systems (HSDPA, HSUPA, HSPA).</p>
+</div>
+<hr />
+<h2 id="learning-outcomes">Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol>
+<li>Trace the <strong>migration path</strong> from GSM to UMTS and the standards timeline.</li>
+<li>Draw and describe the <strong>UMTS Release 99 architecture</strong> — UE, UTRAN (NodeB, RNC),
+   Core Network (CS and PS domains), and the interfaces.</li>
+<li>Explain the <strong>WCDMA</strong> physical layer — chip rate, spreading codes, scrambling,
+   and the uplink/downlink differences.</li>
+<li>Compute <strong>processing gain</strong>, <strong>pole capacity</strong>, and the <strong>interference margin</strong>
+   that sets UMTS cell coverage and capacity.</li>
+<li>Describe the <strong>Rake receiver</strong> and why it's essential in WCDMA multipath.</li>
+<li>Distinguish <strong>softer</strong>, <strong>soft</strong>, and <strong>hard handover</strong> and their trigger
+   conditions.</li>
+<li>Explain <strong>power control</strong> — open-loop, closed-loop, and outer-loop — and why it
+   is critical in CDMA.</li>
+<li>Describe <strong>HSDPA</strong> and <strong>HSUPA</strong> enhancements (AMC, HARQ, fast scheduling,
+   MIMO) and their peak rates.</li>
+<li>Compute <strong>HSPA throughput</strong> given modulation, coding rate, MIMO configuration,
+   and network load.</li>
+<li>Compare UMTS with GSM in capacity, coverage, latency, and complexity.</li>
+</ol>
+<hr />
+<h2 id="41-the-migration-path-from-gsm-to-umts">4.1 The migration path from GSM to UMTS<a class="headerlink" href="#41-the-migration-path-from-gsm-to-umts" title="Permanent link">&para;</a></h2>
+<h3 id="411-why-a-new-system">4.1.1 Why a new system?<a class="headerlink" href="#411-why-a-new-system" title="Permanent link">&para;</a></h3>
+<p>GSM (Chapter 3) served voice and slow data (up to ~470 kbps theoretical with EDGE,
+but realistically 100–200 kbps). It could not deliver the "mobile broadband"
+services that the market wanted by the late 1990s:</p>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>GSM capability</th>
+<th>Gap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Web browsing</td>
+<td>~10–50 kbps practical (GPRS)</td>
+<td>10–100× too slow</td>
+</tr>
+<tr>
+<td>Video streaming</td>
+<td>Not feasible</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Multimedia messaging</td>
+<td>Slow, awkward</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Symmetric uplink/downlink data</td>
+<td>Asymmetric (EDGE DL &gt;&gt; UL)</td>
+<td>Limited uplink</td>
+</tr>
+<tr>
+<td>Spectrum efficiency</td>
+<td>TDMA at ~0.2 bps/Hz/cell</td>
+<td>Needs 1–5 bps/Hz/cell</td>
+</tr>
+</tbody>
+</table>
+<p>The International Telecommunication Union (ITU) defined <strong>IMT-2000</strong> — the 3G
+requirements:</p>
+<ul>
+<li><strong>144 kbps</strong> for vehicular users.</li>
+<li><strong>384 kbps</strong> for pedestrians.</li>
+<li><strong>2 Mbps</strong> for indoor/stationary users.</li>
+<li>Global roaming across multiple 3G standards.</li>
+<li>Support for circuit-switched voice and packet-switched data.</li>
+</ul>
+<h3 id="412-the-3g-standardization">4.1.2 The 3G standardization<a class="headerlink" href="#412-the-3g-standardization" title="Permanent link">&para;</a></h3>
+<p><strong>3GPP</strong> (3rd Generation Partnership Project) was formed in 1998, combining several
+regional standards bodies (ETSI, ARIB, TTC, TTA, CCSA, ATIS) to develop a <strong>global
+3G standard</strong> based on WCDMA.</p>
+<p><strong>Key releases:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Release</th>
+<th style="text-align: center;">Year</th>
+<th>Key additions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>Release 99 (R99)</strong></td>
+<td style="text-align: center;">2000</td>
+<td>Base UMTS: WCDMA FDD and TDD, CS and PS core, voice + data</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 4</td>
+<td style="text-align: center;">2001</td>
+<td>All-IP core network; TDD enhancement</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 5</td>
+<td style="text-align: center;">2002</td>
+<td><strong>HSDPA</strong> — high-speed downlink</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 6</td>
+<td style="text-align: center;">2004</td>
+<td><strong>HSUPA</strong> — high-speed uplink; MBMS broadcast</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 7</td>
+<td style="text-align: center;">2007</td>
+<td><strong>HSPA+</strong> (evolved HSPA): MIMO, 64-QAM DL, 16-QAM UL</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 8</td>
+<td style="text-align: center;">2008</td>
+<td><strong>LTE</strong> introduced (Chapter 5)</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 10</td>
+<td style="text-align: center;">2011</td>
+<td>LTE-Advanced</td>
+</tr>
+<tr>
+<td style="text-align: center;">Release 15</td>
+<td style="text-align: center;">2018</td>
+<td><strong>5G NR</strong> (Chapter 5)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>UMTS R99</strong> was the first commercial deployment. <strong>HSPA (R5+R6)</strong> was the workhorse
+of 3G, deployed from ~2006 to ~2015. <strong>HSPA+ (R7)</strong> extended 3G's life through
+the LTE transition.</p>
+<h3 id="413-3g-variants">4.1.3 3G variants<a class="headerlink" href="#413-3g-variants" title="Permanent link">&para;</a></h3>
+<p>Three 3G standards were deployed:</p>
+<table>
+<thead>
+<tr>
+<th>Standard</th>
+<th>PHY</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>UMTS FDD</strong> (WCDMA)</td>
+<td>Wideband CDMA with FDD</td>
+<td>Dominant globally — most of Europe, Asia, Africa</td>
+</tr>
+<tr>
+<td><strong>UMTS TDD</strong> (TD-CDMA)</td>
+<td>CDMA with TDD</td>
+<td>Some deployment in China, limited elsewhere</td>
+</tr>
+<tr>
+<td><strong>cdma2000</strong> (1xRTT, EV-DO)</td>
+<td>cdmaOne evolution</td>
+<td>North America, Japan, Korea</td>
+</tr>
+</tbody>
+</table>
+<p>This chapter focuses on <strong>UMTS FDD (WCDMA)</strong> — the dominant 3G standard, and the
+natural successor to GSM.</p>
+<h3 id="414-the-key-technology-shift-cdma">4.1.4 The key technology shift — CDMA<a class="headerlink" href="#414-the-key-technology-shift-cdma" title="Permanent link">&para;</a></h3>
+<p>GSM used <strong>TDMA</strong> — orthogonal frequency × time slots, so users do not interfere
+(at least, not within a cell). UMTS uses <strong>WCDMA</strong> — all users share the same
+frequency simultaneously, distinguished by their <strong>spreading codes</strong>.</p>
+<p>This is a fundamental change:</p>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>GSM (TDMA)</th>
+<th>UMTS (WCDMA)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multiple access</td>
+<td>Time slots</td>
+<td>Spreading codes</td>
+</tr>
+<tr>
+<td>Frequency reuse</td>
+<td>Factor <span class="arithmatex">\(N\)</span> (typically 3–7)</td>
+<td><strong>Factor <span class="arithmatex">\(N = 1\)</span></strong></td>
+</tr>
+<tr>
+<td>Interference</td>
+<td>Co-channel from other cells</td>
+<td><strong>Self-interference + co-cell</strong></td>
+</tr>
+<tr>
+<td>Capacity limited by</td>
+<td>Number of slots</td>
+<td><strong>Interference</strong> (soft limit)</td>
+</tr>
+<tr>
+<td>Handover</td>
+<td>Hard</td>
+<td><strong>Soft</strong> (connected to 2+ cells)</td>
+</tr>
+<tr>
+<td>Power control</td>
+<td>Slow, coarse</td>
+<td><strong>Fast, precise (1500 Hz)</strong></td>
+</tr>
+<tr>
+<td>Synchronization</td>
+<td>Frame-synchronous</td>
+<td>Uplink asynchronous (scrambling codes)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="42-system-architecture">4.2 System architecture<a class="headerlink" href="#42-system-architecture" title="Permanent link">&para;</a></h2>
+<h3 id="421-the-three-subsystems">4.2.1 The three subsystems<a class="headerlink" href="#421-the-three-subsystems" title="Permanent link">&para;</a></h3>
+<p>UMTS splits into the same logical structure as GSM, with new names:</p>
+<ul>
+<li><strong>UE</strong> — User Equipment (handset + USIM).</li>
+<li><strong>UTRAN</strong> — UMTS Terrestrial Radio Access Network.</li>
+<li><strong>CN</strong> — Core Network.</li>
+</ul>
+<p>Two additional pieces:</p>
+<ul>
+<li><strong>Serving RNC vs. Drift RNC</strong> — during soft handover, a UE is connected to
+  multiple RNCs; one is the "serving" (controls signalling) and the others are
+  "drift" (relay data).</li>
+<li><strong>CS and PS domains</strong> — the Core Network has both a <strong>Circuit-Switched</strong> domain
+  (for voice, like GSM) and a <strong>Packet-Switched</strong> domain (for data, like GPRS).</li>
+</ul>
+<h3 id="422-ue-user-equipment">4.2.2 UE — User Equipment<a class="headerlink" href="#422-ue-user-equipment" title="Permanent link">&para;</a></h3>
+<p><strong>UE = ME + USIM</strong> (UMTS Subscriber Identity Module).</p>
+<p>The USIM is an upgrade of the GSM SIM — same subscription model, but with
+larger storage, stronger authentication (USIM AKA), and support for new services.</p>
+<p><strong>Identifiers:</strong></p>
+<ul>
+<li><strong>IMSI</strong> — as in GSM.</li>
+<li><strong>IMEI</strong> — as in GSM.</li>
+<li><strong>P-TMSI</strong> — packet-domain equivalent of TMSI.</li>
+<li><strong>GUTI</strong> — GPRS temporary identity (in later releases).</li>
+</ul>
+<h3 id="423-utran-umts-terrestrial-radio-access-network">4.2.3 UTRAN — UMTS Terrestrial Radio Access Network<a class="headerlink" href="#423-utran-umts-terrestrial-radio-access-network" title="Permanent link">&para;</a></h3>
+<p><strong>NodeB</strong> — the base station.</p>
+<ul>
+<li>Handles <strong>WCDMA physical layer</strong>: spreading, scrambling, modulation, coding.</li>
+<li><strong>Rake receiver</strong> — combining multipath components.</li>
+<li><strong>Fast power control</strong> — transmits power-control commands to UEs every slot (1500 Hz).</li>
+<li>Multiple cells per NodeB (typically 3-sector, like GSM BTS).</li>
+<li>Connects to the RNC via the <strong>Iub</strong> interface.</li>
+</ul>
+<p><strong>RNC — Radio Network Controller</strong> — the UMTS equivalent of the GSM BSC.</p>
+<ul>
+<li><strong>Radio resource management</strong> — spreading-code allocation, handover control.</li>
+<li><strong>Outer-loop power control</strong> — sets the target SIR based on BLER.</li>
+<li><strong>Soft handover</strong> management (combines signals from multiple NodeBs).</li>
+<li><strong>Ciphering</strong> (in some configurations) and <strong>header compression</strong> (PDCP).</li>
+<li>Connects to the CN via <strong>Iu-CS</strong> (to MSC) or <strong>Iu-PS</strong> (to SGSN).</li>
+</ul>
+<p><strong>The Iub interface</strong> between NodeB and RNC is complex — it carries user traffic,
+signalling, and timing (node synchronization) with strict timing requirements
+(±1.25 ms for soft handover).</p>
+<h3 id="424-core-network">4.2.4 Core Network<a class="headerlink" href="#424-core-network" title="Permanent link">&para;</a></h3>
+<p><strong>CS domain</strong> (circuit-switched — for voice and CS data):</p>
+<ul>
+<li><strong>MSC</strong> (Mobile Switching Center) — same role as GSM MSC.</li>
+<li><strong>GMSC</strong> (Gateway MSC) — interface to PSTN.</li>
+<li><strong>VLR</strong> (Visitor Location Register) — visitor database.</li>
+</ul>
+<p><strong>PS domain</strong> (packet-switched — for data):</p>
+<ul>
+<li><strong>SGSN</strong> (Serving GPRS Support Node) — packet routing.</li>
+<li><strong>GGSN</strong> (Gateway GPRS Support Node) — gateway to external PDN.</li>
+</ul>
+<p><strong>Shared elements:</strong></p>
+<ul>
+<li><strong>HLR</strong> (Home Location Register) — home subscriber database.</li>
+<li><strong>AuC</strong> (Authentication Center) — holds subscriber keys.</li>
+</ul>
+<p><strong>Evolution from GSM:</strong></p>
+<p>The UMTS Core Network was designed to be a <strong>superset of GPRS</strong> — an operator
+could evolve the GSM core to UMTS by upgrading software and adding capacity, not
+replacing hardware. This was critical for GSM operators adopting 3G (most of them).</p>
+<p>The <strong>all-IP</strong> transformation (Release 4 onward) replaced the MSC with a
+<strong>MSC Server</strong> (signalling) and <strong>MGW</strong> (Media Gateway — user plane).</p>
+<h3 id="425-interfaces">4.2.5 Interfaces<a class="headerlink" href="#425-interfaces" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Between</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Uu</strong></td>
+<td>UE ↔ NodeB</td>
+<td>Radio air interface (WCDMA)</td>
+</tr>
+<tr>
+<td><strong>Iub</strong></td>
+<td>NodeB ↔ RNC</td>
+<td>Control and user traffic</td>
+</tr>
+<tr>
+<td><strong>Iur</strong></td>
+<td>RNC ↔ RNC</td>
+<td>Soft handover, inter-RNC mobility</td>
+</tr>
+<tr>
+<td><strong>Iu-CS</strong></td>
+<td>RNC ↔ MSC</td>
+<td>CS traffic</td>
+</tr>
+<tr>
+<td><strong>Iu-PS</strong></td>
+<td>RNC ↔ SGSN</td>
+<td>PS traffic</td>
+</tr>
+<tr>
+<td><strong>Iu-BC</strong></td>
+<td>RNC ↔ CBC</td>
+<td>Broadcast (cell broadcast)</td>
+</tr>
+</tbody>
+</table>
+<p>The <strong>Iur</strong> interface is unique to UMTS — it enables <strong>soft handover between RNCs</strong>,
+which is not possible in GSM (where handover between BSCs goes through the MSC).</p>
+<h3 id="worked-example-41-iur-and-soft-handover">Worked example 4.1 — Iur and soft handover<a class="headerlink" href="#worked-example-41-iur-and-soft-handover" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A UE on a highway moves from Cell A (RNC1) to Cell B (RNC2) to
+Cell C (NodeB2 under RNC2).</p>
+<p><strong>Without Iur:</strong> at the RNC boundary, the connection must be <strong>hard-handed</strong> from
+RNC1 to RNC2 — a break-before-make handover, ~200 ms interruption, potential call
+drop at high speed.</p>
+<p><strong>With Iur:</strong> the UE enters soft handover at the RNC1/RNC2 boundary. Both RNCs
+receive the same signal via the <strong>Iur</strong> interface; the serving RNC (say RNC1)
+selects the best frame or soft-combines the two. The connection survives the
+boundary without interruption, then the serving RNC switches to RNC2 (or the UE
+drops RNC1 when RNC2's signal is dominant).</p>
+<p><strong>The Iur interface</strong> is what makes CDMA soft handover work across RNC boundaries.
+Without it, UMTS would degrade to hard handover between every pair of RNCs —
+losing the biggest CDMA advantage.</p>
+<hr />
+<h2 id="43-the-wcdma-physical-layer">4.3 The WCDMA physical layer<a class="headerlink" href="#43-the-wcdma-physical-layer" title="Permanent link">&para;</a></h2>
+<h3 id="431-frequency-and-chip-rate">4.3.1 Frequency and chip rate<a class="headerlink" href="#431-frequency-and-chip-rate" title="Permanent link">&para;</a></h3>
+<p><strong>UMTS FDD:</strong></p>
+<ul>
+<li><strong>Uplink:</strong> 1920–1980 MHz.</li>
+<li><strong>Downlink:</strong> 2110–2170 MHz.</li>
+<li><strong>Duplex separation:</strong> 190 MHz.</li>
+<li><strong>Channel bandwidth:</strong> <strong>5 MHz</strong> per carrier.</li>
+<li><strong>Chip rate:</strong> <strong>3.84 Mcps</strong> (megachips per second).</li>
+</ul>
+<p><strong>Why 3.84 Mcps?</strong> It's a multiple of the GSM bit rate (270.833 kbps × 4 = 1.083 Mbps; 3.84 / 1.083 ≈ 3.55, not a clean multiple). More precisely, 3.84 Mcps is chosen so that:</p>
+<ul>
+<li><strong>5 MHz channel</strong> → 3.84 Mcps fills the channel with a small guard band.</li>
+<li><strong>Processing gain</strong> for typical data rates: 3.84 Mcps / 12.2 kbps ≈ 315 (25 dB).</li>
+<li><strong>Coexistence</strong> with GSM in adjacent bands.</li>
+</ul>
+<p><strong>Number of channels in Europe:</strong> 60 channels of 5 MHz in the 60 MHz uplink band
+(1920–1980), and correspondingly in downlink.</p>
+<h3 id="432-spreading-and-scrambling">4.3.2 Spreading and scrambling<a class="headerlink" href="#432-spreading-and-scrambling" title="Permanent link">&para;</a></h3>
+<p>WCDMA uses <strong>two layers of spreading</strong>, each serving a different purpose:</p>
+<p><strong>Layer 1 — Channelization (spreading) codes:</strong> orthogonal codes that separate
+different physical channels <strong>within one transmitter</strong>.</p>
+<ul>
+<li><strong>Orthogonal Variable Spreading Factor (OVSF) codes</strong> — a tree of codes that
+  maintains orthogonality at different spreading factors.</li>
+<li>Used to distinguish <strong>voice, data, control, pilot</strong> channels from a single NodeB.</li>
+<li><strong>Downlink:</strong> OVSF codes separate users within the cell.</li>
+<li><strong>Uplink:</strong> OVSF codes separate the DPDCH (dedicated physical data channel) from
+  the DPCCH (dedicated physical control channel) within one UE.</li>
+</ul>
+<p><strong>Layer 2 — Scrambling codes:</strong> pseudo-random codes that separate <strong>different
+transmitters</strong> (cells or UEs).</p>
+<ul>
+<li><strong>Downlink scrambling codes</strong> — Gold codes of length 38,400 chips (10 ms).
+  Each cell has a unique <strong>primary scrambling code</strong>. There are 512 primary
+  scrambling codes, organized in 64 groups of 8.</li>
+<li><strong>Uplink scrambling codes</strong> — Gold codes, assigned by the RNC.</li>
+<li><strong>Scrambling does not change the signal bandwidth</strong> — it just randomizes it so
+  that different users' signals look uncorrelated to each other.</li>
+</ul>
+<p><strong>The key property:</strong> the orthogonality of OVSF codes is <strong>destroyed by multipath</strong> —
+the delayed copies of a signal arrive out of sync with other users' codes, causing
+multiple-access interference (MAI). Scrambling + Rake receiver + power control
+collectively manage this.</p>
+<h3 id="433-orthogonal-variable-spreading-factor-ovsf-codes">4.3.3 Orthogonal Variable Spreading Factor (OVSF) codes<a class="headerlink" href="#433-orthogonal-variable-spreading-factor-ovsf-codes" title="Permanent link">&para;</a></h3>
+<p>The OVSF tree generates codes of length <span class="arithmatex">\(L = 2^k\)</span> chips, where <span class="arithmatex">\(L = \text{spreading
+factor (SF)}\)</span>. Given a code <span class="arithmatex">\(C\)</span>, its children are:</p>
+<div class="arithmatex">\[
+\boxed{\;C_{2L, 2k} = (C_{L,k}, C_{L,k}),\quad C_{2L, 2k+1} = (C_{L,k}, -C_{L,k})\;}
+\]</div>
+<p>Starting with <span class="arithmatex">\(C_{1,0} = (1)\)</span>, the tree generates codes like:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>SF = 1 :              (1)
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>                     /  \
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>SF = 2 :          (1,1)  (1,-1)
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                  /  \     /   \
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>SF = 4 :   (1,1,1,1)(1,1,-1,-1)(1,-1,1,-1)(1,-1,-1,1)
+</span></code></pre></div>
+<p><strong>Rule:</strong> a code can be used only if <strong>neither it nor any of its ancestors or
+descendants</strong> is in use. This preserves orthogonality.</p>
+<p><strong>Example:</strong> To allocate a voice channel (SF=128) and a data channel (SF=16) to
+the same cell, the RNC picks codes from the tree such that they are not on the
+same branch.</p>
+<p><strong>Orthogonality:</strong> OVSF codes are orthogonal <strong>within a single transmitted signal</strong>.
+In the downlink, all users share one transmitter (the NodeB), so the codes are
+orthogonal — no intra-cell interference <strong>in the absence of multipath</strong>.</p>
+<p><strong>In the uplink, orthogonality is not enforced</strong> — different UEs transmit
+asynchronously, so their codes aren't strictly aligned. Uplink interference is
+handled by <strong>scrambling + Rake + power control</strong>, not by orthogonality.</p>
+<h3 id="worked-example-42-ovsf-allocation">Worked example 4.2 — OVSF allocation<a class="headerlink" href="#worked-example-42-ovsf-allocation" title="Permanent link">&para;</a></h3>
+<p><strong>Downlink, one NodeB serves:</strong></p>
+<ul>
+<li>1 pilot channel (CPICH) at SF = 256.</li>
+<li>1 primary common control channel (P-CCPCH) at SF = 256.</li>
+<li>1 voice user (SF = 128).</li>
+<li>1 data user (SF = 32).</li>
+</ul>
+<p><strong>Codes:</strong> many valid assignments. The RNC chooses:</p>
+<ul>
+<li>CPICH at code index 0 (SF=256).</li>
+<li>P-CCPCH at code index 1 (SF=256).</li>
+<li>Voice user at SF=128, code index 1 (from a different subtree).</li>
+<li>Data user at SF=32, code index 3.</li>
+</ul>
+<p><strong>Constraint:</strong> no ancestor or descendant of any allocated code is used.
+The RNC's code allocator tracks the tree and refuses allocations that would
+violate orthogonality.</p>
+<p><strong>In practice,</strong> the downlink code tree supports roughly <strong>SF=256 maximum per
+cell</strong> (256 spreading codes at SF=256) — but in practice operators allocate a
+max of ~120–180 codes because:</p>
+<ul>
+<li>Signalling channels (pilot, sync, broadcast) take ~10–15.</li>
+<li>Soft handover reserves codes in multiple cells.</li>
+<li>Multipath destroys orthogonality beyond ~60–80% of codes, so adding more
+  provides diminishing capacity.</li>
+</ul>
+<h3 id="434-processing-gain">4.3.4 Processing gain<a class="headerlink" href="#434-processing-gain" title="Permanent link">&para;</a></h3>
+<div class="arithmatex">\[
+\boxed{\;G = \frac{R_c}{R_b} = \frac{3.84\ \text{Mcps}}{R_b}\;}
+\]</div>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th style="text-align: center;"><span class="arithmatex">\(R_b\)</span></th>
+<th style="text-align: center;">Processing gain</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Voice (AMR 12.2 kbps)</td>
+<td style="text-align: center;">12.2 kbps</td>
+<td style="text-align: center;"><strong>315</strong> (25 dB)</td>
+</tr>
+<tr>
+<td>Video call (64 kbps)</td>
+<td style="text-align: center;">64 kbps</td>
+<td style="text-align: center;">60 (17.8 dB)</td>
+</tr>
+<tr>
+<td>Data (384 kbps)</td>
+<td style="text-align: center;">384 kbps</td>
+<td style="text-align: center;">10 (10 dB)</td>
+</tr>
+<tr>
+<td>HSPA peak (14.4 Mbps DL)</td>
+<td style="text-align: center;">14.4 Mbps</td>
+<td style="text-align: center;">0.27 (-5.7 dB!)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The last row</strong> — HSPA DL peak is <strong>higher than the chip rate</strong>. That's because
+HSPA uses <strong>16-QAM or 64-QAM modulation</strong>, which packs more bits per symbol, and
+<strong>high-rate channel coding</strong> (efficient use of the channel). The processing gain
+formula (<span class="arithmatex">\(G = R_c/R_b\)</span>) applies to <strong>voice and low-rate data</strong>; for high-rate
+systems, spectral efficiency per Hz exceeds 1 — the "processing gain" concept
+breaks down.</p>
+<h3 id="435-modulation">4.3.5 Modulation<a class="headerlink" href="#435-modulation" title="Permanent link">&para;</a></h3>
+<p><strong>UMTS R99:</strong></p>
+<ul>
+<li><strong>Downlink:</strong> QPSK (2 bits/symbol) — data; <strong>QPSK for control</strong>.</li>
+<li><strong>Uplink:</strong> dual-channel BPSK (two parallel BPSK streams on I and Q) — effectively
+  QPSK but with specific power ratios.</li>
+</ul>
+<p><strong>HSPA (R5+):</strong></p>
+<ul>
+<li><strong>Downlink:</strong> QPSK → 16-QAM (R5) → 64-QAM (R7).</li>
+<li><strong>Uplink:</strong> QPSK → 16-QAM (R6, HSUPA), later 16-QAM fixed.</li>
+</ul>
+<p><strong>HSPA+ (R7+):</strong></p>
+<ul>
+<li><strong>Downlink:</strong> 64-QAM with 2×2 MIMO (dual-stream).</li>
+<li><strong>Uplink:</strong> 16-QAM with 2×2 MIMO (later, in R11).</li>
+</ul>
+<p><strong>Why QPSK first?</strong> CDMA wants to maintain a <strong>constant-envelope</strong> signal so
+power amplifiers can operate efficiently, and QPSK with pulse shaping is
+near-constant-envelope. Higher-order modulations (16-QAM, 64-QAM) have higher
+PAPR, requiring PA backoff — but HSPA+ accepts this because the base station PA
+can afford it.</p>
+<hr />
+<h2 id="44-the-rake-receiver">4.4 The Rake receiver<a class="headerlink" href="#44-the-rake-receiver" title="Permanent link">&para;</a></h2>
+<p>The <strong>Rake receiver</strong> is the single most important element of the UMTS physical
+layer. It exploits <strong>multipath diversity</strong> — the fact that a signal arriving
+via multiple paths carries redundant information.</p>
+<h3 id="441-why-multipath-is-bad-and-can-be-good">4.4.1 Why multipath is bad — and can be good<a class="headerlink" href="#441-why-multipath-is-bad-and-can-be-good" title="Permanent link">&para;</a></h3>
+<p><strong>Bad:</strong> In a single-carrier narrowband system, multipath causes <strong>ISI</strong> (intersymbol
+interference) — delayed copies of a symbol overlap with the next, requiring
+equalization. This is what happens in GSM (Viterbi equalizer).</p>
+<p><strong>Good (in CDMA):</strong> In a <strong>wideband</strong> CDMA system, the symbol duration (84 ns per
+chip at 3.84 Mcps) is much shorter than typical delay spreads (1–3 μs). Different
+multipath components arrive with <strong>chip-level delays</strong> — they appear as
+<strong>distinguishable copies</strong> rather than ISI. Each copy can be <strong>separately
+demodulated</strong>, then <strong>combined</strong> to improve SNR.</p>
+<h3 id="442-the-rake-concept">4.4.2 The Rake concept<a class="headerlink" href="#442-the-rake-concept" title="Permanent link">&para;</a></h3>
+<p>The Rake receiver is conceptually a set of parallel <strong>finger</strong> demodulators, each
+locked to a specific multipath delay:</p>
+<div class="arithmatex">\[
+\boxed{\;r(t) = \sum_{l=1}^{L} \alpha_l\, s(t - \tau_l)\;}
+\]</div>
+<p>where <span class="arithmatex">\(\alpha_l\)</span> is the complex gain and <span class="arithmatex">\(\tau_l\)</span> the delay of the <span class="arithmatex">\(l\)</span>-th path.</p>
+<p><strong>Each finger</strong> correlates the received signal with the <strong>UE's scrambling code
++ channelization code</strong>, delayed by <span class="arithmatex">\(\tau_l\)</span>. The output of finger <span class="arithmatex">\(l\)</span> is:</p>
+<div class="arithmatex">\[
+y_l = \alpha_l\, s + \text{interference from other paths}
+\]</div>
+<p><strong>Combining:</strong> the outputs are combined with <strong>maximal-ratio combining (MRC)</strong>:</p>
+<div class="arithmatex">\[
+\boxed{\;y = \sum_{l=1}^{L} w_l\, y_l,\quad w_l \propto \alpha_l^*\;}
+\]</div>
+<p>The combined SNR is the <strong>sum</strong> of the SNRs of each finger:</p>
+<div class="arithmatex">\[
+\text{SNR}_{\text{total}} = \sum_l \text{SNR}_l
+\]</div>
+<p><strong>The Rake receiver turns multipath from a problem into a benefit</strong> — it's
+essentially <strong>diversity combining</strong> at the chip level. In deep fade, if any one
+path is strong, the UE still receives.</p>
+<h3 id="worked-example-43-rake-diversity-gain">Worked example 4.3 — Rake diversity gain<a class="headerlink" href="#worked-example-43-rake-diversity-gain" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A UE has a 3-finger Rake receiver. Measured path gains:</p>
+<ul>
+<li>Path 1 (delay 0 μs): <span class="arithmatex">\(\alpha_1 = 1.0\)</span> (0 dB).</li>
+<li>Path 2 (delay 1.2 μs): <span class="arithmatex">\(\alpha_2 = 0.7\)</span> (-3 dB).</li>
+<li>Path 3 (delay 2.4 μs): <span class="arithmatex">\(\alpha_3 = 0.4\)</span> (-8 dB).</li>
+</ul>
+<p><strong>Per-path SNR</strong> (assuming equal noise): proportional to <span class="arithmatex">\(|\alpha_l|^2\)</span>:</p>
+<ul>
+<li>SNR1 ∝ 1.00</li>
+<li>SNR2 ∝ 0.49</li>
+<li>SNR3 ∝ 0.16</li>
+</ul>
+<p><strong>Combined SNR</strong> = 1.00 + 0.49 + 0.16 = <strong>1.65</strong> (linear), compared with a
+single-path SNR of 1.0.</p>
+<p><strong>Diversity gain:</strong> 10·log₁₀(1.65) ≈ <strong>2.2 dB</strong> — the received SNR is 2.2 dB
+better than a single-path system. In Rayleigh fading, this is the difference
+between frequent dropouts and reliable connection.</p>
+<p><strong>If all 3 paths had equal average power</strong> (typical Rayleigh fading with
+independent path statistics), the gain would be <strong>4.77 dB</strong> — the classic L=3
+diversity gain.</p>
+<h3 id="443-practical-rake-receiver-details">4.4.3 Practical Rake receiver details<a class="headerlink" href="#443-practical-rake-receiver-details" title="Permanent link">&para;</a></h3>
+<p><strong>Number of fingers:</strong></p>
+<ul>
+<li><strong>UE:</strong> typically 3–6 fingers (handset size and cost constrain).</li>
+<li><strong>NodeB:</strong> typically 4–8 fingers per antenna sector, with possible multiple
+  antenna combining.</li>
+</ul>
+<p><strong>Finger management:</strong></p>
+<ul>
+<li><strong>Searching</strong> — the UE continually searches for new multipath peaks to assign
+  fingers to.</li>
+<li><strong>Assignment</strong> — when a strong new path appears, allocate a finger.</li>
+<li><strong>Locking</strong> — lock the finger's delay to the peak.</li>
+<li><strong>Releasing</strong> — when a path fades below threshold, release the finger.</li>
+</ul>
+<p><strong>Delay spread limits:</strong></p>
+<ul>
+<li><strong>Typical urban:</strong> 1–3 μs delay spread — Rake handles well.</li>
+<li><strong>Hilly / mountainous:</strong> 10–30 μs delay spread — exceeds Rake's window,
+  causes ISI between distant multipath, needs an <strong>equalizer</strong> (post-Rake).</li>
+<li><strong>Pedestrian / indoor:</strong> &lt;0.5 μs delay spread — Rake sees few multipaths;
+  Rake gain is small but still useful.</li>
+</ul>
+<hr />
+<h2 id="45-power-control">4.5 Power control<a class="headerlink" href="#45-power-control" title="Permanent link">&para;</a></h2>
+<p>In CDMA, <strong>all users share the same frequency simultaneously</strong>, so every
+transmitter is an interferer to every other. If one user transmits at high power,
+it overwhelms everyone else. This is the <strong>near-far problem</strong> — and its solution
+is <strong>fast, precise power control</strong>.</p>
+<h3 id="451-the-goal">4.5.1 The goal<a class="headerlink" href="#451-the-goal" title="Permanent link">&para;</a></h3>
+<p>Each UE should arrive at the NodeB with the <strong>same received power</strong> (before
+spreading). Then all users' signals are separated cleanly by their codes, and no
+one dominates.</p>
+<p><strong>Signal-to-interference ratio</strong> at the NodeB (per user):</p>
+<div class="arithmatex">\[
+\boxed{\;\text{SIR} = \frac{P_{\text{received}}}{(N-1) P_{\text{received}} + N_0 W}\;}
+\]</div>
+<p>where <span class="arithmatex">\(N\)</span> is the number of active users, <span class="arithmatex">\(P_{\text{received}}\)</span> is the received
+power per user, <span class="arithmatex">\(N_0 W\)</span> is the thermal noise, and <span class="arithmatex">\(W\)</span> is the bandwidth (3.84 MHz).</p>
+<p>For <strong>N users at equal power</strong>, SIR ≈ <span class="arithmatex">\(1/(N-1)\)</span> — the capacity of the cell is
+limited by interference (this is <strong>soft capacity</strong>, in contrast to GSM's hard
+slot count).</p>
+<h3 id="452-three-levels-of-power-control">4.5.2 Three levels of power control<a class="headerlink" href="#452-three-levels-of-power-control" title="Permanent link">&para;</a></h3>
+<p><strong>Open-loop power control</strong> (initial access).</p>
+<ul>
+<li>UE measures the received power of the CPICH (pilot).</li>
+<li>Estimates path loss (assuming uplink and downlink path losses are similar).</li>
+<li>Sets its initial uplink transmit power based on the target received power
+  at NodeB minus the estimated path loss.</li>
+<li><strong>Not accurate</strong> (uplink and downlink frequencies differ → different fading);
+  only used to set a starting point.</li>
+</ul>
+<p><strong>Closed-loop power control</strong> (fast, during the call).</p>
+<ul>
+<li><strong>NodeB</strong> measures the received SIR every <strong>slot</strong> (0.667 ms).</li>
+<li>Compares to <strong>target SIR</strong> set by outer-loop control.</li>
+<li>Sends a <strong>TPC (Transmit Power Control) command</strong> every slot — either "up" or
+  "down" by 1 dB.</li>
+<li><strong>Rate:</strong> 1500 Hz — fast enough to track Rayleigh fading (coherence time at
+  3 km/h ≈ 70 ms; at 100 km/h ≈ 2 ms).</li>
+</ul>
+<p><strong>Outer-loop power control</strong> (slow, in the RNC).</p>
+<ul>
+<li>The RNC monitors the <strong>BLER</strong> (block error rate) over frames (100–500 ms windows).</li>
+<li>If BLER &gt; target (e.g., 1%), <strong>raises</strong> the target SIR.</li>
+<li>If BLER &lt; target, <strong>lowers</strong> the target SIR.</li>
+<li>This adapts the target SIR to the <strong>changing channel</strong> and <strong>data rate</strong> — each
+  service needs a different target.</li>
+</ul>
+<h3 id="worked-example-44-power-control-budget">Worked example 4.4 — power control budget<a class="headerlink" href="#worked-example-44-power-control-budget" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> A UE at the cell edge, R99 voice, target SIR = 5 dB (0.316 in linear).</p>
+<p><strong>NodeB measures SIR = 3 dB. Action:</strong> NodeB sends <strong>TPC = "up"</strong> every slot
+until SIR meets 5 dB.</p>
+<p><strong>Rate of convergence:</strong> 1 dB per slot × 1500 slots/s = <strong>1500 dB/s</strong> — very
+fast. In 2 slots (1.3 ms), the SIR adjusts by 2 dB. In practice, the TPC is
+<strong>filtered</strong> to avoid oscillation, and the effective update rate is
+~500–1000 dB/s.</p>
+<p><strong>Downstream effect on capacity:</strong> if power control were absent and one UE
+transmitted 10 dB too loud, the interference to other users would rise by 10 dB,
+killing cell capacity. Precise power control keeps each user near minimum
+transmit power — capacity scales linearly with quality of power control.</p>
+<h3 id="453-power-control-in-the-downlink">4.5.3 Power control in the downlink<a class="headerlink" href="#453-power-control-in-the-downlink" title="Permanent link">&para;</a></h3>
+<p>The downlink also uses power control, but with different characteristics:</p>
+<ul>
+<li><strong>NodeB transmits at a common total power</strong> (typically 20–40 W per sector).</li>
+<li><strong>Per-user power</strong> is allocated so each UE achieves its target SIR.</li>
+<li><strong>Downlink is orthogonal within a cell</strong> (OVSF codes), so intra-cell interference
+  is minimal. Inter-cell interference dominates.</li>
+<li><strong>Fast power control</strong> (1500 Hz) is used on DPDCH/DPCCH; <strong>slow power control</strong>
+  on some channels (pilot, sync).</li>
+</ul>
+<p><strong>Downlink capacity</strong> is limited by <strong>transmit power</strong> — the NodeB PA can deliver
+only so much. As more users demand more power, the cell's coverage shrinks (the
+"cell breathing" phenomenon).</p>
+<hr />
+<h2 id="46-handover-in-umts">4.6 Handover in UMTS<a class="headerlink" href="#46-handover-in-umts" title="Permanent link">&para;</a></h2>
+<p>WCDMA's universal frequency reuse (<span class="arithmatex">\(N = 1\)</span>) enables a unique advantage: a UE
+can be connected to <strong>multiple cells simultaneously</strong>.</p>
+<h3 id="461-types-of-handover">4.6.1 Types of handover<a class="headerlink" href="#461-types-of-handover" title="Permanent link">&para;</a></h3>
+<p><strong>Softer handover</strong> — the UE is connected to <strong>two or more cells of the same
+NodeB</strong>.</p>
+<ul>
+<li>Different sectors of the same base station.</li>
+<li>Cells are on the same NodeB, so the uplink signals are combined at the NodeB
+  (maximum-ratio combining).</li>
+<li>Downlink transmits the same data on multiple sector antennas (the UE combines).</li>
+<li><strong>Trigger:</strong> RSSI of a neighbor sector enters a window relative to the serving.</li>
+</ul>
+<p><strong>Soft handover</strong> — the UE is connected to <strong>two or more NodeBs</strong> (potentially
+under different RNCs).</p>
+<ul>
+<li>Signal is <strong>soft-combined</strong> at the RNC (or at the UE for downlink).</li>
+<li>No break-before-make — the UE keeps the old link while establishing the new.</li>
+<li><strong>Trigger:</strong> RSSI of a neighbor NodeB enters a window relative to the serving.</li>
+<li><strong>This is CDMA's signature advantage</strong> — no interruption during handover.</li>
+</ul>
+<p><strong>Hard handover</strong> — the UE breaks the old connection before establishing the
+new.</p>
+<ul>
+<li>Used when moving between <strong>frequencies</strong> (inter-frequency) or <strong>systems</strong>
+  (UMTS to GSM).</li>
+<li>Involves a brief interruption (~100–200 ms).</li>
+</ul>
+<h3 id="462-the-active-set-and-events">4.6.2 The active set and events<a class="headerlink" href="#462-the-active-set-and-events" title="Permanent link">&para;</a></h3>
+<p><strong>Active set</strong> — the set of cells to which the UE is currently connected.</p>
+<p><strong>Monitored set</strong> — cells the UE measures but is not connected to.</p>
+<p><strong>Detected set</strong> — cells detected but not in either set.</p>
+<p><strong>Radio link events</strong> (3GPP standard naming):</p>
+<table>
+<thead>
+<tr>
+<th>Event</th>
+<th>Trigger</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>1A</strong></td>
+<td>A primary CPICH enters the reporting range (candidate for adding)</td>
+</tr>
+<tr>
+<td><strong>1B</strong></td>
+<td>A primary CPICH leaves the reporting range (candidate for removing)</td>
+</tr>
+<tr>
+<td><strong>1C</strong></td>
+<td>A non-active CPICH becomes better than an active one (replace)</td>
+</tr>
+<tr>
+<td><strong>1D</strong></td>
+<td>Best cell change (best active cell changes)</td>
+</tr>
+<tr>
+<td><strong>2A</strong></td>
+<td>Best frequency change (inter-frequency)</td>
+</tr>
+<tr>
+<td><strong>3A</strong></td>
+<td>GSM cell becomes better than UMTS (inter-system)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Soft handover procedure:</strong></p>
+<ol>
+<li><strong>Event 1A</strong> triggers: a monitored cell's CPICH enters the reporting window.</li>
+<li>UE sends <strong>Measurement Report</strong> to the serving RNC.</li>
+<li>RNC decides to add the cell to the active set.</li>
+<li>RNC sends <strong>Radio Link Setup</strong> to the target NodeB (via Iur if inter-RNC).</li>
+<li>Target NodeB establishes the link and responds.</li>
+<li>RNC sends <strong>Active Set Update</strong> to the UE (via the serving cell).</li>
+<li>UE adds the new cell to its active set.</li>
+<li>Now the UE receives from both cells — combining downlink, soft-combining uplink.</li>
+</ol>
+<p><strong>Timing:</strong> ~500–2000 ms from measurement trigger to full soft handover.</p>
+<h3 id="worked-example-45-soft-handover-window-and-trade-offs">Worked example 4.5 — soft handover window and trade-offs<a class="headerlink" href="#worked-example-45-soft-handover-window-and-trade-offs" title="Permanent link">&para;</a></h3>
+<p><strong>Soft handover threshold</strong> (event 1A) — typically <strong>3–6 dB</strong> below the best
+active cell.</p>
+<p><strong>Scenario:</strong> Serving cell CPICH = -85 dBm. Monitored neighbor = -82 dBm
+(3 dB better). <strong>Reporting range</strong> configured as ±3 dB. Since the neighbor is
+already 3 dB <em>better</em>, event 1A triggers.</p>
+<p><strong>RNC adds</strong> the neighbor to the active set. The UE now has 2 active links.</p>
+<p><strong>Trade-offs:</strong></p>
+<ul>
+<li><strong>Too-narrow window:</strong> cells are added late, misses soft-handover benefit,
+  higher drop rate.</li>
+<li><strong>Too-wide window:</strong> cells are added early, more active set cells → more
+  downlink power consumed (each cell must transmit to the UE), fewer codes
+  available per cell, lower capacity. UMTS typically limits the active set size
+  to <strong>4–6 cells</strong>.</li>
+</ul>
+<p><strong>Rule of thumb:</strong> soft handover is beneficial when paths are within 3–6 dB, but
+the active set must be limited to avoid resource waste.</p>
+<hr />
+<h2 id="47-hsdpa-and-hsupa-the-35g-enhancements">4.7 HSDPA and HSUPA — the 3.5G enhancements<a class="headerlink" href="#47-hsdpa-and-hsupa-the-35g-enhancements" title="Permanent link">&para;</a></h2>
+<p>R99 UMTS delivered voice and up to 384 kbps data. It was a huge improvement over
+GSM, but still not "broadband." <strong>HSDPA (R5)</strong> and <strong>HSUPA (R6)</strong> — collectively
+<strong>HSPA</strong> — brought true mobile broadband.</p>
+<h3 id="471-what-limited-r99s-data-rate">4.7.1 What limited R99's data rate<a class="headerlink" href="#471-what-limited-r99s-data-rate" title="Permanent link">&para;</a></h3>
+<p>R99 data rates were limited by three factors:</p>
+<ol>
+<li><strong>Fixed spreading factor (SF) allocation</strong> — data uses SF=8 or SF=16, capping
+   peak at ~384 kbps (plus HSPA can go higher by using SF=1 or 2, but then almost
+   all codes in the cell go to one user).</li>
+<li><strong>Slow scheduling</strong> — RNC handles scheduling (every 10–100 ms), too slow for
+   bursty data and channel adaptation.</li>
+<li><strong>No fast link adaptation</strong> — the data rate cannot change rapidly with the
+   channel.</li>
+</ol>
+<h3 id="472-hsdpa-high-speed-downlink-packet-access-r5">4.7.2 HSDPA (High-Speed Downlink Packet Access) — R5<a class="headerlink" href="#472-hsdpa-high-speed-downlink-packet-access-r5" title="Permanent link">&para;</a></h3>
+<p>Three key innovations, all localized at the <strong>NodeB</strong> (not the RNC) to enable
+fast response:</p>
+<p><strong>1. Adaptive Modulation and Coding (AMC).</strong></p>
+<ul>
+<li>The NodeB chooses the modulation (QPSK / 16-QAM) and coding rate for each
+  2 ms <strong>TTI</strong> (transmission-time interval).</li>
+<li>Fast adaptation (every 2 ms) to channel conditions.</li>
+<li>Uses <strong>CQI</strong> (channel quality indicator) feedback from UE — every 2 ms.</li>
+</ul>
+<p><strong>2. Fast scheduling</strong> at the NodeB.</p>
+<ul>
+<li>The NodeB decides which UEs to serve every 2 ms — not the RNC.</li>
+<li><strong>Proportional-fair</strong> scheduling balances throughput and fairness.</li>
+<li>Multi-user diversity: at any instant, some UEs have good channel, some bad —
+  serve the ones with good channel now.</li>
+</ul>
+<p><strong>3. HARQ (Hybrid ARQ) with soft combining.</strong></p>
+<ul>
+<li>Fast retransmissions (every 2 ms, vs. R99's 100 ms).</li>
+<li><strong>Incremental redundancy:</strong> retransmissions add new parity bits, combined
+  with original at the UE.</li>
+<li><strong>Chase combining:</strong> retransmissions of the same bits, combined with MRC.</li>
+</ul>
+<p><strong>New channel: HS-DSCH</strong> (High-Speed Downlink Shared CHannel) — a <strong>shared</strong>
+channel, allocated dynamically to different UEs every TTI. Uses SF=16 with up to
+<strong>15 parallel codes</strong>.</p>
+<p><strong>Peak rate (R5):</strong> 14.4 Mbps (SF=16, 15 codes, 16-QAM, rate 3/4 coding).</p>
+<p><strong>Peak rate (R7, 64-QAM + MIMO):</strong> 42 Mbps (HSPA+).</p>
+<h3 id="473-hsupa-high-speed-uplink-packet-access-r6">4.7.3 HSUPA (High-Speed Uplink Packet Access) — R6<a class="headerlink" href="#473-hsupa-high-speed-uplink-packet-access-r6" title="Permanent link">&para;</a></h3>
+<p>Uplink counterpart to HSDPA:</p>
+<p><strong>1. New channel: E-DCH</strong> (Enhanced Dedicated CHannel).</p>
+<ul>
+<li>Uplink shared channel.</li>
+<li>Rate control by NodeB.</li>
+</ul>
+<p><strong>2. Fast scheduling</strong> at the NodeB.</p>
+<ul>
+<li><strong>Scheduling grants</strong> — NodeB controls UE's uplink data rate.</li>
+<li>Two types: <strong>absolute grants</strong> (periodic) and <strong>relative grants</strong> (every TTI).</li>
+</ul>
+<p><strong>3. HARQ</strong> on the uplink (also 2 ms TTI).</p>
+<p><strong>4. Short TTI</strong> — 2 ms (vs. R99's 10, 20, or 40 ms).</p>
+<p><strong>Peak rate (R6):</strong> 5.76 Mbps (uplink).</p>
+<p><strong>Peak rate (R7, 16-QAM):</strong> 11.5 Mbps (uplink).</p>
+<h3 id="474-hspa-r7-and-beyond">4.7.4 HSPA+ (R7 and beyond)<a class="headerlink" href="#474-hspa-r7-and-beyond" title="Permanent link">&para;</a></h3>
+<p><strong>HSPA+</strong> extends HSPA with:</p>
+<ul>
+<li><strong>64-QAM downlink</strong> (from 16-QAM) — R7.</li>
+<li><strong>2×2 MIMO downlink</strong> (dual-stream, later) — R7.</li>
+<li><strong>16-QAM uplink</strong> — R7.</li>
+<li><strong>Continuous Packet Connectivity (CPC)</strong> — for always-on data services, reduces
+  control overhead.</li>
+<li><strong>Dual-Cell HSDPA (DC-HSDPA)</strong> — R8: two 5 MHz carriers aggregated, doubling
+  downlink rate.</li>
+<li><strong>Dual-Cell HSUPA (DC-HSUPA)</strong> — R9: uplink analog of DC-HSDPA.</li>
+</ul>
+<p><strong>Peak rate (R11, 4×4 MIMO + 64-QAM, DC-HSDPA):</strong> <strong>168 Mbps downlink</strong>.</p>
+<h3 id="worked-example-46-hsdpa-peak-rate-calculation">Worked example 4.6 — HSDPA peak rate calculation<a class="headerlink" href="#worked-example-46-hsdpa-peak-rate-calculation" title="Permanent link">&para;</a></h3>
+<p><strong>Parameters (HSDPA R5, single cell):</strong></p>
+<ul>
+<li><strong>15 HS-PDSCH codes</strong> (spreading factor 16).</li>
+<li><strong>Modulation:</strong> 16-QAM (4 bits/symbol).</li>
+<li><strong>Coding rate:</strong> 3/4 (typical for good channel).</li>
+<li><strong>Chip rate:</strong> 3.84 Mcps.</li>
+<li><strong>Spreading factor per code:</strong> SF=16.</li>
+</ul>
+<p><strong>Per-code symbol rate:</strong>
+<span class="arithmatex">\(R_s = 3.84\ \text{Mcps} / 16 = 240\)</span> ksym/s.</p>
+<p><strong>Per-code bit rate (16-QAM, before coding):</strong>
+<span class="arithmatex">\(240 \times 4 = 960\)</span> kbps.</p>
+<p><strong>After coding (rate 3/4):</strong>
+<span class="arithmatex">\(960 \times 0.75 = 720\)</span> kbps.</p>
+<p><strong>15 codes combined:</strong>
+<span class="arithmatex">\(720 \times 15 = 10,800\)</span> kbps = <strong>10.8 Mbps</strong>.</p>
+<p><strong>Standard says 14.4 Mbps</strong> — the difference is because the standard assumes
+<strong>rate 1 (no coding)</strong> for the theoretical peak, giving <span class="arithmatex">\(240 \times 4 \times 15 = 14,400\)</span> kbps. In practice, rate-3/4 coding is used for reliable throughput at
+~10 Mbps.</p>
+<p><strong>HSPA+ (R7) with 64-QAM (6 bits/symbol):</strong>
+<span class="arithmatex">\(240 \times 6 \times 15 \times 0.75 = 16,200\)</span> kbps = <strong>16.2 Mbps</strong> per stream,
+and with 2×2 MIMO → <strong>~32 Mbps peak</strong>.</p>
+<p><strong>Peak rate (R11, 4×4 MIMO, 64-QAM, DC-HSDPA):</strong>
+<span class="arithmatex">\(32 \times 2\ \text{(dual cell)} \times 2\ \text{(4×4 MIMO streams)} = \mathbf{168\ Mbps}\)</span> —
+matching the 3GPP HSPA+ theoretical peak.</p>
+<h3 id="worked-example-47-hsupa-peak-rate">Worked example 4.7 — HSUPA peak rate<a class="headerlink" href="#worked-example-47-hsupa-peak-rate" title="Permanent link">&para;</a></h3>
+<p><strong>Parameters (HSUPA R6):</strong></p>
+<ul>
+<li><strong>1 E-DPDCH</strong> with spreading factor 2 (maximum rate).</li>
+<li><strong>Modulation:</strong> QPSK (2 bits/symbol).</li>
+<li><strong>Coding rate:</strong> 1 (no coding for peak).</li>
+</ul>
+<p><strong>Per-symbol rate:</strong>
+<span class="arithmatex">\(3.84\ \text{Mcps} / 2 = 1920\)</span> ksym/s.</p>
+<p><strong>Bit rate:</strong>
+<span class="arithmatex">\(1920 \times 2 = 3840\)</span> kbps = <strong>3.84 Mbps</strong> per code.</p>
+<p><strong>Standard says 5.76 Mbps</strong> — because with <strong>2 codes</strong> (or with special allocation),
+you get <span class="arithmatex">\(3840 \times 1.5 = 5.76\)</span> Mbps (one code at SF=2, plus one at SF=4).
+In practice, R6 HSUPA peak is often stated as 5.76 Mbps.</p>
+<p><strong>HSPA+ (R7) with 16-QAM:</strong>
+<span class="arithmatex">\(1920 \times 4 \times \text{rate} = 7.68\)</span> Mbps × 1.5 (dual code) = <strong>11.5 Mbps</strong>
+— matching the standard.</p>
+<h3 id="475-hspa-evolution-summary">4.7.5 HSPA evolution summary<a class="headerlink" href="#475-hspa-evolution-summary" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Release</th>
+<th style="text-align: center;">DL modulation</th>
+<th style="text-align: center;">UL modulation</th>
+<th style="text-align: center;">MIMO</th>
+<th style="text-align: center;">Peak DL</th>
+<th style="text-align: center;">Peak UL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">R99 (baseline)</td>
+<td style="text-align: center;">QPSK</td>
+<td style="text-align: center;">BPSK</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">384 kbps</td>
+<td style="text-align: center;">384 kbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R5 (HSDPA)</td>
+<td style="text-align: center;">QPSK, 16-QAM</td>
+<td style="text-align: center;">BPSK</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">14.4 Mbps</td>
+<td style="text-align: center;">384 kbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R6 (HSUPA)</td>
+<td style="text-align: center;">QPSK, 16-QAM</td>
+<td style="text-align: center;">BPSK, QPSK</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">14.4 Mbps</td>
+<td style="text-align: center;">5.76 Mbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R7 (HSPA+)</td>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">2×2</td>
+<td style="text-align: center;">28 Mbps</td>
+<td style="text-align: center;">11.5 Mbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R8 (DC-HSDPA)</td>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">2×2</td>
+<td style="text-align: center;">42 Mbps</td>
+<td style="text-align: center;">11.5 Mbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R9 (DC-HSUPA)</td>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">2×2</td>
+<td style="text-align: center;">42 Mbps</td>
+<td style="text-align: center;">23 Mbps</td>
+</tr>
+<tr>
+<td style="text-align: center;">R11 (4×4 MIMO)</td>
+<td style="text-align: center;">64-QAM</td>
+<td style="text-align: center;">16-QAM</td>
+<td style="text-align: center;">4×4</td>
+<td style="text-align: center;"><strong>168 Mbps</strong></td>
+<td style="text-align: center;">23 Mbps</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The 10-year span from R5 to R11</strong> multiplied peak downlink by <strong>11×</strong> — from
+14.4 Mbps to 168 Mbps — purely through modulation, coding, and MIMO improvements,
+without changing the 5 MHz carrier or the WCDMA chip rate.</p>
+<h3 id="476-what-hspa-didnt-fix">4.7.6 What HSPA didn't fix<a class="headerlink" href="#476-what-hspa-didnt-fix" title="Permanent link">&para;</a></h3>
+<p>HSPA was a remarkable engineering achievement, but by the late 2000s it was hitting
+fundamental limits:</p>
+<ul>
+<li><strong>WCDMA's 5 MHz carrier</strong> limits peak spectral efficiency (about 5 bps/Hz with
+  HSPA+ vs. 15+ bps/Hz with LTE's 20 MHz).</li>
+<li><strong>Interference-limited capacity</strong> — WCDMA's <span class="arithmatex">\(N=1\)</span> reuse is efficient but every
+  cell interferes with every other; adding more users degrades all users.</li>
+<li><strong>Control overhead</strong> — the scheduling, HARQ, and pilot signals consume a
+  significant fraction of capacity.</li>
+</ul>
+<p>These limits motivated <strong>LTE</strong> (Chapter 5) — an <strong>OFDMA</strong> system with a fresh
+air interface that reuses many of HSPA's concepts (AMC, HARQ, fast scheduling)
+but with much higher spectral efficiency.</p>
+<hr />
+<h2 id="48-network-design-considerations">4.8 Network design considerations<a class="headerlink" href="#48-network-design-considerations" title="Permanent link">&para;</a></h2>
+<p>Designing a UMTS network requires <strong>coverage planning</strong> and <strong>capacity planning</strong> —
+the two are coupled (unlike GSM, where they were largely independent).</p>
+<h3 id="481-coverage-planning">4.8.1 Coverage planning<a class="headerlink" href="#481-coverage-planning" title="Permanent link">&para;</a></h3>
+<p><strong>Maximum path loss</strong> (MAPL) — the maximum path loss the link can tolerate:</p>
+<div class="arithmatex">\[
+\boxed{\;\text{MAPL} = P_{\text{tx}} + G_{\text{tx}} + G_{\text{rx}} - L_{\text{cable}} - L_{\text{body}} - S_{\text{rx}} - M_{\text{interference}} - M_{\text{fade}}\;}
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(P_{\text{tx}}\)</span> — transmit power (dBm).</li>
+<li><span class="arithmatex">\(G_{\text{tx}}, G_{\text{rx}}\)</span> — antenna gains.</li>
+<li><span class="arithmatex">\(L_{\text{cable}}\)</span> — cable loss.</li>
+<li><span class="arithmatex">\(L_{\text{body}}\)</span> — body loss (handheld).</li>
+<li><span class="arithmatex">\(S_{\text{rx}}\)</span> — receiver sensitivity.</li>
+<li><span class="arithmatex">\(M_{\text{interference}}\)</span> — interference margin (depends on load).</li>
+<li><span class="arithmatex">\(M_{\text{fade}}\)</span> — fade margin (for outdoor-to-indoor, shadowing, etc.).</li>
+</ul>
+<p><strong>Interference margin</strong> — unique to CDMA. As cell load increases, interference
+rises, requiring more transmit power, which increases interference further — a
+positive feedback loop that shrinks the cell.</p>
+<div class="arithmatex">\[
+\boxed{\;M_{\text{interference}} = -10\log_{10}(1 - \eta)\;}
+\]</div>
+<p>where <span class="arithmatex">\(\eta\)</span> is the <strong>load factor</strong> (fraction of pole capacity).</p>
+<p><strong>Example:</strong> at <span class="arithmatex">\(\eta = 50\%\)</span> (typical), <span class="arithmatex">\(M_{\text{interference}} = -10\log_{10}(0.5) = 3\)</span> dB.
+At <span class="arithmatex">\(\eta = 75\%\)</span>, <span class="arithmatex">\(M_{\text{interference}} = -10\log_{10}(0.25) = 6\)</span> dB. At <span class="arithmatex">\(\eta = 90\%\)</span>, 10 dB.</p>
+<p><strong>The trade-off:</strong> higher load = more capacity but smaller cell (breathing).</p>
+<h3 id="482-capacity-planning">4.8.2 Capacity planning<a class="headerlink" href="#482-capacity-planning" title="Permanent link">&para;</a></h3>
+<p><strong>Pole capacity</strong> — the theoretical limit where the interference grows without
+bound (all power used for interference, none for useful signal).</p>
+<p><strong>Uplink pole capacity:</strong></p>
+<div class="arithmatex">\[
+\boxed{\;N_{\text{pole}} = 1 + \frac{W/R}{(E_b/N_0)_{\text{req}}} \cdot \frac{1}{1 + i}\;}
+\]</div>
+<p>where:</p>
+<ul>
+<li><span class="arithmatex">\(W/R\)</span> = processing gain (e.g., 315 for 12.2 kbps voice).</li>
+<li><span class="arithmatex">\((E_b/N_0)_{\text{req}}\)</span> = required <span class="arithmatex">\(E_b/N_0\)</span> for the target BER (e.g., 5 dB = 3.16 for voice).</li>
+<li><span class="arithmatex">\(i\)</span> = inter-cell interference factor (typically 0.4–0.6 for urban macro cells).</li>
+</ul>
+<p><strong>Example:</strong> <span class="arithmatex">\(W/R = 315\)</span>, <span class="arithmatex">\((E_b/N_0) = 3.16\)</span>, <span class="arithmatex">\(i = 0.55\)</span>:</p>
+<div class="arithmatex">\[
+N_{\text{pole}} = 1 + \frac{315}{3.16 \times 1.55} = 1 + 64.3 \approx 65\ \text{voice users per cell.}
+\]</div>
+<p><strong>Realistic uplink capacity:</strong> 40–60% of pole, so ~26–39 voice users per cell.</p>
+<p><strong>Downlink pole capacity:</strong> similar formula but different interference assumptions;
+in practice the downlink is <strong>power-limited</strong> (the NodeB PA's max transmit power
+constrains how many users can be served) rather than interference-limited.</p>
+<h3 id="worked-example-48-uplink-capacity-for-mixed-services">Worked example 4.8 — uplink capacity for mixed services<a class="headerlink" href="#worked-example-48-uplink-capacity-for-mixed-services" title="Permanent link">&para;</a></h3>
+<p><strong>Scenario:</strong> UMTS cell supporting voice + data.</p>
+<p><strong>Given:</strong></p>
+<ul>
+<li><span class="arithmatex">\(W = 3.84\)</span> MHz.</li>
+<li>Voice: <span class="arithmatex">\(R = 12.2\)</span> kbps, <span class="arithmatex">\((E_b/N_0)_{\text{req}} = 5\)</span> dB, activity factor <span class="arithmatex">\(v = 0.6\)</span>.</li>
+<li>Data (384 kbps): <span class="arithmatex">\(R = 384\)</span> kbps, <span class="arithmatex">\((E_b/N_0)_{\text{req}} = 2\)</span> dB, activity factor <span class="arithmatex">\(v = 1.0\)</span>.</li>
+<li>Inter-cell interference factor <span class="arithmatex">\(i = 0.5\)</span>.</li>
+</ul>
+<p><strong>Effective processing gain (with activity):</strong></p>
+<ul>
+<li>Voice: <span class="arithmatex">\(G_{\text{eff}} = W/(R \cdot v) = 3.84\text{M}/(12.2\text{k} \cdot 0.6) = 525\)</span>.</li>
+<li>Data: <span class="arithmatex">\(G_{\text{eff}} = 3.84\text{M}/(384\text{k} \cdot 1.0) = 10\)</span>.</li>
+</ul>
+<p><strong>Pole capacity:</strong> <span class="arithmatex">\(N_{\text{pole}} = 1 + G_{\text{eff}} / ((E_b/N_0)_{\text{req}} \cdot (1+i))\)</span>.</p>
+<ul>
+<li>Voice: <span class="arithmatex">\(N_{\text{pole}} = 1 + 525 / (3.16 \cdot 1.5) = 1 + 111 \approx 112\)</span> voice users.</li>
+<li>Data: <span class="arithmatex">\(N_{\text{pole}} = 1 + 10 / (1.58 \cdot 1.5) = 1 + 4.2 \approx 5\)</span> data users.</li>
+</ul>
+<p><strong>Mixed load:</strong> if the cell supports <span class="arithmatex">\(N_v\)</span> voice users and <span class="arithmatex">\(N_d\)</span> data users, they
+must satisfy:</p>
+<div class="arithmatex">\[
+\frac{N_v}{112} + \frac{N_d}{5} \le 1
+\]</div>
+<p><strong>Example configuration:</strong> <span class="arithmatex">\(N_v = 60\)</span> voice + <span class="arithmatex">\(N_d = 2\)</span> data users:
+<span class="arithmatex">\(60/112 + 2/5 = 0.536 + 0.4 = 0.936\)</span> — near capacity.</p>
+<p><strong>Realistic (60% of pole):</strong> <span class="arithmatex">\(N_v = 50\)</span> voice + <span class="arithmatex">\(N_d = 1\)</span> data user is a more
+sustainable load.</p>
+<hr />
+<h2 id="49-umts-vs-gsm-a-summary-comparison">4.9 UMTS vs. GSM — a summary comparison<a class="headerlink" href="#49-umts-vs-gsm-a-summary-comparison" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Aspect</th>
+<th>GSM (2G)</th>
+<th>UMTS (3G)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Multiple access</strong></td>
+<td>TDMA (8 slots/carrier)</td>
+<td>WCDMA (spreading codes)</td>
+</tr>
+<tr>
+<td><strong>Carrier bandwidth</strong></td>
+<td>200 kHz</td>
+<td>5 MHz</td>
+</tr>
+<tr>
+<td><strong>Duplex</strong></td>
+<td>FDD (45 MHz separation)</td>
+<td>FDD (190 MHz separation)</td>
+</tr>
+<tr>
+<td><strong>Chip rate</strong></td>
+<td>270.833 kbps</td>
+<td>3.84 Mcps</td>
+</tr>
+<tr>
+<td><strong>Frequency reuse</strong></td>
+<td>Factor N (typically 3–7)</td>
+<td>Factor N = 1</td>
+</tr>
+<tr>
+<td><strong>Modulation (DL)</strong></td>
+<td>GMSK</td>
+<td>QPSK → 16-QAM → 64-QAM (HSPA)</td>
+</tr>
+<tr>
+<td><strong>Modulation (UL)</strong></td>
+<td>GMSK</td>
+<td>BPSK → QPSK → 16-QAM (HSUPA)</td>
+</tr>
+<tr>
+<td><strong>Channel coding</strong></td>
+<td>Conv. rate 1/2, K=5</td>
+<td>Conv. (R99) or Turbo (R5+)</td>
+</tr>
+<tr>
+<td><strong>Interleaving</strong></td>
+<td>Depth 4 (20 ms)</td>
+<td>Depth 1–4 (10–80 ms)</td>
+</tr>
+<tr>
+<td><strong>Speech codec</strong></td>
+<td>RPE-LTP, 13 kbps</td>
+<td>AMR, 4.75–12.2 kbps</td>
+</tr>
+<tr>
+<td><strong>Handover</strong></td>
+<td>Hard</td>
+<td>Softer + soft + hard</td>
+</tr>
+<tr>
+<td><strong>Power control</strong></td>
+<td>Slow (every 480 ms, coarse)</td>
+<td>Fast (1500 Hz, fine)</td>
+</tr>
+<tr>
+<td><strong>Receiver</strong></td>
+<td>Viterbi equalizer</td>
+<td>Rake receiver</td>
+</tr>
+<tr>
+<td><strong>Peak DL rate</strong></td>
+<td>470 kbps (EDGE theoretical)</td>
+<td>42 Mbps (HSPA+) to 168 Mbps (HSPA+ R11)</td>
+</tr>
+<tr>
+<td><strong>Peak UL rate</strong></td>
+<td>236 kbps (EDGE theoretical)</td>
+<td>5.76 Mbps (HSUPA) to 23 Mbps (DC-HSUPA)</td>
+</tr>
+<tr>
+<td><strong>Latency (RTT)</strong></td>
+<td>600–800 ms</td>
+<td>50–100 ms (HSPA)</td>
+</tr>
+<tr>
+<td><strong>Security algorithm</strong></td>
+<td>A5/1, A5/3</td>
+<td>f8 (UEA1, UEA2 based on KASUMI)</td>
+</tr>
+<tr>
+<td><strong>Voice capacity per cell</strong></td>
+<td>~50–100 (per 3-sector site)</td>
+<td>~60–120 (voice; higher with HSPA)</td>
+</tr>
+<tr>
+<td><strong>Complexity</strong></td>
+<td>Moderate</td>
+<td>Very high</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The bottom line:</strong> UMTS is not just "GSM with faster data" — it is a fundamentally
+different air interface (CDMA instead of TDMA) with different interference
+mechanisms, different handover, different receiver architecture. The migration
+from GSM to UMTS was a decade-long, multi-billion-dollar undertaking for global
+operators.</p>
+<hr />
+<h2 id="410-chapter-summary">4.10 Chapter summary<a class="headerlink" href="#410-chapter-summary" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>UMTS</strong> was the 3G system defined by 3GPP to meet the ITU IMT-2000 requirements
+   (144 kbps / 384 kbps / 2 Mbps). It was deployed as <strong>UMTS FDD (WCDMA)</strong> — the
+   dominant global 3G standard.</li>
+<li><strong>Migration path:</strong> GSM → GPRS → UMTS → HSPA → HSPA+ — a continuous evolution
+   with backward-compatible core networks, and a completely new air interface for
+   the 3G radio.</li>
+<li><strong>System architecture:</strong> UE, UTRAN (NodeB, RNC), CN (CS and PS domains). The
+   <strong>Iur interface</strong> between RNCs enables soft handover across RNC boundaries.</li>
+<li><strong>WCDMA physical layer:</strong> 5 MHz carrier, 3.84 Mcps chip rate, QPSK (later
+   16/64-QAM), <strong>OVSF spreading codes</strong> for channel separation, <strong>Gold scrambling
+   codes</strong> for user separation.</li>
+<li><strong>Processing gain</strong> (<span class="arithmatex">\(G = R_c/R_b\)</span>) for voice is ~25 dB — enough to operate
+   below the noise floor. For high-rate HSPA, spectral efficiency can exceed 1
+   bps/Hz, so "processing gain" becomes a misnomer.</li>
+<li><strong>The Rake receiver</strong> exploits multipath as <strong>diversity</strong> rather than ISI.
+   Each finger tracks one path; maximal-ratio combining gives up to 5 dB gain
+   for 3 paths, more with more fingers.</li>
+<li><strong>Power control</strong> is essential in CDMA — the <strong>near-far problem</strong> would
+   destroy capacity without it. Three levels: open-loop (initial), closed-loop
+   (fast, 1500 Hz, at the NodeB), outer-loop (target SIR, at the RNC).</li>
+<li><strong>Soft handover</strong> — a UE connected to 2+ cells simultaneously — is CDMA's
+   signature advantage. It eliminates hard handover interruptions and provides
+   macro-diversity. Active set size limited to 4–6 cells to avoid resource waste.</li>
+<li><strong>HSDPA</strong> (R5) — AMC, fast scheduling, HARQ — raised downlink peak from 384 kbps
+   to 14.4 Mbps. <strong>HSUPA</strong> (R6) did the same for uplink (to 5.76 Mbps). <strong>HSPA+</strong>
+   (R7–R11) added 64-QAM, MIMO, and dual-cell — pushing peak to 168 Mbps downlink.</li>
+<li><strong>Network design</strong> couples coverage and capacity via the <strong>interference margin</strong>:
+    as load increases, cells shrink ("breathing"). The pole capacity is the
+    theoretical maximum; realistic capacity is 40–60% of pole.</li>
+<li><strong>UMTS vs. GSM:</strong> fundamentally different air interface (CDMA vs. TDMA),
+    different handover (soft vs. hard), different receiver (Rake vs. equalizer),
+    different power control (fast and continuous vs. slow and discrete).</li>
+</ol>
+<hr />
+<h2 id="411-quiz">4.11 Quiz<a class="headerlink" href="#411-quiz" title="Permanent link">&para;</a></h2>
+<h3 id="a-multiple-choice">A. Multiple choice<a class="headerlink" href="#a-multiple-choice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>UMTS FDD uses which multiple-access technique?
+   (a) TDMA (b) FDMA (c) WCDMA (d) OFDMA</p>
+</li>
+<li>
+<p>The chip rate of UMTS FDD is:
+   (a) 1.2288 Mcps (b) 3.84 Mcps (c) 5 Mcps (d) 20 Mcps</p>
+</li>
+<li>
+<p>The carrier bandwidth of UMTS FDD is:
+   (a) 1.25 MHz (b) 5 MHz (c) 10 MHz (d) 20 MHz</p>
+</li>
+<li>
+<p>Which receiver architecture is essential in UMTS?
+   (a) Viterbi equalizer (b) Matched filter (c) Rake receiver (d) MMSE equalizer</p>
+</li>
+<li>
+<p>Which is <strong>not</strong> a level of power control in UMTS?
+   (a) Open-loop (b) Closed-loop (c) Outer-loop (d) Inner-loop</p>
+</li>
+<li>
+<p><strong>Fast closed-loop power control</strong> in UMTS operates at:
+   (a) 10 Hz (b) 100 Hz (c) 1500 Hz (d) 15,000 Hz</p>
+</li>
+<li>
+<p>The <strong>near-far problem</strong> is worst in:
+   (a) FDMA (b) TDMA (c) CDMA (d) SDMA</p>
+</li>
+<li>
+<p><strong>Soft handover</strong> is a UE connected to:
+   (a) One cell (b) Two cells of the same NodeB (c) Two or more NodeBs (d) Multiple frequencies</p>
+</li>
+<li>
+<p><strong>HSDPA</strong> peak downlink (R5) is:
+   (a) 384 kbps (b) 2 Mbps (c) 14.4 Mbps (d) 42 Mbps</p>
+</li>
+<li>
+<p><strong>HSUPA</strong> peak uplink (R6) is:
+    (a) 384 kbps (b) 2 Mbps (c) 5.76 Mbps (d) 11.5 Mbps</p>
+</li>
+<li>
+<p>The <strong>Iur</strong> interface connects:
+    (a) UE ↔ NodeB (b) NodeB ↔ RNC (c) RNC ↔ RNC (d) RNC ↔ SGSN</p>
+</li>
+<li>
+<p><strong>Pole capacity</strong> is:
+    (a) The number of active users at 50% load (b) The theoretical max where interference diverges (c) The maximum downlink power (d) The chip rate divided by data rate</p>
+</li>
+</ol>
+<h3 id="b-fill-in-the-blank">B. Fill in the blank<a class="headerlink" href="#b-fill-in-the-blank" title="Permanent link">&para;</a></h3>
+<ol>
+<li>UMTS FDD uses ____ MHz uplink and ____ MHz downlink.</li>
+<li>The \textbf{chip rate} of UMTS FDD is ____ Mcps.</li>
+<li>\textbf{OVSF} stands for Orthogonal ____ Spreading Factor.</li>
+<li>The \textbf{scrambling codes} in the downlink are ____ codes of length 38,400 chips.</li>
+<li>The \textbf{Rake receiver} exploits multipath as ____.</li>
+<li>In UMTS, ____ -loop power control sets the target SIR based on BLER.</li>
+<li>\textbf{Soft handover} is when a UE is connected to ____ or more NodeBs.</li>
+<li>\textbf{HSDPA} peak downlink (R5) is ____ Mbps.</li>
+<li>\textbf{HSUPA} peak uplink (R6) is ____ Mbps.</li>
+<li>In a 3-sector NodeB, the maximum transmit power per sector is typically ____ W.</li>
+</ol>
+<h3 id="c-define-explain">C. Define / explain<a class="headerlink" href="#c-define-explain" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Explain why CDMA uses <strong>universal frequency reuse (<span class="arithmatex">\(N=1\)</span>)</strong> while TDMA uses
+   frequency reuse factors <span class="arithmatex">\(N &gt; 1\)</span>. What is the trade-off?</li>
+<li>Describe the <strong>UMTS architecture</strong> — UE, UTRAN, CN. What are the key components
+   in each, and what does each do?</li>
+<li>Explain <strong>OVSF codes</strong> and the tree structure. Why must no ancestor or
+   descendant code be used simultaneously?</li>
+<li>Explain the <strong>Rake receiver</strong>. Why is multipath a diversity rather than a
+   problem in WCDMA? What is the gain for <span class="arithmatex">\(L\)</span> equal-power paths?</li>
+<li>Compare <strong>open-loop</strong>, <strong>closed-loop</strong>, and <strong>outer-loop power control</strong>.
+   What does each do, at what rate, and where is it implemented?</li>
+<li>Describe <strong>soft handover</strong> in UMTS. What is the <strong>active set</strong>? What are the
+   trade-offs in choosing the soft-handover window?</li>
+<li>Describe <strong>HSDPA</strong>'s three main innovations (AMC, fast scheduling, HARQ).
+   Why does each require localization at the NodeB (not the RNC)?</li>
+<li>Compute the peak HSDPA downlink rate for 15 codes, 16-QAM, rate 3/4 coding.
+   Then for HSPA+ with 64-QAM and 2×2 MIMO.</li>
+<li>Derive the <strong>interference margin</strong> formula <span class="arithmatex">\(M = -10\log_{10}(1 - \eta)\)</span>. What
+   is it at <span class="arithmatex">\(\eta = 50\%\)</span>, <span class="arithmatex">\(75\%\)</span>, <span class="arithmatex">\(90\%\)</span>?</li>
+<li>Explain the <strong>pole capacity</strong> for uplink CDMA. Why is realistic capacity only
+    40–60% of pole?</li>
+</ol>
+<hr />
+<h2 id="412-answer-key">4.12 Answer key<a class="headerlink" href="#412-answer-key" title="Permanent link">&para;</a></h2>
+<details class="success">
+<summary>A. Multiple choice</summary>
+<ol>
+<li><strong>(c)</strong> — WCDMA.</li>
+<li><strong>(b)</strong> — 3.84 Mcps.</li>
+<li><strong>(b)</strong> — 5 MHz.</li>
+<li><strong>(c)</strong> — Rake receiver.</li>
+<li><strong>(d)</strong> — "inner-loop" is not a standard term (fast closed-loop is sometimes called inner-loop, but outer-loop is the RNC-side one).</li>
+<li><strong>(c)</strong> — 1500 Hz.</li>
+<li><strong>(c)</strong> — CDMA.</li>
+<li><strong>(c)</strong> — two or more NodeBs.</li>
+<li><strong>(c)</strong> — 14.4 Mbps.</li>
+<li><strong>(c)</strong> — 5.76 Mbps.</li>
+<li><strong>(c)</strong> — RNC ↔ RNC.</li>
+<li><strong>(b)</strong> — theoretical max where interference diverges.</li>
+</ol>
+</details>
+<details class="success">
+<summary>B. Fill in the blank</summary>
+<ol>
+<li>1920–1980; 2110–2170.</li>
+<li>3.84.</li>
+<li>Variable.</li>
+<li>Gold.</li>
+<li>Diversity.</li>
+<li>Outer.</li>
+<li>Two.</li>
+<li>14.4.</li>
+<li>5.76.</li>
+<li>20–40.</li>
+</ol>
+</details>
+<details class="success">
+<summary>C. Define / explain — model answers</summary>
+<ol>
+<li><em>CDMA <span class="arithmatex">\(N=1\)</span> vs. TDMA <span class="arithmatex">\(N&gt;1\)</span>:</em> In CDMA, all users share the same frequency
+   band everywhere, distinguished only by codes. Every cell uses the same 5 MHz
+   carrier. Capacity is interference-limited (adding users adds interference to
+   all cells) — soft capacity. In TDMA, users share time slots on a per-cell basis;
+   to avoid interference between cells, frequencies must be reused at some distance
+   (<span class="arithmatex">\(N&gt;1\)</span>). <em>Trade-off:</em> CDMA has no frequency planning needed (good), but
+   interference from adjacent cells limits capacity (bad) — hence the inter-cell
+   interference factor <span class="arithmatex">\(i \approx 0.5\)</span> in pole-capacity formulas.</li>
+<li><em>UMTS architecture:</em> UE (handset + USIM). UTRAN = NodeB (base station, WCDMA
+   PHY, Rake, fast power control) + RNC (radio resource management, soft handover,
+   outer-loop power control, ciphers). Core Network = CS domain (MSC, VLR) + PS
+   domain (SGSN, GGSN) + shared HLR/AuC. Interfaces: Uu (radio), Iub (NodeB-RNC),
+   Iur (RNC-RNC), Iu-CS (RNC-MSC), Iu-PS (RNC-SGSN).</li>
+<li><em>OVSF codes:</em> generated by a tree where each code has two children, one formed
+   by replicating the parent, one by replicating-and-negating. Orthogonal within
+   one transmitter. <em>Rule:</em> an allocated code excludes its ancestors (which are
+   prefixes) and descendants (which begin with it) — because they would not be
+   orthogonal to it. This maintains zero correlation within the cell's own transmission.</li>
+<li><em>Rake receiver:</em> multiple finger demodulators, each locked to a multipath delay;
+   MRC combining. <em>Why diversity, not ISI:</em> wideband CDMA's chip duration (0.26 μs)
+   is much shorter than typical delay spread (1–3 μs), so multipath components
+   are resolvable at chip granularity rather than overlapping at symbol granularity.
+   <em>Gain:</em> <span class="arithmatex">\(L\)</span> equal-power independent paths give SNR gain of <span class="arithmatex">\(L\)</span> (in linear);
+   10 log₁₀ L dB. For L=3: 4.77 dB.</li>
+<li><em>Open-loop:</em> UE measures CPICH, estimates path loss, sets initial TX power.
+   Not accurate (uplink ≠ downlink fading). Rate: once at call setup.
+   <em>Closed-loop:</em> NodeB measures received SIR every slot (0.667 ms), compares to
+   target, sends TPC commands every slot. Rate: 1500 Hz. Implemented in NodeB.
+   <em>Outer-loop:</em> RNC monitors BLER over frames, adjusts target SIR. Rate: 10–100 Hz.
+   Implemented in RNC.</li>
+<li><em>Soft handover:</em> UE connected to 2+ NodeBs simultaneously, signals combined.
+   <em>Active set:</em> cells the UE is currently connected to. <em>Trade-offs:</em> wider
+   window = earlier addition, better reliability, but consumes more downlink power
+   (each cell transmits to the UE) and more downlink codes per cell. Typical active
+   set 4–6 cells, window 3–6 dB.</li>
+<li><em>HSDPA's three innovations:</em> AMC (modulation+coding adapted per 2 ms TTI to
+   instantaneous channel); fast scheduling (which UE gets the shared HS-DSCH each
+   2 ms TTI, exploiting channel fluctuations via multi-user diversity); HARQ
+   (fast retransmission with soft combining). All must be at the NodeB to be
+   fast — the RNC is too slow (frame-level). Moving these functions to NodeB
+   is what enabled the 14.4 Mbps peak.</li>
+<li><em>HSDPA peak:</em> 15 codes × SF=16 → <span class="arithmatex">\(240\)</span> ksym/s/code × 4 bits/symbol (16-QAM) × 15 codes × 0.75 (rate 3/4) = 10.8 Mbps (practical) or 14.4 Mbps (rate 1, theoretical). <em>HSPA+ with 64-QAM + 2×2 MIMO:</em> 240 ksym/s × 6 bits/symbol × 15 codes × 0.75 × 2 (MIMO) = 32.4 Mbps per cell (theoretical peak 28–42 Mbps depending on the standard version).</li>
+<li><em>Interference margin:</em> <span class="arithmatex">\(M = -10\log_{10}(1-\eta)\)</span>. At <span class="arithmatex">\(\eta=0.5\)</span>: 3 dB.
+   At <span class="arithmatex">\(\eta=0.75\)</span>: 6 dB. At <span class="arithmatex">\(\eta=0.9\)</span>: 10 dB. Higher load = larger margin =
+   smaller cell radius (cell breathing).</li>
+<li><em>Pole capacity:</em> <span class="arithmatex">\(N_{\text{pole}} = 1 + G/((E_b/N_0)_{\text{req}}(1+i))\)</span>.
+    Realistic capacity is 40–60% of pole because at 100% of pole the interference
+    grows without bound — the cell becomes unstable. To maintain reliable
+    communication (BLER &lt; target) and reserve capacity for soft handover
+    overhead, operators dimension at 50–60% of pole.</li>
+</ol>
+</details>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>H. Holma &amp; A. Toskala</strong>, <em>WCDMA for UMTS: HSPA Evolution and LTE</em>, 5th ed., Wiley, 2010 — the definitive reference; covers WCDMA, HSDPA, HSUPA, HSPA+ in depth.</li>
+<li><strong>H. Holma &amp; A. Toskala</strong>, <em>LTE for UMTS: Evolution to LTE-Advanced</em>, Wiley, 2011 — companion volume on the LTE transition.</li>
+<li><strong>H. Kaaranen, A. Ahtiainen, L. Laitinen, S. Naghian &amp; V. Niemi</strong>, <em>UMTS Networks: Architecture, Mobility and Services</em>, 2nd ed., Wiley, 2005 — systems-level view.</li>
+<li><strong>J. Laiho, A. Wacker &amp; T. Novosad</strong>, <em>Radio Network Planning and Optimisation for UMTS</em>, 2nd ed., Wiley, 2006 — the coverage/capacity planning reference.</li>
+<li><strong>T. Ojanperä &amp; R. Prasad</strong>, <em>Wideband CDMA for Third Generation Mobile Communications</em>, Artech, 1998 — the foundational WCDMA textbook.</li>
+<li><strong>A. J. Viterbi</strong>, <em>CDMA: Principles of Spread Spectrum Communication</em>, Addison-Wesley, 1995 — the Rake receiver and CDMA capacity theory from the inventor.</li>
+<li><strong>3GPP TS 25.xxx series</strong> — the UMTS specifications:</li>
+<li>TS 25.201 — Physical layer: general description.</li>
+<li>TS 25.211–25.215 — Physical channels, spreading, modulation.</li>
+<li>TS 25.301 — Radio interface protocol architecture.</li>
+<li>TS 25.401 — UTRAN overall description.</li>
+<li>TS 25.331 — RRC protocol specification.</li>
+<li><strong>3GPP TS 25.308</strong> — HSDPA overall description.</li>
+<li><strong>3GPP TS 25.319</strong> — Enhanced uplink (HSUPA) overall description.</li>
+<li><strong>3GPP TS 25.306</strong> — UE radio access capabilities.</li>
+</ul>
+<hr />
+<h2 id="suggested-tutorial-problems">Suggested tutorial problems<a class="headerlink" href="#suggested-tutorial-problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>OVSF allocation.</strong> Build the OVSF tree up to SF=8. Allocate a voice channel at SF=128, a video channel at SF=32, and a data channel at SF=16. Verify no ancestor/descendant conflict.</p>
+</li>
+<li>
+<p><strong>Processing gain.</strong> Compute the processing gain for voice (12.2 kbps AMR), video (64 kbps), data (384 kbps), and HSPA peak (14.4 Mbps) at <span class="arithmatex">\(R_c = 3.84\)</span> Mcps. Which of these does the "gain" concept break down for?</p>
+</li>
+<li>
+<p><strong>Rake diversity.</strong> A UE has 4 fingers. Paths have average power <span class="arithmatex">\([0, -3, -6, -9]\)</span> dB. Compute the diversity gain vs. a single-path system in Rayleigh fading.</p>
+</li>
+<li>
+<p><strong>Closed-loop power control.</strong> If a UE starts at 20 dBm and the target SIR requires 23 dBm, how many TPC "up" commands (at 1 dB each) does it take? At 1500 Hz, how long does this take?</p>
+</li>
+<li>
+<p><strong>Pole capacity.</strong> For UMTS voice (<span class="arithmatex">\(W=3.84\)</span> MHz, <span class="arithmatex">\(R=12.2\)</span> kbps, <span class="arithmatex">\((E_b/N_0)_{\text{req}} = 5\)</span> dB, <span class="arithmatex">\(i=0.5\)</span>, <span class="arithmatex">\(v=0.6\)</span>), compute the pole capacity. Then compute realistic capacity at 50% load.</p>
+</li>
+<li>
+<p><strong>Interference margin.</strong> Compute <span class="arithmatex">\(M\)</span> for <span class="arithmatex">\(\eta = 0.3, 0.5, 0.7, 0.9\)</span>. Plot <span class="arithmatex">\(M\)</span> vs. <span class="arithmatex">\(\eta\)</span>. What happens as <span class="arithmatex">\(\eta \to 1\)</span>?</p>
+</li>
+<li>
+<p><strong>HSDPA peak rate.</strong> Derive the 14.4 Mbps peak (R5): 15 codes, SF=16, 16-QAM, rate 3/4. Then derive the 28 Mbps peak (HSPA+ R7) with 64-QAM. Then the 42 Mbps peak with 2×2 MIMO.</p>
+</li>
+<li>
+<p><strong>HSUPA peak rate.</strong> Derive the 5.76 Mbps uplink peak (R6): SF=2 + SF=4 (two codes), QPSK. Then 11.5 Mbps with 16-QAM.</p>
+</li>
+<li>
+<p><strong>Soft handover events.</strong> Given a UE with active set = {cellA}, monitored = {cellB, cellC}, describe what happens when:</p>
+</li>
+<li>cellB CPICH becomes 5 dB better than cellA.</li>
+<li>cellA CPICH drops 10 dB below cellB.</li>
+<li>
+<p>cellB and cellC both become better than cellA.</p>
+</li>
+<li>
+<p><strong>Cell breathing.</strong> A cell is designed for 4 km radius at 40% load (interference margin 2.2 dB). What is the cell radius at 70% load (interference margin 5.2 dB), assuming path-loss exponent 3?</p>
+</li>
+<li>
+<p><strong>HSDPA vs. HSUPA.</strong> Compare HSDPA and HSUPA in: peak rate, HARQ type, scheduling grant structure, key innovation.</p>
+</li>
+<li>
+<p><strong>HSPA+ evolution.</strong> Tabulate HSPA+ peak rates by release (R7, R8, R9, R10, R11). What is the <strong>fundamental limitation</strong> that pushed operators to LTE?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../slides/assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

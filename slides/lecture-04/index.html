@@ -1,0 +1,3822 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/slides/lecture-04/">
+      
+      
+        <link rel="prev" href="../lecture-03/">
+      
+      
+        <link rel="next" href="../lecture-05/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Lecture 5 - 4G/LTE/WiMAX - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 5 - 4G/LTE/WiMAX
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Lecture 5 - 4G/LTE/WiMAX</h1>
+
+<div class="mkdocs-revealjs-wrapper" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" style="width:100%;height:700px;margin:1.5rem 0;">
+  <div class="reveal mkdocs-revealjs-deck" id="mkdocs-revealjs-diapo1" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" data-reveal-options="{&quot;embedded&quot;:true,&quot;keyboardCondition&quot;:&quot;focused&quot;,&quot;width&quot;:960,&quot;height&quot;:700,&quot;margin&quot;:0.05,&quot;controls&quot;:true,&quot;progress&quot;:true,&quot;slideNumber&quot;:true,&quot;fragments&quot;:true,&quot;autoAnimate&quot;:true,&quot;autoAnimateEasing&quot;:&quot;ease&quot;,&quot;autoAnimateDuration&quot;:1.0,&quot;autoAnimateUnmatched&quot;:false,&quot;transition&quot;:&quot;slide&quot;,&quot;transitionSpeed&quot;:&quot;default&quot;,&quot;minScale&quot;:0.1,&quot;maxScale&quot;:1.5}" style="width:100%;height:700px;">
+    <div class="slides">
+      <section
+        data-markdown
+        data-separator="^\n---\n$"
+        data-separator-vertical="^\n----\n$"
+        data-separator-notes="^Note:"
+      >
+        <textarea data-template>
+## ECEG-6412
+
+### Chapter 4 — UMTS
+
+MSc in Communication Engineering · Year 1, Semester I
+
+Dr. Tesfamichael Gebregziabher
+
+---
+
+## Outline
+
+<div class="fragment">
+
+**Part 1 — Migration to 3G**
+
+- Why GSM needed a successor
+- The IMT-2000 requirements
+
+</div>
+
+<div class="fragment">
+
+**Part 2 — Architecture**
+
+- UE, UTRAN (NodeB, RNC), Core Network
+- The Iur interface
+
+</div>
+
+<div class="fragment">
+
+**Part 3 — WCDMA PHY**
+
+- Chip rate, spreading, scrambling, OVSF
+- The Rake receiver
+
+</div>
+
+<div class="fragment">
+
+**Part 4 — Power control and handover**
+
+- Near-far problem
+- Softer, soft, hard handover
+
+</div>
+
+<div class="fragment">
+
+**Part 5 — HSPA and network design**
+
+- HSDPA, HSUPA, HSPA+
+- Coverage / capacity trade-off
+
+</div>
+
+---
+
+## Learning outcomes
+
+<div class="fragment">
+
+**LO1 — Trace the 3G migration path**
+
+GSM → GPRS → UMTS → HSPA → HSPA+.
+
+</div>
+
+<div class="fragment">
+
+**LO2 — Draw the UMTS architecture**
+
+UE, UTRAN, CN (CS + PS). Iur interface enables soft handover across RNCs.
+
+</div>
+
+<div class="fragment">
+
+**LO3 — Explain WCDMA physical layer**
+
+3.84 Mcps chip rate, 5 MHz carrier, OVSF spreading + Gold scrambling.
+
+</div>
+
+<div class="fragment">
+
+**LO4 — Describe the Rake receiver**
+
+Multipath as diversity. MRC combining. ~5 dB gain for 3 equal paths.
+
+</div>
+
+<div class="fragment">
+
+**LO5 — Analyze power control and handover**
+
+Open / closed / outer loop. Softer, soft, hard. Active set.
+
+</div>
+
+<div class="fragment">
+
+**LO6 — Compute HSPA peak rates and pole capacity**
+
+HSDPA 14.4 Mbps; HSUPA 5.76 Mbps; pole capacity formula.
+
+</div>
+
+---
+
+## §4.1 — Why GSM needed a successor
+
+<div class="fragment">
+
+GSM (Chapter 3) served voice and slow data (~100 kbps with EDGE).
+
+</div>
+
+<div class="fragment">
+
+By the late 1990s, demand for **mobile internet** — web, email, video — was emerging.
+
+</div>
+
+<div class="fragment">
+
+| Need | GSM capability | Gap |
+|---|---|---|
+| Web browsing | ~10–50 kbps practical | 10–100× too slow |
+| Video streaming | Not feasible | — |
+| Symmetric uplink/downlink | Asymmetric (EDGE DL >> UL) | Limited |
+| Spectral efficiency | ~0.2 bps/Hz/cell | Needs 1–5 bps/Hz/cell |
+
+</div>
+
+<div class="fragment">
+
+The **ITU IMT-2000** requirements defined 3G:
+
+- **144 kbps** vehicular
+- **384 kbps** pedestrian
+- **2 Mbps** indoor
+- Global roaming
+- CS voice + PS data
+
+</div>
+
+---
+
+## The 3GPP standardization
+
+<div class="fragment">
+
+**3GPP** (3rd Generation Partnership Project) formed in 1998 — combining ETSI, ARIB, TTC, TTA, CCSA, ATIS.
+
+</div>
+
+<div class="fragment">
+
+**Release 99 (2000)** — base UMTS: WCDMA FDD, CS + PS core.
+
+</div>
+
+<div class="fragment">
+
+**Release 5 (2002)** — HSDPA (14.4 Mbps DL peak).
+
+**Release 6 (2004)** — HSUPA (5.76 Mbps UL peak).
+
+**Release 7 (2007)** — HSPA+ (MIMO, 64-QAM DL).
+
+</div>
+
+<div class="fragment">
+
+Three 3G variants deployed:
+- **UMTS FDD** (WCDMA) — dominant
+- **UMTS TDD** — limited
+- **cdma2000** — North America, Japan, Korea
+
+</div>
+
+<div class="fragment">
+
+**This chapter focuses on UMTS FDD** — the global 3G standard.
+
+</div>
+
+---
+
+## The fundamental shift — TDMA to CDMA
+
+<div class="fragment">
+
+GSM used **TDMA** — orthogonal time slots; users don't interfere within a cell.
+
+</div>
+
+<div class="fragment">
+
+UMTS uses **WCDMA** — all users share the same frequency; distinguished by **spreading codes.**
+
+</div>
+
+<div class="fragment">
+
+| Aspect | GSM (TDMA) | UMTS (WCDMA) |
+|---|---|---|
+| Multiple access | Time slots | Spreading codes |
+| Frequency reuse | Factor N (3–7) | **Factor N = 1** |
+| Interference | Co-channel from other cells | **Self + co-cell** |
+| Handover | Hard | **Soft** (2+ cells) |
+| Power control | Slow, coarse | **Fast (1500 Hz)** |
+| Receiver | Viterbi equalizer | **Rake** |
+
+</div>
+
+<div class="fragment">
+
+**The most fundamental change since GSM** — not an evolution, a new PHY.
+
+</div>
+
+---
+
+## §4.2 — UMTS system architecture
+
+<div class="fragment">
+
+Three subsystems:
+
+**UE** — User Equipment (handset + USIM)
+
+**UTRAN** — UMTS Terrestrial Radio Access Network
+
+**CN** — Core Network (CS + PS domains)
+
+</div>
+
+<div class="fragment">
+
+CS domain — Circuit-Switched (voice, CS data):
+- **MSC**, **GMSC**, **VLR**
+
+</div>
+
+<div class="fragment">
+
+PS domain — Packet-Switched (data):
+- **SGSN**, **GGSN**
+
+</div>
+
+<div class="fragment">
+
+Shared: **HLR**, **AuC** — same role as in GSM.
+
+</div>
+
+---
+
+## UTRAN — NodeB and RNC
+
+<div class="fragment">
+
+**NodeB** — the base station:
+- WCDMA PHY: spreading, scrambling, modulation, coding
+- **Rake receiver**
+- Fast power control (1500 Hz)
+- Multiple cells per NodeB (typically 3 sectors)
+
+</div>
+
+<div class="fragment">
+
+**RNC** — Radio Network Controller:
+- Radio resource management
+- **Outer-loop power control** (target SIR from BLER)
+- **Soft handover** management
+- Ciphering
+- Controls ~50–200 NodeBs
+
+</div>
+
+<div class="fragment">
+
+**Key difference from GSM:** the RNC is **not** just a BSC — it handles soft handover, which requires combining signals from multiple NodeBs.
+
+</div>
+
+---
+
+## The Iur interface — UMTS's secret weapon
+
+<div class="fragment">
+
+**Iur** connects RNC ↔ RNC.
+
+</div>
+
+<div class="fragment">
+
+**Why it matters:** a mobile can be connected to NodeBs **under different RNCs** simultaneously.
+
+</div>
+
+<div class="fragment">
+
+**Scenario:** UE on a highway, moving from RNC1 → RNC2.
+
+- **Without Iur:** hard handover at the boundary — break-before-make, ~200 ms interruption.
+- **With Iur:** **soft handover survives the boundary** — no interruption.
+
+</div>
+
+<div class="fragment">
+
+**The Iur interface** is what makes CDMA soft handover work across RNC boundaries.
+
+**GSM (with $N>1$) has no equivalent** — BSC-to-BSC handover always goes through the MSC.
+
+</div>
+
+---
+
+## Key interfaces
+
+<div class="fragment">
+
+| Interface | Between | Purpose |
+|---|---|---|
+| **Uu** | UE ↔ NodeB | Radio air interface |
+| **Iub** | NodeB ↔ RNC | Control + traffic |
+| **Iur** | RNC ↔ RNC | Soft handover, inter-RNC mobility |
+| **Iu-CS** | RNC ↔ MSC | CS traffic |
+| **Iu-PS** | RNC ↔ SGSN | PS traffic |
+
+</div>
+
+<div class="fragment">
+
+**The Iur** is the UMTS innovation — GSM has no equivalent.
+
+</div>
+
+---
+
+## Checkpoint — Why Iur matters
+
+<div class="quiz" data-question="iur-role">
+  <p class="quiz-question">What does the <strong>Iur</strong> interface enable that GSM does not have?</p>
+  <button class="quiz-option" data-answer="wrong">Voice over IP</button>
+  <button class="quiz-option" data-answer="correct">Soft handover across RNC boundaries</button>
+  <button class="quiz-option" data-answer="wrong">Packet data services</button>
+  <button class="quiz-option" data-answer="wrong">Authentication between operators</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** Without Iur, a mobile moving from RNC1 to RNC2 would need a hard handover through the MSC — with interruption. With Iur, the two RNCs combine signals via the Iur interface, so the mobile survives the RNC boundary without interruption. This is what makes UMTS soft handover work at scale.
+
+</div>
+
+---
+
+## §4.3 — WCDMA physical layer
+
+<div class="fragment">
+
+**Frequency band:** 1920–1980 MHz uplink, 2110–2170 MHz downlink.
+
+**Channel bandwidth:** **5 MHz** per carrier.
+
+**Chip rate:** **3.84 Mcps** (megachips per second).
+
+</div>
+
+<div class="fragment">
+
+**Why 3.84 Mcps?** Fills a 5 MHz channel with small guard. Processing gain for voice: 3.84 M / 12.2 k ≈ **315** (25 dB).
+
+</div>
+
+<div class="fragment">
+
+**Duplex separation:** 190 MHz (much wider than GSM's 45 MHz).
+
+</div>
+
+<div class="fragment">
+
+**Number of channels:** ~60 carriers of 5 MHz in the 60 MHz uplink band.
+
+</div>
+
+---
+
+## Two layers of spreading — the key WCDMA idea
+
+<div class="fragment">
+
+WCDMA uses **two orthogonal layers**:
+
+**Layer 1 — Channelization (spreading) codes:** separate physical channels **within one transmitter.**
+
+**Layer 2 — Scrambling codes:** separate different **transmitters** (cells or UEs).
+
+</div>
+
+<div class="fragment">
+
+**Channelization: OVSF codes** (Orthogonal Variable Spreading Factor).
+
+- Tree structure, maintains orthogonality at different spreading factors
+- Downlink: separates users within the cell
+- Uplink: separates DPDCH from DPCCH within one UE
+
+</div>
+
+<div class="fragment">
+
+**Scrambling: Gold codes** of length 38,400 chips (10 ms).
+
+- Downlink: 512 primary scrambling codes per cell
+- Uplink: assigned by RNC per UE
+
+</div>
+
+---
+
+## OVSF codes — the tree
+
+<div class="fragment">
+
+**OVSF tree:** each code has two children, formed by replicate (child 0) or replicate-and-negate (child 1).
+
+```
+SF=1:     (1)
+         /   \
+SF=2:  (1,1) (1,-1)
+       /  \    /   \
+SF=4: ...
+```
+
+</div>
+
+<div class="fragment">
+
+**Rule:** a code can be used only if **neither it nor any ancestor or descendant** is in use.
+
+**This preserves orthogonality** within the transmitter.
+
+</div>
+
+<div class="fragment">
+
+**Capacity:** with SF=256, up to 256 orthogonal codes per cell. In practice ~120–180 used (rest for pilots, sync, soft handover reservations).
+
+</div>
+
+---
+
+## Processing gain
+
+<div class="fragment">
+
+$$
+\boxed{\;G = \frac{R_c}{R_b} = \frac{3.84\ \text{Mcps}}{R_b}\;}
+$$
+
+</div>
+
+<div class="fragment">
+
+| Service | $R_b$ | $G$ |
+|---|:---:|:---:|
+| Voice (AMR 12.2 kbps) | 12.2 kbps | **315** (25 dB) |
+| Video (64 kbps) | 64 kbps | 60 (17.8 dB) |
+| Data (384 kbps) | 384 kbps | 10 (10 dB) |
+| HSPA peak (14.4 Mbps) | 14.4 Mbps | **0.27 — breaks down** |
+
+</div>
+
+<div class="fragment">
+
+**The breakdown:** HSPA peak uses 16-QAM and high-rate coding, so the "spread below the chip rate" concept no longer applies. Spectral efficiency matters instead.
+
+</div>
+
+---
+
+## Modulation evolution
+
+<div class="fragment">
+
+**UMTS R99 (baseline):**
+- Downlink: **QPSK**
+- Uplink: dual-channel BPSK (effectively QPSK)
+
+</div>
+
+<div class="fragment">
+
+**HSPA (R5–R7):**
+- Downlink: QPSK → 16-QAM (R5) → **64-QAM** (R7)
+- Uplink: QPSK → 16-QAM (R6)
+
+</div>
+
+<div class="fragment">
+
+**HSPA+ (R7+):**
+- 64-QAM DL with 2×2 MIMO
+- 16-QAM UL
+
+</div>
+
+<div class="fragment">
+
+**Why not higher modulation from the start?** Constant-envelope (QPSK) is easier on the PA. Higher QAM increases PAPR — requires PA backoff — but enables much higher peak rates when SNR is good.
+
+</div>
+
+---
+
+## §4.4 — The Rake receiver
+
+<div class="fragment">
+
+The Rake receiver is **the single most important element** of the UMTS PHY.
+
+</div>
+
+<div class="fragment">
+
+**What it does:** exploits **multipath diversity** — a signal arriving via multiple paths carries redundant information.
+
+</div>
+
+<div class="fragment">
+
+**Why multipath is good in WCDMA:** wideband CDMA's chip duration (~0.26 μs at 3.84 Mcps) is much shorter than typical delay spread (1–3 μs). Multipath components arrive at **chip-level delays** — distinguishable, not ISI.
+
+</div>
+
+<div class="fragment">
+
+**In narrowband GSM,** the same multipath causes ISI — requires a **Viterbi equalizer**.
+
+**In wideband WCDMA,** it becomes **diversity** — exploited by the **Rake.**
+
+</div>
+
+---
+
+## The Rake concept — multiple fingers, MRC combining
+
+<div class="fragment">
+
+**Channel with $L$ paths:**
+
+$$
+r(t) = \sum_{l=1}^{L} \alpha_l\, s(t - \tau_l)
+$$
+
+</div>
+
+<div class="fragment">
+
+**Rake:** a set of **finger** demodulators, each locked to one path delay $\tau_l$.
+
+Each finger correlates with the spreading code, delayed by $\tau_l$.
+
+</div>
+
+<div class="fragment">
+
+**Combining:** **maximal-ratio combining (MRC)** — weight each finger by its path gain:
+
+$$
+\boxed{\;y = \sum_{l=1}^{L} w_l\, y_l,\quad w_l \propto \alpha_l^*\;}
+$$
+
+Combined SNR = sum of per-finger SNRs.
+
+</div>
+
+<div class="fragment">
+
+**The Rake turns multipath from a problem into a benefit** — it's diversity combining at the chip level.
+
+</div>
+
+---
+
+## Rake diversity gain
+
+<div class="fragment">
+
+**Example — 3 paths with relative powers $[0, -3, -8]$ dB:**
+
+Linear powers: $[1, 0.501, 0.158]$. Sum = 1.659.
+
+**Diversity gain:** $10\log_{10}(1.659) \approx$ **2.2 dB** over single-path.
+
+</div>
+
+<div class="fragment">
+
+**For $L$ equal-power paths:** SNR gain = $10\log_{10}(L)$ dB.
+
+- $L = 2$: 3.0 dB
+- $L = 3$: 4.77 dB
+- $L = 4$: 6.0 dB
+
+</div>
+
+<div class="fragment">
+
+**In Rayleigh fading, this diversity gain is the difference between frequent dropouts and reliable connection** — the reason WCDMA works even at low per-path SNR.
+
+</div>
+
+---
+
+## Finger management
+
+<div class="fragment">
+
+**UE typically has 3–6 fingers** (handset size and cost constrain).
+
+**NodeB typically 4–8 per sector**, with possible multi-antenna combining.
+
+</div>
+
+<div class="fragment">
+
+**Searching:** continuously scan for new multipath peaks.
+
+**Assignment:** allocate a finger when a strong new path appears.
+
+**Locking:** lock the finger's delay to the peak.
+
+**Releasing:** free the finger when a path fades below threshold.
+
+</div>
+
+<div class="fragment">
+
+**For large delay spread** (hilly terrain, 10–30 μs): exceeds the Rake's window → needs an **equalizer** (post-Rake).
+
+</div>
+
+---
+
+## Checkpoint — Rake vs. equalizer
+
+<div class="quiz" data-question="rake-vs-eq">
+  <p class="quiz-question">Why does UMTS use a <strong>Rake receiver</strong> where GSM uses a <strong>Viterbi equalizer</strong>?</p>
+  <button class="quiz-option" data-answer="wrong">WCDMA has less multipath than GSM</button>
+  <button class="quiz-option" data-answer="correct">WCDMA's wide bandwidth makes multipath resolvable at chip level — diversity, not ISI</button>
+  <button class="quiz-option" data-answer="wrong">The Rake is cheaper than an equalizer</button>
+  <button class="quiz-option" data-answer="wrong">UMTS uses more antennas</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** GSM's 200 kHz channel has a chip/symbol duration (~3.7 μs) much longer than typical delay spread — so multipath overlaps symbols and causes ISI, needing an equalizer. UMTS's 3.84 Mcps chip duration (~0.26 μs) is shorter than typical delay spread — multipath arrives as distinguishable copies, and the Rake combines them as diversity.
+
+</div>
+
+---
+
+## §4.5 — Power control — the CDMA necessity
+
+<div class="fragment">
+
+**The near-far problem:** in CDMA, all users share the same frequency. A strong nearby user **overwhelms** a distant weak user.
+
+</div>
+
+<div class="fragment">
+
+**The goal:** each UE should arrive at the NodeB with **the same received power** — so codes can separate them cleanly.
+
+</div>
+
+<div class="fragment">
+
+**Three levels of power control:**
+
+- **Open-loop** — initial access (fast, coarse)
+- **Closed-loop** — 1500 Hz (fast, fine) at the NodeB
+- **Outer-loop** — 10–100 Hz at the RNC (target SIR from BLER)
+
+</div>
+
+<div class="fragment">
+
+**Without power control, CDMA cell capacity collapses** — one strong user kills everyone else.
+
+</div>
+
+---
+
+## Three levels of power control
+
+<div class="fragment">
+
+**Open-loop** — initial access.
+
+- UE measures CPICH, estimates path loss, sets TX power accordingly.
+- Not accurate (UL ≠ DL fading), but a good starting point.
+
+</div>
+
+<div class="fragment">
+
+**Closed-loop** — the key to CDMA capacity.
+
+- NodeB measures received SIR **every slot (0.667 ms)**.
+- Compares to **target SIR**.
+- Sends **TPC (Transmit Power Control)** command every slot: up or down by 1 dB.
+- **Rate: 1500 Hz** — fast enough to track Rayleigh fading.
+
+</div>
+
+<div class="fragment">
+
+**Outer-loop** — adapts the target.
+
+- RNC monitors **BLER** over frames (100–500 ms windows).
+- If BLER > target (e.g., 1%): **raise** target SIR.
+- If BLER < target: **lower** target SIR.
+- Adapts to service, data rate, and channel.
+
+</div>
+
+---
+
+## Power control budget
+
+<div class="fragment">
+
+**Example — UE at cell edge, R99 voice, target SIR = 5 dB.**
+
+NodeB measures SIR = 3 dB. Sends **TPC = "up"** every slot.
+
+</div>
+
+<div class="fragment">
+
+**Rate of convergence:** 1 dB/slot × 1500 slots/s = **1500 dB/s**.
+
+In 2 slots (1.3 ms): +2 dB → target reached.
+
+</div>
+
+<div class="fragment">
+
+**The efficiency:** without precise power control, a 10 dB error in TX power for one user would rise cell interference by 10 dB → kills capacity.
+
+With 1500 Hz fine control, each user stays near minimum TX power → capacity scales linearly.
+
+</div>
+
+<div class="fragment">
+
+**This is why UMTS capacity is measured in users per cell, not in slots** — power control quality determines the effective capacity.
+
+</div>
+
+---
+
+## §4.6 — Handover in UMTS
+
+<div class="fragment">
+
+WCDMA's $N=1$ reuse enables a unique advantage: a UE can be connected to **multiple cells simultaneously.**
+
+</div>
+
+<div class="fragment">
+
+**Three types of handover:**
+
+**Softer** — 2+ cells of the **same NodeB**
+
+**Soft** — 2+ NodeBs (potentially under different RNCs)
+
+**Hard** — break-before-make (inter-frequency or inter-system)
+
+</div>
+
+<div class="fragment">
+
+**Soft handover is CDMA's signature advantage** — no interruption during the transition.
+
+</div>
+
+<div class="fragment">
+
+**Not possible in GSM** (with $N>1$): different cells use different frequencies, so the UE cannot receive from both simultaneously.
+
+</div>
+
+---
+
+## Active set and handover events
+
+<div class="fragment">
+
+**Active set** — the set of cells the UE is currently connected to.
+
+**Monitored set** — cells the UE measures but is not connected to.
+
+</div>
+
+<div class="fragment">
+
+**Key events (3GPP naming):**
+
+- **Event 1A** — a CPICH enters the reporting range (candidate for adding)
+- **Event 1B** — a CPICH leaves the reporting range (candidate for removing)
+- **Event 1C** — a non-active cell becomes better than an active one (replace)
+- **Event 2A** — best frequency change (inter-frequency)
+- **Event 3A** — GSM cell becomes better than UMTS (inter-system)
+
+</div>
+
+<div class="fragment">
+
+**Active set size typically limited to 4–6 cells** — wider window means more robustness but more downlink power consumed per UE.
+
+</div>
+
+---
+
+## Soft handover — the sequence
+
+<div class="fragment">
+
+**1. Event 1A** — a monitored cell's CPICH enters the reporting window.
+
+**2. UE sends Measurement Report** to serving RNC.
+
+**3. RNC decides to add the cell** to the active set.
+
+**4. Radio Link Setup** to target NodeB (via Iur if inter-RNC).
+
+**5. Target NodeB establishes the link.**
+
+**6. Active Set Update** sent to UE (via the serving cell).
+
+**7. UE adds the new cell** — now receives from both.
+
+</div>
+
+<div class="fragment">
+
+**Timing:** ~500–2000 ms from measurement trigger to full soft handover.
+
+</div>
+
+---
+
+## Checkpoint — Soft handover window
+
+<div class="quiz" data-question="soft-ho-window">
+  <p class="quiz-question">Why is the active set typically limited to <strong>4–6 cells</strong>?</p>
+  <button class="quiz-option" data-answer="wrong">Because the UE has only 4–6 antennas</button>
+  <button class="quiz-option" data-answer="correct">Each additional cell consumes downlink power and codes, reducing capacity</button>
+  <button class="quiz-option" data-answer="wrong">Because GSM only supports 6 cells</button>
+  <button class="quiz-option" data-answer="wrong">Because the Iur interface has a 6-cell limit</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** Every cell in the active set must transmit to the UE and reserve codes for it — even if the signal is weak. Too many cells in the active set → wasted downlink power and codes → less capacity. Too few → missed soft-handover opportunity → higher drop rate.
+
+</div>
+
+---
+
+## §4.7 — HSPA — the 3.5G enhancements
+
+<div class="fragment">
+
+**R99 UMTS** was a huge improvement over GSM, but not "broadband." HSPA brought true mobile broadband.
+
+</div>
+
+<div class="fragment">
+
+**Three limiting factors of R99:**
+
+1. **Fixed spreading factor** caps peak rate
+2. **Slow scheduling** (RNC every 10–100 ms) — too slow
+3. **No fast link adaptation**
+
+</div>
+
+<div class="fragment">
+
+**HSPA moves key functions to NodeB** — enabling fast response (every 2 ms).
+
+</div>
+
+<div class="fragment">
+
+**Collective name:** **HSPA** = HSDPA (downlink) + HSUPA (uplink).
+
+</div>
+
+---
+
+## HSDPA — three innovations
+
+<div class="fragment">
+
+**1. Adaptive Modulation and Coding (AMC)**
+
+- NodeB chooses modulation + coding **every 2 ms TTI**
+- Uses **CQI** feedback from UE (every 2 ms)
+
+</div>
+
+<div class="fragment">
+
+**2. Fast scheduling at NodeB**
+
+- NodeB decides which UEs get the shared HS-DSCH every 2 ms
+- **Proportional-fair scheduling** balances throughput and fairness
+- **Multi-user diversity** — serve UEs with good channel now
+
+</div>
+
+<div class="fragment">
+
+**3. HARQ with soft combining**
+
+- Fast retransmissions (2 ms, vs. R99's 100 ms)
+- **Incremental redundancy** — retransmissions add new parity
+- **Chase combining** — retransmissions of same bits, MRC-combined
+
+</div>
+
+<div class="fragment">
+
+**New channel: HS-DSCH** — shared, allocated dynamically to different UEs every TTI.
+
+Uses SF=16, up to **15 parallel codes**.
+
+</div>
+
+---
+
+## HSDPA peak rate derivation
+
+<div class="fragment">
+
+**Setup (R5):** 15 HS-PDSCH codes, SF=16, 16-QAM, rate-3/4 coding, 3.84 Mcps.
+
+</div>
+
+<div class="fragment">
+
+**Per code symbol rate:**
+
+$$
+\frac{3.84\ \text{Mcps}}{16} = 240\ \text{ksym/s}
+$$
+
+</div>
+
+<div class="fragment">
+
+**Per code bit rate (16-QAM, 4 bits/sym):**
+
+$$
+240 \times 4 = 960\ \text{kbps}
+$$
+
+**After rate-3/4 coding:**
+
+$$
+960 \times 0.75 = 720\ \text{kbps per code}
+$$
+
+</div>
+
+<div class="fragment">
+
+**× 15 codes:**
+
+$$
+720 \times 15 = \mathbf{10.8\ Mbps}\ \text{(practical)}
+$$
+
+The standard's 14.4 Mbps uses rate-1 theoretical — matches.
+
+</div>
+
+---
+
+## HSUPA and HSPA+
+
+<div class="fragment">
+
+**HSUPA (R6)** — uplink counterpart:
+
+- **E-DCH** channel, rate controlled by NodeB
+- **Fast scheduling grants** (absolute + relative)
+- **HARQ** with short 2 ms TTI
+- **Peak: 5.76 Mbps UL**
+
+</div>
+
+<div class="fragment">
+
+**HSPA+ (R7+):**
+
+- **64-QAM DL** (from 16-QAM)
+- **2×2 MIMO** (dual-stream)
+- **16-QAM UL**
+- **Dual-Cell HSDPA** (R8) — 2 carriers
+- **4×4 MIMO + 4-carrier** (R11)
+
+</div>
+
+<div class="fragment">
+
+**Peak evolution:**
+
+| Release | DL Peak |
+|:---:|:---:|
+| R5 (HSDPA) | 14.4 Mbps |
+| R7 (HSPA+) | 28 Mbps |
+| R8 (DC-HSDPA) | 42 Mbps |
+| R11 (4×4 MIMO + DC) | **168 Mbps** |
+
+</div>
+
+<div class="fragment">
+
+**The 10-year span multiplied peak DL by 11×** — through modulation, coding, MIMO, and carrier aggregation, without changing the 5 MHz carrier.
+
+</div>
+
+---
+
+## Checkpoint — HSPA peak rate
+
+<div class="quiz" data-question="hsdpa-peak">
+  <p class="quiz-question">What is the <strong>HSDPA R5</strong> peak downlink rate with 15 codes, 16-QAM, and rate-3/4 coding?</p>
+  <button class="quiz-option" data-answer="wrong">5.76 Mbps</button>
+  <button class="quiz-option" data-answer="wrong">14.4 Mbps (that's rate-1 theoretical)</button>
+  <button class="quiz-option" data-answer="correct">~10.8 Mbps (practical with rate-3/4)</button>
+  <button class="quiz-option" data-answer="wrong">42 Mbps</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**The math:** 15 codes × 240 ksym/s × 4 bits/sym (16-QAM) × 0.75 (rate 3/4) = 10.8 Mbps. The 14.4 Mbps spec figure assumes rate-1 (no FEC) — practical peak is ~10.8 Mbps with realistic coding.
+
+</div>
+
+---
+
+## §4.8 — Network design — coverage vs. capacity
+
+<div class="fragment">
+
+In CDMA, **coverage and capacity are coupled** (unlike GSM, where they were largely independent).
+
+</div>
+
+<div class="fragment">
+
+**Interference margin** — the extra link budget needed as cell load increases:
+
+$$
+\boxed{\;M = -10\log_{10}(1 - \eta)\;}
+$$
+
+where $\eta$ is the load factor (fraction of pole capacity).
+
+</div>
+
+<div class="fragment">
+
+| Load $\eta$ | Interference margin |
+|:---:|:---:|
+| 30% | 1.55 dB |
+| 50% | **3.0 dB** |
+| 70% | 5.2 dB |
+| 90% | **10.0 dB** |
+
+</div>
+
+<div class="fragment">
+
+**The trade-off:** higher load = more capacity, but smaller cell ("cell breathing").
+
+</div>
+
+---
+
+## Pole capacity — the theoretical limit
+
+<div class="fragment">
+
+**Uplink pole capacity:**
+
+$$
+\boxed{\;N_{\text{pole}} = 1 + \frac{W/R}{(E_b/N_0)_{\text{req}} \cdot (1+i) \cdot v}\;}
+$$
+
+where:
+- $W$ = chip rate (3.84 Mcps)
+- $R$ = data rate
+- $i$ = inter-cell interference factor (~0.5)
+- $v$ = activity factor (~0.6 voice)
+
+</div>
+
+<div class="fragment">
+
+**UMTS voice example:**
+
+$G = 3.84\text{M} / 12.2\text{k} = 315$. $(E_b/N_0) = 5$ dB = 3.16.
+
+$N_{\text{pole}} = 1 + 315 / (3.16 \cdot 1.5 \cdot 0.6) \approx 1 + 110 \approx \mathbf{111}$.
+
+</div>
+
+<div class="fragment">
+
+**Realistic at 50% of pole:** ~55 voice users per cell.
+
+</div>
+
+<div class="fragment">
+
+**Why 40–60% of pole:** at 100% the cell becomes unstable — interference diverges. Operators dimension for headroom.
+
+</div>
+
+---
+
+## §4.9 — UMTS vs. GSM — the summary
+
+| Aspect | GSM | UMTS |
+|---|---|---|
+| **Multiple access** | TDMA | **WCDMA** |
+| **Chip rate** | 270.833 kbps | **3.84 Mcps** |
+| **Bandwidth** | 200 kHz | **5 MHz** |
+| **Reuse factor** | N (3–7) | **N = 1** |
+| **Modulation** | GMSK | QPSK → 16-QAM → 64-QAM |
+| **Handover** | Hard | **Soft / softer / hard** |
+| **Power control** | Slow (480 ms) | **Fast (1500 Hz)** |
+| **Receiver** | Viterbi equalizer | **Rake** |
+| **Peak DL** | ~470 kbps (EDGE) | 168 Mbps (HSPA+ R11) |
+| **Latency** | ~600 ms | **~50–100 ms** |
+
+<div class="fragment">
+
+**UMTS is not "GSM with faster data"** — it's a fundamentally different air interface. The migration was a decade-long, multi-billion-dollar undertaking for global operators.
+
+</div>
+
+---
+
+## Checkpoint — Power control
+
+<div class="quiz" data-question="power-ctrl-rate">
+  <p class="quiz-question">What is the update rate of <strong>fast closed-loop power control</strong> in UMTS?</p>
+  <button class="quiz-option" data-answer="wrong">10 Hz</button>
+  <button class="quiz-option" data-answer="wrong">100 Hz</button>
+  <button class="quiz-option" data-answer="correct">1500 Hz</button>
+  <button class="quiz-option" data-answer="wrong">15,000 Hz</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why so fast.** Rayleigh fading at highway speed (100 km/h, 2 GHz) has a coherence time of ~2 ms — the channel changes significantly every few slots. 1500 Hz (one TPC per 0.667 ms slot) is the minimum to track it.
+
+</div>
+
+---
+
+## Chapter 4 — key takeaways
+
+<div class="fragment">
+
+**1.** UMTS was the **3G system** defined by 3GPP — deployed as **UMTS FDD (WCDMA)** — the dominant global 3G standard.
+
+</div>
+
+<div class="fragment">
+
+**2.** Architecture: **UE + UTRAN + CN**. The **Iur interface** enables soft handover across RNC boundaries — unique to UMTS.
+
+</div>
+
+<div class="fragment">
+
+**3.** WCDMA PHY: **5 MHz carrier, 3.84 Mcps, OVSF + Gold codes**. Processing gain ~25 dB for voice.
+
+</div>
+
+<div class="fragment">
+
+**4.** The **Rake receiver** turns multipath into diversity. For $L$ equal paths, gain $\approx 10\log_{10} L$ dB.
+
+</div>
+
+<div class="fragment">
+
+**5.** **Power control** is essential — near-far problem. Three levels: open, closed (1500 Hz), outer (target SIR).
+
+</div>
+
+<div class="fragment">
+
+**6.** **Soft handover** — 2+ cells simultaneously — is CDMA's signature advantage. Active set limited to 4–6 cells.
+
+</div>
+
+<div class="fragment">
+
+**7.** **HSPA** (HSDPA + HSUPA) brought true mobile broadband — AMC, fast scheduling, HARQ at the NodeB. Peak 14.4 Mbps (R5) → 168 Mbps (R11).
+
+</div>
+
+<div class="fragment">
+
+**8.** Network design is **interference-limited** — coverage and capacity are coupled via the load factor.
+
+</div>
+
+---
+
+## Next — Chapter 5
+
+**4G — LTE and WiMAX**
+
+<div class="fragment">
+
+- IMT-Advanced requirements
+- **OFDMA** (downlink) + **SC-FDMA** (uplink) — the new PHY
+- MIMO: spatial multiplexing, diversity, beamforming
+- **LTE EPC architecture** — flat, all-IP
+- LTE-Advanced: carrier aggregation, 8×8 MIMO, CoMP
+- **WiMAX** — technically comparable, commercially defeated
+
+</div>
+
+<div class="fragment">
+
+**The biggest air-interface shift since UMTS — CDMA to OFDMA.**
+
+</div>
+
+---
+
+<aside class="notes">
+  <div style="font-size: 16px; line-height: 1.6;">
+
+**Speaker notes for the whole lecture:**
+
+- Slides 4–7 (why UMTS, timeline, TDMA→CDMA): ~8 min. Emphasize that **TDMA → CDMA** is a fundamental change — not an evolution. Every subsequent concept (power control, Rake, soft handover) exists because of CDMA.
+- Slides 8–14 (architecture): ~8 min. The **Iur interface** is the key — spend extra time on it. Without Iur, UMTS would have GSM-style hard handovers at every RNC boundary.
+- Slides 15–21 (WCDMA PHY): ~10 min. Two-layer spreading (OVSF + scrambling) is confusing; draw the diagram on the board. Emphasize **why OVSF is needed**: to separate users within a cell (downlink) and channels within a UE (uplink).
+- Slides 22–27 (Rake): the most important concept. Emphasize **why multipath is good here** (chip-level resolution → diversity) vs. bad in GSM (symbol-level overlap → ISI).
+- Slides 28–33 (power control + handover): ~10 min. Near-far problem is the motivating concept. Walk through all three power control loops.
+- Slides 34–40 (HSPA): the 3.5G evolution. HSPA's key innovation is **moving AMC/HARQ/scheduling to the NodeB** — from RNC's 100 ms to NodeB's 2 ms. This is what enabled the 14.4 Mbps peak.
+- Slides 41–45 (network design + comparison): the trade-off between coverage and capacity (cell breathing) is critical. The exam will ask for pole capacity computation.
+
+**The exam will test: processing gain, OVSF rule, Rake diversity gain, pole capacity formula, and HSPA peak rate derivation.**
+
+  </div>
+</aside>
+        </textarea>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../assets/quiz.js"></script>
+      
+    
+  
+<!-- mkdocs-revealjs ───────────────────────────────────────── -->
+
+<!-- Plugin base corrections (always loaded, before any theme) -->
+<style id="revealjs-base">
+.reveal .slides section ul,.reveal .slides section ol{display:inline-block;text-align:left}.reveal .slides section .admonition,.reveal .slides section details[class]{width:var(--admon-width, 80%);max-width:var(--admon-max-width, none);margin:var(--admon-margin, 1.5625em auto);padding:var(--admon-padding, 0 .6rem);font-size:var(--admon-font-size, .85em);text-align:var(--text-align, left);box-shadow:var(--admon-box-shadow, none);opacity:var(--admon-opacity, 1)}.reveal .slides section .admonition .danger,.reveal .slides section details[class] .danger{border:var(--admon-border, .075rem solid #ff1744)}.reveal .slides section .admonition .note,.reveal .slides section details[class] .note{border:var(--admon-border, .075rem solid #448aff)}.reveal .slides section .admonition .tip,.reveal .slides section details[class] .tip{border:var(--admon-border, .075rem solid #00bfa5)}.reveal .slides section .admonition .warning,.reveal .slides section details[class] .warning{border:var(--admon-border, .075rem solid #ff9100)}.reveal .slides section .admonition p,.reveal .slides section .admonition .admonition-title,.reveal .slides section .admonition summary,.reveal .slides section .admonition ul,.reveal .slides section .admonition ol,.reveal .slides section .admonition li,.reveal .slides section .admonition pre,.reveal .slides section .admonition code,.reveal .slides section details[class] p,.reveal .slides section details[class] .admonition-title,.reveal .slides section details[class] summary,.reveal .slides section details[class] ul,.reveal .slides section details[class] ol,.reveal .slides section details[class] li,.reveal .slides section details[class] pre,.reveal .slides section details[class] code{text-align:left}.reveal .slides section .twemoji{vertical-align:middle}.reveal .tabbed-set{text-align:left}.reveal .tabbed-set>input[type=radio]{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}.reveal .tabbed-set .tabbed-labels{text-align:left}.reveal .tabbed-set .tabbed-labels>label{cursor:pointer}.reveal .tabbed-set .tabbed-content>.tabbed-block[hidden]{display:none!important}.reveal .tabbed-set .tabbed-content>.tabbed-block:not([hidden]){display:block}.mkdocs-revealjs-html-island{display:none!important}.mkdocs-revealjs-wrapper{overflow:hidden}.mkdocs-revealjs-wrapper>.mksq-reveal-navigation.mksq-page-navigation-top:not(.mksq-reveal-navigation-fullscreen):not([data-mounted=floating]){top:2px!important}.mkdocs-revealjs-wrapper.mkdocs-revealjs-fullscreen-host{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;margin:0!important}.mkdocs-revealjs-deck.mkdocs-revealjs-fullscreen-deck{position:relative}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen{z-index:40000!important}.mksq-reveal-navigation[hidden]{display:none!important}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen.mksq-page-navigation-top:not([data-mounted=floating]){top:.5rem!important}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+<!-- Reveal.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="revealjs-theme-light" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="revealjs-theme-dark" media="not all">
+
+<!-- Reveal.js theme: hack overrides (light / dark) -->
+
+<!-- Reveal.js theme: custom CSS (light / dark) -->
+
+<!-- Highlight.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" id="revealjs-hljs-light" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" id="revealjs-hljs-dark" media="not all">
+
+<!-- Highlight.js theme: hack overrides (light / dark) -->
+
+<!-- Highlight.js theme: custom CSS (light / dark) -->
+
+<!-- Mermaid theme: hack overrides (light / dark) -->
+
+<!-- Mermaid theme: custom CSS (light / dark) -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+
+
+
+
+
+
+<script src="../../slides/assets/quiz.js"></script>
+<script>
+(function () {
+
+  // ── Extensible content lifecycle ────────────────────────────────────────
+  // MkDocs extensions render rich HTML before Reveal.js. Those fragments are
+  // transported through Reveal/marked as opaque HTML islands and hydrated only
+  // after deck.initialize(). External projects can register a refresh adapter
+  // or listen for the content-ready/content-shown events below.
+  var _rvContentAdapters = new Map();
+  var _rvContentRefreshTimers = new WeakMap();
+  var _rvContentTabCounter = 0;
+  var _rvDecks = new Map();
+
+  function _rvDeckForRoot(root) {
+    if (!root) return null;
+    var deckRoot = root.matches && root.matches(".mkdocs-revealjs-deck")
+      ? root
+      : (root.closest ? root.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot && root.querySelector) {
+      deckRoot = root.querySelector(".mkdocs-revealjs-deck");
+    }
+    return deckRoot ? (_rvDecks.get(deckRoot.dataset.revealjsDeckId) || null) : null;
+  }
+
+  // ── Fullscreen evaluation chrome ───────────────────────────────────────
+  // The Fullscreen API only renders the fullscreen element and descendants.
+  // SuperQuiz deck chrome (numbered navigation, strict-eval toolbar and access
+  // gate) normally lives as a sibling of the .reveal root inside the wrapper.
+  // Move the chrome owned by the active deck into the fullscreen Reveal root,
+  // then restore the exact DOM position and inline styles on exit.
+  var _rvFullscreenNavigationState = new Map();
+  var _rvFullscreenEvalChromeState = new Map();
+
+  function _rvGetFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function _rvDeckId(deckRoot) {
+    return deckRoot && deckRoot.dataset
+      ? String(deckRoot.dataset.revealjsDeckId || "")
+      : "";
+  }
+
+  function _rvFindRevealNavigation(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return null;
+    var deckId = _rvDeckId(deckRoot);
+    var navigations = Array.from(wrapper.querySelectorAll(".mksq-reveal-navigation"));
+    return navigations.find(function(navigation) {
+      return !deckId || String(navigation.dataset.deckId || "") === deckId;
+    }) || null;
+  }
+
+  function _rvFindRevealEvalChrome(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return [];
+    var deckId = _rvDeckId(deckRoot);
+    return Array.from(wrapper.querySelectorAll(".mkdocs-revealjs-eval-chrome"))
+      .filter(function(chrome) {
+        return !deckId || String(chrome.dataset.deckId || "") === deckId;
+      });
+  }
+
+  function _rvRestoreFullscreenNavigation(navigation) {
+    var state = _rvFullscreenNavigationState.get(navigation);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(navigation, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(navigation);
+    }
+    if (state.style === null) navigation.removeAttribute("style");
+    else navigation.setAttribute("style", state.style);
+    if (navigation.dataset) {
+      if (state.mounted === null) delete navigation.dataset.mounted;
+      else navigation.dataset.mounted = state.mounted;
+    }
+    navigation.classList.remove("mksq-reveal-navigation-fullscreen");
+    _rvFullscreenNavigationState.delete(navigation);
+  }
+
+  function _rvRestoreFullscreenEvalChrome(chrome) {
+    var state = _rvFullscreenEvalChromeState.get(chrome);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(chrome, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(chrome);
+    }
+    if (state.style === null) chrome.removeAttribute("style");
+    else chrome.setAttribute("style", state.style);
+    chrome.classList.remove("mkdocs-revealjs-eval-chrome-fullscreen");
+    _rvFullscreenEvalChromeState.delete(chrome);
+  }
+
+  function _rvRestoreAllFullscreenChrome() {
+    var states = Array.from(_rvFullscreenNavigationState.values())
+      .concat(Array.from(_rvFullscreenEvalChromeState.values()));
+    Array.from(_rvFullscreenNavigationState.keys()).forEach(_rvRestoreFullscreenNavigation);
+    Array.from(_rvFullscreenEvalChromeState.keys()).forEach(_rvRestoreFullscreenEvalChrome);
+    states.forEach(function(state) {
+      if (state.wrapper) state.wrapper.classList.remove("mkdocs-revealjs-fullscreen-host");
+      if (state.deckRoot) state.deckRoot.classList.remove("mkdocs-revealjs-fullscreen-deck");
+      var deck = state.deckRoot ? _rvDeckForRoot(state.deckRoot) : null;
+      if (deck && typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+    });
+  }
+
+  function _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot) {
+    if (!chrome || !fullscreenElement) return;
+    if (!_rvFullscreenEvalChromeState.has(chrome)) {
+      var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation chrome");
+      var parent = chrome.parentNode;
+      if (parent) parent.insertBefore(placeholder, chrome);
+      _rvFullscreenEvalChromeState.set(chrome, {
+        placeholder: placeholder,
+        parent: parent,
+        style: chrome.hasAttribute("style") ? chrome.getAttribute("style") : null,
+        wrapper: wrapper,
+        deckRoot: deckRoot
+      });
+    }
+    chrome.classList.add("mkdocs-revealjs-eval-chrome-fullscreen");
+    if (!fullscreenElement.contains(chrome)) fullscreenElement.appendChild(chrome);
+  }
+
+  function _rvEnterFullscreenChrome(fullscreenElement) {
+    if (!fullscreenElement || !fullscreenElement.querySelector) return;
+    var deckRoot = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot) deckRoot = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    if (!deckRoot) return;
+    var wrapper = deckRoot.closest ? deckRoot.closest(".mkdocs-revealjs-wrapper") : null;
+    if (!wrapper) return;
+    var navigation = _rvFindRevealNavigation(wrapper, deckRoot);
+    var evalChrome = _rvFindRevealEvalChrome(wrapper, deckRoot);
+    if (!navigation && !evalChrome.length) return;
+
+    wrapper.classList.add("mkdocs-revealjs-fullscreen-host");
+    deckRoot.classList.add("mkdocs-revealjs-fullscreen-deck");
+
+    // SuperQuiz owns evaluation access. Its numbered navigation carries the
+    // native `hidden` state until the password has been accepted. Never promote
+    // a locked navigation into the browser fullscreen top layer.
+    var navigationVisible = navigation
+      && !navigation.hidden
+      && !navigation.hasAttribute("hidden")
+      && navigation.getAttribute("aria-hidden") !== "true";
+
+    if (navigationVisible) {
+      if (!_rvFullscreenNavigationState.has(navigation)) {
+        var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation navigation");
+        var parent = navigation.parentNode;
+        if (parent) parent.insertBefore(placeholder, navigation);
+        _rvFullscreenNavigationState.set(navigation, {
+          placeholder: placeholder,
+          parent: parent,
+          style: navigation.hasAttribute("style") ? navigation.getAttribute("style") : null,
+          mounted: navigation.dataset ? (navigation.dataset.mounted || null) : null,
+          wrapper: wrapper,
+          deckRoot: deckRoot
+        });
+      }
+      navigation.classList.add("mksq-reveal-navigation-fullscreen");
+      // Drag coordinates belong to the embedded wrapper. Fullscreen starts from
+      // the configured anchor; the original inline style/mounted state is
+      // restored on exit. A new fullscreen drag may set mounted=floating.
+      navigation.removeAttribute("style");
+      if (navigation.dataset) delete navigation.dataset.mounted;
+      if (!fullscreenElement.contains(navigation)) fullscreenElement.appendChild(navigation);
+    }
+
+    evalChrome.forEach(function(chrome) {
+      _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot);
+    });
+
+    var deck = _rvDeckForRoot(deckRoot);
+    if (deck && typeof deck.layout === "function") {
+      window.requestAnimationFrame(function() { deck.layout(); });
+    }
+  }
+
+  function _rvSyncFullscreenNavigation() {
+    var fullscreenElement = _rvGetFullscreenElement();
+    _rvRestoreAllFullscreenChrome();
+    if (fullscreenElement) _rvEnterFullscreenChrome(fullscreenElement);
+  }
+
+  document.addEventListener("fullscreenchange", _rvSyncFullscreenNavigation);
+  document.addEventListener("webkitfullscreenchange", _rvSyncFullscreenNavigation);
+
+  // SuperQuiz removes `hidden` only after successful password verification,
+  // then emits this event. If the deck is already fullscreen at that point,
+  // mount the newly unlocked navigation now; there is no second fullscreenchange
+  // event to do it for us.
+  document.addEventListener("mkdocs-superquiz-eval-unlocked", function(event) {
+    var fullscreenElement = _rvGetFullscreenElement();
+    if (!fullscreenElement) return;
+    var detail = event && event.detail ? event.detail : {};
+    var fullscreenDeck = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!fullscreenDeck && fullscreenElement.querySelector) {
+      fullscreenDeck = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    }
+    if (!fullscreenDeck) return;
+    var deckId = _rvDeckId(fullscreenDeck);
+    if (detail.deckId && deckId && String(detail.deckId) !== deckId) return;
+    _rvEnterFullscreenChrome(fullscreenElement);
+  });
+
+  function _rvDecodeHtmlIsland(payload) {
+    var normalized = String(payload || "")
+      .replace(/-/g, "+")
+      .replace(/_/g, "/");
+    var binary = window.atob(normalized);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i += 1) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+
+  function _rvHydrateHtmlIslands(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return [];
+    var islands = [];
+    if (scanRoot.matches && scanRoot.matches(".mkdocs-revealjs-html-island")) {
+      islands.push(scanRoot);
+    }
+    scanRoot.querySelectorAll(".mkdocs-revealjs-html-island")
+      .forEach(function(island) { islands.push(island); });
+
+    var hydrated = [];
+    islands.forEach(function(island) {
+      if (!island.isConnected || island.dataset.revealjsHydrated === "true") return;
+      try {
+        var template = document.createElement("template");
+        template.innerHTML = _rvDecodeHtmlIsland(
+          island.getAttribute("data-mkdocs-revealjs-html") || ""
+        );
+        var nodes = Array.prototype.slice.call(template.content.childNodes);
+        island.replaceWith(template.content);
+        nodes.forEach(function(node) {
+          if (node.nodeType === 1) hydrated.push(node);
+        });
+      } catch (error) {
+        island.dataset.revealjsHydrated = "error";
+        console.warn("[revealjs] unable to hydrate MkDocs HTML island:", error);
+      }
+    });
+    return hydrated;
+  }
+
+  function _rvRegisterContentAdapter(name, adapter) {
+    var key = String(name || "").trim();
+    if (!key || !adapter) return false;
+    var normalized = typeof adapter === "function"
+      ? { refresh: adapter }
+      : adapter;
+    if (typeof normalized.refresh !== "function") return false;
+    normalized.priority = Number.isFinite(normalized.priority)
+      ? normalized.priority
+      : 100;
+    _rvContentAdapters.set(key, normalized);
+    return true;
+  }
+
+  function _rvDispatchContentEvent(root, reason) {
+    var target = root && root.dispatchEvent ? root : document;
+    var initial = reason === "initialize";
+    target.dispatchEvent(new CustomEvent(
+      initial
+        ? "mkdocs-revealjs-content-ready"
+        : "mkdocs-revealjs-content-shown",
+      {
+        bubbles: true,
+        detail: {
+          root: root || document,
+          reason: reason || "refresh",
+          deck: _rvDeckForRoot(root)
+        }
+      }
+    ));
+  }
+
+  function _rvRunContentAdapters(root, reason) {
+    var scanRoot = root || document;
+    var context = {
+      reason: reason || "refresh",
+      deck: _rvDeckForRoot(scanRoot)
+    };
+    var adapters = Array.from(_rvContentAdapters.entries())
+      .sort(function(left, right) {
+        var priorityDelta = left[1].priority - right[1].priority;
+        return priorityDelta || left[0].localeCompare(right[0]);
+      });
+
+    var chain = Promise.resolve();
+    adapters.forEach(function(entry) {
+      var name = entry[0];
+      var adapter = entry[1];
+      chain = chain.then(function() {
+        try {
+          return Promise.resolve(adapter.refresh(scanRoot, context));
+        } catch (error) {
+          return Promise.reject(error);
+        }
+      }).catch(function(error) {
+        console.warn("[revealjs] content adapter '" + name + "' failed:", error);
+      });
+    });
+
+    return chain.then(function() {
+      _rvDispatchContentEvent(scanRoot, reason);
+      return scanRoot;
+    });
+  }
+
+  function _rvRefreshContent(root, reason) {
+    var scanRoot = root || document;
+    _rvHydrateHtmlIslands(scanRoot);
+    _rvPrepareContentTabs(scanRoot);
+    return _rvRunContentAdapters(scanRoot, reason);
+  }
+
+  function _rvScheduleContentRefresh(root, reason, delay) {
+    var scanRoot = root || document;
+    var previous = _rvContentRefreshTimers.get(scanRoot);
+    if (previous !== undefined) window.clearTimeout(previous);
+    var timer = window.setTimeout(function() {
+      _rvContentRefreshTimers.delete(scanRoot);
+      Promise.resolve(_rvRefreshContent(scanRoot, reason)).catch(function(error) {
+        console.warn("[revealjs] scheduled content refresh failed:", error);
+      });
+    }, delay || 0);
+    _rvContentRefreshTimers.set(scanRoot, timer);
+  }
+
+  function _rvWaitForGlobal(name, timeoutMs) {
+    var timeout = Number.isFinite(timeoutMs) ? timeoutMs : 10000;
+    var started = Date.now();
+    return new Promise(function(resolve, reject) {
+      function check() {
+        if (window[name]) {
+          resolve(window[name]);
+          return;
+        }
+        if (Date.now() - started >= timeout) {
+          reject(new Error(name + " did not become available within " + timeout + " ms"));
+          return;
+        }
+        window.setTimeout(check, 25);
+      }
+      check();
+    });
+  }
+
+  var _rvPublicApi = window.MkDocsRevealJS || {};
+  _rvPublicApi.registerContentAdapter = _rvRegisterContentAdapter;
+  _rvPublicApi.refresh = function(root, reason) {
+    return _rvRefreshContent(root || document, reason || "external-refresh");
+  };
+  _rvPublicApi.requestLayout = function(root) {
+    if (root) {
+      var one = _rvDeckForRoot(root);
+      if (one && typeof one.layout === "function") one.layout();
+      return;
+    }
+    _rvDecks.forEach(function(deck) {
+      if (deck && typeof deck.layout === "function") deck.layout();
+    });
+  };
+  _rvPublicApi.getDeck = function(id) {
+    return _rvDecks.get(String(id || "")) || null;
+  };
+  _rvPublicApi.getDecks = function() {
+    return new Map(_rvDecks);
+  };
+  window.MkDocsRevealJS = _rvPublicApi;
+
+  // ── Content tabs ────────────────────────────────────────────────────────
+  // The HTML structure is produced once by pymdownx.tabbed and transported as
+  // an opaque island. Runtime code only applies state and emits a generic
+  // content-shown lifecycle event; it never reparses or reorders tab panels.
+  function _rvPrepareContentTabs(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return;
+    var tabSets = [];
+    if (scanRoot.matches && scanRoot.matches(".tabbed-set")) tabSets.push(scanRoot);
+    scanRoot.querySelectorAll(".tabbed-set").forEach(function(set) {
+      if (tabSets.indexOf(set) < 0) tabSets.push(set);
+    });
+
+    tabSets.forEach(function(set) {
+      var children = Array.prototype.slice.call(set.children || []);
+      var inputs = children.filter(function(child) {
+        return child.tagName === "INPUT" && child.type === "radio";
+      });
+      var labelsRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-labels");
+      });
+      var contentRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-content");
+      });
+      var labels = labelsRoot
+        ? Array.prototype.slice.call(labelsRoot.children || []).filter(function(child) {
+            return child.tagName === "LABEL";
+          })
+        : [];
+      var blocks = contentRoot
+        ? Array.prototype.slice.call(contentRoot.children || []).filter(function(child) {
+            return child.classList && child.classList.contains("tabbed-block");
+          })
+        : [];
+
+      if (!inputs.length || inputs.length !== labels.length || inputs.length !== blocks.length) {
+        console.warn("[revealjs] invalid content-tab structure:", {
+          inputs: inputs.length,
+          labels: labels.length,
+          blocks: blocks.length,
+          element: set
+        });
+        return;
+      }
+
+      if (!set.dataset.revealjsTabUid) {
+        _rvContentTabCounter += 1;
+        set.dataset.revealjsTabUid = String(_rvContentTabCounter);
+      }
+      var base = "mkdocs-revealjs-tab-" + set.dataset.revealjsTabUid;
+      var count = inputs.length;
+
+      function activate(index, notify) {
+        var active = Math.max(0, Math.min(index, count - 1));
+        for (var i = 0; i < count; i += 1) {
+          var selected = i === active;
+          inputs[i].checked = selected;
+          labels[i].setAttribute("aria-selected", selected ? "true" : "false");
+          labels[i].setAttribute("tabindex", selected ? "0" : "-1");
+          blocks[i].hidden = !selected;
+          blocks[i].setAttribute("aria-hidden", selected ? "false" : "true");
+        }
+        set.dataset.revealjsActiveTab = String(active);
+        if (notify) {
+          window.requestAnimationFrame(function() {
+            _rvScheduleContentRefresh(blocks[active], "tab-shown", 0);
+            _rvPublicApi.requestLayout();
+          });
+        }
+      }
+
+      var activeIndex = inputs.findIndex(function(input) { return input.checked; });
+      if (activeIndex < 0) activeIndex = 0;
+
+      for (var i = 0; i < count; i += 1) {
+        var id = inputs[i].id || (base + "-" + (i + 1));
+        inputs[i].name = inputs[i].name || base;
+        inputs[i].id = id;
+        labels[i].setAttribute("for", id);
+        labels[i].setAttribute("role", "tab");
+        blocks[i].setAttribute("role", "tabpanel");
+
+        if (!inputs[i].dataset.revealjsTabBound) {
+          inputs[i].dataset.revealjsTabBound = "true";
+          inputs[i].addEventListener("change", (function(index) {
+            return function(event) {
+              if (event.target.checked) activate(index, true);
+            };
+          })(i));
+        }
+      }
+
+      set.setAttribute("data-mkdocs-revealjs-tabs-ready", "true");
+      activate(activeIndex, false);
+    });
+  }
+
+  // ── Built-in adapters ───────────────────────────────────────────────────
+  function _rvRootMatches(root, selector) {
+    if (!root) return false;
+    if (root.matches && root.matches(selector)) return true;
+    return Boolean(root.querySelector && root.querySelector(selector));
+  }
+
+  function _rvRefreshMathsAdmonitions(root, context) {
+    var api = window.MkDocsMathsAdmonitions;
+    if (!api) return;
+
+    // MMA counters are scoped to one API processing operation. A Reveal deck
+    // must therefore be processed as one complete unit with initReveal(deck).
+    // Scoped refresh(currentSlide) calls would restart counters at 1.
+    var deck = context && context.deck;
+    var reason = context && context.reason;
+    if (deck && typeof api.initReveal === "function") {
+      if (reason === "initialize" || reason === "external-refresh") {
+        return api.initReveal(deck);
+      }
+      return;
+    }
+
+    if (reason === "initialize" && typeof api.refresh === "function") {
+      return api.refresh(root || document);
+    }
+  }
+
+  function _rvRefreshXTables(root) {
+    var scanRoot = root || document;
+    if (!_rvRootMatches(scanRoot, "table.xtable")) return;
+
+    var loaderPresent = Boolean(document.querySelector(
+      'script[src*="mkdocs-xtables"], script[data-mkdocs-xtables-loader]'
+    ));
+    if (!window.MkDocsXTables && !loaderPresent) return;
+
+    var apiPromise = window.MkDocsXTables
+      ? Promise.resolve(window.MkDocsXTables)
+      : _rvWaitForGlobal("MkDocsXTables", 10000);
+
+    return apiPromise.then(function(api) {
+      if (!api || typeof api.refresh !== "function") {
+        throw new Error("MkDocsXTables.refresh(root) is unavailable");
+      }
+      return api.refresh(scanRoot);
+    });
+  }
+
+  function _rvNormalizeTikzJaxFences(root) {
+    if (!root || !root.querySelectorAll) return [];
+    var changed = [];
+    root.querySelectorAll(
+      "pre > code.language-tikzjax, " +
+      "pre > code.tikzjax, " +
+      "pre > code.language-tikz, " +
+      "pre > code.tikz"
+    ).forEach(function(code) {
+      var pre = code.parentElement;
+      if (!pre) return;
+      var modified = false;
+      ["language-tikzjax", "tikzjax", "language-tikz", "tikz"]
+        .forEach(function(className) {
+          if (code.classList.contains(className) && !pre.classList.contains(className)) {
+            pre.classList.add(className);
+            modified = true;
+          }
+        });
+      if (modified) changed.push(pre);
+    });
+    return changed;
+  }
+
+  function _rvRefreshTikzJax(root) {
+    var scanRoot = root || document;
+    var normalized = _rvNormalizeTikzJaxFences(scanRoot);
+
+    if (typeof window.TikzJaxRefresh === "function") {
+      window.TikzJaxRefresh(scanRoot);
+      return;
+    }
+
+    if (!window.TikzJax) return;
+
+    // Current @rod2ik/tikzjax exposes TikzJaxConfigure and owns a centralized
+    // MutationObserver. HTML-island hydration and normalized-fence reinsertion
+    // are therefore sufficient; cloning every source would race that observer
+    // and could associate a render result with a detached loader.
+    if (typeof window.TikzJaxConfigure === "function") {
+      normalized.forEach(function(pre) {
+        if (pre.parentNode) pre.replaceWith(pre.cloneNode(true));
+      });
+      return;
+    }
+
+  }
+
+  _rvRegisterContentAdapter("maths-admonitions", {
+    priority: 10,
+    refresh: _rvRefreshMathsAdmonitions
+  });
+  _rvRegisterContentAdapter("xtables", {
+    priority: 20,
+    refresh: _rvRefreshXTables
+  });
+  _rvRegisterContentAdapter("tikzjax", {
+    priority: 30,
+    refresh: _rvRefreshTikzJax
+  });
+
+  // ── Visibility and layout lifecycle ─────────────────────────────────────
+  function _rvInstallContentLifecycle(deck, root) {
+    if (!root || !root.addEventListener) return;
+    var scheduled = false;
+    function scheduleLayout() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        deck.layout();
+      });
+    }
+
+    root.addEventListener("tikzjax-load-finished", scheduleLayout);
+    root.addEventListener("xtables:ready", scheduleLayout);
+    root.addEventListener("xtables:error", scheduleLayout);
+    root.addEventListener("mkdocs-revealjs-content-updated", scheduleLayout);
+    root.addEventListener("toggle", function(event) {
+      if (!event.target || event.target.tagName !== "DETAILS" || !event.target.open) return;
+      _rvScheduleContentRefresh(event.target, "details-shown", 0);
+      scheduleLayout();
+    }, true);
+
+    deck.on("slidechanged", function(event) {
+      var slide = event && event.currentSlide ? event.currentSlide : root;
+      _rvScheduleContentRefresh(slide, "slide-shown", 0);
+      scheduleLayout();
+    });
+  }
+
+  // ── Theme switcher ───────────────────────────────────────────────────────
+  var _SWAP_PAIRS = [["revealjs-theme-light", "revealjs-theme-dark"], ["revealjs-hljs-light", "revealjs-hljs-dark"], ["revealjs-hack-rv-light", "revealjs-hack-rv-dark"], ["revealjs-hack-hl-light", "revealjs-hack-hl-dark"]];
+  var _rvActiveThemeAssets = [];
+  var _rvThemeFinishToken = 0;
+
+  function _rvDeckRoots() {
+    return Array.from(document.querySelectorAll(".mkdocs-revealjs-deck"));
+  }
+
+  function _rvActivateThemeAsset(element, active) {
+    if (!element) return;
+    element.media = active ? "all" : "not all";
+  }
+
+  function _rvSyncScrollPageBackgrounds(viewport, previousBackground) {
+    if (!viewport) return;
+    var currentBackground = window.getComputedStyle(viewport).background;
+    if (!currentBackground) return;
+
+    viewport.querySelectorAll(".scroll-page").forEach(function(page) {
+      var pageBackground = window.getComputedStyle(page).background;
+      var managed = page.getAttribute("data-mkdocs-revealjs-theme-background") === "true";
+      var inheritedCurrent = !previousBackground && pageBackground === currentBackground;
+      var inheritedPrevious = previousBackground && pageBackground === previousBackground;
+      if (managed || inheritedCurrent || inheritedPrevious) {
+        page.style.background = currentBackground;
+        page.setAttribute("data-mkdocs-revealjs-theme-background", "true");
+      }
+    });
+  }
+
+  function _rvInstallScrollPageBackgroundSync(viewport) {
+    if (!viewport || typeof MutationObserver === "undefined") return;
+    var scheduled = false;
+    function schedule() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        _rvSyncScrollPageBackgrounds(viewport, "");
+      });
+    }
+    new MutationObserver(function(mutations) {
+      var hasNewScrollPage = mutations.some(function(mutation) {
+        return Array.from(mutation.addedNodes || []).some(function(node) {
+          return node && node.nodeType === 1 && (
+            node.classList.contains("scroll-page") ||
+            (typeof node.querySelector === "function" && node.querySelector(".scroll-page"))
+          );
+        });
+      });
+      if (hasNewScrollPage) schedule();
+    }).observe(viewport, { childList: true, subtree: true });
+  }
+
+  function _rvFinishThemeSwap(activeAssets, previousBackgrounds) {
+    var token = ++_rvThemeFinishToken;
+    function finish() {
+      if (token !== _rvThemeFinishToken) return;
+      _rvDeckRoots().forEach(function(viewport) {
+        var deck = _rvDeckForRoot(viewport);
+        if (deck && typeof deck.layout === "function") deck.layout();
+        var previous = previousBackgrounds && previousBackgrounds.get
+          ? (previousBackgrounds.get(viewport) || "")
+          : "";
+        _rvSyncScrollPageBackgrounds(viewport, previous);
+      });
+    }
+    function schedule() {
+      window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(finish);
+      });
+    }
+    (activeAssets || []).forEach(function(asset) {
+      if (!asset || asset.tagName !== "LINK" || asset.sheet) return;
+      asset.addEventListener("load", schedule, { once: true });
+      asset.addEventListener("error", schedule, { once: true });
+    });
+    schedule();
+  }
+
+  function applyTheme(scheme) {
+    var previousBackgrounds = new Map();
+    _rvDeckRoots().forEach(function(viewport) {
+      previousBackgrounds.set(viewport, window.getComputedStyle(viewport).background);
+    });
+    var isDark = (scheme === "slate");
+    var activeAssets = [];
+    _SWAP_PAIRS.forEach(function(pair) {
+      var light = document.getElementById(pair[0]);
+      var dark  = document.getElementById(pair[1]);
+      _rvActivateThemeAsset(light, !isDark);
+      _rvActivateThemeAsset(dark, isDark);
+      var active = isDark ? dark : light;
+      if (active) activeAssets.push(active);
+    });
+    _rvActiveThemeAssets = activeAssets;
+    _rvFinishThemeSwap(activeAssets, previousBackgrounds);
+  }
+
+  applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+
+  new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === "data-md-color-scheme") {
+        applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+      }
+    });
+  }).observe(document.body, {
+    attributes: true,
+    attributeFilter: ["data-md-color-scheme"]
+  });
+
+  // ── Reveal.js init ──────────────────────────────────────────────────────
+  function _rvReadDeckOptions(el) {
+    try {
+      var value = JSON.parse(el.getAttribute("data-reveal-options") || "{}");
+      return value && typeof value === "object" ? value : {};
+    } catch (error) {
+      console.warn("[revealjs] invalid deck options:", error);
+      return {};
+    }
+  }
+
+  function _rvArmRandomizedEvaluationFirstSlide(deck, root) {
+    if (!deck || !root || !root.querySelectorAll) return;
+
+    // Reveal can finish initialization before SuperQuiz has shuffled the
+    // evaluation slides. Arm the canonical SuperQuiz completion event before
+    // publishing mkdocs-revealjs-ready, while also accepting an already-finished
+    // randomization when SuperQuiz initialized first.
+    var randomizableQuestions = Array.from(root.querySelectorAll(
+      '.mkdocs-superquiz[data-display-mode="eval"]' +
+      '[data-randomize-questions="true"]'
+    ));
+    if (randomizableQuestions.length < 2) return;
+
+    var settled = false;
+    var timeoutId = null;
+    var randomizedListener = null;
+
+    function randomizationFinished() {
+      return randomizableQuestions.every(function(question) {
+        return question.isConnected &&
+          question.dataset.evalRandomizationApplied === "true";
+      });
+    }
+
+    function settleAtFirstRandomizedSlide() {
+      if (settled || !randomizationFinished()) return false;
+      settled = true;
+      if (timeoutId !== null) window.clearTimeout(timeoutId);
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+
+      if (!root.isConnected) return true;
+      // SuperQuiz has now physically reordered the top-level <section> nodes,
+      // renumbered the evaluation and refreshed the navigation. Rebuild Reveal's
+      // internal slide model and select index 0 *synchronously*: SuperQuiz may
+      // continue the same initialization task by mounting its navigation, which
+      // must observe the new current slide rather than the authored first slide.
+      if (typeof deck.sync === "function") deck.sync();
+      if (typeof deck.slide === "function") deck.slide(0, 0);
+      if (typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+      return true;
+    }
+
+    // SuperQuiz publishes the exact end of its synchronous randomize + DOM
+    // reorder + navigation renumber transaction. That event is the canonical
+    // synchronization point for Reveal evaluation decks.
+    randomizedListener = function(event) {
+      var detail = event && event.detail ? event.detail : {};
+      var eventRoot = detail.root || null;
+      var eventDeckId = String(detail.deckId || '');
+      var rootDeckId = String(root.dataset.revealjsDeckId || '');
+      if (!eventRoot && !eventDeckId) return;
+      if (eventRoot && eventRoot !== root) return;
+      if (!eventRoot && eventDeckId && rootDeckId && eventDeckId !== rootDeckId) return;
+      settleAtFirstRandomizedSlide();
+    };
+    document.addEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+
+    // Handles the case where SuperQuiz initialized before Reveal finished.
+    if (settleAtFirstRandomizedSlide()) return;
+
+    // Do not retain the listener forever if another plugin removes/replaces the
+    // evaluation before SuperQuiz initializes.
+    timeoutId = window.setTimeout(function() {
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+    }, 5000);
+  }
+
+  function initRevealDeck(el) {
+    if (!el || el.dataset.revealjsInitialized === "true") return Promise.resolve(null);
+    el.dataset.revealjsInitialized = "true";
+    var options = _rvReadDeckOptions(el);
+    options.highlight = { highlightOnLoad: true };
+    options.plugins = [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath];
+
+    var deck = new Reveal(el, options);
+    var deckId = el.dataset.revealjsDeckId || el.id || ("deck-" + (_rvDecks.size + 1));
+    _rvDecks.set(deckId, deck);
+    el._mkdocsRevealDeck = deck;
+    _rvInstallContentLifecycle(deck, el);
+    _rvInstallScrollPageBackgroundSync(el);
+    el.setAttribute("aria-busy", "true");
+
+    return deck.initialize()
+      .then(function() {
+        return _rvRefreshContent(el, "initialize");
+      })
+      .then(function() {
+        deck.layout();
+        _rvFinishThemeSwap(_rvActiveThemeAssets, new Map());
+    
+        el.removeAttribute("aria-busy");
+        window.requestAnimationFrame(function() {
+          _rvScheduleContentRefresh(el, "post-layout", 0);
+        });
+        window.setTimeout(function() {
+          _rvScheduleContentRefresh(el, "stabilized", 250);
+        }, 250);
+
+        // Arm this before publishing ready. SuperQuiz may already be initialized,
+        // or it may initialize after the Reveal deck. The completion event plus
+        // the immediate state check handles both orders.
+        _rvArmRandomizedEvaluationFirstSlide(deck, el);
+
+        document.dispatchEvent(new CustomEvent('mkdocs-revealjs-ready', {
+          detail: {
+            deck: deck,
+            deckId: deckId,
+            root: el,
+            mode: el.dataset.revealjsMode || "diapo"
+          }
+        }));
+
+        return deck;
+      })
+      .catch(function(error) {
+        el.removeAttribute("aria-busy");
+        console.error("[revealjs] initialization failed for " + deckId + ":", error);
+        return null;
+      });
+  }
+
+  function initReveal() {
+    var roots = _rvDeckRoots();
+    return Promise.all(roots.map(initRevealDeck));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReveal);
+  } else {
+    initReveal();
+  }
+})();
+</script>
+<!-- ─────────────────────────────────────── mkdocs-revealjs -->
+</body>
+</html>

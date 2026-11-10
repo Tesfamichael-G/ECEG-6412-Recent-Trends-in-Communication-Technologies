@@ -1,0 +1,3747 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/slides/lecture-03/">
+      
+      
+        <link rel="prev" href="../lecture-02/">
+      
+      
+        <link rel="next" href="../lecture-04/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Lecture 4 - UMTS - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 4 - UMTS
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Lecture 4 - UMTS</h1>
+
+<div class="mkdocs-revealjs-wrapper" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" style="width:100%;height:700px;margin:1.5rem 0;">
+  <div class="reveal mkdocs-revealjs-deck" id="mkdocs-revealjs-diapo1" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" data-reveal-options="{&quot;embedded&quot;:true,&quot;keyboardCondition&quot;:&quot;focused&quot;,&quot;width&quot;:960,&quot;height&quot;:700,&quot;margin&quot;:0.05,&quot;controls&quot;:true,&quot;progress&quot;:true,&quot;slideNumber&quot;:true,&quot;fragments&quot;:true,&quot;autoAnimate&quot;:true,&quot;autoAnimateEasing&quot;:&quot;ease&quot;,&quot;autoAnimateDuration&quot;:1.0,&quot;autoAnimateUnmatched&quot;:false,&quot;transition&quot;:&quot;slide&quot;,&quot;transitionSpeed&quot;:&quot;default&quot;,&quot;minScale&quot;:0.1,&quot;maxScale&quot;:1.5}" style="width:100%;height:700px;">
+    <div class="slides">
+      <section
+        data-markdown
+        data-separator="^\n---\n$"
+        data-separator-vertical="^\n----\n$"
+        data-separator-notes="^Note:"
+      >
+        <textarea data-template>
+## ECEG-6412
+
+### Chapter 3 — GSM
+
+MSc in Communication Engineering · Year 1, Semester I
+
+Dr. Tesfamichael Gebregziabher
+
+---
+
+## Outline
+
+<div class="fragment">
+
+**Part 1 — History and design goals**
+
+- From European fragmentation to a global standard
+- The SIM card revolution
+
+</div>
+
+<div class="fragment">
+
+**Part 2 — Architecture**
+
+- MS, BSS, NSS, OSS
+- GPRS additions: SGSN, GGSN
+
+</div>
+
+<div class="fragment">
+
+**Part 3 — Physical layer**
+
+- TDMA frame hierarchy
+- GMSK modulation
+- Burst types
+
+</div>
+
+<div class="fragment">
+
+**Part 4 — Channels, speech, security**
+
+- Logical and physical channels
+- RPE-LTP speech coding
+- A3/A5/A8 security
+
+</div>
+
+<div class="fragment">
+
+**Part 5 — Mobility and data**
+
+- Call flow, handover
+- SMS, CSD, HSCSD, GPRS, EDGE
+
+</div>
+
+---
+
+## Learning outcomes
+
+<div class="fragment">
+
+**LO1 — Describe GSM architecture**
+
+MS, BSS (BTS + BSC), NSS (MSC + VLR + HLR + AuC + EIR), OSS.
+
+</div>
+
+<div class="fragment">
+
+**LO2 — Compute TDMA timing and capacity**
+
+Frame = 4.615 ms, 8 slots × 577 μs, 270.833 kbps per carrier.
+
+</div>
+
+<div class="fragment">
+
+**LO3 — Explain GMSK and burst types**
+
+Constant envelope, BT = 0.3, normal / FB / SB / AB / DB.
+
+</div>
+
+<div class="fragment">
+
+**LO4 — Trace the speech coding pipeline**
+
+RPE-LTP: 260 bits per 20 ms = 13 kbps.
+
+</div>
+
+<div class="fragment">
+
+**LO5 — Describe GSM security and mobility**
+
+A3 authentication, A5 ciphering, soft-capacity handover, call flow.
+
+</div>
+
+<div class="fragment">
+
+**LO6 — Analyse 2.5G evolution**
+
+CSD → HSCSD → GPRS → EDGE. Peak rates and why each step happened.
+
+</div>
+
+---
+
+## §3.1 — From fragmentation to a common standard
+
+<div class="fragment">
+
+Before GSM, Europe had **five incompatible analog systems:**
+
+**NMT** (Nordic) · **TACS** (UK) · **C-Netz** (Germany) · **Radiocom 2000** (France) · **RTMS** (Italy)
+
+</div>
+
+<div class="fragment">
+
+A user traveling from Berlin to Paris had to **rent a different handset** in each country.
+
+</div>
+
+<div class="fragment">
+
+**1982** — CEPT founds the **Groupe Spécial Mobile** (GSM) to design a pan-European digital system.
+
+</div>
+
+<div class="fragment">
+
+Later renamed: **Global System for Mobile Communications** — the same acronym, new meaning.
+
+</div>
+
+---
+
+## The GSM timeline
+
+<div class="fragment">
+
+**1982** — Groupe Spécial Mobile founded.
+
+</div>
+
+<div class="fragment">
+
+**1987** — Memorandum of Understanding: 13 countries commit.
+
+</div>
+
+<div class="fragment">
+
+**1990** — First GSM specification (Phase 1) frozen.
+
+</div>
+
+<div class="fragment">
+
+**1991** — First commercial call (Radiolinja, Finland).
+
+</div>
+
+<div class="fragment">
+
+**1992** — SMS introduced. **1995** — Phase 2.
+
+</div>
+
+<div class="fragment">
+
+**2000** — GPRS commercial. **2003** — EDGE commercial.
+
+</div>
+
+<div class="fragment">
+
+**2010s–2020s** — Still the global voice fallback; ~800 networks in 200+ countries.
+
+</div>
+
+---
+
+## The design goals (ETSI, 1990)
+
+| Goal | Requirement | GSM's answer |
+|---|---|---|
+| International roaming | Work in any country | Global standard; **SIM card** |
+| Digital voice | Noise suppression | 13 kbps **RPE-LTP** |
+| Capacity | Beat analog | **TDMA** — 8 slots/carrier |
+| Security | Prevent eavesdropping | **A3 / A5 / A8** |
+| Data | Support non-voice | SMS, CSD → GPRS |
+| Cost | Cheap handsets | **Global scale** |
+| Spectrum flexibility | Multiple bands | 900, 1800, 1900 MHz |
+
+<div class="fragment">
+
+**The SIM card was the killer innovation** — separating subscriber from handset.
+
+</div>
+
+---
+
+## The SIM revolution
+
+<div class="fragment">
+
+Before GSM: handsets locked to one operator, one country.
+
+</div>
+
+<div class="fragment">
+
+GSM: **Subscriber Identity Module** stores IMSI, key $K_i$, A3/A8, PIN.
+
+</div>
+
+<div class="fragment">
+
+**Roaming** — put your SIM in a local handset abroad.
+
+</div>
+
+<div class="fragment">
+
+**Portability** — move your subscription between phones.
+
+</div>
+
+<div class="fragment">
+
+**Security** — cryptographic authentication, SIM-based.
+
+</div>
+
+<div class="fragment">
+
+**Personalisation** — phonebook, SMS, preferences on the card.
+
+</div>
+
+---
+
+## GSM frequency bands
+
+<div class="fragment">
+
+| Band | Uplink (MS→BTS) | Downlink (BTS→MS) |
+|---|---|---|
+| **GSM 900** | 890–915 MHz | 935–960 MHz |
+| **GSM 1800** (DCS) | 1710–1785 MHz | 1805–1880 MHz |
+| **GSM 1900** (PCS, Americas) | 1850–1910 MHz | 1930–1990 MHz |
+| **GSM 850** (Americas) | 824–849 MHz | 869–894 MHz |
+
+</div>
+
+<div class="fragment">
+
+**Duplex separation:**
+- GSM 900 → 45 MHz
+- GSM 1800 → 95 MHz
+- GSM 1900 → 80 MHz
+
+</div>
+
+<div class="fragment">
+
+**FDD everywhere.** Duplexers in UE and BTS separate uplink and downlink bands.
+
+</div>
+
+---
+
+## §3.2 — GSM system architecture
+
+<div class="fragment">
+
+Four subsystems:
+
+**MS** — Mobile Station (handset + SIM)
+
+</div>
+
+<div class="fragment">
+
+**BSS** — Base Station Subsystem (BTS + BSC)
+
+</div>
+
+<div class="fragment">
+
+**NSS** — Network and Switching Subsystem (MSC, VLR, HLR, AuC, EIR)
+
+</div>
+
+<div class="fragment">
+
+**OSS** — Operation and Support Subsystem (management)
+
+</div>
+
+<div class="fragment">
+
+**GPRS additions:** SGSN (Serving) + GGSN (Gateway) for packet data.
+
+</div>
+
+---
+
+## Mobile Station (MS)
+
+<div class="fragment">
+
+**ME — Mobile Equipment**
+- The handset itself
+- Identified by **IMEI** (15-digit hardware serial)
+
+</div>
+
+<div class="fragment">
+
+**SIM — Subscriber Identity Module**
+- **IMSI** — International Mobile Subscriber Identity
+  - MCC (country) + MNC (network) + MSIN (subscriber)
+- **$K_i$** — 128-bit secret authentication key
+- **A3 / A8** algorithms
+
+</div>
+
+<div class="fragment">
+
+**MSISDN** — the phone number the world dials (+251 …). Mapped to IMSI in the HLR.
+
+</div>
+
+---
+
+## Base Station Subsystem (BSS)
+
+<div class="fragment">
+
+**BTS — Base Transceiver Station** (the tower)
+- Radio PHY: modulation, coding, ciphering
+- 1–12 transceivers per site
+- Timing advance, power control
+- Connects to BSC via the **Abis** interface
+
+</div>
+
+<div class="fragment">
+
+**BSC — Base Station Controller**
+- Radio resource management
+- Handover decisions
+- Frequency hopping coordination
+- Controls **~50–200 BTSs**
+- Connects to MSC via the **A** interface
+
+</div>
+
+---
+
+## Network and Switching Subsystem (NSS)
+
+<div class="fragment">
+
+**MSC — Mobile Switching Center** (the central switch)
+- Connects BSS to PSTN and other MSCs
+- Call setup, routing, inter-MSC handover
+
+</div>
+
+<div class="fragment">
+
+**VLR — Visitor Location Register**
+- Database co-located with MSC
+- IMSI, TMSI, location area, service profile of visiting subscribers
+
+</div>
+
+<div class="fragment">
+
+**HLR — Home Location Register** (master database)
+- IMSI, MSISDN, subscription, current VLR
+
+</div>
+
+<div class="fragment">
+
+**AuC — Authentication Center**
+- Stores $K_i$; generates authentication triplets
+
+</div>
+
+<div class="fragment">
+
+**EIR — Equipment Identity Register**
+- IMEI white/grey/black lists
+
+</div>
+
+---
+
+## GPRS — the packet-data additions
+
+<div class="fragment">
+
+**SGSN — Serving GPRS Support Node**
+- The packet-domain analog of the MSC
+- Routes packets to/from mobile in its service area
+- Mobility + session management
+
+</div>
+
+<div class="fragment">
+
+**GGSN — Gateway GPRS Support Node**
+- Gateway to external PDNs (Internet, corporate)
+- **Anchor point** for the mobile's IP session
+- Allocates IP address
+
+</div>
+
+<div class="fragment">
+
+**Voice + data together:** mobile has both CS (MSC) and PS (SGSN/GGSN) connections.
+
+</div>
+
+---
+
+## Key interfaces
+
+<div class="fragment">
+
+| Interface | Between | Purpose |
+|---|---|---|
+| **Um** | MS ↔ BTS | Radio air interface |
+| **Abis** | BTS ↔ BSC | Control + traffic |
+| **A** | BSC ↔ MSC | Traffic + signalling |
+| **B** | MSC ↔ VLR | Subscriber queries |
+| **C** | MSC ↔ HLR | Location updates |
+| **D** | HLR ↔ VLR | Inter-VLR roaming |
+| **E** | MSC ↔ MSC | Inter-MSC handover |
+| **Gb** | BSC ↔ SGSN | GPRS packet control |
+
+</div>
+
+<div class="fragment">
+
+**The D interface** — HLR ↔ VLR — is what enables **international roaming.**
+
+</div>
+
+---
+
+## Checkpoint — Which entity authenticates the subscriber?
+
+<div class="quiz" data-question="auc-role">
+  <p class="quiz-question">Which entity stores <strong>$K_i$</strong> and generates authentication triplets (RAND, SRES, $K_c$)?</p>
+  <button class="quiz-option" data-answer="wrong">HLR — Home Location Register</button>
+  <button class="quiz-option" data-answer="correct">AuC — Authentication Center</button>
+  <button class="quiz-option" data-answer="wrong">EIR — Equipment Identity Register</button>
+  <button class="quiz-option" data-answer="wrong">MSC — Mobile Switching Center</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** The AuC is paired with the HLR: the HLR holds subscription data, the AuC holds the cryptographic key $K_i$ and computes the triplets. The VLR queries the HLR, which forwards to the AuC. The $K_i$ never leaves the AuC or the SIM.
+
+</div>
+
+---
+
+## §3.3 — Physical layer: TDMA timing
+
+<div class="fragment">
+
+Each GSM carrier is **200 kHz wide** and carries **8 users via TDMA.**
+
+</div>
+
+<div class="fragment">
+
+**Gross bit rate** per carrier:
+
+$$
+R_c = 270.833\ \text{kbps}
+$$
+
+</div>
+
+<div class="fragment">
+
+**Timeslot (burst) duration:** 577 μs (exactly $\tfrac{15}{26}$ ms).
+
+**TDMA frame:** 8 slots × 577 μs = **4.615 ms**.
+
+</div>
+
+<div class="fragment">
+
+**The math:** 156.25 bits per burst / 577 μs = **270,833 bps**.
+
+</div>
+
+---
+
+## Frame hierarchy
+
+<div class="fragment">
+
+| Level | Duration | Contents |
+|---|:---:|---|
+| **Slot** | 577 μs | One burst |
+| **TDMA frame** | 4.615 ms | 8 slots |
+| **Traffic multiframe** | 120 ms | 26 frames (24 TCH + SACCH + idle) |
+| **Control multiframe** | 235.4 ms | 51 frames |
+| **Superframe** | 6.12 s | 51 × 26 frames |
+| **Hyperframe** | 3h 28m 53.76s | 2048 superframes |
+
+</div>
+
+<div class="fragment">
+
+**Why 26 and 51?** They are **co-prime** — over a hyperframe (26 × 51 = 1326 frames), every traffic/control timing combination occurs exactly once.
+
+</div>
+
+---
+
+## Timing advance — how GSM handles large cells
+
+<div class="fragment">
+
+**Problem:** a mobile at the cell edge is farther from the BTS than one nearby — its bursts arrive **later**.
+
+</div>
+
+<div class="fragment">
+
+**Guard time in each slot:** 30.46 μs.
+
+**Round-trip propagation:** 30.46 μs × c = ~9 km.
+
+One-way cell radius: **~4.5 km** (naive limit).
+
+</div>
+
+<div class="fragment">
+
+**Solution: timing advance (TA).** The BTS tells each mobile to transmit **earlier** by an amount equal to its propagation delay.
+
+</div>
+
+<div class="fragment">
+
+**TA range:** 0 to 63 (each step = 1 bit = 3.69 μs), giving cell radius up to **~35 km** with extended range.
+
+</div>
+
+---
+
+## Burst types
+
+<div class="fragment">
+
+**Normal burst (NB)** — 156.25 bits:
+- 3 tail + 58 data + **26 training** + 58 data + 3 tail + 8.25 guard
+- Used for traffic and most control
+
+</div>
+
+<div class="fragment">
+
+**Frequency Correction Burst (FB)** — all zeros, pure tone for frequency tuning.
+
+**Synchronization Burst (SB)** — encodes BSIC (base station identity).
+
+</div>
+
+<div class="fragment">
+
+**Access Burst (AB)** — shorter (88 bits), longer guard (68.25 bits). Used on RACH (random access) before timing advance is known.
+
+</div>
+
+<div class="fragment">
+
+**Dummy Burst (DB)** — fills unused slots to keep power constant.
+
+</div>
+
+---
+
+## GMSK modulation — constant envelope
+
+<div class="fragment">
+
+**Gaussian Minimum Shift Keying** — the modulation of GSM.
+
+</div>
+
+<div class="fragment">
+
+MSK is continuous-phase FSK with modulation index 0.5. **GMSK** adds a Gaussian filter to reduce spectral sidelobes.
+
+</div>
+
+<div class="fragment">
+
+**Parameter: $BT = 0.3$.** The Gaussian filter's bandwidth times the bit period.
+
+</div>
+
+<div class="fragment">
+
+**Spectral efficiency:** ~1.35 bps/Hz — enough to fit 270.833 kbps in 200 kHz.
+
+</div>
+
+<div class="fragment">
+
+**Constant envelope:** PA operates at saturation → high efficiency → longer battery, smaller handsets.
+
+</div>
+
+---
+
+## Checkpoint — Why GMSK?
+
+<div class="quiz" data-question="gmsk-choice">
+  <p class="quiz-question">Why did GSM choose <strong>GMSK</strong> instead of QPSK?</p>
+  <button class="quiz-option" data-answer="wrong">GMSK has higher spectral efficiency</button>
+  <button class="quiz-option" data-answer="correct">GMSK has constant envelope — power amplifier operates at saturation</button>
+  <button class="quiz-option" data-answer="wrong">GMSK is simpler to demodulate</button>
+  <button class="quiz-option" data-answer="wrong">GMSK works better on mmWave</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Trade-off.** GSM was designed in the 1980s, when PA efficiency dominated handset size and battery life. GMSK's constant envelope lets the PA run saturated — critical for a palm-sized phone. Modern systems (LTE/5G) use OFDM with variable envelope but recover efficiency through **digital predistortion**.
+
+</div>
+
+---
+
+## §3.4 — Logical and physical channels
+
+<div class="fragment">
+
+**Physical channel:** one timeslot × one carrier × one frame number.
+
+</div>
+
+<div class="fragment">
+
+**Logical channel:** the *information stream* (traffic, control, signalling) mapped onto physical channels.
+
+</div>
+
+<div class="fragment">
+
+**Three families:**
+- **TCH** — Traffic channels (voice / data)
+- **CCH** — Control channels (broadcast, common, dedicated)
+- **Multiplexed by frame number** — multiple logical channels share one physical channel
+
+</div>
+
+---
+
+## Traffic channels
+
+<div class="fragment">
+
+**Full-rate TCH (TCH/F):** one slot every frame, 8 slots per carrier.
+
+- **TCH/FS** — speech at 13 kbps
+- **TCH/F9.6** — data at 9.6 kbps (CSD)
+- **TCH/F4.8, TCH/F2.4**
+
+</div>
+
+<div class="fragment">
+
+**Half-rate TCH (TCH/H):** one slot every **other** frame, 16 slots per carrier.
+
+- **TCH/HS** — half-rate speech (6.5 kbps)
+- **TCH/H4.8, TCH/H2.4**
+
+</div>
+
+<div class="fragment">
+
+**Half-rate doubles capacity** but at lower voice quality.
+
+</div>
+
+---
+
+## Control channels
+
+<div class="fragment">
+
+**Broadcast channels (BCH)** — downlink, one-to-many:
+- **FCCH** — frequency correction (pure tone)
+- **SCH** — synchronization + BSIC
+- **BCCH** — system information (network identity, neighbor cells)
+
+</div>
+
+<div class="fragment">
+
+**Common control channels (CCCH)** — for call setup:
+- **PCH** — paging (incoming calls)
+- **RACH** — random access request (uplink)
+- **AGCH** — access grant (downlink)
+
+</div>
+
+<div class="fragment">
+
+**Dedicated control channels (DCCH)** — per-user:
+- **SDCCH** — signalling (call setup, SMS, location update)
+- **SACCH** — slow associated (measurements, timing advance, power control)
+- **FACCH** — fast associated (handover commands)
+
+</div>
+
+---
+
+## §3.5 — Speech coding: RPE-LTP at 13 kbps
+
+<div class="fragment">
+
+GSM compresses 64 kbps PCM voice to **13 kbps** using **RPE-LTP**: Regular Pulse Excitation with Long-Term Prediction.
+
+</div>
+
+<div class="fragment">
+
+Essentially an LPC variant with an excitation codebook.
+
+</div>
+
+<div class="fragment">
+
+**The design constraint:** 13 kbps fits the 20 ms frame (260 bits) with enough room for channel coding within the 22.8 kbps gross per-slot payload.
+
+</div>
+
+---
+
+## RPE-LTP pipeline
+
+<div class="fragment">
+
+**Step 1 — LPC analysis**
+- 8 LPC coefficients per 20 ms frame
+- Converted to Log Area Ratios, quantized: **36 bits**
+
+</div>
+
+<div class="fragment">
+
+**Step 2 — Long-Term Prediction (LTP)**
+- Removes pitch-period structure from the residual
+- Lag (7 bits) + gain (2 bits) per subframe × 4 subframes = **36 bits**
+
+</div>
+
+<div class="fragment">
+
+**Step 3 — Regular Pulse Excitation (RPE)**
+- Residual downsampled to 13 samples, quantized at 3 bits each
+- Grid position (2 bits) + 13 × 3 = **41 bits per subframe × 4 = 164 bits**
+
+</div>
+
+<div class="fragment">
+
+**Total:** 36 + 36 + 164 = **236 bits** (padded to 260 with 24 bits of protection).
+
+</div>
+
+---
+
+## Channel coding + interleaving
+
+<div class="fragment">
+
+Speech bits are **not all equal** in importance:
+
+- **Class 1a** — 50 bits (LPC + LTP lags). Protected by CRC-3.
+- **Class 1b** — 132 bits (LTP gains, RPE grids). Convolutional code rate 1/2, K=5.
+- **Class 2** — 78 bits (RPE samples). Uncoded.
+
+</div>
+
+<div class="fragment">
+
+**After coding:** 53 + 264 + 78 = **395 bits per 20 ms frame.**
+
+</div>
+
+<div class="fragment">
+
+**Interleaving depth = 4 bursts.** Spreads burst errors across 4 TDMA frames.
+
+</div>
+
+<div class="fragment">
+
+**Why interleave?** A Rayleigh fade can null one 577 μs burst — but only a fraction of each speech frame. Depth-4 interleaving distributes the corruption so the convolutional code can recover.
+
+</div>
+
+---
+
+## §3.6 — GSM security
+
+<div class="fragment">
+
+Three cryptographic algorithms, all SIM-resident except A5 (in the handset):
+
+</div>
+
+<div class="fragment">
+
+**A3 — Authentication**
+
+SIM proves it knows $K_i$ by computing:
+
+$$
+\text{SRES} = A3(K_i, \text{RAND})
+$$
+
+Network compares to expected SRES.
+
+</div>
+
+<div class="fragment">
+
+**A8 — Key derivation**
+
+Derives ciphering key from the same $(K_i, \text{RAND})$:
+
+$$
+K_c = A8(K_i, \text{RAND})
+$$
+
+</div>
+
+<div class="fragment">
+
+**A5 — Encryption**
+
+Encrypts over-the-air traffic using $K_c$ and frame number as counter.
+
+</div>
+
+---
+
+## The authentication triplet
+
+<div class="fragment">
+
+**AuC generates for each subscriber:**
+
+- **RAND** — 128-bit random challenge
+- **SRES** — 32-bit signed response
+- **$K_c$** — 64-bit ciphering key
+
+</div>
+
+<div class="fragment">
+
+**Flow:**
+
+1. VLR → HLR → AuC: request authentication for IMSI
+2. AuC sends triplet back to VLR
+3. VLR sends **RAND** to mobile
+4. SIM computes SRES' = A3($K_i$, RAND)
+5. Mobile sends SRES' to VLR
+6. VLR compares SRES' with stored SRES — match → authenticated
+
+</div>
+
+<div class="fragment">
+
+**The $K_i$ never leaves the SIM or AuC** — the triplet contains only derived values.
+
+</div>
+
+---
+
+## Checkpoint — Which algorithm does ciphering?
+
+<div class="quiz" data-question="a5-role">
+  <p class="quiz-question">Which algorithm <strong>encrypts the over-the-air traffic</strong> in GSM?</p>
+  <button class="quiz-option" data-answer="wrong">A3 — authentication</button>
+  <button class="quiz-option" data-answer="wrong">A8 — key derivation</button>
+  <button class="quiz-option" data-answer="correct">A5 — ciphering</button>
+  <button class="quiz-option" data-answer="wrong">COMP128 — SIM routine</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Naming.** A3 authenticates (proves you are who you say). A8 derives $K_c$ (from the same triplet). A5 encrypts traffic (using $K_c$). COMP128 is a combined A3/A8 implementation on many SIMs.
+
+</div>
+
+---
+
+## §3.7 — Call flow — mobile-originated
+
+<div class="fragment">
+
+**Step 1 — Random access.** Mobile sends Channel Request on **RACH**.
+
+</div>
+
+<div class="fragment">
+
+**Step 2 — Immediate assignment.** BTS responds on AGCH with an **SDCCH** assignment.
+
+</div>
+
+<div class="fragment">
+
+**Step 3 — CM Service Request.** Signalling on SDCCH.
+
+</div>
+
+<div class="fragment">
+
+**Step 4 — Authentication + ciphering.** A3/A5 handshake.
+
+</div>
+
+<div class="fragment">
+
+**Step 5 — Call setup.** Dialled number via SDCCH.
+
+</div>
+
+<div class="fragment">
+
+**Step 6 — Traffic channel assignment.** Move to TCH, call proceeds.
+
+</div>
+
+<div class="fragment">
+
+**Total time:** ~2–5 seconds from dialling to ringing.
+
+</div>
+
+---
+
+## Handover — hard handover
+
+<div class="fragment">
+
+**Unlike UMTS**, GSM handover is **hard** — break-before-make. No soft handover possible with $N=7$ reuse.
+
+</div>
+
+<div class="fragment">
+
+**Triggers:**
+- **RSSI drop** — neighbor is 3–6 dB better, sustained for a window (typically 480 ms to 2 s)
+- **Quality (BER) too high** even if RSSI acceptable
+- **Timing advance > threshold** — mobile too far
+- **Congestion** — serving cell overloaded
+
+</div>
+
+<div class="fragment">
+
+**Hysteresis** prevents ping-pong handovers: the trigger condition must be sustained.
+
+</div>
+
+<div class="fragment">
+
+**Total handover latency:** ~150–250 ms — brief interruption, imperceptible for voice.
+
+</div>
+
+---
+
+## §3.8 — Data services — SMS, CSD, HSCSD
+
+<div class="fragment">
+
+**SMS — Short Message Service**
+- **160 characters** of 7-bit ASCII
+- Uses **signalling channels** (SDCCH) — no traffic channel needed
+- **Store-and-forward** via SMSC
+- $100B/yr industry globally at peak
+
+</div>
+
+<div class="fragment">
+
+**CSD — Circuit-Switched Data**
+- **9.6 kbps** via a TCH/F9.6 slot
+- Dial-up style, billed **per minute**
+
+</div>
+
+<div class="fragment">
+
+**HSCSD — High-Speed CSD**
+- Uses **multiple slots** for one user
+- Up to **57.6 kbps** (4 slots × 14.4 kbps)
+- Billed **per slot-minute** — very expensive
+- Superseded by GPRS
+
+</div>
+
+---
+
+## GPRS — the packet-data revolution
+
+<div class="fragment">
+
+**GPRS** (General Packet Radio Service) — the **2.5G** evolution.
+
+</div>
+
+<div class="fragment">
+
+**Architecture changes:**
+- **SGSN** — packet routing
+- **GGSN** — gateway to external PDN
+- **PCU** — packet control unit at BSC
+
+</div>
+
+<div class="fragment">
+
+**New coding schemes:**
+- CS-1: rate 1/2, 9.05 kbps/slot
+- CS-2: rate 2/3, 13.4 kbps/slot
+- CS-3: rate 3/4, 15.6 kbps/slot
+- CS-4: rate 1, **21.4 kbps/slot**
+
+</div>
+
+<div class="fragment">
+
+**Multi-slot:** up to 8 slots → **171.2 kbps** theoretical peak.
+
+Realistic: **20–50 kbps** per user.
+
+</div>
+
+<div class="fragment">
+
+**Always-on**, **billed per MB** — not per minute. The paradigm shift that made mobile data viable.
+
+</div>
+
+---
+
+## EDGE — 2.75G
+
+<div class="fragment">
+
+**Enhanced Data rates for GSM Evolution** — extends GPRS with higher-order modulation.
+
+</div>
+
+<div class="fragment">
+
+**Key change: 8-PSK modulation** (3 bits/symbol) — vs. GMSK's 1 bit/symbol.
+
+</div>
+
+<div class="fragment">
+
+**New MCS schemes (MCS-1 to MCS-9):**
+- MCS-1 to 4: GMSK (backward compatible)
+- MCS-5 to 9: 8-PSK
+
+</div>
+
+<div class="fragment">
+
+**Peak:** 8 slots × MCS-9 = **~473 kbps** theoretical.
+Realistic: **100–200 kbps** in deployment.
+
+</div>
+
+<div class="fragment">
+
+**Incremental redundancy:** retransmissions carry new parity bits (combined at receiver) — more efficient than fixed retransmission.
+
+</div>
+
+---
+
+## Checkpoint — GPRS vs. EDGE
+
+<div class="quiz" data-question="edge-gain">
+  <p class="quiz-question">What was the <strong>key PHY change</strong> that makes EDGE faster than GPRS?</p>
+  <button class="quiz-option" data-answer="wrong">Higher chip rate</button>
+  <button class="quiz-option" data-answer="correct">8-PSK modulation (3 bits/symbol vs GMSK's 1)</button>
+  <button class="quiz-option" data-answer="wrong">More TDMA slots per carrier</button>
+  <button class="quiz-option" data-answer="wrong">Wider carrier bandwidth</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** EDGE keeps GSM's 200 kHz carrier and 8-slot TDMA but switches from GMSK (1 bit/symbol) to **8-PSK** (3 bits/symbol) when the channel is good. The peak rate roughly triples (MCS-9 vs CS-4), at the cost of ~3–4 dB higher SNR requirement.
+
+</div>
+
+---
+
+## Chapter 3 — key takeaways
+
+<div class="fragment">
+
+**1.** GSM unified fragmented European analog systems into a **global digital standard**.
+
+</div>
+
+<div class="fragment">
+
+**2.** Architecture: **MS + BSS + NSS + OSS.** GPRS adds **SGSN + GGSN** for packet data.
+
+</div>
+
+<div class="fragment">
+
+**3.** Physical layer: **200 kHz carriers**, **8 slots per TDMA frame**, 4.615 ms frame, **GMSK** modulation with $BT = 0.3$.
+
+</div>
+
+<div class="fragment">
+
+**4.** Speech: **RPE-LTP at 13 kbps.** Channel coding + interleaving give robustness to Rayleigh fading.
+
+</div>
+
+<div class="fragment">
+
+**5.** Security: **A3 / A5 / A8.** $K_i$ never leaves SIM/AuC. TMSI hides IMSI.
+
+</div>
+
+<div class="fragment">
+
+**6.** Data evolution: CSD (9.6 kbps) → HSCSD → **GPRS** (packet, up to 171 kbps) → **EDGE** (8-PSK, up to 473 kbps). Each step reflects the shift from voice to data.
+
+</div>
+
+---
+
+## Next — Chapter 4
+
+**UMTS — the WCDMA generation**
+
+<div class="fragment">
+
+- The migration path from GSM (TDMA) to UMTS (CDMA)
+- WCDMA physical layer: 5 MHz, 3.84 Mcps, OVSF codes
+- **Rake receiver** — multipath as diversity
+- **Soft handover** — CDMA's signature advantage
+- Power control (open / closed / outer loop)
+- HSPA: HSDPA (14.4 Mbps) and HSUPA (5.76 Mbps)
+
+</div>
+
+<div class="fragment">
+
+**The biggest architectural shift since GSM — from time slots to spreading codes.**
+
+</div>
+
+---
+
+<aside class="notes">
+  <div style="font-size: 16px; line-height: 1.6;">
+
+**Speaker notes for the whole lecture:**
+
+- Slides 4–8 (history and design goals): ~5 min. Emphasize that **GSM's answers to the five AMPS limitations** drove every design decision — digital voice, TDMA, SMS, global standard, SIM card.
+- Slides 9–16 (architecture): ~8 min. Walk through the three subsystems, then GPRS additions. The **D interface** (HLR ↔ VLR) is the soul of roaming — worth a minute.
+- Slides 17–21 (TDMA timing + bursts + GMSK): the technical core. **Timing advance is elegant** — emphasize how GSM solves large-cell propagation with a simple timing correction.
+- Slides 22–25 (channels): a quick landscape. Don't memorize the full channel map — just understand **TCH** (traffic), **BCH** (broadcast), **CCCH** (call setup), **DCCH** (per-user signalling).
+- Slides 26–28 (RPE-LTP + coding): the compression story. 64 kbps → 13 kbps is 5:1 compression, achieved by exploiting **vocal-tract structure**. Channel coding then adds robustness.
+- Slides 29–31 (security): A3/A5/A8 distinction. **COMP128** is a historical detail; don't dwell.
+- Slides 32–34 (call flow + handover): the call flow is scripted — walk through once, don't memorize. Handover hysteresis is the key concept.
+- Slides 35–38 (data): SMS, CSD, GPRS, EDGE — the four-step evolution. Emphasize that **GPRS's billing change** (per MB, always-on) is what made mobile data economically viable.
+
+**The exam will test: TDMA bit rate computation, GMSK why-constant-envelope, RPE-LTP bit breakdown, A3/A5/A8, and GPRS/EDGE peak rates.**
+
+  </div>
+</aside>
+        </textarea>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../assets/quiz.js"></script>
+      
+    
+  
+<!-- mkdocs-revealjs ───────────────────────────────────────── -->
+
+<!-- Plugin base corrections (always loaded, before any theme) -->
+<style id="revealjs-base">
+.reveal .slides section ul,.reveal .slides section ol{display:inline-block;text-align:left}.reveal .slides section .admonition,.reveal .slides section details[class]{width:var(--admon-width, 80%);max-width:var(--admon-max-width, none);margin:var(--admon-margin, 1.5625em auto);padding:var(--admon-padding, 0 .6rem);font-size:var(--admon-font-size, .85em);text-align:var(--text-align, left);box-shadow:var(--admon-box-shadow, none);opacity:var(--admon-opacity, 1)}.reveal .slides section .admonition .danger,.reveal .slides section details[class] .danger{border:var(--admon-border, .075rem solid #ff1744)}.reveal .slides section .admonition .note,.reveal .slides section details[class] .note{border:var(--admon-border, .075rem solid #448aff)}.reveal .slides section .admonition .tip,.reveal .slides section details[class] .tip{border:var(--admon-border, .075rem solid #00bfa5)}.reveal .slides section .admonition .warning,.reveal .slides section details[class] .warning{border:var(--admon-border, .075rem solid #ff9100)}.reveal .slides section .admonition p,.reveal .slides section .admonition .admonition-title,.reveal .slides section .admonition summary,.reveal .slides section .admonition ul,.reveal .slides section .admonition ol,.reveal .slides section .admonition li,.reveal .slides section .admonition pre,.reveal .slides section .admonition code,.reveal .slides section details[class] p,.reveal .slides section details[class] .admonition-title,.reveal .slides section details[class] summary,.reveal .slides section details[class] ul,.reveal .slides section details[class] ol,.reveal .slides section details[class] li,.reveal .slides section details[class] pre,.reveal .slides section details[class] code{text-align:left}.reveal .slides section .twemoji{vertical-align:middle}.reveal .tabbed-set{text-align:left}.reveal .tabbed-set>input[type=radio]{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}.reveal .tabbed-set .tabbed-labels{text-align:left}.reveal .tabbed-set .tabbed-labels>label{cursor:pointer}.reveal .tabbed-set .tabbed-content>.tabbed-block[hidden]{display:none!important}.reveal .tabbed-set .tabbed-content>.tabbed-block:not([hidden]){display:block}.mkdocs-revealjs-html-island{display:none!important}.mkdocs-revealjs-wrapper{overflow:hidden}.mkdocs-revealjs-wrapper>.mksq-reveal-navigation.mksq-page-navigation-top:not(.mksq-reveal-navigation-fullscreen):not([data-mounted=floating]){top:2px!important}.mkdocs-revealjs-wrapper.mkdocs-revealjs-fullscreen-host{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;margin:0!important}.mkdocs-revealjs-deck.mkdocs-revealjs-fullscreen-deck{position:relative}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen{z-index:40000!important}.mksq-reveal-navigation[hidden]{display:none!important}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen.mksq-page-navigation-top:not([data-mounted=floating]){top:.5rem!important}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+<!-- Reveal.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="revealjs-theme-light" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="revealjs-theme-dark" media="not all">
+
+<!-- Reveal.js theme: hack overrides (light / dark) -->
+
+<!-- Reveal.js theme: custom CSS (light / dark) -->
+
+<!-- Highlight.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" id="revealjs-hljs-light" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" id="revealjs-hljs-dark" media="not all">
+
+<!-- Highlight.js theme: hack overrides (light / dark) -->
+
+<!-- Highlight.js theme: custom CSS (light / dark) -->
+
+<!-- Mermaid theme: hack overrides (light / dark) -->
+
+<!-- Mermaid theme: custom CSS (light / dark) -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+
+
+
+
+
+
+<script src="../../slides/assets/quiz.js"></script>
+<script>
+(function () {
+
+  // ── Extensible content lifecycle ────────────────────────────────────────
+  // MkDocs extensions render rich HTML before Reveal.js. Those fragments are
+  // transported through Reveal/marked as opaque HTML islands and hydrated only
+  // after deck.initialize(). External projects can register a refresh adapter
+  // or listen for the content-ready/content-shown events below.
+  var _rvContentAdapters = new Map();
+  var _rvContentRefreshTimers = new WeakMap();
+  var _rvContentTabCounter = 0;
+  var _rvDecks = new Map();
+
+  function _rvDeckForRoot(root) {
+    if (!root) return null;
+    var deckRoot = root.matches && root.matches(".mkdocs-revealjs-deck")
+      ? root
+      : (root.closest ? root.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot && root.querySelector) {
+      deckRoot = root.querySelector(".mkdocs-revealjs-deck");
+    }
+    return deckRoot ? (_rvDecks.get(deckRoot.dataset.revealjsDeckId) || null) : null;
+  }
+
+  // ── Fullscreen evaluation chrome ───────────────────────────────────────
+  // The Fullscreen API only renders the fullscreen element and descendants.
+  // SuperQuiz deck chrome (numbered navigation, strict-eval toolbar and access
+  // gate) normally lives as a sibling of the .reveal root inside the wrapper.
+  // Move the chrome owned by the active deck into the fullscreen Reveal root,
+  // then restore the exact DOM position and inline styles on exit.
+  var _rvFullscreenNavigationState = new Map();
+  var _rvFullscreenEvalChromeState = new Map();
+
+  function _rvGetFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function _rvDeckId(deckRoot) {
+    return deckRoot && deckRoot.dataset
+      ? String(deckRoot.dataset.revealjsDeckId || "")
+      : "";
+  }
+
+  function _rvFindRevealNavigation(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return null;
+    var deckId = _rvDeckId(deckRoot);
+    var navigations = Array.from(wrapper.querySelectorAll(".mksq-reveal-navigation"));
+    return navigations.find(function(navigation) {
+      return !deckId || String(navigation.dataset.deckId || "") === deckId;
+    }) || null;
+  }
+
+  function _rvFindRevealEvalChrome(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return [];
+    var deckId = _rvDeckId(deckRoot);
+    return Array.from(wrapper.querySelectorAll(".mkdocs-revealjs-eval-chrome"))
+      .filter(function(chrome) {
+        return !deckId || String(chrome.dataset.deckId || "") === deckId;
+      });
+  }
+
+  function _rvRestoreFullscreenNavigation(navigation) {
+    var state = _rvFullscreenNavigationState.get(navigation);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(navigation, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(navigation);
+    }
+    if (state.style === null) navigation.removeAttribute("style");
+    else navigation.setAttribute("style", state.style);
+    if (navigation.dataset) {
+      if (state.mounted === null) delete navigation.dataset.mounted;
+      else navigation.dataset.mounted = state.mounted;
+    }
+    navigation.classList.remove("mksq-reveal-navigation-fullscreen");
+    _rvFullscreenNavigationState.delete(navigation);
+  }
+
+  function _rvRestoreFullscreenEvalChrome(chrome) {
+    var state = _rvFullscreenEvalChromeState.get(chrome);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(chrome, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(chrome);
+    }
+    if (state.style === null) chrome.removeAttribute("style");
+    else chrome.setAttribute("style", state.style);
+    chrome.classList.remove("mkdocs-revealjs-eval-chrome-fullscreen");
+    _rvFullscreenEvalChromeState.delete(chrome);
+  }
+
+  function _rvRestoreAllFullscreenChrome() {
+    var states = Array.from(_rvFullscreenNavigationState.values())
+      .concat(Array.from(_rvFullscreenEvalChromeState.values()));
+    Array.from(_rvFullscreenNavigationState.keys()).forEach(_rvRestoreFullscreenNavigation);
+    Array.from(_rvFullscreenEvalChromeState.keys()).forEach(_rvRestoreFullscreenEvalChrome);
+    states.forEach(function(state) {
+      if (state.wrapper) state.wrapper.classList.remove("mkdocs-revealjs-fullscreen-host");
+      if (state.deckRoot) state.deckRoot.classList.remove("mkdocs-revealjs-fullscreen-deck");
+      var deck = state.deckRoot ? _rvDeckForRoot(state.deckRoot) : null;
+      if (deck && typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+    });
+  }
+
+  function _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot) {
+    if (!chrome || !fullscreenElement) return;
+    if (!_rvFullscreenEvalChromeState.has(chrome)) {
+      var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation chrome");
+      var parent = chrome.parentNode;
+      if (parent) parent.insertBefore(placeholder, chrome);
+      _rvFullscreenEvalChromeState.set(chrome, {
+        placeholder: placeholder,
+        parent: parent,
+        style: chrome.hasAttribute("style") ? chrome.getAttribute("style") : null,
+        wrapper: wrapper,
+        deckRoot: deckRoot
+      });
+    }
+    chrome.classList.add("mkdocs-revealjs-eval-chrome-fullscreen");
+    if (!fullscreenElement.contains(chrome)) fullscreenElement.appendChild(chrome);
+  }
+
+  function _rvEnterFullscreenChrome(fullscreenElement) {
+    if (!fullscreenElement || !fullscreenElement.querySelector) return;
+    var deckRoot = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot) deckRoot = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    if (!deckRoot) return;
+    var wrapper = deckRoot.closest ? deckRoot.closest(".mkdocs-revealjs-wrapper") : null;
+    if (!wrapper) return;
+    var navigation = _rvFindRevealNavigation(wrapper, deckRoot);
+    var evalChrome = _rvFindRevealEvalChrome(wrapper, deckRoot);
+    if (!navigation && !evalChrome.length) return;
+
+    wrapper.classList.add("mkdocs-revealjs-fullscreen-host");
+    deckRoot.classList.add("mkdocs-revealjs-fullscreen-deck");
+
+    // SuperQuiz owns evaluation access. Its numbered navigation carries the
+    // native `hidden` state until the password has been accepted. Never promote
+    // a locked navigation into the browser fullscreen top layer.
+    var navigationVisible = navigation
+      && !navigation.hidden
+      && !navigation.hasAttribute("hidden")
+      && navigation.getAttribute("aria-hidden") !== "true";
+
+    if (navigationVisible) {
+      if (!_rvFullscreenNavigationState.has(navigation)) {
+        var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation navigation");
+        var parent = navigation.parentNode;
+        if (parent) parent.insertBefore(placeholder, navigation);
+        _rvFullscreenNavigationState.set(navigation, {
+          placeholder: placeholder,
+          parent: parent,
+          style: navigation.hasAttribute("style") ? navigation.getAttribute("style") : null,
+          mounted: navigation.dataset ? (navigation.dataset.mounted || null) : null,
+          wrapper: wrapper,
+          deckRoot: deckRoot
+        });
+      }
+      navigation.classList.add("mksq-reveal-navigation-fullscreen");
+      // Drag coordinates belong to the embedded wrapper. Fullscreen starts from
+      // the configured anchor; the original inline style/mounted state is
+      // restored on exit. A new fullscreen drag may set mounted=floating.
+      navigation.removeAttribute("style");
+      if (navigation.dataset) delete navigation.dataset.mounted;
+      if (!fullscreenElement.contains(navigation)) fullscreenElement.appendChild(navigation);
+    }
+
+    evalChrome.forEach(function(chrome) {
+      _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot);
+    });
+
+    var deck = _rvDeckForRoot(deckRoot);
+    if (deck && typeof deck.layout === "function") {
+      window.requestAnimationFrame(function() { deck.layout(); });
+    }
+  }
+
+  function _rvSyncFullscreenNavigation() {
+    var fullscreenElement = _rvGetFullscreenElement();
+    _rvRestoreAllFullscreenChrome();
+    if (fullscreenElement) _rvEnterFullscreenChrome(fullscreenElement);
+  }
+
+  document.addEventListener("fullscreenchange", _rvSyncFullscreenNavigation);
+  document.addEventListener("webkitfullscreenchange", _rvSyncFullscreenNavigation);
+
+  // SuperQuiz removes `hidden` only after successful password verification,
+  // then emits this event. If the deck is already fullscreen at that point,
+  // mount the newly unlocked navigation now; there is no second fullscreenchange
+  // event to do it for us.
+  document.addEventListener("mkdocs-superquiz-eval-unlocked", function(event) {
+    var fullscreenElement = _rvGetFullscreenElement();
+    if (!fullscreenElement) return;
+    var detail = event && event.detail ? event.detail : {};
+    var fullscreenDeck = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!fullscreenDeck && fullscreenElement.querySelector) {
+      fullscreenDeck = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    }
+    if (!fullscreenDeck) return;
+    var deckId = _rvDeckId(fullscreenDeck);
+    if (detail.deckId && deckId && String(detail.deckId) !== deckId) return;
+    _rvEnterFullscreenChrome(fullscreenElement);
+  });
+
+  function _rvDecodeHtmlIsland(payload) {
+    var normalized = String(payload || "")
+      .replace(/-/g, "+")
+      .replace(/_/g, "/");
+    var binary = window.atob(normalized);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i += 1) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+
+  function _rvHydrateHtmlIslands(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return [];
+    var islands = [];
+    if (scanRoot.matches && scanRoot.matches(".mkdocs-revealjs-html-island")) {
+      islands.push(scanRoot);
+    }
+    scanRoot.querySelectorAll(".mkdocs-revealjs-html-island")
+      .forEach(function(island) { islands.push(island); });
+
+    var hydrated = [];
+    islands.forEach(function(island) {
+      if (!island.isConnected || island.dataset.revealjsHydrated === "true") return;
+      try {
+        var template = document.createElement("template");
+        template.innerHTML = _rvDecodeHtmlIsland(
+          island.getAttribute("data-mkdocs-revealjs-html") || ""
+        );
+        var nodes = Array.prototype.slice.call(template.content.childNodes);
+        island.replaceWith(template.content);
+        nodes.forEach(function(node) {
+          if (node.nodeType === 1) hydrated.push(node);
+        });
+      } catch (error) {
+        island.dataset.revealjsHydrated = "error";
+        console.warn("[revealjs] unable to hydrate MkDocs HTML island:", error);
+      }
+    });
+    return hydrated;
+  }
+
+  function _rvRegisterContentAdapter(name, adapter) {
+    var key = String(name || "").trim();
+    if (!key || !adapter) return false;
+    var normalized = typeof adapter === "function"
+      ? { refresh: adapter }
+      : adapter;
+    if (typeof normalized.refresh !== "function") return false;
+    normalized.priority = Number.isFinite(normalized.priority)
+      ? normalized.priority
+      : 100;
+    _rvContentAdapters.set(key, normalized);
+    return true;
+  }
+
+  function _rvDispatchContentEvent(root, reason) {
+    var target = root && root.dispatchEvent ? root : document;
+    var initial = reason === "initialize";
+    target.dispatchEvent(new CustomEvent(
+      initial
+        ? "mkdocs-revealjs-content-ready"
+        : "mkdocs-revealjs-content-shown",
+      {
+        bubbles: true,
+        detail: {
+          root: root || document,
+          reason: reason || "refresh",
+          deck: _rvDeckForRoot(root)
+        }
+      }
+    ));
+  }
+
+  function _rvRunContentAdapters(root, reason) {
+    var scanRoot = root || document;
+    var context = {
+      reason: reason || "refresh",
+      deck: _rvDeckForRoot(scanRoot)
+    };
+    var adapters = Array.from(_rvContentAdapters.entries())
+      .sort(function(left, right) {
+        var priorityDelta = left[1].priority - right[1].priority;
+        return priorityDelta || left[0].localeCompare(right[0]);
+      });
+
+    var chain = Promise.resolve();
+    adapters.forEach(function(entry) {
+      var name = entry[0];
+      var adapter = entry[1];
+      chain = chain.then(function() {
+        try {
+          return Promise.resolve(adapter.refresh(scanRoot, context));
+        } catch (error) {
+          return Promise.reject(error);
+        }
+      }).catch(function(error) {
+        console.warn("[revealjs] content adapter '" + name + "' failed:", error);
+      });
+    });
+
+    return chain.then(function() {
+      _rvDispatchContentEvent(scanRoot, reason);
+      return scanRoot;
+    });
+  }
+
+  function _rvRefreshContent(root, reason) {
+    var scanRoot = root || document;
+    _rvHydrateHtmlIslands(scanRoot);
+    _rvPrepareContentTabs(scanRoot);
+    return _rvRunContentAdapters(scanRoot, reason);
+  }
+
+  function _rvScheduleContentRefresh(root, reason, delay) {
+    var scanRoot = root || document;
+    var previous = _rvContentRefreshTimers.get(scanRoot);
+    if (previous !== undefined) window.clearTimeout(previous);
+    var timer = window.setTimeout(function() {
+      _rvContentRefreshTimers.delete(scanRoot);
+      Promise.resolve(_rvRefreshContent(scanRoot, reason)).catch(function(error) {
+        console.warn("[revealjs] scheduled content refresh failed:", error);
+      });
+    }, delay || 0);
+    _rvContentRefreshTimers.set(scanRoot, timer);
+  }
+
+  function _rvWaitForGlobal(name, timeoutMs) {
+    var timeout = Number.isFinite(timeoutMs) ? timeoutMs : 10000;
+    var started = Date.now();
+    return new Promise(function(resolve, reject) {
+      function check() {
+        if (window[name]) {
+          resolve(window[name]);
+          return;
+        }
+        if (Date.now() - started >= timeout) {
+          reject(new Error(name + " did not become available within " + timeout + " ms"));
+          return;
+        }
+        window.setTimeout(check, 25);
+      }
+      check();
+    });
+  }
+
+  var _rvPublicApi = window.MkDocsRevealJS || {};
+  _rvPublicApi.registerContentAdapter = _rvRegisterContentAdapter;
+  _rvPublicApi.refresh = function(root, reason) {
+    return _rvRefreshContent(root || document, reason || "external-refresh");
+  };
+  _rvPublicApi.requestLayout = function(root) {
+    if (root) {
+      var one = _rvDeckForRoot(root);
+      if (one && typeof one.layout === "function") one.layout();
+      return;
+    }
+    _rvDecks.forEach(function(deck) {
+      if (deck && typeof deck.layout === "function") deck.layout();
+    });
+  };
+  _rvPublicApi.getDeck = function(id) {
+    return _rvDecks.get(String(id || "")) || null;
+  };
+  _rvPublicApi.getDecks = function() {
+    return new Map(_rvDecks);
+  };
+  window.MkDocsRevealJS = _rvPublicApi;
+
+  // ── Content tabs ────────────────────────────────────────────────────────
+  // The HTML structure is produced once by pymdownx.tabbed and transported as
+  // an opaque island. Runtime code only applies state and emits a generic
+  // content-shown lifecycle event; it never reparses or reorders tab panels.
+  function _rvPrepareContentTabs(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return;
+    var tabSets = [];
+    if (scanRoot.matches && scanRoot.matches(".tabbed-set")) tabSets.push(scanRoot);
+    scanRoot.querySelectorAll(".tabbed-set").forEach(function(set) {
+      if (tabSets.indexOf(set) < 0) tabSets.push(set);
+    });
+
+    tabSets.forEach(function(set) {
+      var children = Array.prototype.slice.call(set.children || []);
+      var inputs = children.filter(function(child) {
+        return child.tagName === "INPUT" && child.type === "radio";
+      });
+      var labelsRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-labels");
+      });
+      var contentRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-content");
+      });
+      var labels = labelsRoot
+        ? Array.prototype.slice.call(labelsRoot.children || []).filter(function(child) {
+            return child.tagName === "LABEL";
+          })
+        : [];
+      var blocks = contentRoot
+        ? Array.prototype.slice.call(contentRoot.children || []).filter(function(child) {
+            return child.classList && child.classList.contains("tabbed-block");
+          })
+        : [];
+
+      if (!inputs.length || inputs.length !== labels.length || inputs.length !== blocks.length) {
+        console.warn("[revealjs] invalid content-tab structure:", {
+          inputs: inputs.length,
+          labels: labels.length,
+          blocks: blocks.length,
+          element: set
+        });
+        return;
+      }
+
+      if (!set.dataset.revealjsTabUid) {
+        _rvContentTabCounter += 1;
+        set.dataset.revealjsTabUid = String(_rvContentTabCounter);
+      }
+      var base = "mkdocs-revealjs-tab-" + set.dataset.revealjsTabUid;
+      var count = inputs.length;
+
+      function activate(index, notify) {
+        var active = Math.max(0, Math.min(index, count - 1));
+        for (var i = 0; i < count; i += 1) {
+          var selected = i === active;
+          inputs[i].checked = selected;
+          labels[i].setAttribute("aria-selected", selected ? "true" : "false");
+          labels[i].setAttribute("tabindex", selected ? "0" : "-1");
+          blocks[i].hidden = !selected;
+          blocks[i].setAttribute("aria-hidden", selected ? "false" : "true");
+        }
+        set.dataset.revealjsActiveTab = String(active);
+        if (notify) {
+          window.requestAnimationFrame(function() {
+            _rvScheduleContentRefresh(blocks[active], "tab-shown", 0);
+            _rvPublicApi.requestLayout();
+          });
+        }
+      }
+
+      var activeIndex = inputs.findIndex(function(input) { return input.checked; });
+      if (activeIndex < 0) activeIndex = 0;
+
+      for (var i = 0; i < count; i += 1) {
+        var id = inputs[i].id || (base + "-" + (i + 1));
+        inputs[i].name = inputs[i].name || base;
+        inputs[i].id = id;
+        labels[i].setAttribute("for", id);
+        labels[i].setAttribute("role", "tab");
+        blocks[i].setAttribute("role", "tabpanel");
+
+        if (!inputs[i].dataset.revealjsTabBound) {
+          inputs[i].dataset.revealjsTabBound = "true";
+          inputs[i].addEventListener("change", (function(index) {
+            return function(event) {
+              if (event.target.checked) activate(index, true);
+            };
+          })(i));
+        }
+      }
+
+      set.setAttribute("data-mkdocs-revealjs-tabs-ready", "true");
+      activate(activeIndex, false);
+    });
+  }
+
+  // ── Built-in adapters ───────────────────────────────────────────────────
+  function _rvRootMatches(root, selector) {
+    if (!root) return false;
+    if (root.matches && root.matches(selector)) return true;
+    return Boolean(root.querySelector && root.querySelector(selector));
+  }
+
+  function _rvRefreshMathsAdmonitions(root, context) {
+    var api = window.MkDocsMathsAdmonitions;
+    if (!api) return;
+
+    // MMA counters are scoped to one API processing operation. A Reveal deck
+    // must therefore be processed as one complete unit with initReveal(deck).
+    // Scoped refresh(currentSlide) calls would restart counters at 1.
+    var deck = context && context.deck;
+    var reason = context && context.reason;
+    if (deck && typeof api.initReveal === "function") {
+      if (reason === "initialize" || reason === "external-refresh") {
+        return api.initReveal(deck);
+      }
+      return;
+    }
+
+    if (reason === "initialize" && typeof api.refresh === "function") {
+      return api.refresh(root || document);
+    }
+  }
+
+  function _rvRefreshXTables(root) {
+    var scanRoot = root || document;
+    if (!_rvRootMatches(scanRoot, "table.xtable")) return;
+
+    var loaderPresent = Boolean(document.querySelector(
+      'script[src*="mkdocs-xtables"], script[data-mkdocs-xtables-loader]'
+    ));
+    if (!window.MkDocsXTables && !loaderPresent) return;
+
+    var apiPromise = window.MkDocsXTables
+      ? Promise.resolve(window.MkDocsXTables)
+      : _rvWaitForGlobal("MkDocsXTables", 10000);
+
+    return apiPromise.then(function(api) {
+      if (!api || typeof api.refresh !== "function") {
+        throw new Error("MkDocsXTables.refresh(root) is unavailable");
+      }
+      return api.refresh(scanRoot);
+    });
+  }
+
+  function _rvNormalizeTikzJaxFences(root) {
+    if (!root || !root.querySelectorAll) return [];
+    var changed = [];
+    root.querySelectorAll(
+      "pre > code.language-tikzjax, " +
+      "pre > code.tikzjax, " +
+      "pre > code.language-tikz, " +
+      "pre > code.tikz"
+    ).forEach(function(code) {
+      var pre = code.parentElement;
+      if (!pre) return;
+      var modified = false;
+      ["language-tikzjax", "tikzjax", "language-tikz", "tikz"]
+        .forEach(function(className) {
+          if (code.classList.contains(className) && !pre.classList.contains(className)) {
+            pre.classList.add(className);
+            modified = true;
+          }
+        });
+      if (modified) changed.push(pre);
+    });
+    return changed;
+  }
+
+  function _rvRefreshTikzJax(root) {
+    var scanRoot = root || document;
+    var normalized = _rvNormalizeTikzJaxFences(scanRoot);
+
+    if (typeof window.TikzJaxRefresh === "function") {
+      window.TikzJaxRefresh(scanRoot);
+      return;
+    }
+
+    if (!window.TikzJax) return;
+
+    // Current @rod2ik/tikzjax exposes TikzJaxConfigure and owns a centralized
+    // MutationObserver. HTML-island hydration and normalized-fence reinsertion
+    // are therefore sufficient; cloning every source would race that observer
+    // and could associate a render result with a detached loader.
+    if (typeof window.TikzJaxConfigure === "function") {
+      normalized.forEach(function(pre) {
+        if (pre.parentNode) pre.replaceWith(pre.cloneNode(true));
+      });
+      return;
+    }
+
+  }
+
+  _rvRegisterContentAdapter("maths-admonitions", {
+    priority: 10,
+    refresh: _rvRefreshMathsAdmonitions
+  });
+  _rvRegisterContentAdapter("xtables", {
+    priority: 20,
+    refresh: _rvRefreshXTables
+  });
+  _rvRegisterContentAdapter("tikzjax", {
+    priority: 30,
+    refresh: _rvRefreshTikzJax
+  });
+
+  // ── Visibility and layout lifecycle ─────────────────────────────────────
+  function _rvInstallContentLifecycle(deck, root) {
+    if (!root || !root.addEventListener) return;
+    var scheduled = false;
+    function scheduleLayout() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        deck.layout();
+      });
+    }
+
+    root.addEventListener("tikzjax-load-finished", scheduleLayout);
+    root.addEventListener("xtables:ready", scheduleLayout);
+    root.addEventListener("xtables:error", scheduleLayout);
+    root.addEventListener("mkdocs-revealjs-content-updated", scheduleLayout);
+    root.addEventListener("toggle", function(event) {
+      if (!event.target || event.target.tagName !== "DETAILS" || !event.target.open) return;
+      _rvScheduleContentRefresh(event.target, "details-shown", 0);
+      scheduleLayout();
+    }, true);
+
+    deck.on("slidechanged", function(event) {
+      var slide = event && event.currentSlide ? event.currentSlide : root;
+      _rvScheduleContentRefresh(slide, "slide-shown", 0);
+      scheduleLayout();
+    });
+  }
+
+  // ── Theme switcher ───────────────────────────────────────────────────────
+  var _SWAP_PAIRS = [["revealjs-theme-light", "revealjs-theme-dark"], ["revealjs-hljs-light", "revealjs-hljs-dark"], ["revealjs-hack-rv-light", "revealjs-hack-rv-dark"], ["revealjs-hack-hl-light", "revealjs-hack-hl-dark"]];
+  var _rvActiveThemeAssets = [];
+  var _rvThemeFinishToken = 0;
+
+  function _rvDeckRoots() {
+    return Array.from(document.querySelectorAll(".mkdocs-revealjs-deck"));
+  }
+
+  function _rvActivateThemeAsset(element, active) {
+    if (!element) return;
+    element.media = active ? "all" : "not all";
+  }
+
+  function _rvSyncScrollPageBackgrounds(viewport, previousBackground) {
+    if (!viewport) return;
+    var currentBackground = window.getComputedStyle(viewport).background;
+    if (!currentBackground) return;
+
+    viewport.querySelectorAll(".scroll-page").forEach(function(page) {
+      var pageBackground = window.getComputedStyle(page).background;
+      var managed = page.getAttribute("data-mkdocs-revealjs-theme-background") === "true";
+      var inheritedCurrent = !previousBackground && pageBackground === currentBackground;
+      var inheritedPrevious = previousBackground && pageBackground === previousBackground;
+      if (managed || inheritedCurrent || inheritedPrevious) {
+        page.style.background = currentBackground;
+        page.setAttribute("data-mkdocs-revealjs-theme-background", "true");
+      }
+    });
+  }
+
+  function _rvInstallScrollPageBackgroundSync(viewport) {
+    if (!viewport || typeof MutationObserver === "undefined") return;
+    var scheduled = false;
+    function schedule() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        _rvSyncScrollPageBackgrounds(viewport, "");
+      });
+    }
+    new MutationObserver(function(mutations) {
+      var hasNewScrollPage = mutations.some(function(mutation) {
+        return Array.from(mutation.addedNodes || []).some(function(node) {
+          return node && node.nodeType === 1 && (
+            node.classList.contains("scroll-page") ||
+            (typeof node.querySelector === "function" && node.querySelector(".scroll-page"))
+          );
+        });
+      });
+      if (hasNewScrollPage) schedule();
+    }).observe(viewport, { childList: true, subtree: true });
+  }
+
+  function _rvFinishThemeSwap(activeAssets, previousBackgrounds) {
+    var token = ++_rvThemeFinishToken;
+    function finish() {
+      if (token !== _rvThemeFinishToken) return;
+      _rvDeckRoots().forEach(function(viewport) {
+        var deck = _rvDeckForRoot(viewport);
+        if (deck && typeof deck.layout === "function") deck.layout();
+        var previous = previousBackgrounds && previousBackgrounds.get
+          ? (previousBackgrounds.get(viewport) || "")
+          : "";
+        _rvSyncScrollPageBackgrounds(viewport, previous);
+      });
+    }
+    function schedule() {
+      window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(finish);
+      });
+    }
+    (activeAssets || []).forEach(function(asset) {
+      if (!asset || asset.tagName !== "LINK" || asset.sheet) return;
+      asset.addEventListener("load", schedule, { once: true });
+      asset.addEventListener("error", schedule, { once: true });
+    });
+    schedule();
+  }
+
+  function applyTheme(scheme) {
+    var previousBackgrounds = new Map();
+    _rvDeckRoots().forEach(function(viewport) {
+      previousBackgrounds.set(viewport, window.getComputedStyle(viewport).background);
+    });
+    var isDark = (scheme === "slate");
+    var activeAssets = [];
+    _SWAP_PAIRS.forEach(function(pair) {
+      var light = document.getElementById(pair[0]);
+      var dark  = document.getElementById(pair[1]);
+      _rvActivateThemeAsset(light, !isDark);
+      _rvActivateThemeAsset(dark, isDark);
+      var active = isDark ? dark : light;
+      if (active) activeAssets.push(active);
+    });
+    _rvActiveThemeAssets = activeAssets;
+    _rvFinishThemeSwap(activeAssets, previousBackgrounds);
+  }
+
+  applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+
+  new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === "data-md-color-scheme") {
+        applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+      }
+    });
+  }).observe(document.body, {
+    attributes: true,
+    attributeFilter: ["data-md-color-scheme"]
+  });
+
+  // ── Reveal.js init ──────────────────────────────────────────────────────
+  function _rvReadDeckOptions(el) {
+    try {
+      var value = JSON.parse(el.getAttribute("data-reveal-options") || "{}");
+      return value && typeof value === "object" ? value : {};
+    } catch (error) {
+      console.warn("[revealjs] invalid deck options:", error);
+      return {};
+    }
+  }
+
+  function _rvArmRandomizedEvaluationFirstSlide(deck, root) {
+    if (!deck || !root || !root.querySelectorAll) return;
+
+    // Reveal can finish initialization before SuperQuiz has shuffled the
+    // evaluation slides. Arm the canonical SuperQuiz completion event before
+    // publishing mkdocs-revealjs-ready, while also accepting an already-finished
+    // randomization when SuperQuiz initialized first.
+    var randomizableQuestions = Array.from(root.querySelectorAll(
+      '.mkdocs-superquiz[data-display-mode="eval"]' +
+      '[data-randomize-questions="true"]'
+    ));
+    if (randomizableQuestions.length < 2) return;
+
+    var settled = false;
+    var timeoutId = null;
+    var randomizedListener = null;
+
+    function randomizationFinished() {
+      return randomizableQuestions.every(function(question) {
+        return question.isConnected &&
+          question.dataset.evalRandomizationApplied === "true";
+      });
+    }
+
+    function settleAtFirstRandomizedSlide() {
+      if (settled || !randomizationFinished()) return false;
+      settled = true;
+      if (timeoutId !== null) window.clearTimeout(timeoutId);
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+
+      if (!root.isConnected) return true;
+      // SuperQuiz has now physically reordered the top-level <section> nodes,
+      // renumbered the evaluation and refreshed the navigation. Rebuild Reveal's
+      // internal slide model and select index 0 *synchronously*: SuperQuiz may
+      // continue the same initialization task by mounting its navigation, which
+      // must observe the new current slide rather than the authored first slide.
+      if (typeof deck.sync === "function") deck.sync();
+      if (typeof deck.slide === "function") deck.slide(0, 0);
+      if (typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+      return true;
+    }
+
+    // SuperQuiz publishes the exact end of its synchronous randomize + DOM
+    // reorder + navigation renumber transaction. That event is the canonical
+    // synchronization point for Reveal evaluation decks.
+    randomizedListener = function(event) {
+      var detail = event && event.detail ? event.detail : {};
+      var eventRoot = detail.root || null;
+      var eventDeckId = String(detail.deckId || '');
+      var rootDeckId = String(root.dataset.revealjsDeckId || '');
+      if (!eventRoot && !eventDeckId) return;
+      if (eventRoot && eventRoot !== root) return;
+      if (!eventRoot && eventDeckId && rootDeckId && eventDeckId !== rootDeckId) return;
+      settleAtFirstRandomizedSlide();
+    };
+    document.addEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+
+    // Handles the case where SuperQuiz initialized before Reveal finished.
+    if (settleAtFirstRandomizedSlide()) return;
+
+    // Do not retain the listener forever if another plugin removes/replaces the
+    // evaluation before SuperQuiz initializes.
+    timeoutId = window.setTimeout(function() {
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+    }, 5000);
+  }
+
+  function initRevealDeck(el) {
+    if (!el || el.dataset.revealjsInitialized === "true") return Promise.resolve(null);
+    el.dataset.revealjsInitialized = "true";
+    var options = _rvReadDeckOptions(el);
+    options.highlight = { highlightOnLoad: true };
+    options.plugins = [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath];
+
+    var deck = new Reveal(el, options);
+    var deckId = el.dataset.revealjsDeckId || el.id || ("deck-" + (_rvDecks.size + 1));
+    _rvDecks.set(deckId, deck);
+    el._mkdocsRevealDeck = deck;
+    _rvInstallContentLifecycle(deck, el);
+    _rvInstallScrollPageBackgroundSync(el);
+    el.setAttribute("aria-busy", "true");
+
+    return deck.initialize()
+      .then(function() {
+        return _rvRefreshContent(el, "initialize");
+      })
+      .then(function() {
+        deck.layout();
+        _rvFinishThemeSwap(_rvActiveThemeAssets, new Map());
+    
+        el.removeAttribute("aria-busy");
+        window.requestAnimationFrame(function() {
+          _rvScheduleContentRefresh(el, "post-layout", 0);
+        });
+        window.setTimeout(function() {
+          _rvScheduleContentRefresh(el, "stabilized", 250);
+        }, 250);
+
+        // Arm this before publishing ready. SuperQuiz may already be initialized,
+        // or it may initialize after the Reveal deck. The completion event plus
+        // the immediate state check handles both orders.
+        _rvArmRandomizedEvaluationFirstSlide(deck, el);
+
+        document.dispatchEvent(new CustomEvent('mkdocs-revealjs-ready', {
+          detail: {
+            deck: deck,
+            deckId: deckId,
+            root: el,
+            mode: el.dataset.revealjsMode || "diapo"
+          }
+        }));
+
+        return deck;
+      })
+      .catch(function(error) {
+        el.removeAttribute("aria-busy");
+        console.error("[revealjs] initialization failed for " + deckId + ":", error);
+        return null;
+      });
+  }
+
+  function initReveal() {
+    var roots = _rvDeckRoots();
+    return Promise.all(roots.map(initRevealDeck));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReveal);
+  } else {
+    initReveal();
+  }
+})();
+</script>
+<!-- ─────────────────────────────────────── mkdocs-revealjs -->
+</body>
+</html>

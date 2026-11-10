@@ -1,0 +1,3220 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/chapters/01-introduction/">
+      
+      
+        <link rel="prev" href="../../slides/wired-trends/">
+      
+      
+        <link rel="next" href="../02-modulation-coding/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>1. Introduction - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chapter-1-introduction" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              1. Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../slides/lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../slides/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-historical-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Historical background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Historical background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-birth-of-wireless" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 The birth of wireless
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-the-cellular-generations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 The cellular generations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-the-big-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 The big shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-overview-of-wireless-networks-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Overview of wireless networks and standards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-layered-view-of-cellular-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Layered view of cellular networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Layered view of cellular networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-physical-layer-phy-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Physical layer (PHY, Layer 1)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-mac-sublayer-medium-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 MAC sublayer (Medium Access Control)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-mac-management-sublayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 MAC-management sublayer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-higher-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Higher layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-control-plane-vs-user-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Control plane vs. user plane
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-the-wireless-and-cellular-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 The wireless and cellular environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 The wireless and cellular environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-frequency-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Frequency reuse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-co-channel-interference-and-sir" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Co-channel interference and SIR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-sectoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.3 Sectoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-cell-types-and-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.4 Cell types and hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-the-wireless-propagation-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 The wireless propagation channel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 The wireless propagation channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-free-space-path-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 Free-space path loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-11-fspl-at-different-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.1 — FSPL at different frequencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-empirical-path-loss-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 Empirical path-loss models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-log-normal-shadowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.3 Log-normal shadowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-12-coverage-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.2 — coverage probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-small-scale-fading" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.4 Small-scale fading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-13-coherence-bandwidth-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.3 — coherence bandwidth and time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155-fading-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.5 Fading distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-legacy-systems-amps-and-tacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Legacy systems — AMPS and TACS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Legacy systems — AMPS and TACS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-amps-advanced-mobile-phone-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 AMPS (Advanced Mobile Phone System)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-tacs-total-access-communication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 TACS (Total Access Communication System)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-limitations-of-1g-the-motivation-for-2g" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 Limitations of 1G — the motivation for 2G
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#learning-outcomes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Learning outcomes
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-historical-background" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1 Historical background
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.1 Historical background">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#111-the-birth-of-wireless" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.1 The birth of wireless
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#112-the-cellular-generations" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.2 The cellular generations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#113-the-big-shifts" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.1.3 The big shifts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-overview-of-wireless-networks-and-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.2 Overview of wireless networks and standards
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-layered-view-of-cellular-networks" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3 Layered view of cellular networks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.3 Layered view of cellular networks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#131-physical-layer-phy-layer-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.1 Physical layer (PHY, Layer 1)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#132-mac-sublayer-medium-access-control" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.2 MAC sublayer (Medium Access Control)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#133-mac-management-sublayer" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.3 MAC-management sublayer
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#134-higher-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.4 Higher layers
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#135-control-plane-vs-user-plane" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.3.5 Control plane vs. user plane
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-the-wireless-and-cellular-environments" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4 The wireless and cellular environments
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.4 The wireless and cellular environments">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#141-frequency-reuse" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.1 Frequency reuse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#142-co-channel-interference-and-sir" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.2 Co-channel interference and SIR
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#143-sectoring" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.3 Sectoring
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#144-cell-types-and-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.4.4 Cell types and hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-the-wireless-propagation-channel" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5 The wireless propagation channel
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.5 The wireless propagation channel">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#151-free-space-path-loss" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.1 Free-space path loss
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-11-fspl-at-different-frequencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.1 — FSPL at different frequencies
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#152-empirical-path-loss-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.2 Empirical path-loss models
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#153-log-normal-shadowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.3 Log-normal shadowing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-12-coverage-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.2 — coverage probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#154-small-scale-fading" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.4 Small-scale fading
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#worked-example-13-coherence-bandwidth-and-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worked example 1.3 — coherence bandwidth and time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#155-fading-distributions" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.5.5 Fading distributions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-legacy-systems-amps-and-tacs" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6 Legacy systems — AMPS and TACS
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.6 Legacy systems — AMPS and TACS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#161-amps-advanced-mobile-phone-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.1 AMPS (Advanced Mobile Phone System)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#162-tacs-total-access-communication-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.2 TACS (Total Access Communication System)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#163-limitations-of-1g-the-motivation-for-2g" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.6.3 Limitations of 1G — the motivation for 2G
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-chapter-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.7 Chapter summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.8 Quiz
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1.8 Quiz">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-multiple-choice" class="md-nav__link">
+    <span class="md-ellipsis">
+      A. Multiple choice
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-fill-in-the-blank" class="md-nav__link">
+    <span class="md-ellipsis">
+      B. Fill in the blank
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-define-explain" class="md-nav__link">
+    <span class="md-ellipsis">
+      C. Define / explain
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-answer-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.9 Answer key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further reading
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#suggested-tutorial-problems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Suggested tutorial problems
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="chapter-1-introduction">Chapter 1 — Introduction<a class="headerlink" href="#chapter-1-introduction" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">Chapter at a glance</p>
+<p><strong>Contact hours:</strong> 3 lecture · <strong>Home study:</strong> 7 h · <strong>Part I — Wireless system basics</strong></p>
+<p><strong>Coverage (syllabus):</strong> introduction and historical background · overview of
+wireless networks and standards · layered view of cellular networks (physical
+layer, MAC sublayer, MAC-management sublayer) · the wireless and cellular
+environments · the wireless propagation channel · legacy systems (AMPS, TACS).</p>
+</div>
+<hr />
+<h2 id="learning-outcomes">Learning outcomes<a class="headerlink" href="#learning-outcomes" title="Permanent link">&para;</a></h2>
+<p>By the end of this chapter you should be able to:</p>
+<ol>
+<li>Trace the <strong>evolution of wireless systems</strong> from Marconi to 5G, identifying
+   the key generation-defining technologies.</li>
+<li>Map the <strong>wireless standards landscape</strong> — cellular, WLAN, WPAN, WMAN, satellite.</li>
+<li>Describe the <strong>layered view</strong> of a cellular network (PHY, MAC, MAC-management)
+   and the role of each layer.</li>
+<li>Compute <strong>link budgets</strong> and <strong>free-space path loss</strong>.</li>
+<li>Apply the <strong>Okumura–Hata</strong> and <strong>COST-231</strong> empirical models and understand
+   their applicability ranges.</li>
+<li>Model <strong>log-normal shadowing</strong> and compute <strong>coverage probabilities</strong>.</li>
+<li>Describe <strong>multipath fading</strong> — Rayleigh, Rician, Nakagami — and compute
+   <strong>coherence bandwidth</strong> and <strong>coherence time</strong>.</li>
+<li>Explain <strong>frequency reuse</strong> and compute the <strong>signal-to-interference ratio</strong> for
+   hexagonal cells with sectoring.</li>
+<li>Describe the <strong>legacy AMPS/TACS</strong> systems and their limitations that motivated
+   GSM.</li>
+</ol>
+<hr />
+<h2 id="11-historical-background">1.1 Historical background<a class="headerlink" href="#11-historical-background" title="Permanent link">&para;</a></h2>
+<h3 id="111-the-birth-of-wireless">1.1.1 The birth of wireless<a class="headerlink" href="#111-the-birth-of-wireless" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>1864 — Maxwell's equations</strong> predicted electromagnetic waves.</li>
+<li><strong>1887 — Hertz</strong> demonstrated radio waves experimentally.</li>
+<li><strong>1895 — Marconi</strong> transmitted the first wireless telegraph signal over 2 km.</li>
+<li><strong>1901 — Marconi</strong> transatlantic transmission from Cornwall to Newfoundland.</li>
+<li><strong>1906 — Fessenden</strong> first radio broadcast (AM voice).</li>
+<li><strong>1920s — Commercial AM radio</strong> and the first mobile radio systems (police, taxi).</li>
+<li><strong>1947 — Bell Labs</strong> proposed the <strong>cellular concept</strong> (frequency reuse in cells).</li>
+</ul>
+<p>The cellular idea was revolutionary — it recognised that <strong>frequency reuse over space</strong> could multiply capacity far beyond the sum of individual channel bandwidths. But it needed two technologies that didn't exist yet:</p>
+<ul>
+<li><strong>Fast, reliable frequency-agile transceivers</strong> — for handover between cells.</li>
+<li><strong>Compact, inexpensive microprocessors</strong> — for control signalling and mobility management.</li>
+</ul>
+<h3 id="112-the-cellular-generations">1.1.2 The cellular generations<a class="headerlink" href="#112-the-cellular-generations" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Generation</th>
+<th style="text-align: center;">Era</th>
+<th>Technology</th>
+<th style="text-align: center;">Peak rate</th>
+<th>Key innovation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>1G</strong></td>
+<td style="text-align: center;">1979–1995</td>
+<td>AMPS, TACS, NMT — <strong>analog</strong> FM, FDMA</td>
+<td style="text-align: center;">~2.4 kbps</td>
+<td>Cellular frequency reuse, handover</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2G</strong></td>
+<td style="text-align: center;">1991–2005</td>
+<td>GSM, IS-95 — <strong>digital</strong> voice, TDMA/CDMA</td>
+<td style="text-align: center;">9.6–14.4 kbps</td>
+<td>Digital voice, SMS, encryption</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>2.5G</strong></td>
+<td style="text-align: center;">2000–2007</td>
+<td>GPRS, EDGE — <strong>packet data</strong> over GSM</td>
+<td style="text-align: center;">40–470 kbps</td>
+<td>Packet data, always-on</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3G</strong></td>
+<td style="text-align: center;">2001–2012</td>
+<td>UMTS (WCDMA), cdma2000 — <strong>mobile broadband</strong></td>
+<td style="text-align: center;">384 kbps–2 Mbps</td>
+<td>Wideband CDMA, mobile internet</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>3.5G/3.75G</strong></td>
+<td style="text-align: center;">2006–2015</td>
+<td>HSPA, HSPA+, LTE (early) — <strong>enhanced data</strong></td>
+<td style="text-align: center;">7.2–42 Mbps</td>
+<td>HSDPA, HSUPA, MIMO, higher-order modulation</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>4G</strong></td>
+<td style="text-align: center;">2009–2020</td>
+<td>LTE, LTE-Advanced, WiMAX — <strong>all-IP</strong></td>
+<td style="text-align: center;">100 Mbps–1 Gbps</td>
+<td>OFDMA, MIMO, SON, all-IP core</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>5G</strong></td>
+<td style="text-align: center;">2019–present</td>
+<td>5G NR (New Radio) — <strong>massive broadband + URLLC + IoT</strong></td>
+<td style="text-align: center;">1–20 Gbps</td>
+<td>Massive MIMO, mmWave, network slicing</td>
+</tr>
+<tr>
+<td style="text-align: center;"><strong>6G</strong></td>
+<td style="text-align: center;">~2030 (research)</td>
+<td>—</td>
+<td style="text-align: center;">100 Gbps–1 Tbps</td>
+<td>THz, AI-native, integrated sensing</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Roughly one new generation every decade.</strong> Each one adds: higher spectral efficiency, higher capacity, new services, and new physical-layer techniques.</p>
+<h3 id="113-the-big-shifts">1.1.3 The big shifts<a class="headerlink" href="#113-the-big-shifts" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Analog → digital (1G → 2G).</strong> Digital brings encryption, error correction, SMS, and dramatic capacity gains.</li>
+<li><strong>Voice → data (2G → 3G).</strong> The internet goes mobile.</li>
+<li><strong>Circuit → packet (2.5G → 3G/4G).</strong> Always-on, IP-based, universal.</li>
+<li><strong>Homogeneous → heterogeneous (3G → 4G).</strong> Macrocells, picocells, femtocells, WiFi — multi-RAT coordination.</li>
+<li><strong>Human-centric → everything-centric (4G → 5G).</strong> mMTC for sensors, URLLC for control.</li>
+</ul>
+<hr />
+<h2 id="12-overview-of-wireless-networks-and-standards">1.2 Overview of wireless networks and standards<a class="headerlink" href="#12-overview-of-wireless-networks-and-standards" title="Permanent link">&para;</a></h2>
+<p>The wireless landscape splits by <strong>range</strong> and <strong>purpose</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Range</th>
+<th>Typical standard</th>
+<th>Peak rate</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>WPAN</strong> (personal)</td>
+<td>1–10 m</td>
+<td>Bluetooth, ZigBee, UWB</td>
+<td>1–480 Mbps (UWB)</td>
+<td>Headphones, sensors, wearables</td>
+</tr>
+<tr>
+<td><strong>WLAN</strong> (local)</td>
+<td>30–100 m</td>
+<td>IEEE 802.11 (WiFi 4/5/6/7)</td>
+<td>100 Mbps–10 Gbps</td>
+<td>Home, enterprise, hotspots</td>
+</tr>
+<tr>
+<td><strong>WMAN</strong> (metropolitan)</td>
+<td>1–50 km</td>
+<td>IEEE 802.16 (WiMAX), 5G FWA</td>
+<td>70 Mbps–1 Gbps</td>
+<td>Broadband access in underserved areas</td>
+</tr>
+<tr>
+<td><strong>WWAN</strong> (wide / cellular)</td>
+<td>1–30 km</td>
+<td>2G/3G/4G/5G</td>
+<td>100 kbps–20 Gbps</td>
+<td>Mobile voice + data</td>
+</tr>
+<tr>
+<td><strong>Satellite</strong></td>
+<td>global</td>
+<td>GEO, MEO (GPS, O3b), LEO (Starlink, OneWeb)</td>
+<td>1–200 Mbps</td>
+<td>Coverage everywhere; backhaul</td>
+</tr>
+<tr>
+<td><strong>LPWAN</strong> (low-power)</td>
+<td>2–15 km</td>
+<td>LoRa, Sigfox, NB-IoT</td>
+<td>0.1–250 kbps</td>
+<td>IoT sensors, smart meters</td>
+</tr>
+</tbody>
+</table>
+<p>For this course, <strong>WWAN (cellular) is the focus</strong> — but the other categories appear in Chapter 6 (NGN).</p>
+<p><strong>Standards bodies:</strong></p>
+<ul>
+<li><strong>3GPP</strong> — cellular standards from GSM onward.</li>
+<li><strong>IEEE 802</strong> — WLAN, WPAN, WMAN (802.11, 802.15, 802.16).</li>
+<li><strong>ITU</strong> — global spectrum coordination; IMT-2000 (3G), IMT-Advanced (4G), IMT-2020 (5G).</li>
+</ul>
+<p><strong>Spectrum bands (roughly):</strong></p>
+<table>
+<thead>
+<tr>
+<th>Band</th>
+<th>Range</th>
+<th>5G usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Low</td>
+<td>600–900 MHz</td>
+<td>Coverage, rural</td>
+</tr>
+<tr>
+<td>Mid</td>
+<td>1.7–6 GHz</td>
+<td>Capacity, urban (3.5 GHz is the "5G mid-band")</td>
+</tr>
+<tr>
+<td>High (mmWave)</td>
+<td>24–100 GHz</td>
+<td>Dense urban, FWA, short range</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-layered-view-of-cellular-networks">1.3 Layered view of cellular networks<a class="headerlink" href="#13-layered-view-of-cellular-networks" title="Permanent link">&para;</a></h2>
+<p>Modern cellular networks are described by the <strong>3GPP protocol stack</strong> — several layers, each serving a specific function. The key layers for this course:</p>
+<h3 id="131-physical-layer-phy-layer-1">1.3.1 Physical layer (PHY, Layer 1)<a class="headerlink" href="#131-physical-layer-phy-layer-1" title="Permanent link">&para;</a></h3>
+<p><strong>What it does.</strong> Transmits bits over the wireless channel — modulation, coding, multiple access, MIMO, power control, channel estimation.</p>
+<p><strong>Key blocks (typical):</strong></p>
+<ul>
+<li><strong>Channel coding</strong> — convolutional, turbo, LDPC (5G), polar codes (5G control).</li>
+<li><strong>Modulation</strong> — QPSK, 16QAM, 64QAM, 256QAM (LTE-advanced, 5G).</li>
+<li><strong>Multiple access</strong> — OFDMA downlink, SC-FDMA uplink (LTE), CP-OFDM (5G).</li>
+<li><strong>MIMO</strong> — spatial multiplexing (multi-stream), beamforming, transmit diversity.</li>
+<li><strong>HARQ</strong> — hybrid ARQ combining FEC + retransmission.</li>
+<li><strong>Synchronization and channel estimation</strong> — pilots / reference signals.</li>
+</ul>
+<p><strong>Visible in 3GPP specs as:</strong> TS 25.2xx (UMTS PHY), TS 36.2xx (LTE PHY), TS 38.2xx (5G NR PHY).</p>
+<h3 id="132-mac-sublayer-medium-access-control">1.3.2 MAC sublayer (Medium Access Control)<a class="headerlink" href="#132-mac-sublayer-medium-access-control" title="Permanent link">&para;</a></h3>
+<p><strong>What it does.</strong> Schedules transmissions among users — decides who gets to transmit, when, and with what resources.</p>
+<p><strong>Key functions:</strong></p>
+<ul>
+<li><strong>Scheduling</strong> — dynamic per-TTI (transmission-time interval) assignment of time-frequency resources to users, based on channel quality (CQI feedback) and QoS requirements.</li>
+<li><strong>HARQ control</strong> — manages retransmissions based on PHY-layer HARQ outcomes.</li>
+<li><strong>Random access</strong> — contention-based initial access (RACH), for new connections or when no scheduled resource is available.</li>
+<li><strong>Multiplexing</strong> — packs multiple logical channels into transport blocks.</li>
+<li><strong>Timing advance, power headroom reporting.</strong></li>
+</ul>
+<p><strong>Visible as:</strong> TS 25.321 (UMTS MAC), TS 36.321 (LTE MAC), TS 38.321 (5G MAC).</p>
+<h3 id="133-mac-management-sublayer">1.3.3 MAC-management sublayer<a class="headerlink" href="#133-mac-management-sublayer" title="Permanent link">&para;</a></h3>
+<p>Sits between MAC and the upper layers — responsible for <strong>radio resource control</strong> and <strong>mobility</strong>.</p>
+<p><strong>Key functions (in LTE this is the RRC layer):</strong></p>
+<ul>
+<li><strong>Connection management</strong> — setup, reconfiguration, release of RRC connections.</li>
+<li><strong>Mobility management</strong> — handover decisions, cell reselection.</li>
+<li><strong>Radio resource allocation</strong> — configuring MAC and PHY parameters (e.g., HARQ, MIMO mode).</li>
+<li><strong>Paging</strong> — reaching idle-mode UEs.</li>
+<li><strong>Broadcast</strong> — system information delivery.</li>
+<li><strong>Security</strong> — key management, encryption of signalling.</li>
+</ul>
+<p><strong>Visible as:</strong> TS 25.331 (UMTS RRC), TS 36.331 (LTE RRC), TS 38.331 (5G RRC).</p>
+<h3 id="134-higher-layers">1.3.4 Higher layers<a class="headerlink" href="#134-higher-layers" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>PDCP</strong> (Packet Data Convergence Protocol) — header compression, ciphering, integrity.</li>
+<li><strong>RLC</strong> (Radio Link Control) — segmentation, ARQ, in-order delivery.</li>
+<li><strong>NAS</strong> (Non-Access Stratum) — mobility management, session management, outside the radio access network.</li>
+<li><strong>IP and above</strong> — the transport and application layers.</li>
+</ul>
+<h3 id="135-control-plane-vs-user-plane">1.3.5 Control plane vs. user plane<a class="headerlink" href="#135-control-plane-vs-user-plane" title="Permanent link">&para;</a></h3>
+<p>Every protocol has two "planes":</p>
+<table>
+<thead>
+<tr>
+<th>Plane</th>
+<th>Carries</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Control</strong></td>
+<td>Signalling (RRC, NAS)</td>
+<td>Connection setup, handover commands</td>
+</tr>
+<tr>
+<td><strong>User</strong></td>
+<td>Data (IP packets)</td>
+<td>Voice, video, web traffic</td>
+</tr>
+</tbody>
+</table>
+<p>The two planes share the PHY (physical transmission) but have separate protocol stacks above it.</p>
+<hr />
+<h2 id="14-the-wireless-and-cellular-environments">1.4 The wireless and cellular environments<a class="headerlink" href="#14-the-wireless-and-cellular-environments" title="Permanent link">&para;</a></h2>
+<h3 id="141-frequency-reuse">1.4.1 Frequency reuse<a class="headerlink" href="#141-frequency-reuse" title="Permanent link">&para;</a></h3>
+<p>The <strong>cellular concept</strong> — the founding idea of mobile telephony — is that the same frequency band can be reused in geographically separated cells, as long as they're far enough apart.</p>
+<p><strong>Cluster size</strong> <span class="arithmatex">\(N\)</span> — the number of cells in a repeating pattern. Common values: <span class="arithmatex">\(N = 3, 4, 7, 9, 12\)</span>.</p>
+<p>The <strong>reuse distance</strong> <span class="arithmatex">\(D\)</span> — the distance between cell centers using the same frequency — is</p>
+<div class="arithmatex">\[
+\boxed{\;D = \sqrt{3N}\cdot R\;}
+\]</div>
+<p>where <span class="arithmatex">\(R\)</span> is the cell radius (distance from center to vertex in a hexagonal cell).</p>
+<p><strong>Reuse factor:</strong></p>
+<div class="arithmatex">\[
+\boxed{\;K = \frac{D}{R} = \sqrt{3N}\;}
+\]</div>
+<p><strong>Capacity</strong> per unit area scales with <span class="arithmatex">\(1/N\)</span>: smaller <span class="arithmatex">\(N\)</span> → more reuse → higher capacity, but also more interference from co-channel cells.</p>
+<h3 id="142-co-channel-interference-and-sir">1.4.2 Co-channel interference and SIR<a class="headerlink" href="#142-co-channel-interference-and-sir" title="Permanent link">&para;</a></h3>
+<p>The <strong>signal-to-interference ratio (SIR)</strong> at a mobile determines voice/data quality. For a hexagonal grid, the worst case is when the mobile is at the edge of its cell — farthest from its own base station, closest to interfering base stations.</p>
+<p><strong>For a tier-1 interferer scenario</strong> (6 co-channel cells in the first tier), and path-loss exponent <span class="arithmatex">\(n\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;\text{SIR} \approx \frac{(D/R)^n}{6} = \frac{(3N)^{n/2}}{6}\;}
+\]</div>
+<p>(approximation assuming all 6 interferers are at distance <span class="arithmatex">\(D\)</span>; slightly conservative).</p>
+<p><strong>In dB:</strong></p>
+<div class="arithmatex">\[
+\text{SIR}_{\text{dB}} \approx 10\log_{10}\!\left(\frac{(3N)^{n/2}}{6}\right)
+\]</div>
+<p><strong>Example</strong> — for <span class="arithmatex">\(N = 7\)</span> and <span class="arithmatex">\(n = 4\)</span>:</p>
+<div class="arithmatex">\[
+\text{SIR} \approx \frac{(21)^2}{6} = 73.5 \approx 18.7\ \text{dB}
+\]</div>
+<p>This is adequate for analog FM (typically needs ~18 dB), which is why AMPS used <span class="arithmatex">\(N = 7\)</span>.</p>
+<h3 id="143-sectoring">1.4.3 Sectoring<a class="headerlink" href="#143-sectoring" title="Permanent link">&para;</a></h3>
+<p>Divide each hexagonal cell into <strong>sectors</strong> — typically <strong>3 sectors</strong> (120°) or <strong>6 sectors</strong> (60°) — using directional antennas at the base station.</p>
+<p><strong>Effect:</strong> the number of co-channel interferers in the <strong>first tier</strong> is reduced from 6 (omni) to <strong>2</strong> (3-sector) or <strong>1</strong> (6-sector).</p>
+<p>The SIR improves by a factor of <span class="arithmatex">\(6/2 = 3\)</span> (3-sector, ~4.77 dB) or <span class="arithmatex">\(6/1 = 6\)</span> (6-sector, ~7.78 dB).</p>
+<p>Alternatively, sectoring lets you <strong>reduce the cluster size</strong> <span class="arithmatex">\(N\)</span> at the same SIR — from <span class="arithmatex">\(N = 7\)</span> (omni) to <span class="arithmatex">\(N = 3\)</span> or <span class="arithmatex">\(N = 4\)</span> (sectored) — and gain capacity.</p>
+<p><strong>Trade-off:</strong> sectoring requires more antennas per site (3 or 6 instead of 1), more sectors to hand over between, and slightly more frequent handovers.</p>
+<h3 id="144-cell-types-and-hierarchy">1.4.4 Cell types and hierarchy<a class="headerlink" href="#144-cell-types-and-hierarchy" title="Permanent link">&para;</a></h3>
+<p>Modern networks use a <strong>heterogeneous</strong> cell hierarchy:</p>
+<table>
+<thead>
+<tr>
+<th>Cell type</th>
+<th>Radius</th>
+<th>Transmit power</th>
+<th>Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Macrocell</strong></td>
+<td>1–30 km</td>
+<td>20–40 W</td>
+<td>Coverage</td>
+</tr>
+<tr>
+<td><strong>Microcell</strong></td>
+<td>100–1000 m</td>
+<td>1–5 W</td>
+<td>Capacity in dense areas</td>
+</tr>
+<tr>
+<td><strong>Picocell</strong></td>
+<td>10–200 m</td>
+<td>0.1–1 W</td>
+<td>Indoor, hotspots</td>
+</tr>
+<tr>
+<td><strong>Femtocell</strong></td>
+<td>10–50 m</td>
+<td>10–100 mW</td>
+<td>Home / small office</td>
+</tr>
+</tbody>
+</table>
+<p>Hierarchy lets the operator provide coverage (macro) and capacity (pico) at different cost points.</p>
+<hr />
+<h2 id="15-the-wireless-propagation-channel">1.5 The wireless propagation channel<a class="headerlink" href="#15-the-wireless-propagation-channel" title="Permanent link">&para;</a></h2>
+<p>The wireless channel is the <strong>biggest differentiator</strong> between wired and wireless system design. Three concurrent effects:</p>
+<ol>
+<li><strong>Large-scale path loss</strong> — signal strength decreases with distance.</li>
+<li><strong>Shadowing</strong> — random variation due to obstructions (buildings, hills).</li>
+<li><strong>Small-scale fading</strong> — rapid amplitude/phase fluctuations due to multipath.</li>
+</ol>
+<h3 id="151-free-space-path-loss">1.5.1 Free-space path loss<a class="headerlink" href="#151-free-space-path-loss" title="Permanent link">&para;</a></h3>
+<p>For an <strong>isotropic</strong> antenna in free space, the received power at distance <span class="arithmatex">\(d\)</span> (in metres) from a transmitter of power <span class="arithmatex">\(P_t\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;P_r = P_t\, G_t\, G_r\, \left(\frac{\lambda}{4\pi d}\right)^2\;}
+\]</div>
+<p>In dB, with <span class="arithmatex">\(d\)</span> in km and <span class="arithmatex">\(f\)</span> in MHz (Friis form):</p>
+<div class="arithmatex">\[
+\boxed{\;\text{FSPL}_{\text{dB}} = 32.44 + 20\log_{10}(f_{\text{MHz}}) + 20\log_{10}(d_{\text{km}})\;}
+\]</div>
+<p>This is the <strong>path loss in free space</strong> — the irreducible baseline; real channels are worse.</p>
+<p><strong>Notable property:</strong> FSPL increases with <span class="arithmatex">\(f^2\)</span> — <strong>higher frequencies have higher path loss</strong>. This is why mmWave (28 GHz+) has much shorter range than sub-1 GHz.</p>
+<h3 id="worked-example-11-fspl-at-different-frequencies">Worked example 1.1 — FSPL at different frequencies<a class="headerlink" href="#worked-example-11-fspl-at-different-frequencies" title="Permanent link">&para;</a></h3>
+<p>Compute the FSPL for <span class="arithmatex">\(d = 1\)</span> km at:</p>
+<ul>
+<li>
+<p><strong>900 MHz (GSM):</strong>
+  <span class="arithmatex">\(\text{FSPL} = 32.44 + 20\log(900) + 20\log(1) = 32.44 + 59.08 + 0 = 91.5\)</span> dB.</p>
+</li>
+<li>
+<p><strong>2 GHz (UMTS):</strong>
+  <span class="arithmatex">\(\text{FSPL} = 32.44 + 20\log(2000) + 0 = 32.44 + 66.02 = 98.5\)</span> dB.</p>
+</li>
+<li>
+<p><strong>28 GHz (5G mmWave):</strong>
+  <span class="arithmatex">\(\text{FSPL} = 32.44 + 20\log(28000) + 0 = 32.44 + 88.94 = 121.4\)</span> dB.</p>
+</li>
+</ul>
+<p><strong>Interpretation.</strong> Going from 2 GHz to 28 GHz costs <strong>23 dB</strong> of additional path loss at the same distance — a factor of ~200 in received power. This is why mmWave cells are small (typically 100–300 m in urban).</p>
+<h3 id="152-empirical-path-loss-models">1.5.2 Empirical path-loss models<a class="headerlink" href="#152-empirical-path-loss-models" title="Permanent link">&para;</a></h3>
+<p>Free-space is optimistic. Real channels have additional loss from buildings, foliage, and terrain. The <strong>Okumura–Hata</strong> model fits measured data in urban areas:</p>
+<p><strong>Okumura–Hata (urban, 150–1500 MHz):</strong></p>
+<div class="arithmatex">\[
+\boxed{\;\text{PL}_{\text{dB}} = 69.55 + 26.16\log(f) - 13.82\log(h_b) - a(h_m) + (44.9 - 6.55\log(h_b))\log(d)\;}
+\]</div>
+<p>where:
+- <span class="arithmatex">\(f\)</span> = frequency in MHz
+- <span class="arithmatex">\(h_b\)</span> = base station antenna height in metres (typically 30–200 m)
+- <span class="arithmatex">\(h_m\)</span> = mobile antenna height (1–10 m)
+- <span class="arithmatex">\(d\)</span> = distance in km
+- <span class="arithmatex">\(a(h_m)\)</span> = mobile antenna correction factor (environment-dependent)</p>
+<p><strong>For a medium-small city</strong> with <span class="arithmatex">\(f = 900\)</span> MHz, <span class="arithmatex">\(h_b = 50\)</span> m, <span class="arithmatex">\(h_m = 1.5\)</span> m, <span class="arithmatex">\(d = 1\)</span> km:</p>
+<div class="arithmatex">\[
+a(h_m) = (1.1\log(900) - 0.7)h_m - (1.56\log(900) - 0.8) \approx 0.016
+\]</div>
+<div class="arithmatex">\[
+\text{PL} = 69.55 + 26.16\log(900) - 13.82\log(50) - 0.016 + (44.9 - 6.55\log(50))\log(1)
+\]</div>
+<p>The last term is 0 at <span class="arithmatex">\(d = 1\)</span> km. Computing:</p>
+<ul>
+<li><span class="arithmatex">\(26.16 \log(900) = 26.16 \times 2.954 = 77.28\)</span></li>
+<li><span class="arithmatex">\(13.82 \log(50) = 13.82 \times 1.699 = 23.48\)</span></li>
+<li>Sum: <span class="arithmatex">\(69.55 + 77.28 - 23.48 - 0.016 = 123.33\)</span> dB.</li>
+</ul>
+<p>Compare with FSPL at 900 MHz, 1 km (91.5 dB): Okumura–Hata gives <strong>~32 dB more loss</strong> — a realistic urban environment is much worse than free space.</p>
+<p><strong>COST-231</strong> extends Okumura–Hata to 2 GHz:</p>
+<div class="arithmatex">\[
+\text{PL} = 46.3 + 33.9\log(f) - 13.82\log(h_b) - a(h_m) + (44.9 - 6.55\log(h_b))\log(d) + C_M
+\]</div>
+<p>where <span class="arithmatex">\(C_M = 3\)</span> dB for dense urban, <span class="arithmatex">\(0\)</span> for medium cities. Use COST-231 for 1.5–2 GHz (UMTS).</p>
+<h3 id="153-log-normal-shadowing">1.5.3 Log-normal shadowing<a class="headerlink" href="#153-log-normal-shadowing" title="Permanent link">&para;</a></h3>
+<p>Even at fixed distance, the received power varies randomly as the mobile moves — buildings, hills, foliage block the path differently.</p>
+<p><strong>Log-normal shadowing</strong> models this as a Gaussian random variable in dB:</p>
+<div class="arithmatex">\[
+\boxed{\;P_r(d)\big|_{\text{dB}} = P_r(d)\big|_{\text{mean,dB}} + X_\sigma,\quad X_\sigma \sim \mathcal N(0, \sigma^2)\;}
+\]</div>
+<p>Typical <span class="arithmatex">\(\sigma\)</span>:
+- <strong>Urban:</strong> 6–10 dB
+- <strong>Suburban:</strong> 4–8 dB
+- <strong>Rural:</strong> 4–6 dB</p>
+<p><strong>Coverage probability</strong> — the fraction of locations at distance <span class="arithmatex">\(d\)</span> where received power exceeds a threshold <span class="arithmatex">\(P_{\min}\)</span>:</p>
+<div class="arithmatex">\[
+\boxed{\;\Pr\{P_r(d) \ge P_{\min}\} = Q\!\left(\frac{P_{\min} - \bar P_r(d)}{\sigma}\right)\;}
+\]</div>
+<p>where <span class="arithmatex">\(\bar P_r(d)\)</span> is the mean received power (from path-loss model) and <span class="arithmatex">\(Q(\cdot)\)</span> is the Gaussian tail function.</p>
+<h3 id="worked-example-12-coverage-probability">Worked example 1.2 — coverage probability<a class="headerlink" href="#worked-example-12-coverage-probability" title="Permanent link">&para;</a></h3>
+<p>A cell edge is at <span class="arithmatex">\(d = 1\)</span> km from the base station. Mean received power (from Okumura–Hata) is <span class="arithmatex">\(\bar P_r = -95\)</span> dBm. Shadowing std <span class="arithmatex">\(\sigma = 8\)</span> dB. Receiver sensitivity is <span class="arithmatex">\(P_{\min} = -105\)</span> dBm.</p>
+<div class="arithmatex">\[
+\Pr\{\text{coverage}\} = Q\!\left(\frac{-105 - (-95)}{8}\right) = Q\!\left(\frac{-10}{8}\right) = Q(-1.25)
+\]</div>
+<p><span class="arithmatex">\(Q(-1.25) = 1 - Q(1.25) \approx 1 - 0.106 = 0.894\)</span>.</p>
+<p><strong>~89% of locations</strong> at cell edge have coverage — 11% are in shadow at any given instant (mobility averages this out).</p>
+<h3 id="154-small-scale-fading">1.5.4 Small-scale fading<a class="headerlink" href="#154-small-scale-fading" title="Permanent link">&para;</a></h3>
+<p>Over <strong>short distances</strong> (a few wavelengths) and <strong>short times</strong> (milliseconds), the signal fluctuates rapidly. This is <strong>multipath fading</strong> — multiple reflected paths arrive with different phases and either constructively or destructively combine.</p>
+<p><strong>Key channel parameters:</strong></p>
+<p><strong>Delay spread</strong> <span class="arithmatex">\(\tau_{\max}\)</span> — the difference between the arrival times of the first and last significant multipath component. Typically:
+- <strong>Indoor:</strong> 20–300 ns
+- <strong>Urban:</strong> 0.5–5 μs
+- <strong>Hilly terrain:</strong> 10–30 μs</p>
+<p><strong>RMS delay spread</strong> <span class="arithmatex">\(\tau_{\text{rms}}\)</span> — the standard deviation of the power delay profile. Used for coherence bandwidth.</p>
+<p><strong>Coherence bandwidth</strong> <span class="arithmatex">\(B_c\)</span> — the range of frequencies over which the channel response is <strong>approximately flat</strong> (highly correlated):</p>
+<div class="arithmatex">\[
+\boxed{\;B_c \approx \frac{1}{5\tau_{\text{rms}}}\ \text{(50\% correlation)}\quad\text{or}\quad B_c \approx \frac{1}{50\tau_{\text{rms}}}\ \text{(90\% correlation)}\;}
+\]</div>
+<p>If the signal bandwidth <span class="arithmatex">\(B_s \gg B_c\)</span>, the channel is <strong>frequency-selective</strong> (needs equalization); if <span class="arithmatex">\(B_s \ll B_c\)</span>, it's <strong>flat</strong>.</p>
+<p><strong>Doppler spread</strong> <span class="arithmatex">\(f_D\)</span> — caused by motion; the spread of frequencies around the carrier:</p>
+<div class="arithmatex">\[
+\boxed{\;f_D = \frac{v f_c}{c}\;}
+\]</div>
+<p>where <span class="arithmatex">\(v\)</span> is the mobile speed, <span class="arithmatex">\(f_c\)</span> is the carrier frequency, and <span class="arithmatex">\(c\)</span> is the speed of light.</p>
+<p><strong>Coherence time</strong> <span class="arithmatex">\(T_c\)</span> — the time over which the channel is <strong>approximately constant</strong>:</p>
+<div class="arithmatex">\[
+\boxed{\;T_c \approx \frac{1}{f_D} \approx \frac{0.423}{f_D}\ \text{(50\% correlation)}\;}
+\]</div>
+<p>If the symbol time <span class="arithmatex">\(T_s \ll T_c\)</span>, the channel is <strong>slow fading</strong>; if <span class="arithmatex">\(T_s \gg T_c\)</span>, it's <strong>fast fading</strong>.</p>
+<h3 id="worked-example-13-coherence-bandwidth-and-time">Worked example 1.3 — coherence bandwidth and time<a class="headerlink" href="#worked-example-13-coherence-bandwidth-and-time" title="Permanent link">&para;</a></h3>
+<p><strong>Urban channel:</strong> <span class="arithmatex">\(\tau_{\text{rms}} = 2\ \mu\text{s}\)</span>, <span class="arithmatex">\(f_c = 2\)</span> GHz, <span class="arithmatex">\(v = 50\)</span> km/h = 13.9 m/s.</p>
+<p><strong>Coherence bandwidth</strong> (50% correlation):
+$$
+B_c = \frac{1}{5 \times 2\,\mu\text{s}} = 100\ \text{kHz}
+$$</p>
+<p>UMTS uses <span class="arithmatex">\(5\)</span> MHz bandwidth — <strong>much greater</strong> than <span class="arithmatex">\(B_c = 100\)</span> kHz. So UMTS is <strong>frequency-selective</strong> → needs Rake receiver / equalization.</p>
+<p><strong>Doppler spread:</strong>
+$$
+f_D = \frac{13.9 \times 2 \times 10^9}{3 \times 10^8} = 92.7\ \text{Hz}
+$$</p>
+<p><strong>Coherence time:</strong>
+$$
+T_c \approx \frac{0.423}{92.7} \approx 4.6\ \text{ms}
+$$</p>
+<p>UMTS symbol duration is <span class="arithmatex">\(1/3.84\ \text{Mchip/s} \approx 0.26\ \mu\text{s}\)</span> — <strong>much less</strong> than <span class="arithmatex">\(T_c = 4.6\)</span> ms. So the channel is <strong>slow fading</strong> relative to symbols → coherence between many symbols.</p>
+<h3 id="155-fading-distributions">1.5.5 Fading distributions<a class="headerlink" href="#155-fading-distributions" title="Permanent link">&para;</a></h3>
+<p>Three models cover most scenarios:</p>
+<p><strong>Rayleigh fading</strong> — no line-of-sight; all paths are reflected. The envelope <span class="arithmatex">\(r\)</span> has PDF:</p>
+<div class="arithmatex">\[
+\boxed{\;p(r) = \frac{r}{\sigma^2}\, e^{-r^2/(2\sigma^2)},\quad r \ge 0\;}
+\]</div>
+<p>Mean square <span class="arithmatex">\(E[r^2] = 2\sigma^2\)</span>. Phase uniform on <span class="arithmatex">\([0, 2\pi)\)</span>.</p>
+<p><strong>Rician fading</strong> — one strong line-of-sight (LoS) plus scattered paths. Parameterized by the <strong>Rician <span class="arithmatex">\(K\)</span> factor</strong> = (LoS power) / (scattered power). <span class="arithmatex">\(K = 0\)</span> → Rayleigh; <span class="arithmatex">\(K \to \infty\)</span> → pure AWGN.</p>
+<div class="arithmatex">\[
+\boxed{\;p(r) = \frac{r}{\sigma^2} \exp\!\left(-\frac{r^2 + A^2}{2\sigma^2}\right) I_0\!\left(\frac{A r}{\sigma^2}\right),\quad r \ge 0\;}
+\]</div>
+<p>where <span class="arithmatex">\(A\)</span> is the LoS amplitude, <span class="arithmatex">\(K = A^2/(2\sigma^2)\)</span>.</p>
+<p><strong>Nakagami-<span class="arithmatex">\(m\)</span></strong> — general fading, parameterized by <span class="arithmatex">\(m\)</span>:</p>
+<div class="arithmatex">\[
+p(r) = \frac{2 m^m r^{2m-1}}{\Gamma(m)\Omega^m}\exp\!\left(-\frac{m r^2}{\Omega}\right)
+\]</div>
+<p>where <span class="arithmatex">\(\Omega = E[r^2]\)</span>, <span class="arithmatex">\(m \ge 0.5\)</span>. <span class="arithmatex">\(m = 1\)</span> → Rayleigh, <span class="arithmatex">\(m \to \infty\)</span> → AWGN, <span class="arithmatex">\(m &lt; 1\)</span> → severe fading.</p>
+<hr />
+<h2 id="16-legacy-systems-amps-and-tacs">1.6 Legacy systems — AMPS and TACS<a class="headerlink" href="#16-legacy-systems-amps-and-tacs" title="Permanent link">&para;</a></h2>
+<h3 id="161-amps-advanced-mobile-phone-system">1.6.1 AMPS (Advanced Mobile Phone System)<a class="headerlink" href="#161-amps-advanced-mobile-phone-system" title="Permanent link">&para;</a></h3>
+<p>Introduced by Bell Labs in <strong>1983</strong> in the US. The first widely deployed <strong>analog cellular</strong> system — the archetypal 1G.</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency band</td>
+<td>824–849 MHz (uplink), 869–894 MHz (downlink) — <strong>800 MHz</strong> band</td>
+</tr>
+<tr>
+<td>Duplexing</td>
+<td><strong>FDD</strong> — separate uplink/downlink, 45 MHz separation</td>
+</tr>
+<tr>
+<td>Multiple access</td>
+<td><strong>FDMA</strong> — 30 kHz channels</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td><strong>FM</strong> — frequency modulation</td>
+</tr>
+<tr>
+<td>Channel bandwidth</td>
+<td>30 kHz</td>
+</tr>
+<tr>
+<td>Number of voice channels</td>
+<td>832 (with 42 control channels)</td>
+</tr>
+<tr>
+<td>Cell cluster size</td>
+<td>typically <strong><span class="arithmatex">\(N = 7\)</span></strong></td>
+</tr>
+<tr>
+<td>Voice coding</td>
+<td>analog, companded</td>
+</tr>
+<tr>
+<td>Handover</td>
+<td>hard handover (break-before-make)</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>none (analog, easy to eavesdrop)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Architecture (simplified):</strong></p>
+<ul>
+<li><strong>Mobile Station (MS)</strong> — the handset.</li>
+<li><strong>Base Station (BS)</strong> — transmits/receives in one cell.</li>
+<li><strong>Mobile Telephone Switching Office (MTSO)</strong> — controls the base stations, handles call routing and handover.</li>
+</ul>
+<p><strong>Why 30 kHz FM?</strong> Voice quality required a channel bandwidth consistent with FM's 4 kHz baseband and ~12 dB SIR — hence 30 kHz after guard bands. FM's capture effect helped reject some interference, but the SIR requirement (~18 dB) was still high, forcing <span class="arithmatex">\(N = 7\)</span>.</p>
+<h3 id="162-tacs-total-access-communication-system">1.6.2 TACS (Total Access Communication System)<a class="headerlink" href="#162-tacs-total-access-communication-system" title="Permanent link">&para;</a></h3>
+<p>The European 1G system — first deployed in the UK in <strong>1985</strong>. Very similar to AMPS, with adjustments for European spectrum:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>TACS</th>
+<th>AMPS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Frequency band</td>
+<td>890–915 / 935–960 MHz</td>
+<td>824–849 / 869–894 MHz</td>
+</tr>
+<tr>
+<td>Channel bandwidth</td>
+<td><strong>25 kHz</strong></td>
+<td>30 kHz</td>
+</tr>
+<tr>
+<td>Number of channels</td>
+<td><strong>1000</strong></td>
+<td>832</td>
+</tr>
+<tr>
+<td>Modulation</td>
+<td>FM</td>
+<td>FM</td>
+</tr>
+<tr>
+<td>Access</td>
+<td>FDMA</td>
+<td>FDMA</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ETACS</strong> (Extended TACS) added more channels for the UK market.</p>
+<h3 id="163-limitations-of-1g-the-motivation-for-2g">1.6.3 Limitations of 1G — the motivation for 2G<a class="headerlink" href="#163-limitations-of-1g-the-motivation-for-2g" title="Permanent link">&para;</a></h3>
+<p>The limitations of AMPS and TACS were <strong>exactly the design goals of GSM</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Limitation</th>
+<th>Consequence</th>
+<th>GSM's answer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Analog voice</strong></td>
+<td>Poor security; easy to eavesdrop</td>
+<td><strong>Digital voice</strong> + encryption (A5/1, A5/3)</td>
+</tr>
+<tr>
+<td><strong>Low capacity</strong></td>
+<td>Spectrum congestion</td>
+<td><strong>TDMA</strong> — 8 slots per 200 kHz carrier</td>
+</tr>
+<tr>
+<td><strong>Poor data</strong></td>
+<td>No data services beyond slow modem</td>
+<td><strong>SMS</strong>, <strong>circuit-switched data</strong>, then <strong>GPRS/EDGE</strong></td>
+</tr>
+<tr>
+<td><strong>Roaming</strong></td>
+<td>Different systems in each country</td>
+<td><strong>Global standard</strong> — GSM deployed in 200+ countries</td>
+</tr>
+<tr>
+<td><strong>Cost</strong></td>
+<td>Handsets expensive</td>
+<td><strong>SIM card</strong> decoupling handset from subscription</td>
+</tr>
+<tr>
+<td><strong>No paging beyond SMS-like services</strong></td>
+<td></td>
+<td>Integrated</td>
+</tr>
+</tbody>
+</table>
+<p><strong>GSM</strong> (Groupe Spécial Mobile, then Global System for Mobile Communications) was designed by ETSI beginning in 1982, first deployed in <strong>1991</strong> — Chapter 3 covers it in full.</p>
+<hr />
+<h2 id="17-chapter-summary">1.7 Chapter summary<a class="headerlink" href="#17-chapter-summary" title="Permanent link">&para;</a></h2>
+<ol>
+<li><strong>Wireless has evolved roughly one generation per decade</strong> — from analog FDMA (1G) to all-IP OFDMA + massive MIMO + mmWave (5G). Each generation introduces a generation-defining PHY technique and a generation-defining application.</li>
+<li><strong>The standards landscape splits by range</strong> — WPAN, WLAN, WMAN, WWAN, satellite, LPWAN. Cellular (WWAN) is this course's focus, but the others reappear in Ch 6.</li>
+<li><strong>Cellular networks are layered:</strong> PHY (bits over channel), MAC (scheduling, HARQ, random access), MAC-management / RRC (connection, mobility, resource allocation), and upper layers (PDCP, RLC, NAS, IP).</li>
+<li><strong>Frequency reuse is the foundation of cellular capacity.</strong> Cluster size <span class="arithmatex">\(N\)</span> determines reuse distance <span class="arithmatex">\(D = \sqrt{3N} R\)</span>. Smaller <span class="arithmatex">\(N\)</span> → more capacity but more co-channel interference. <strong>SIR <span class="arithmatex">\(\approx (3N)^{n/2}/6\)</span></strong> for omni cells with <span class="arithmatex">\(n\)</span> the path-loss exponent.</li>
+<li><strong>Sectoring</strong> divides cells into 120° or 60° sectors. It reduces first-tier interferers from 6 to 2 (or 1) — improving SIR by 3× or 6×, or equivalently allowing smaller <span class="arithmatex">\(N\)</span>.</li>
+<li><strong>The wireless channel has three scales:</strong> large-scale path loss (FSPL, Okumura–Hata, COST-231), shadowing (log-normal), small-scale fading (Rayleigh, Rician, Nakagami).</li>
+<li><strong>Coherence bandwidth</strong> <span class="arithmatex">\(B_c \sim 1/(5\tau_{\text{rms}})\)</span> and <strong>coherence time</strong> <span class="arithmatex">\(T_c \sim 1/f_D\)</span> define the time-frequency granularity of the channel. Signal bandwidth <span class="arithmatex">\(\gg B_c\)</span> → frequency-selective; symbol time <span class="arithmatex">\(\gg T_c\)</span> → fast fading.</li>
+<li><strong>AMPS and TACS</strong> are the archetypal 1G systems: analog FM, FDMA, <span class="arithmatex">\(N = 7\)</span>. Their limitations (analog security, low capacity, no data) drove the design of GSM.</li>
+</ol>
+<hr />
+<h2 id="18-quiz">1.8 Quiz<a class="headerlink" href="#18-quiz" title="Permanent link">&para;</a></h2>
+<h3 id="a-multiple-choice">A. Multiple choice<a class="headerlink" href="#a-multiple-choice" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p>The <strong>cluster size</strong> <span class="arithmatex">\(N\)</span> in a cellular system determines:
+   (a) The number of users per cell (b) The reuse distance and co-channel interference
+   (c) The transmit power (d) The modulation order</p>
+</li>
+<li>
+<p><strong>FSPL</strong> increases with frequency as:
+   (a) <span class="arithmatex">\(f\)</span> (b) <span class="arithmatex">\(f^2\)</span> (in dB: <span class="arithmatex">\(20\log f\)</span>) (c) <span class="arithmatex">\(\sqrt f\)</span> (d) <span class="arithmatex">\(1/f\)</span></p>
+</li>
+<li>
+<p>For a hexagonal cellular system with <span class="arithmatex">\(N = 7\)</span> and <span class="arithmatex">\(n = 4\)</span>, the omni-cell SIR is approximately:
+   (a) 10 dB (b) 13 dB (c) 18.7 dB (d) 30 dB</p>
+</li>
+<li>
+<p><strong>Log-normal shadowing</strong> has typical standard deviation (urban):
+   (a) 1 dB (b) 6–10 dB (c) 20 dB (d) 40 dB</p>
+</li>
+<li>
+<p>Which layer of the 3GPP stack is responsible for <strong>HARQ retransmissions</strong>?
+   (a) PHY (b) MAC (c) RRC (d) NAS</p>
+</li>
+<li>
+<p><strong>Coherence bandwidth</strong> is inversely proportional to:
+   (a) Doppler spread (b) RMS delay spread (c) Path loss (d) Transmit power</p>
+</li>
+<li>
+<p><strong>AMPS</strong> uses which multiple-access scheme?
+   (a) TDMA (b) FDMA (c) CDMA (d) OFDMA</p>
+</li>
+<li>
+<p>The <strong>channel bandwidth</strong> of AMPS is:
+   (a) 12.5 kHz (b) 25 kHz (c) 30 kHz (d) 200 kHz</p>
+</li>
+<li>
+<p><strong>Sectoring</strong> a cell into 3 sectors reduces first-tier co-channel interferers from 6 to:
+   (a) 1 (b) 2 (c) 3 (d) 6</p>
+</li>
+<li>
+<p>Which is <strong>not</strong> a channel effect at the small-scale (fast fading) level?
+    (a) Multipath (b) Rayleigh distribution (c) Shadowing by buildings (d) Doppler spread</p>
+</li>
+<li>
+<p>The <strong>Rician <span class="arithmatex">\(K\)</span> factor</strong> characterizes:
+    (a) Shadowing depth (b) Path-loss exponent (c) LoS-to-scattered power ratio (d) Coherence bandwidth</p>
+</li>
+<li>
+<p>Which generation introduced <strong>all-IP core networks</strong>?
+    (a) 2G (b) 3G (c) 4G (d) 5G</p>
+</li>
+</ol>
+<h3 id="b-fill-in-the-blank">B. Fill in the blank<a class="headerlink" href="#b-fill-in-the-blank" title="Permanent link">&para;</a></h3>
+<ol>
+<li>The path-loss exponent in free space is $n = $____.</li>
+<li>In a hexagonal cellular system, reuse distance $D = $____ <span class="arithmatex">\(\cdot R\)</span>.</li>
+<li>The physical layer is often called Layer ____ in the 3GPP stack.</li>
+<li>The <strong>coherence bandwidth</strong> at 50% correlation is approximately <span class="arithmatex">\(B_c \approx 1/\)</span>____ (in terms of RMS delay spread).</li>
+<li>The Doppler spread formula is $f_D = v \cdot f_c / $____.</li>
+<li>AMPS operates in the ____ MHz band.</li>
+<li><strong>Cluster size</strong> is often chosen so that <span class="arithmatex">\(\text{SIR}\)</span> meets a target — for AMPS (analog FM), the target was approximately ____ dB.</li>
+<li>GSM uses ____ slots per 200 kHz carrier.</li>
+<li>The <strong>channel bandwidth</strong> of UMTS is ____ MHz.</li>
+<li>In the ____-cell hierarchy, femtocells have the smallest coverage (typically 10–50 m).</li>
+</ol>
+<h3 id="c-define-explain">C. Define / explain<a class="headerlink" href="#c-define-explain" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Explain the <strong>cellular concept</strong> and why frequency reuse multiplies capacity. What trade-off is introduced?</li>
+<li>State the <strong>free-space path-loss</strong> formula (Friis, in dB). Compute the FSPL at 1 km for 900 MHz and 28 GHz — how much worse is mmWave?</li>
+<li>Describe <strong>log-normal shadowing</strong>. State the coverage-probability formula and give a numerical example.</li>
+<li>Define <strong>delay spread</strong>, <strong>coherence bandwidth</strong>, <strong>Doppler spread</strong>, and <strong>coherence time</strong>. Explain how each relates to the choice of <strong>equalization</strong> vs. <strong>coding</strong> vs. <strong>interleaving</strong>.</li>
+<li>Distinguish <strong>frequency-selective</strong> and <strong>flat</strong> fading; <strong>fast</strong> and <strong>slow</strong> fading. Give an example of a system for each regime.</li>
+<li>State the <strong>SIR</strong> approximation for omni-cellular hexagonal systems. Show that sectoring improves it by 3× (3-sector) or 6× (6-sector).</li>
+<li>Describe the <strong>three layers</strong> (PHY, MAC, RRC) that make up the 3GPP radio access network. What are the key functions of each?</li>
+<li>Describe the <strong>AMPS</strong> and <strong>TACS</strong> systems. Identify three limitations that motivated the development of GSM.</li>
+</ol>
+<hr />
+<h2 id="19-answer-key">1.9 Answer key<a class="headerlink" href="#19-answer-key" title="Permanent link">&para;</a></h2>
+<details class="success">
+<summary>A. Multiple choice</summary>
+<ol>
+<li><strong>(b)</strong> — reuse distance and co-channel interference.</li>
+<li><strong>(b)</strong> — <span class="arithmatex">\(f^2\)</span> → <span class="arithmatex">\(20\log f\)</span> in dB.</li>
+<li><strong>(c)</strong> — <span class="arithmatex">\((21)^2/6 \approx 73.5 \approx 18.7\)</span> dB.</li>
+<li><strong>(b)</strong> — 6–10 dB urban.</li>
+<li><strong>(b)</strong> — MAC handles HARQ.</li>
+<li><strong>(b)</strong> — RMS delay spread.</li>
+<li><strong>(b)</strong> — FDMA.</li>
+<li><strong>(c)</strong> — 30 kHz.</li>
+<li><strong>(b)</strong> — 2.</li>
+<li><strong>(c)</strong> — shadowing is large-scale, not small-scale.</li>
+<li><strong>(c)</strong> — LoS/scattered ratio.</li>
+<li><strong>(c)</strong> — 4G (LTE/SAE).</li>
+</ol>
+</details>
+<details class="success">
+<summary>B. Fill in the blank</summary>
+<ol>
+<li>2 (free space; distance-squared attenuation)</li>
+<li><span class="arithmatex">\(\sqrt{3N}\)</span></li>
+<li>1</li>
+<li><span class="arithmatex">\(5\tau_{\text{rms}}\)</span> (for 50% correlation)</li>
+<li><span class="arithmatex">\(c\)</span> (speed of light)</li>
+<li>800 (824–894)</li>
+<li>18 (roughly)</li>
+<li>8</li>
+<li>5</li>
+<li>hetero (heterogeneous)</li>
+</ol>
+</details>
+<details class="success">
+<summary>C. Define / explain — model answers</summary>
+<ol>
+<li><em>Cellular concept:</em> divide the coverage area into cells (typically hexagons), each served by a base station. The same spectrum is reused in cells separated by a cluster distance, allowing far more simultaneous users than the total channel bandwidth would allow. <em>Trade-off:</em> reused frequencies cause <strong>co-channel interference</strong>. Reducing cluster size <span class="arithmatex">\(N\)</span> increases capacity but also interference — the design goal is to pick <span class="arithmatex">\(N\)</span> (and antenna patterns) so that SIR meets the target for the modulation/coding scheme.</li>
+<li><em>FSPL formula:</em> <span class="arithmatex">\(\text{FSPL}_{\text{dB}} = 32.44 + 20\log f_{\text{MHz}} + 20\log d_{\text{km}}\)</span>. At 900 MHz, 1 km: <strong>91.5 dB</strong>. At 28 GHz, 1 km: <strong>121.4 dB</strong>. Difference: <strong>~30 dB</strong> — mmWave signal at 1 km is 1000× weaker than sub-1 GHz at the same distance. This is why mmWave cells are 100–300 m in urban deployments.</li>
+<li><em>Log-normal shadowing:</em> received power in dB fluctuates as a Gaussian random variable around the mean path-loss prediction: <span class="arithmatex">\(P_r|_{dB} = \bar P_r(d) + X_\sigma\)</span>, <span class="arithmatex">\(X_\sigma \sim \mathcal N(0, \sigma^2)\)</span>. Coverage probability = <span class="arithmatex">\(\Pr\{P_r \ge P_{\min}\} = Q((P_{\min} - \bar P_r)/\sigma)\)</span>. <em>Example:</em> <span class="arithmatex">\(\bar P_r = -95\)</span> dBm, <span class="arithmatex">\(P_{\min} = -105\)</span> dBm, <span class="arithmatex">\(\sigma = 8\)</span> dB: <span class="arithmatex">\(Q(-10/8) = Q(-1.25) \approx 0.89\)</span> — about 89% coverage at that distance.</li>
+<li><em>Delay spread:</em> range of multipath arrival times. <em>Coherence bandwidth:</em> <span class="arithmatex">\(B_c \approx 1/(5\tau_{\text{rms}})\)</span>, the frequency range over which the channel is flat. If <span class="arithmatex">\(B_s \gg B_c\)</span>, frequency-selective → needs <strong>equalization</strong> (or OFDM to convert to flat per subcarrier). <em>Doppler spread:</em> <span class="arithmatex">\(f_D = v f_c / c\)</span> — frequency smearing from motion. <em>Coherence time:</em> <span class="arithmatex">\(T_c \approx 0.423/f_D\)</span> — the time over which the channel is constant. If <span class="arithmatex">\(T_s \ll T_c\)</span>, slow fading; else fast fading → needs <strong>interleaving</strong> to distribute errors across coherence blocks.</li>
+<li><em>Frequency-selective vs. flat:</em> frequency-selective when <span class="arithmatex">\(B_s \gg B_c\)</span> (e.g., UMTS 5 MHz vs <span class="arithmatex">\(B_c = 100\)</span> kHz — frequency-selective, needs Rake). Flat when <span class="arithmatex">\(B_s \ll B_c\)</span> (e.g., narrowband voice). <em>Fast vs. slow:</em> fast when <span class="arithmatex">\(T_s \gg T_c\)</span> (rare in practice; high-speed rail at high frequency); slow when <span class="arithmatex">\(T_s \ll T_c\)</span> (typical). Slow fading is tracked by adaptive modulation; fast fading needs interleaving and coding.</li>
+<li><em>SIR approximation:</em> <span class="arithmatex">\(\text{SIR} \approx (3N)^{n/2}/6\)</span> for 6 first-tier interferers. With 3-sector antennas, only 2 of the 6 interferers are received in any sector, so SIR improves by factor 3 (4.77 dB). With 6-sector (60°), only 1 interferer → 6× (7.78 dB).</li>
+<li><em>PHY (L1):</em> modulation, coding, multiple access, MIMO, HARQ physical-layer processing, channel estimation, power control. <em>MAC (L2 lower):</em> scheduling (per-TTI resource assignment), HARQ control, random access, multiplexing logical channels. <em>RRC (L3, MAC-management):</em> connection setup/release, handover, mobility, paging, broadcast, security key management. Together they take IP packets from the core network and deliver them over the radio link, adapting to channel and mobility conditions.</li>
+<li><em>AMPS:</em> 800 MHz, FDMA, 30 kHz FM channels, analog voice, <span class="arithmatex">\(N = 7\)</span>. <em>TACS:</em> 900 MHz European equivalent, 25 kHz channels. <em>Limitations motivating GSM:</em> (i) <strong>analog</strong> → poor security, easy eavesdropping; (ii) <strong>low capacity</strong> — FDMA with <span class="arithmatex">\(N=7\)</span> couldn't meet demand; (iii) <strong>no data services</strong> beyond slow modem, no SMS-equivalent; (iv) <strong>fragmented standards</strong> across countries prevented roaming; (v) <strong>expensive handsets</strong> locked to subscription. GSM answered all five: digital encryption, TDMA (8 slots/carrier), SMS+GPRS/EDGE, global standard, SIM card.</li>
+</ol>
+</details>
+<hr />
+<h2 id="further-reading">Further reading<a class="headerlink" href="#further-reading" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>T. S. Rappaport</strong>, <em>Wireless Communications: Principles and Practice</em>, 2nd ed., Prentice Hall, 2002 — Ch 1 (overview), Ch 3 (path loss), Ch 4 (fading), Ch 9 (multiple access).</li>
+<li><strong>A. F. Molisch</strong>, <em>Wireless Communications</em>, 2nd ed., Wiley, 2011 — Ch 4–5 (propagation, fading), Ch 19–20 (cellular systems).</li>
+<li><strong>D. Tse &amp; P. Viswanath</strong>, <em>Fundamentals of Wireless Communication</em>, Cambridge, 2005 — Ch 2 (channel models) — free PDF online.</li>
+<li><strong>M. Mouly &amp; M.-B. Pautet</strong>, <em>The GSM System for Mobile Communications</em>, Cell &amp; Sys, 1992 — Ch 1–2 for the historical context and 1G systems.</li>
+<li><strong>H. Holma &amp; A. Toskala</strong>, <em>WCDMA for UMTS: HSPA Evolution and LTE</em>, 5th ed., Wiley, 2010 — Ch 1 (history).</li>
+<li><strong>3GPP TS 25.301</strong> — UMTS radio interface protocol architecture (for the layering).</li>
+<li><strong>3GPP TS 36.300</strong> — LTE overall description (for the LTE layering equivalent).</li>
+</ul>
+<hr />
+<h2 id="suggested-tutorial-problems">Suggested tutorial problems<a class="headerlink" href="#suggested-tutorial-problems" title="Permanent link">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Link budget.</strong> Base station: 43 dBm transmit, 15 dBi antenna. Mobile: 0 dBi antenna, −110 dBm receiver sensitivity. Compute the maximum cell radius in free space at 900 MHz and at 2 GHz. Assume no additional losses.</p>
+</li>
+<li>
+<p><strong>Frequency reuse.</strong> For a hexagonal cellular system with <span class="arithmatex">\(N = 7\)</span> and <span class="arithmatex">\(n = 4\)</span> (path-loss exponent), compute the SIR. Repeat with <span class="arithmatex">\(N = 3\)</span> and <span class="arithmatex">\(n = 4\)</span>. What is the capacity gain from <span class="arithmatex">\(N = 7 \to N = 3\)</span>, and what is the SIR penalty?</p>
+</li>
+<li>
+<p><strong>Sectoring.</strong> Show that 3-sector (120°) coverage improves the SIR by ~4.77 dB. Then compute the minimum <span class="arithmatex">\(N\)</span> that achieves the same SIR as <span class="arithmatex">\(N = 7\)</span> without sectoring, using 3-sector antennas.</p>
+</li>
+<li>
+<p><strong>Coverage with shadowing.</strong> For a cell edge at <span class="arithmatex">\(d = 2\)</span> km, mean received power <span class="arithmatex">\(\bar P_r = -100\)</span> dBm, <span class="arithmatex">\(\sigma = 6\)</span> dB, and receiver sensitivity <span class="arithmatex">\(P_{\min} = -108\)</span> dBm, compute the coverage probability at the cell edge.</p>
+</li>
+<li>
+<p><strong>Delay spread.</strong> Given a power delay profile with significant components at delays <span class="arithmatex">\(\{0, 0.5, 1, 2\}\)</span> μs with relative powers <span class="arithmatex">\(\{0, -3, -6, -12\}\)</span> dB, compute the RMS delay spread and coherence bandwidth. Is a 5 MHz LTE signal flat or frequency-selective over this channel?</p>
+</li>
+<li>
+<p><strong>Doppler and coherence time.</strong> At <span class="arithmatex">\(f_c = 3.5\)</span> GHz, compute the coherence time for <span class="arithmatex">\(v = 3\)</span> km/h (pedestrian), <span class="arithmatex">\(30\)</span> km/h (urban driving), and <span class="arithmatex">\(120\)</span> km/h (highway). For each, decide if LTE (1 ms TTI) experiences slow or fast fading.</p>
+</li>
+<li>
+<p><strong>Fading distributions.</strong> Plot the PDF of Rayleigh fading with <span class="arithmatex">\(\Omega = 1\)</span>. Then plot the Rician PDF with <span class="arithmatex">\(K = 3, 10, 20\)</span> dB on the same axes. Comment on the effect of increasing <span class="arithmatex">\(K\)</span>.</p>
+</li>
+<li>
+<p><strong>Legacy comparison.</strong> For AMPS and TACS, compute the total number of voice channels in each system (given the spectrum allocations). Compare with GSM Phase 1 (8 slots/carrier, 200 kHz carrier) — what is the capacity multiplier?</p>
+</li>
+<li>
+<p><strong>Generational comparison.</strong> Draw a table comparing 1G through 5G on these axes: multiple access, modulation, peak rate, core network, key applications.</p>
+</li>
+<li>
+<p><strong>Practical link budget — 4G vs. 5G.</strong> Using the same transmit power and antenna gains, compute the range for LTE at 2 GHz and 5G NR at 28 GHz, assuming identical receiver sensitivity and free-space path loss up to 500 m then <span class="arithmatex">\(n = 3.5\)</span> beyond. How small must mmWave cells be to achieve the same coverage?</p>
+</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../../slides/assets/quiz.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="MSc in Communication Engineering · Year 1, Semester I">
+      
+      
+        <meta name="author" content="Dr. Tesfamichael Gebregziabher">
+      
+      
+        <link rel="canonical" href="https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies/slides/lecture-07/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.3">
+    
+    
+      
+        <title>Lecture 07 - ECEG-6412 — Recent Trends in Communication Technologies</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.50c56a3b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-header__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ECEG-6412 — Recent Trends in Communication Technologies
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 07
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="teal"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../syllabus.md" class="md-tabs__link">
+        
+  
+    
+  
+  Syllabus
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../schedule/" class="md-tabs__link">
+        
+  
+    
+  
+  Schedule
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../lecture-01/" class="md-tabs__link">
+          
+  
+    
+  
+  Slides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/01-introduction/" class="md-tabs__link">
+          
+  
+    
+  
+  Part I - Wireless System Basics
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/wired-trends/" class="md-tabs__link">
+          
+  
+    
+  
+  Part II - Wired Technology Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/03-gsm/" class="md-tabs__link">
+          
+  
+    
+  
+  Part III - Wireless Network Trends
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../chapters/05-broadband-wireless/" class="md-tabs__link">
+          
+  
+    
+  
+  Part IV - Emerging Technologies
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../exam-bank/" class="md-tabs__link">
+        
+  
+    
+  
+  Exam Bank
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../solutions/" class="md-tabs__link">
+          
+  
+    
+  
+  Solutions
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../assessment/" class="md-tabs__link">
+        
+  
+    
+  
+  Assessment
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../resources/" class="md-tabs__link">
+        
+  
+    
+  
+  Resources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../feedback/" class="md-tabs__link">
+        
+  
+    
+  
+  Feedback
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ECEG-6412 — Recent Trends in Communication Technologies" class="md-nav__button md-logo" aria-label="ECEG-6412 — Recent Trends in Communication Technologies" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2m6 2c0-3.3-2.7-6-6-6s-6 2.7-6 6c0 2.2 1.2 4.1 3 5.2l1-1.7c-1.2-.7-2-2-2-3.4 0-2.2 1.8-4 4-4s4 1.8 4 4c0 1.5-.8 2.8-2 3.4l1 1.7c1.8-1 3-3 3-5.2M12 2C6.5 2 2 6.5 2 12c0 3.7 2 6.9 5 8.6l1-1.7c-2.4-1.4-4-4-4-6.9 0-4.4 3.6-8 8-8s8 3.6 8 8c0 3-1.6 5.5-4 6.9l1 1.7c3-1.7 5-4.9 5-8.6 0-5.5-4.5-10-10-10Z"/></svg>
+
+    </a>
+    ECEG-6412 — Recent Trends in Communication Technologies
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../syllabus.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syllabus
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../schedule/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Schedule
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Slides
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Slides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-01/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-02/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-03/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-04/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-05/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lecture-06/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Lecture 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Technology Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part I - Wireless System Basics
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Part I - Wireless System Basics
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Modulation and Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part II - Wired Technology Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Part II - Wired Technology Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Access and Core Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part III - Wireless Network Trends
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Part III - Wireless Network Trends
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Part IV - Emerging Technologies
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Part IV - Emerging Technologies
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Advanced Broadband Wireless
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Next Generation Networks
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../chapters/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Machine Learning for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../exam-bank/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Exam Bank
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+      
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../solutions/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10" id="__nav_10_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/01-introduction/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 1 - Introduction
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/02-modulation-coding/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 2 - Modulation & Coding
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/03-gsm/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 3 - GSM
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/04-umts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 4 - UMTS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/05-broadband-wireless/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 5 - 4G/LTE/WiMAX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/06-ngn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 6 - NGN
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/07-ml-communications/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Chapter 7 - ML for Communications
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../solutions/wired-trends/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Wired Trends
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../assessment/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assessment
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../feedback/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Feedback
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Lecture 07</h1>
+
+<div class="mkdocs-revealjs-wrapper" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" style="width:100%;height:700px;margin:1.5rem 0;">
+  <div class="reveal mkdocs-revealjs-deck" id="mkdocs-revealjs-diapo1" data-revealjs-deck-id="diapo1" data-revealjs-mode="diapo" data-reveal-options="{&quot;embedded&quot;:true,&quot;keyboardCondition&quot;:&quot;focused&quot;,&quot;width&quot;:960,&quot;height&quot;:700,&quot;margin&quot;:0.05,&quot;controls&quot;:true,&quot;progress&quot;:true,&quot;slideNumber&quot;:true,&quot;fragments&quot;:true,&quot;autoAnimate&quot;:true,&quot;autoAnimateEasing&quot;:&quot;ease&quot;,&quot;autoAnimateDuration&quot;:1.0,&quot;autoAnimateUnmatched&quot;:false,&quot;transition&quot;:&quot;slide&quot;,&quot;transitionSpeed&quot;:&quot;default&quot;,&quot;minScale&quot;:0.1,&quot;maxScale&quot;:1.5}" style="width:100%;height:700px;">
+    <div class="slides">
+      <section
+        data-markdown
+        data-separator="^\n---\n$"
+        data-separator-vertical="^\n----\n$"
+        data-separator-notes="^Note:"
+      >
+        <textarea data-template>
+## ECEG-6412
+
+### Chapter 7 — Machine Learning for Communications
+
+MSc in Communication Engineering · Year 1, Semester I
+
+Dr. Tesfamichael Gebregziabher
+
+---
+
+## Outline
+
+<div class="fragment">
+
+**Part 1 — Why ML for communications**
+
+- The ETI mission
+- Where classical methods hit limits
+
+</div>
+
+<div class="fragment">
+
+**Part 2 — ML fundamentals**
+
+- Supervised, unsupervised, reinforcement
+- The data problem
+
+</div>
+
+<div class="fragment">
+
+**Part 3 — ML for the PHY**
+
+- Channel estimation, decoding, autoencoders
+- Channel modeling with generative AI
+
+</div>
+
+<div class="fragment">
+
+**Part 4 — ML for the MAC**
+
+- Scheduling, dynamic spectrum, beam management
+
+</div>
+
+<div class="fragment">
+
+**Part 5 — Federated learning and practical challenges**
+
+- Privacy-preserving ML
+- What's deployed, what's not, what's next
+
+</div>
+
+---
+
+## Learning outcomes
+
+<div class="fragment">
+
+**LO1 — State the ETI mission**
+
+Foster ML for the PHY and MAC layers — across wireless, optical, satellite, molecular.
+
+</div>
+
+<div class="fragment">
+
+**LO2 — Match ML paradigms to problems**
+
+Supervised (estimation, decoding), unsupervised (sensing), reinforcement (scheduling).
+
+</div>
+
+<div class="fragment">
+
+**LO3 — Evaluate ML for the PHY**
+
+Where does it beat classical methods? When does it not?
+
+</div>
+
+<div class="fragment">
+
+**LO4 — Evaluate ML for the MAC**
+
+RL for scheduling, ML for spectrum, beam prediction.
+
+</div>
+
+<div class="fragment">
+
+**LO5 — Explain federated learning**
+
+Privacy-preserving training without centralizing raw data.
+
+</div>
+
+<div class="fragment">
+
+**LO6 — Identify practical challenges**
+
+Data scarcity, generalization, latency, interpretability, standardization.
+
+</div>
+
+---
+
+## §7.1 — Why ML for communications?
+
+<div class="fragment">
+
+The **IEEE ComSoc Emerging Technology Initiative (ETI)** on **Machine Learning for Communications** was launched in 2019.
+
+</div>
+
+<div class="fragment">
+
+**Mission:** foster research and innovation on ML for the **PHY** and **MAC** layers — across wireless, optical, satellite, and molecular communication systems.
+
+</div>
+
+<div class="fragment">
+
+**The premise:** classical communication theory has reached practical limits in some areas, and ML can solve problems that are:
+
+- **Too complex** for closed-form optimization
+- **Too data-dependent** for analytic models
+- **Too slow** for traditional algorithms under real-time constraints
+
+</div>
+
+---
+
+## The classical foundation
+
+<div class="fragment">
+
+Classical communication systems are designed from **mathematical models** — each block has a **provably optimal** solution:
+
+| Component | Classical solution |
+|---|---|
+| Channel estimation | MMSE (with known covariance) |
+| Equalization | Viterbi, MMSE |
+| Detection (MIMO) | ML, sphere decoding |
+| Channel coding | LDPC, turbo, polar — near-Shannon |
+| Scheduling | Proportional fair |
+| Estimation | Kalman filter |
+
+</div>
+
+<div class="fragment">
+
+**Why replace them with neural networks?**
+
+</div>
+
+---
+
+## Where ML shines — three properties
+
+<div class="fragment">
+
+**1. Non-linear function approximation.**
+
+Neural networks approximate any continuous function to arbitrary accuracy (universal approximation theorem).
+
+Many communication problems (channel estimation, precoding, detection) are **non-linear** and lack closed-form optima — ML learns the mapping from data.
+
+</div>
+
+<div class="fragment">
+
+**2. End-to-end optimization.**
+
+Traditional systems are **independent blocks** (estimate → equalize → demodulate → decode). Each block optimizes its own metric.
+
+ML lets you **jointly optimize the whole chain** for the end-to-end objective.
+
+</div>
+
+<div class="fragment">
+
+**3. Data-driven modeling.**
+
+When the environment is too complex for analytic modeling — mmWave channels, molecular propagation, non-linear hardware — ML learns from measurements.
+
+</div>
+
+---
+
+## Where ML doesn't shine
+
+<div class="fragment">
+
+**ML is not a replacement for classical methods** — it's an additional tool.
+
+</div>
+
+<div class="fragment">
+
+**ML loses to classical methods when:**
+
+- The classical solution is **optimal** (matched filter, LDPC decoder)
+- Data is **scarce** (new bands, new standards)
+- **Interpretability and certification** are required (safety-critical — automotive, medical, aviation)
+- **Generalization matters** (model trained on one channel may fail on another)
+- Real-time latency is critical (URLLC at 1 ms)
+
+</div>
+
+<div class="fragment">
+
+**The best systems combine ML and classical DSP** — ML for the complex, environment-specific parts; classical for the parts with optimal solutions.
+
+</div>
+
+---
+
+## Checkpoint — When does ML NOT beat classical?
+
+<div class="quiz" data-question="ml-limits">
+  <p class="quiz-question">For which of these is the <strong>classical method already optimal</strong> (ML offers little benefit)?</p>
+  <button class="quiz-option" data-answer="wrong">Channel estimation with unknown statistics</button>
+  <button class="quiz-option" data-answer="wrong">MIMO detection in massive MIMO</button>
+  <button class="quiz-option" data-answer="correct">Matched filter for a known signal in AWGN</button>
+  <button class="quiz-option" data-answer="wrong">Channel modeling with site-specific geometry</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** The matched filter is **provably optimal** for maximizing SNR at a specific time — a Cauchy–Schwarz inequality that no learned filter can beat. ML's advantages appear where the optimum is unknown (unknown statistics, non-linear channels, high-complexity problems), not where classical theory already gives the best answer.
+
+</div>
+
+---
+
+## §7.2 — ML fundamentals
+
+<div class="fragment">
+
+**Three paradigms:**
+
+| Paradigm | Data | Communications use |
+|---|---|---|
+| **Supervised** | (input, label) pairs | Channel estimation, decoding, modulation classification |
+| **Unsupervised** | input only | Spectrum sensing, anomaly detection |
+| **Reinforcement** | reward signal | Scheduling, spectrum access, beam management |
+
+</div>
+
+<div class="fragment">
+
+**Supervised learning:** learn $f_\theta$ from training set $\{(x_i, y_i)\}$.
+
+$$
+\boxed{\;\theta^* = \arg\min_\theta \frac{1}{N}\sum_{i=1}^N \mathcal L(f_\theta(x_i), y_i)\;}
+$$
+
+</div>
+
+<div class="fragment">
+
+**Reinforcement learning:** learn policy $\pi(a \mid s)$ from reward signal.
+
+$$
+\boxed{\;\pi^* = \arg\max_\pi \mathbb E\!\left[\sum_{t=0}^\infty \gamma^t r_t\right]\;}
+$$
+
+No labels — just reward.
+
+</div>
+
+---
+
+## Deep learning for signals
+
+<div class="fragment">
+
+**CNN (Convolutional Neural Network)** — the dominant architecture for PHY:
+
+- 1-D CNN over signal (time or frequency as "image")
+- Convolutional layers learn local patterns
+- Pooling reduces dimensionality
+- Fully connected layers for classification/regression
+
+</div>
+
+<div class="fragment">
+
+**RNN / LSTM** — for sequential data (channel estimation over time, scheduling).
+
+**Transformers** — attention-based; increasingly used for channel estimation, decoding, end-to-end.
+
+</div>
+
+<div class="fragment">
+
+**Autoencoders** — for unsupervised and self-supervised tasks, and for **end-to-end learning of communication systems** (see §7.3.3).
+
+</div>
+
+<div class="fragment">
+
+**Unfolded networks** — iterative algorithms unrolled into a fixed-depth NN with trainable parameters (deep unfolding).
+
+</div>
+
+---
+
+## The data problem
+
+<div class="fragment">
+
+Unlike vision and NLP, communications has a **data problem**:
+
+**Where does training data come from?**
+
+| Source | Pros | Cons |
+|---|---|---|
+| **Simulation** (3GPP TR 38.901, Sionna) | Unlimited, controllable | Model-reality gap |
+| **Measurement** | Realistic | Expensive, limited, site-specific |
+| **Synthetic augmentation** | Cheap | Doesn't cover all real cases |
+| **Field data** | Truly representative | Privacy, collection cost |
+
+</div>
+
+<div class="fragment">
+
+**The model-reality gap:** an ML model trained on 3GPP TR 38.901 synthetic channels may fail on real measured channels.
+
+**This is the fundamental data challenge of communications ML** — much harder than in vision or NLP.
+
+</div>
+
+<div class="fragment">
+
+**Solutions:** transfer learning, domain adaptation, online learning.
+
+</div>
+
+---
+
+## §7.3 — ML for the PHY — channel estimation
+
+<div class="fragment">
+
+**The classical problem:** estimate channel $h$ from received pilots $y_p = h\, x_p + n$.
+
+**Classical methods:**
+- LS — no statistics, noisy at low SNR
+- MMSE — optimal, needs covariance
+- Compressed sensing — exploits sparsity
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** a CNN maps received pilots + context → channel estimate.
+
+**Why might ML help?**
+
+- Channel has structure (sparsity, correlation)
+- MMSE needs the **covariance** — which must be estimated, and is wrong in new environments
+- ML **learns** the structure from data, generalizes
+
+</div>
+
+<div class="fragment">
+
+**Critical insight:** when the ML model is trained on the **same** channel it's evaluated on, it nearly matches MMSE — **without needing the covariance**.
+
+When trained on a **different** channel (mismatch), it degrades.
+
+</div>
+
+---
+
+## Channel estimation — the trade-off
+
+<div class="fragment">
+
+**Typical results (EPA channel, 10 dB SNR):**
+
+| Method | NMSE (dB) |
+|---|:---:|
+| LS | −8 |
+| MMSE (known covariance) | **−14** |
+| ML (matched training) | **−13** |
+| ML (mismatched training) | −10 |
+
+</div>
+
+<div class="fragment">
+
+**The model-reality gap is real.**
+
+When the ML model's implicit channel statistics match the deployment, it wins. When they don't, it loses.
+
+</div>
+
+<div class="fragment">
+
+**Where ML wins in practice:** when covariance is **hard to estimate** (short windows, non-stationary channels, massive MIMO with many antennas).
+
+**Where classical wins:** when statistics are known and stable.
+
+</div>
+
+---
+
+## ML for channel decoding
+
+<div class="fragment">
+
+**The classical problem:** recover information bits from a received noisy codeword.
+
+**Classical decoders:** Viterbi, BCJR, belief propagation (LDPC), SCL (polar) — **near-optimal**.
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** learn a decoder that maps noisy codewords → bits.
+
+**Architecture:** RNN or transformer that iterates over the codeword.
+
+</div>
+
+<div class="fragment">
+
+**Where ML helps:**
+- **Latency** — a single feed-forward pass may be faster than iterative decoding
+- **Finite-length performance** — ML can exploit short-code structure
+- **Joint decoding** across multi-user / multi-antenna
+
+</div>
+
+<div class="fragment">
+
+**Where classical wins:** LDPC/turbo/polar are already **within 0.5 dB of Shannon**. At practical block lengths, ML decoders don't reliably beat them.
+
+The main opportunity is **latency**, not raw BER.
+
+</div>
+
+---
+
+## Decoding — latency vs. accuracy
+
+<div class="fragment">
+
+**Example:** 5G NR LDPC decoder at rate 3/4, block 8448 bits, target 1 Gbps.
+
+| Decoder | Latency | Energy (pJ/bit) | BER at 2 dB |
+|---|:---:|:---:|:---:|
+| Classical BP (15 iter) | 4.2 μs | 120 | 1.2e-6 |
+| Neural LDPC (5 iter) | **1.1 μs** | 200 | 1.5e-6 |
+| Neural LDPC (20 iter) | 4.3 μs | 800 | 1.1e-6 |
+
+</div>
+
+<div class="fragment">
+
+**The trade-off:**
+- Neural LDPC **4× lower latency** at similar BER
+- But higher energy, and depends on fixed code structure
+- ML decoders are deployed for **latency-critical** applications, not general decoding
+
+</div>
+
+---
+
+## §7.3.3 — The autoencoder — the radical idea
+
+<div class="fragment">
+
+**Replace the entire PHY (TX + channel + RX) with an autoencoder** trained end-to-end.
+
+**O'Shea–Hoydis formulation (2017):**
+
+$$
+\text{bits} \to \text{Encoder}_\theta \to \text{Channel} \to \text{Decoder}_\phi \to \text{bits}
+$$
+
+Train encoder + decoder **jointly** to minimize bit-error loss.
+
+</div>
+
+<div class="fragment">
+
+**Why it's interesting:**
+
+- **Joint optimization** — no separate design of TX and RX
+- **Adapts to any (differentiable) channel**
+- **Discovers new modulation schemes** — may not match BPSK/QPSK/QAM
+
+</div>
+
+<div class="fragment">
+
+**The critical requirement:** the channel must be **differentiable** for backpropagation.
+
+Works when channel is additive Gaussian or a known differentiable function. Fails when channel has hard decisions or unmodeled distributions.
+
+</div>
+
+---
+
+## What the autoencoder discovers
+
+<div class="fragment">
+
+**AWGN channel (2 bits/symbol):**
+
+The learned constellation has 4 points, roughly in a **square** — **it learns QPSK**.
+
+BER matches theory within 0.1 dB. **The network discovers the classical optimal.**
+
+</div>
+
+<div class="fragment">
+
+**Non-linear channel (PA saturation, 4 bits/symbol):**
+
+The learned constellation is **not 16-QAM**. It's stretched and offset to compensate for the distortion.
+
+BER improves **~5 dB** over classical 16-QAM — because the classical constellation was optimized for AWGN, not for the non-linear PA.
+
+</div>
+
+<div class="fragment">
+
+**This is where ML genuinely beats classical.**
+
+For the AWGN channel, classical is optimal — ML just recovers it. For non-linear or unmodeled channels, ML learns a better solution.
+
+</div>
+
+---
+
+## Checkpoint — Autoencoder on AWGN
+
+<div class="quiz" data-question="autoencoder">
+  <p class="quiz-question">When trained on the <strong>AWGN channel</strong> at 2 bits/symbol, what does the autoencoder typically learn?</p>
+  <button class="quiz-option" data-answer="wrong">A new constellation unlike any classical scheme</button>
+  <button class="quiz-option" data-answer="correct">A QPSK-like constellation — the classical optimal</button>
+  <button class="quiz-option" data-answer="wrong">16-QAM</button>
+  <button class="quiz-option" data-answer="wrong">It fails to converge</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** For the AWGN channel, QPSK is the **optimal 2-bit/symbol modulation** — the constellation that minimizes BER for a given $E_b/N_0$. Gradient descent finds it naturally. **The autoencoder's value appears on non-linear channels** where classical optimal is unknown — there it learns constellations that beat classical QAM.
+
+</div>
+
+---
+
+## ML for channel modeling — generative AI
+
+<div class="fragment">
+
+**The classical problem:** 3GPP TR 38.901 is geometric, site-specific, slow to simulate, hard to extend.
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** learn a **generative model** of the channel — sample realistic realizations from the same distribution as real channels.
+
+</div>
+
+<div class="fragment">
+
+**Techniques:**
+
+- **VAE (Variational Autoencoder)** — learns latent representation, samples from it
+- **GAN (Generative Adversarial Network)** — generator vs. discriminator
+- **Diffusion models** — similar to DALL-E / Stable Diffusion — sample by progressively denoising
+
+</div>
+
+<div class="fragment">
+
+**Use:**
+- Generate training data for receiver ML models
+- Generate channels for coverage planning
+- Augment measured data for rare scenarios
+
+**3GPP Release 18** includes generative-AI channel models for specific scenarios (high-speed train, industrial).
+
+</div>
+
+---
+
+## §7.4 — ML for the MAC — scheduling
+
+<div class="fragment">
+
+**The classical problem:** given UEs with channel $h_i(t)$ and queue $q_i(t)$, decide which UE to serve each TTI to maximize utility.
+
+</div>
+
+<div class="fragment">
+
+**Classical algorithms:**
+
+- **Round-robin** — fair, ignores channel
+- **Max-throughput** — best channel, unfair
+- **Proportional fair** — max $h_i(t)/\bar h_i$ — throughput + fairness
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** **reinforcement learning** to learn a scheduling policy.
+
+- **State:** channel qualities, queue lengths, delays
+- **Action:** which UE to serve
+- **Reward:** throughput (+ fairness bonus)
+- **Algorithm:** DQN, PPO, actor-critic
+
+</div>
+
+<div class="fragment">
+
+**Advantage over classical:** handles **multiple objectives** (throughput + fairness + latency + energy) that classical heuristics struggle to balance.
+
+</div>
+
+---
+
+## RL scheduling — worked example
+
+<div class="fragment">
+
+**Setup:** 10 UEs, Rayleigh fading, full-buffer traffic. Reward = sum throughput, $\gamma = 0.9$.
+
+**Training:** 1 million TTI × 10 UEs.
+
+</div>
+
+<div class="fragment">
+
+**Results:**
+
+| Scheduler | Cell throughput | Jain's fairness |
+|---|:---:|:---:|
+| Round-robin | 22 Mbps | **0.98** |
+| Proportional fair | 26 Mbps | 0.85 |
+| **RL (learned)** | **27 Mbps** | 0.82 |
+
+</div>
+
+<div class="fragment">
+
+**Interpretation.** RL achieves slightly higher throughput (+4%) than PF at slightly lower fairness. **Not a dramatic win** — PF is already near-optimal for this simple scenario.
+
+</div>
+
+<div class="fragment">
+
+**RL wins more** with multiple objectives (throughput + delay), non-standard channel models, or bursty traffic. For simple scenarios, PF remains the default.
+
+</div>
+
+---
+
+## Dynamic spectrum access
+
+<div class="fragment">
+
+**The problem:** licensed spectrum is often underutilized (15–85% idle). **Cognitive radio** lets unlicensed users access it when the primary user is absent.
+
+</div>
+
+<div class="fragment">
+
+**Classical approach:** energy detection — measure energy in the band, threshold at occupancy. **Fails** under noise uncertainty, low SNR.
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** supervised classification of spectrum occupancy from IQ samples.
+
+**Input:** $N$ IQ samples. **Output:** primary user present/absent, modulation type.
+
+**Network:** 1-D CNN over IQ.
+
+</div>
+
+<div class="fragment">
+
+**Why ML wins:** robust to noise uncertainty, detects weak primary users, generalizes across modulation types.
+
+**Deployment:** CBRS (US) uses a centralized SAS database for primary detection — ML is a candidate for **incumbent detection** in future systems.
+
+</div>
+
+---
+
+## Beam management in mmWave
+
+<div class="fragment">
+
+**The problem:** mmWave needs beam alignment. Exhaustive search over an $N \times N$ codebook is $O(N^2)$ — **slow**.
+
+For 64 beams: 64 measurements × 1 ms = 64 ms to align.
+
+</div>
+
+<div class="fragment">
+
+**ML approach:** **beam prediction** — predict the best beam from **fewer measurements** or from **context** (position, history, previous beams).
+
+**Input:** a few "probe" beams + GPS + previous beams.
+**Output:** predicted best beam, or predicted CQI for all beams.
+
+**Network:** CNN or LSTM.
+
+</div>
+
+<div class="fragment">
+
+**Result:**
+
+| Method | Measurements | Best-beam accuracy | Latency |
+|---|:---:|:---:|:---:|
+| Exhaustive search | 64 | 100% | 64 ms |
+| Classical hierarchical | 20 | 85% | 20 ms |
+| **ML (CNN)** | **8** | **92%** | **8 ms** |
+
+</div>
+
+<div class="fragment">
+
+**8× measurement reduction**, 8× faster alignment. Enables **high-mobility beam tracking** that classical search cannot support.
+
+**5G-Advanced Release 18** standardizes AI/ML for beam management.
+
+</div>
+
+---
+
+## Checkpoint — Beam management
+
+<div class="quiz" data-question="beam-ml">
+  <p class="quiz-question">What is the primary benefit of <strong>ML-based beam management</strong> in mmWave?</p>
+  <button class="quiz-option" data-answer="wrong">Higher peak data rate per UE</button>
+  <button class="quiz-option" data-answer="correct">Reduced measurement overhead — faster beam alignment for high-mobility UEs</button>
+  <button class="quiz-option" data-answer="wrong">Better spectral efficiency per beam</button>
+  <button class="quiz-option" data-answer="wrong">Eliminates the need for beamforming</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** Beam management's bottleneck is **measurement time** — exhaustive search over $N^2$ pairs is too slow for moving UEs. ML predicts the best beam from **fewer probes** + context, reducing measurement from 64 to 8 in the example. That 8× speedup makes beam tracking viable at highway speeds.
+
+</div>
+
+---
+
+## §7.5 — Federated learning
+
+<div class="fragment">
+
+**The privacy problem:**
+
+Classical ML trains on **centralized data** — but channel data, location, and usage data are **sensitive**.
+
+Regulations (GDPR, CCPA) restrict moving personal data.
+
+</div>
+
+<div class="fragment">
+
+**Federated learning (FL):** train a model **without centralizing data.**
+
+**The FedAvg algorithm:**
+
+1. Initialize a global model at the server
+2. Broadcast to $N$ participating devices
+3. Each device trains **locally** on its data
+4. Send model **updates** (weights, not data) to the server
+5. Server **aggregates** (weighted average):
+
+$$
+w_{t+1} = \sum_{k=1}^N \frac{n_k}{n}\, w_{t+1}^{(k)}
+$$
+
+6. Repeat
+
+</div>
+
+<div class="fragment">
+
+**Privacy:** only model updates leave the device, not raw data. **Differential privacy** can be added for formal guarantees.
+
+</div>
+
+---
+
+## FL — trade-offs and applications
+
+<div class="fragment">
+
+**FL applications in communications:**
+
+- **Beam prediction** at mobile devices — learned locally, aggregated
+- **Channel estimation** — models trained at UEs, aggregated at gNB
+- **Anomaly detection** — distributed detection of rogue devices
+- **Spectrum sensing** — collaborative sensing without IQ sharing
+
+</div>
+
+<div class="fragment">
+
+**Challenges:**
+
+- **Communication cost** — model updates are large; compression needed
+- **Non-IID data** — different UEs see different channels; local models diverge
+- **Stragglers** — slow/offline devices
+- **Security** — malicious devices can poison the model
+
+</div>
+
+<div class="fragment">
+
+**Example:** 100 UEs, channel data 10 GB centralized vs. **50 MB** of model updates — **200× less bandwidth**.
+
+At 0.5 dB accuracy loss. **Privacy is the win** — many applications accept the loss.
+
+</div>
+
+---
+
+## §7.6 — Practical challenges
+
+<div class="fragment">
+
+**Data:**
+- Scarcity — real measurements are expensive
+- Quality — labels require reference signals
+- **Distribution shift** — training ≠ deployment
+
+</div>
+
+<div class="fragment">
+
+**Generalization:**
+- ML trained on one channel/band may **fail** on another
+- Fundamentally different from vision/NLP (data distribution is site-specific and non-stationary)
+- Solutions: domain adaptation, meta-learning, online learning
+
+</div>
+
+<div class="fragment">
+
+**Latency and complexity:**
+- Inference must fit the TTI (1 ms in LTE, 0.5 ms in 5G, 0.125 ms in URLLC)
+- Model size must fit in the device
+- Energy — inference costs power
+
+</div>
+
+<div class="fragment">
+
+**Interpretability and safety:**
+- Black-box models hard to certify
+- Safety-critical applications need formal verification
+- Hybrid models, physics-informed NNs, deep unfolding address this
+
+</div>
+
+---
+
+## Standardization — what's actually deployed
+
+<div class="fragment">
+
+**3GPP Release 18 (5G-Advanced, 2024):**
+
+- **AI/ML for NR air interface** as a study item
+- **Beam management** standardized
+- **CSI feedback** under study
+- **Positioning** using ML
+- **Network energy saving** deployed
+- **Load balancing** deployed
+
+</div>
+
+<div class="fragment">
+
+**O-RAN Alliance** — deployment platform:
+
+- **RIC** (RAN Intelligent Controller)
+- **xApps** — near-real-time apps
+- **rApps** — non-real-time apps
+- First production deployment of third-party ML in RAN
+
+</div>
+
+<div class="fragment">
+
+**ITU-R IMT-2030 (6G)** — **AI-native air interface** as a major theme.
+
+AI is a first-class component of the network — from PHY to network management.
+
+</div>
+
+---
+
+## Checkpoint — Federated learning
+
+<div class="quiz" data-question="fl-privacy">
+  <p class="quiz-question">Why is <strong>federated learning</strong> considered privacy-preserving?</p>
+  <button class="quiz-option" data-answer="wrong">It encrypts the raw data during transmission</button>
+  <button class="quiz-option" data-answer="correct">Raw data never leaves the device — only model updates are sent</button>
+  <button class="quiz-option" data-answer="wrong">It uses blockchain to verify training</button>
+  <button class="quiz-option" data-answer="wrong">It obfuscates the model structure</button>
+  <p class="quiz-feedback"></p>
+</div>
+
+<div class="fragment">
+
+**Why.** Classical ML sends raw data to a server for training. Federated learning keeps **raw data on the device** and sends only **model updates** (gradients or weights). Model updates contain far less information about individual samples — and differential privacy can formalize the guarantee. This is a fundamental architectural advantage for regulated or privacy-sensitive data.
+
+</div>
+
+---
+
+## §7.7 — Where ML is deployed today
+
+<div class="fragment">
+
+**Standardized and deployed:**
+
+| Application | Standard | Status |
+|---|---|---|
+| Beam management (5G NR) | 3GPP Release 18 | Deployed in 5G-Advanced |
+| Network energy saving | 3GPP Release 18 | Deployed |
+| Load balancing | 3GPP Release 18 | Deployed |
+| Anomaly detection | O-RAN | Deployed in cloud RAN |
+| Traffic prediction | O-RAN | Deployed for capacity planning |
+
+</div>
+
+<div class="fragment">
+
+**Commercial (proprietary):**
+
+- **Nokia, Ericsson, Huawei, Samsung** — ML-based beam management, channel estimation in 5G gNB products
+- **Qualcomm** — ML channel estimation in Snapdragon modems (studied, limited)
+- **NVIDIA Sionna** — GPU-accelerated simulation for ML research
+
+</div>
+
+<div class="fragment">
+
+**The gap between research and deployment is real.** Most papers show gains on simulation; most deployments use small, well-understood ML models for specific tasks.
+
+</div>
+
+---
+
+## §7.8 — AI-native 6G
+
+<div class="fragment">
+
+**6G (ITU-R IMT-2030)** is described as **AI-native** — AI from the start, not bolted on.
+
+</div>
+
+<div class="fragment">
+
+**Expected features:**
+
+- **AI-driven PHY** — learned channel estimation, beam prediction, possibly entire learned PHY for some links
+- **AI-defined RAN** — xApps, rApps, network automation
+- **AI-orchestrated core** — self-optimizing, self-healing
+- **AI for network management** — energy, congestion, slicing
+- **Federated learning** across billions of devices
+
+</div>
+
+<div class="fragment">
+
+**Research projects:**
+
+- **Hexa-X** (EU 6G flagship) — AI/ML as one of six pillars
+- **NGMN 6G** — operator-driven requirements
+- **ITU-R IMT-2030** — the framework
+
+</div>
+
+<div class="fragment">
+
+**The vision is ambitious — the challenge is delivering it with interpretability, safety, and standardization.**
+
+</div>
+
+---
+
+## Chapter 7 — key takeaways
+
+<div class="fragment">
+
+**1.** **ML for communications** is driven by the need to solve problems too complex, too data-dependent, or too slow for classical methods. **IEEE ComSoc ETI** coordinates the research.
+
+</div>
+
+<div class="fragment">
+
+**2.** Three paradigms: **supervised** (channel estimation, decoding), **unsupervised** (spectrum sensing), **reinforcement** (scheduling, beam management).
+
+</div>
+
+<div class="fragment">
+
+**3.** ML for PHY:
+- **Channel estimation** — matches MMSE without covariance, but degrades under model mismatch
+- **Decoding** — offers latency improvements; classical LDPC/turbo remain near-optimal
+- **Autoencoder** — discovers new constellations for non-linear channels
+- **Channel modeling** — generative AI produces realistic training data
+
+</div>
+
+<div class="fragment">
+
+**4.** ML for MAC:
+- **Scheduling** — RL balances multiple objectives; small gain over PF in simple scenarios
+- **Spectrum sensing** — ML beats energy detection under noise uncertainty
+- **Beam management** — 8× measurement reduction
+
+</div>
+
+<div class="fragment">
+
+**5.** **Federated learning** — privacy-preserving training without centralizing data. 200× less bandwidth, 0.5 dB accuracy loss.
+
+</div>
+
+<div class="fragment">
+
+**6.** **Practical challenges:** data scarcity, generalization, latency, interpretability, standardization.
+
+</div>
+
+<div class="fragment">
+
+**7.** **Standardization:** 3GPP Release 18 includes ML for beam management, energy, load balancing. O-RAN RIC provides deployment platform.
+
+</div>
+
+<div class="fragment">
+
+**8.** **AI-native 6G** is the vision — ML across all layers.
+
+</div>
+
+---
+
+## Course complete
+
+<div class="fragment">
+
+**ECEG-6412 — Recent Trends in Communication Technologies**
+
+You now understand:
+
+- The wireless propagation channel
+- Modulation, coding, multiple access
+- GSM, UMTS, 4G/LTE, 5G
+- The wired infrastructure
+- Emerging trends: IoT, LPWAN, ML for communications
+
+</div>
+
+<div class="fragment">
+
+**The unifying theme:** every generation adds a new PHY technique and a new application class — driven by the same fundamental Shannon trade-off.
+
+</div>
+
+<div class="fragment">
+
+**The future:** 6G, AI-native networks, THz communication, integrated sensing — the next decade.
+
+</div>
+
+<div class="fragment">
+
+**Good luck with your final examination.**
+
+</div>
+
+---
+
+<aside class="notes">
+  <div style="font-size: 16px; line-height: 1.6;">
+
+**Speaker notes for the whole lecture:**
+
+- Slides 4–7 (ETI mission, where ML helps): ~6 min. Emphasize the **three properties** — non-linear approximation, end-to-end optimization, data-driven modeling. And the **three limits** — optimal classical solutions, data scarcity, interpretability.
+- Slides 8–11 (ML fundamentals): ~5 min. Don't spend too long on the general ML basics — students have seen this in other courses. Focus on **why communications data is different** (model-reality gap).
+- Slides 12–17 (channel estimation + decoding): ~10 min. Emphasize **where ML wins and where it doesn't** — matched-covariance MMSE is already near-optimal; ML's value is when statistics are unknown or channel is non-stationary.
+- Slides 18–22 (autoencoder + channel modeling): the most conceptually interesting material. **The autoencoder learns QPSK for AWGN** — a beautiful result showing ML recovers classical optimal. **Where it wins is non-linear channels.**
+- Slides 23–27 (MAC): scheduling (small gains over PF), spectrum sensing, beam management (big gains — 8× reduction).
+- Slides 28–30 (federated learning): the privacy story. **200× less bandwidth** at 0.5 dB loss is a real-world trade-off.
+- Slides 31–34 (challenges + deployment): **the gap between research and deployment** is important. Most papers show simulation gains; most production deployments are small, focused ML models.
+- Slides 35–37 (AI-native 6G): the future. Keep it brief — it's aspirational.
+
+**The final exam may test: three ML paradigms, when ML beats classical, autoencoder on AWGN, federated learning privacy, three 5G use cases (recap from Ch 6), and the ETI mission.**
+
+**Course complete.** With this deck, ECEG-6412 has:
+
+- 8 content chapters (Ch 1–7 + wired-trends)
+- 7 slide decks (Ch 1–7)
+- Exam bank (100 marks)
+- Solutions for all 8 chapters
+- Full syllabus, schedule, assessment, resources, feedback
+
+The course site is ready to deploy.
+
+  </div>
+</aside>
+        </textarea>
+      </section>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "navigation.indexes", "navigation.tracking", "content.code.copy", "search.suggest", "search.highlight", "toc.follow"], "search": "../../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      
+        <script src="../../javascripts/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../assets/quiz.js"></script>
+      
+    
+  
+<!-- mkdocs-revealjs ───────────────────────────────────────── -->
+
+<!-- Plugin base corrections (always loaded, before any theme) -->
+<style id="revealjs-base">
+.reveal .slides section ul,.reveal .slides section ol{display:inline-block;text-align:left}.reveal .slides section .admonition,.reveal .slides section details[class]{width:var(--admon-width, 80%);max-width:var(--admon-max-width, none);margin:var(--admon-margin, 1.5625em auto);padding:var(--admon-padding, 0 .6rem);font-size:var(--admon-font-size, .85em);text-align:var(--text-align, left);box-shadow:var(--admon-box-shadow, none);opacity:var(--admon-opacity, 1)}.reveal .slides section .admonition .danger,.reveal .slides section details[class] .danger{border:var(--admon-border, .075rem solid #ff1744)}.reveal .slides section .admonition .note,.reveal .slides section details[class] .note{border:var(--admon-border, .075rem solid #448aff)}.reveal .slides section .admonition .tip,.reveal .slides section details[class] .tip{border:var(--admon-border, .075rem solid #00bfa5)}.reveal .slides section .admonition .warning,.reveal .slides section details[class] .warning{border:var(--admon-border, .075rem solid #ff9100)}.reveal .slides section .admonition p,.reveal .slides section .admonition .admonition-title,.reveal .slides section .admonition summary,.reveal .slides section .admonition ul,.reveal .slides section .admonition ol,.reveal .slides section .admonition li,.reveal .slides section .admonition pre,.reveal .slides section .admonition code,.reveal .slides section details[class] p,.reveal .slides section details[class] .admonition-title,.reveal .slides section details[class] summary,.reveal .slides section details[class] ul,.reveal .slides section details[class] ol,.reveal .slides section details[class] li,.reveal .slides section details[class] pre,.reveal .slides section details[class] code{text-align:left}.reveal .slides section .twemoji{vertical-align:middle}.reveal .tabbed-set{text-align:left}.reveal .tabbed-set>input[type=radio]{position:absolute;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none}.reveal .tabbed-set .tabbed-labels{text-align:left}.reveal .tabbed-set .tabbed-labels>label{cursor:pointer}.reveal .tabbed-set .tabbed-content>.tabbed-block[hidden]{display:none!important}.reveal .tabbed-set .tabbed-content>.tabbed-block:not([hidden]){display:block}.mkdocs-revealjs-html-island{display:none!important}.mkdocs-revealjs-wrapper{overflow:hidden}.mkdocs-revealjs-wrapper>.mksq-reveal-navigation.mksq-page-navigation-top:not(.mksq-reveal-navigation-fullscreen):not([data-mounted=floating]){top:2px!important}.mkdocs-revealjs-wrapper.mkdocs-revealjs-fullscreen-host{position:fixed!important;inset:0!important;width:100vw!important;height:100vh!important;margin:0!important}.mkdocs-revealjs-deck.mkdocs-revealjs-fullscreen-deck{position:relative}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen{z-index:40000!important}.mksq-reveal-navigation[hidden]{display:none!important}.mksq-reveal-navigation.mksq-reveal-navigation-fullscreen.mksq-page-navigation-top:not([data-mounted=floating]){top:.5rem!important}
+
+</style>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+
+<!-- Reveal.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css" id="revealjs-theme-light" media="all">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/black.css" id="revealjs-theme-dark" media="not all">
+
+<!-- Reveal.js theme: hack overrides (light / dark) -->
+
+<!-- Reveal.js theme: custom CSS (light / dark) -->
+
+<!-- Highlight.js theme: starter (light / dark) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs.min.css" id="revealjs-hljs-light" media="all">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" id="revealjs-hljs-dark" media="not all">
+
+<!-- Highlight.js theme: hack overrides (light / dark) -->
+
+<!-- Highlight.js theme: custom CSS (light / dark) -->
+
+<!-- Mermaid theme: hack overrides (light / dark) -->
+
+<!-- Mermaid theme: custom CSS (light / dark) -->
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/markdown/markdown.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/highlight/highlight.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/notes/notes.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/plugin/math/math.js"></script>
+
+
+
+
+
+
+<script src="../../slides/assets/quiz.js"></script>
+<script>
+(function () {
+
+  // ── Extensible content lifecycle ────────────────────────────────────────
+  // MkDocs extensions render rich HTML before Reveal.js. Those fragments are
+  // transported through Reveal/marked as opaque HTML islands and hydrated only
+  // after deck.initialize(). External projects can register a refresh adapter
+  // or listen for the content-ready/content-shown events below.
+  var _rvContentAdapters = new Map();
+  var _rvContentRefreshTimers = new WeakMap();
+  var _rvContentTabCounter = 0;
+  var _rvDecks = new Map();
+
+  function _rvDeckForRoot(root) {
+    if (!root) return null;
+    var deckRoot = root.matches && root.matches(".mkdocs-revealjs-deck")
+      ? root
+      : (root.closest ? root.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot && root.querySelector) {
+      deckRoot = root.querySelector(".mkdocs-revealjs-deck");
+    }
+    return deckRoot ? (_rvDecks.get(deckRoot.dataset.revealjsDeckId) || null) : null;
+  }
+
+  // ── Fullscreen evaluation chrome ───────────────────────────────────────
+  // The Fullscreen API only renders the fullscreen element and descendants.
+  // SuperQuiz deck chrome (numbered navigation, strict-eval toolbar and access
+  // gate) normally lives as a sibling of the .reveal root inside the wrapper.
+  // Move the chrome owned by the active deck into the fullscreen Reveal root,
+  // then restore the exact DOM position and inline styles on exit.
+  var _rvFullscreenNavigationState = new Map();
+  var _rvFullscreenEvalChromeState = new Map();
+
+  function _rvGetFullscreenElement() {
+    return document.fullscreenElement || document.webkitFullscreenElement || null;
+  }
+
+  function _rvDeckId(deckRoot) {
+    return deckRoot && deckRoot.dataset
+      ? String(deckRoot.dataset.revealjsDeckId || "")
+      : "";
+  }
+
+  function _rvFindRevealNavigation(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return null;
+    var deckId = _rvDeckId(deckRoot);
+    var navigations = Array.from(wrapper.querySelectorAll(".mksq-reveal-navigation"));
+    return navigations.find(function(navigation) {
+      return !deckId || String(navigation.dataset.deckId || "") === deckId;
+    }) || null;
+  }
+
+  function _rvFindRevealEvalChrome(wrapper, deckRoot) {
+    if (!wrapper || !wrapper.querySelectorAll) return [];
+    var deckId = _rvDeckId(deckRoot);
+    return Array.from(wrapper.querySelectorAll(".mkdocs-revealjs-eval-chrome"))
+      .filter(function(chrome) {
+        return !deckId || String(chrome.dataset.deckId || "") === deckId;
+      });
+  }
+
+  function _rvRestoreFullscreenNavigation(navigation) {
+    var state = _rvFullscreenNavigationState.get(navigation);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(navigation, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(navigation);
+    }
+    if (state.style === null) navigation.removeAttribute("style");
+    else navigation.setAttribute("style", state.style);
+    if (navigation.dataset) {
+      if (state.mounted === null) delete navigation.dataset.mounted;
+      else navigation.dataset.mounted = state.mounted;
+    }
+    navigation.classList.remove("mksq-reveal-navigation-fullscreen");
+    _rvFullscreenNavigationState.delete(navigation);
+  }
+
+  function _rvRestoreFullscreenEvalChrome(chrome) {
+    var state = _rvFullscreenEvalChromeState.get(chrome);
+    if (!state) return;
+    if (state.placeholder && state.placeholder.parentNode) {
+      state.placeholder.parentNode.insertBefore(chrome, state.placeholder);
+      state.placeholder.remove();
+    } else if (state.parent && state.parent.isConnected) {
+      state.parent.appendChild(chrome);
+    }
+    if (state.style === null) chrome.removeAttribute("style");
+    else chrome.setAttribute("style", state.style);
+    chrome.classList.remove("mkdocs-revealjs-eval-chrome-fullscreen");
+    _rvFullscreenEvalChromeState.delete(chrome);
+  }
+
+  function _rvRestoreAllFullscreenChrome() {
+    var states = Array.from(_rvFullscreenNavigationState.values())
+      .concat(Array.from(_rvFullscreenEvalChromeState.values()));
+    Array.from(_rvFullscreenNavigationState.keys()).forEach(_rvRestoreFullscreenNavigation);
+    Array.from(_rvFullscreenEvalChromeState.keys()).forEach(_rvRestoreFullscreenEvalChrome);
+    states.forEach(function(state) {
+      if (state.wrapper) state.wrapper.classList.remove("mkdocs-revealjs-fullscreen-host");
+      if (state.deckRoot) state.deckRoot.classList.remove("mkdocs-revealjs-fullscreen-deck");
+      var deck = state.deckRoot ? _rvDeckForRoot(state.deckRoot) : null;
+      if (deck && typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+    });
+  }
+
+  function _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot) {
+    if (!chrome || !fullscreenElement) return;
+    if (!_rvFullscreenEvalChromeState.has(chrome)) {
+      var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation chrome");
+      var parent = chrome.parentNode;
+      if (parent) parent.insertBefore(placeholder, chrome);
+      _rvFullscreenEvalChromeState.set(chrome, {
+        placeholder: placeholder,
+        parent: parent,
+        style: chrome.hasAttribute("style") ? chrome.getAttribute("style") : null,
+        wrapper: wrapper,
+        deckRoot: deckRoot
+      });
+    }
+    chrome.classList.add("mkdocs-revealjs-eval-chrome-fullscreen");
+    if (!fullscreenElement.contains(chrome)) fullscreenElement.appendChild(chrome);
+  }
+
+  function _rvEnterFullscreenChrome(fullscreenElement) {
+    if (!fullscreenElement || !fullscreenElement.querySelector) return;
+    var deckRoot = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!deckRoot) deckRoot = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    if (!deckRoot) return;
+    var wrapper = deckRoot.closest ? deckRoot.closest(".mkdocs-revealjs-wrapper") : null;
+    if (!wrapper) return;
+    var navigation = _rvFindRevealNavigation(wrapper, deckRoot);
+    var evalChrome = _rvFindRevealEvalChrome(wrapper, deckRoot);
+    if (!navigation && !evalChrome.length) return;
+
+    wrapper.classList.add("mkdocs-revealjs-fullscreen-host");
+    deckRoot.classList.add("mkdocs-revealjs-fullscreen-deck");
+
+    // SuperQuiz owns evaluation access. Its numbered navigation carries the
+    // native `hidden` state until the password has been accepted. Never promote
+    // a locked navigation into the browser fullscreen top layer.
+    var navigationVisible = navigation
+      && !navigation.hidden
+      && !navigation.hasAttribute("hidden")
+      && navigation.getAttribute("aria-hidden") !== "true";
+
+    if (navigationVisible) {
+      if (!_rvFullscreenNavigationState.has(navigation)) {
+        var placeholder = document.createComment("mkdocs-revealjs fullscreen evaluation navigation");
+        var parent = navigation.parentNode;
+        if (parent) parent.insertBefore(placeholder, navigation);
+        _rvFullscreenNavigationState.set(navigation, {
+          placeholder: placeholder,
+          parent: parent,
+          style: navigation.hasAttribute("style") ? navigation.getAttribute("style") : null,
+          mounted: navigation.dataset ? (navigation.dataset.mounted || null) : null,
+          wrapper: wrapper,
+          deckRoot: deckRoot
+        });
+      }
+      navigation.classList.add("mksq-reveal-navigation-fullscreen");
+      // Drag coordinates belong to the embedded wrapper. Fullscreen starts from
+      // the configured anchor; the original inline style/mounted state is
+      // restored on exit. A new fullscreen drag may set mounted=floating.
+      navigation.removeAttribute("style");
+      if (navigation.dataset) delete navigation.dataset.mounted;
+      if (!fullscreenElement.contains(navigation)) fullscreenElement.appendChild(navigation);
+    }
+
+    evalChrome.forEach(function(chrome) {
+      _rvMoveEvalChromeIntoFullscreen(chrome, fullscreenElement, wrapper, deckRoot);
+    });
+
+    var deck = _rvDeckForRoot(deckRoot);
+    if (deck && typeof deck.layout === "function") {
+      window.requestAnimationFrame(function() { deck.layout(); });
+    }
+  }
+
+  function _rvSyncFullscreenNavigation() {
+    var fullscreenElement = _rvGetFullscreenElement();
+    _rvRestoreAllFullscreenChrome();
+    if (fullscreenElement) _rvEnterFullscreenChrome(fullscreenElement);
+  }
+
+  document.addEventListener("fullscreenchange", _rvSyncFullscreenNavigation);
+  document.addEventListener("webkitfullscreenchange", _rvSyncFullscreenNavigation);
+
+  // SuperQuiz removes `hidden` only after successful password verification,
+  // then emits this event. If the deck is already fullscreen at that point,
+  // mount the newly unlocked navigation now; there is no second fullscreenchange
+  // event to do it for us.
+  document.addEventListener("mkdocs-superquiz-eval-unlocked", function(event) {
+    var fullscreenElement = _rvGetFullscreenElement();
+    if (!fullscreenElement) return;
+    var detail = event && event.detail ? event.detail : {};
+    var fullscreenDeck = fullscreenElement.matches && fullscreenElement.matches(".mkdocs-revealjs-deck")
+      ? fullscreenElement
+      : (fullscreenElement.closest ? fullscreenElement.closest(".mkdocs-revealjs-deck") : null);
+    if (!fullscreenDeck && fullscreenElement.querySelector) {
+      fullscreenDeck = fullscreenElement.querySelector(".mkdocs-revealjs-deck");
+    }
+    if (!fullscreenDeck) return;
+    var deckId = _rvDeckId(fullscreenDeck);
+    if (detail.deckId && deckId && String(detail.deckId) !== deckId) return;
+    _rvEnterFullscreenChrome(fullscreenElement);
+  });
+
+  function _rvDecodeHtmlIsland(payload) {
+    var normalized = String(payload || "")
+      .replace(/-/g, "+")
+      .replace(/_/g, "/");
+    var binary = window.atob(normalized);
+    var bytes = new Uint8Array(binary.length);
+    for (var i = 0; i < binary.length; i += 1) {
+      bytes[i] = binary.charCodeAt(i);
+    }
+    return new TextDecoder("utf-8").decode(bytes);
+  }
+
+  function _rvHydrateHtmlIslands(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return [];
+    var islands = [];
+    if (scanRoot.matches && scanRoot.matches(".mkdocs-revealjs-html-island")) {
+      islands.push(scanRoot);
+    }
+    scanRoot.querySelectorAll(".mkdocs-revealjs-html-island")
+      .forEach(function(island) { islands.push(island); });
+
+    var hydrated = [];
+    islands.forEach(function(island) {
+      if (!island.isConnected || island.dataset.revealjsHydrated === "true") return;
+      try {
+        var template = document.createElement("template");
+        template.innerHTML = _rvDecodeHtmlIsland(
+          island.getAttribute("data-mkdocs-revealjs-html") || ""
+        );
+        var nodes = Array.prototype.slice.call(template.content.childNodes);
+        island.replaceWith(template.content);
+        nodes.forEach(function(node) {
+          if (node.nodeType === 1) hydrated.push(node);
+        });
+      } catch (error) {
+        island.dataset.revealjsHydrated = "error";
+        console.warn("[revealjs] unable to hydrate MkDocs HTML island:", error);
+      }
+    });
+    return hydrated;
+  }
+
+  function _rvRegisterContentAdapter(name, adapter) {
+    var key = String(name || "").trim();
+    if (!key || !adapter) return false;
+    var normalized = typeof adapter === "function"
+      ? { refresh: adapter }
+      : adapter;
+    if (typeof normalized.refresh !== "function") return false;
+    normalized.priority = Number.isFinite(normalized.priority)
+      ? normalized.priority
+      : 100;
+    _rvContentAdapters.set(key, normalized);
+    return true;
+  }
+
+  function _rvDispatchContentEvent(root, reason) {
+    var target = root && root.dispatchEvent ? root : document;
+    var initial = reason === "initialize";
+    target.dispatchEvent(new CustomEvent(
+      initial
+        ? "mkdocs-revealjs-content-ready"
+        : "mkdocs-revealjs-content-shown",
+      {
+        bubbles: true,
+        detail: {
+          root: root || document,
+          reason: reason || "refresh",
+          deck: _rvDeckForRoot(root)
+        }
+      }
+    ));
+  }
+
+  function _rvRunContentAdapters(root, reason) {
+    var scanRoot = root || document;
+    var context = {
+      reason: reason || "refresh",
+      deck: _rvDeckForRoot(scanRoot)
+    };
+    var adapters = Array.from(_rvContentAdapters.entries())
+      .sort(function(left, right) {
+        var priorityDelta = left[1].priority - right[1].priority;
+        return priorityDelta || left[0].localeCompare(right[0]);
+      });
+
+    var chain = Promise.resolve();
+    adapters.forEach(function(entry) {
+      var name = entry[0];
+      var adapter = entry[1];
+      chain = chain.then(function() {
+        try {
+          return Promise.resolve(adapter.refresh(scanRoot, context));
+        } catch (error) {
+          return Promise.reject(error);
+        }
+      }).catch(function(error) {
+        console.warn("[revealjs] content adapter '" + name + "' failed:", error);
+      });
+    });
+
+    return chain.then(function() {
+      _rvDispatchContentEvent(scanRoot, reason);
+      return scanRoot;
+    });
+  }
+
+  function _rvRefreshContent(root, reason) {
+    var scanRoot = root || document;
+    _rvHydrateHtmlIslands(scanRoot);
+    _rvPrepareContentTabs(scanRoot);
+    return _rvRunContentAdapters(scanRoot, reason);
+  }
+
+  function _rvScheduleContentRefresh(root, reason, delay) {
+    var scanRoot = root || document;
+    var previous = _rvContentRefreshTimers.get(scanRoot);
+    if (previous !== undefined) window.clearTimeout(previous);
+    var timer = window.setTimeout(function() {
+      _rvContentRefreshTimers.delete(scanRoot);
+      Promise.resolve(_rvRefreshContent(scanRoot, reason)).catch(function(error) {
+        console.warn("[revealjs] scheduled content refresh failed:", error);
+      });
+    }, delay || 0);
+    _rvContentRefreshTimers.set(scanRoot, timer);
+  }
+
+  function _rvWaitForGlobal(name, timeoutMs) {
+    var timeout = Number.isFinite(timeoutMs) ? timeoutMs : 10000;
+    var started = Date.now();
+    return new Promise(function(resolve, reject) {
+      function check() {
+        if (window[name]) {
+          resolve(window[name]);
+          return;
+        }
+        if (Date.now() - started >= timeout) {
+          reject(new Error(name + " did not become available within " + timeout + " ms"));
+          return;
+        }
+        window.setTimeout(check, 25);
+      }
+      check();
+    });
+  }
+
+  var _rvPublicApi = window.MkDocsRevealJS || {};
+  _rvPublicApi.registerContentAdapter = _rvRegisterContentAdapter;
+  _rvPublicApi.refresh = function(root, reason) {
+    return _rvRefreshContent(root || document, reason || "external-refresh");
+  };
+  _rvPublicApi.requestLayout = function(root) {
+    if (root) {
+      var one = _rvDeckForRoot(root);
+      if (one && typeof one.layout === "function") one.layout();
+      return;
+    }
+    _rvDecks.forEach(function(deck) {
+      if (deck && typeof deck.layout === "function") deck.layout();
+    });
+  };
+  _rvPublicApi.getDeck = function(id) {
+    return _rvDecks.get(String(id || "")) || null;
+  };
+  _rvPublicApi.getDecks = function() {
+    return new Map(_rvDecks);
+  };
+  window.MkDocsRevealJS = _rvPublicApi;
+
+  // ── Content tabs ────────────────────────────────────────────────────────
+  // The HTML structure is produced once by pymdownx.tabbed and transported as
+  // an opaque island. Runtime code only applies state and emits a generic
+  // content-shown lifecycle event; it never reparses or reorders tab panels.
+  function _rvPrepareContentTabs(root) {
+    var scanRoot = root || document;
+    if (!scanRoot.querySelectorAll) return;
+    var tabSets = [];
+    if (scanRoot.matches && scanRoot.matches(".tabbed-set")) tabSets.push(scanRoot);
+    scanRoot.querySelectorAll(".tabbed-set").forEach(function(set) {
+      if (tabSets.indexOf(set) < 0) tabSets.push(set);
+    });
+
+    tabSets.forEach(function(set) {
+      var children = Array.prototype.slice.call(set.children || []);
+      var inputs = children.filter(function(child) {
+        return child.tagName === "INPUT" && child.type === "radio";
+      });
+      var labelsRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-labels");
+      });
+      var contentRoot = children.find(function(child) {
+        return child.classList && child.classList.contains("tabbed-content");
+      });
+      var labels = labelsRoot
+        ? Array.prototype.slice.call(labelsRoot.children || []).filter(function(child) {
+            return child.tagName === "LABEL";
+          })
+        : [];
+      var blocks = contentRoot
+        ? Array.prototype.slice.call(contentRoot.children || []).filter(function(child) {
+            return child.classList && child.classList.contains("tabbed-block");
+          })
+        : [];
+
+      if (!inputs.length || inputs.length !== labels.length || inputs.length !== blocks.length) {
+        console.warn("[revealjs] invalid content-tab structure:", {
+          inputs: inputs.length,
+          labels: labels.length,
+          blocks: blocks.length,
+          element: set
+        });
+        return;
+      }
+
+      if (!set.dataset.revealjsTabUid) {
+        _rvContentTabCounter += 1;
+        set.dataset.revealjsTabUid = String(_rvContentTabCounter);
+      }
+      var base = "mkdocs-revealjs-tab-" + set.dataset.revealjsTabUid;
+      var count = inputs.length;
+
+      function activate(index, notify) {
+        var active = Math.max(0, Math.min(index, count - 1));
+        for (var i = 0; i < count; i += 1) {
+          var selected = i === active;
+          inputs[i].checked = selected;
+          labels[i].setAttribute("aria-selected", selected ? "true" : "false");
+          labels[i].setAttribute("tabindex", selected ? "0" : "-1");
+          blocks[i].hidden = !selected;
+          blocks[i].setAttribute("aria-hidden", selected ? "false" : "true");
+        }
+        set.dataset.revealjsActiveTab = String(active);
+        if (notify) {
+          window.requestAnimationFrame(function() {
+            _rvScheduleContentRefresh(blocks[active], "tab-shown", 0);
+            _rvPublicApi.requestLayout();
+          });
+        }
+      }
+
+      var activeIndex = inputs.findIndex(function(input) { return input.checked; });
+      if (activeIndex < 0) activeIndex = 0;
+
+      for (var i = 0; i < count; i += 1) {
+        var id = inputs[i].id || (base + "-" + (i + 1));
+        inputs[i].name = inputs[i].name || base;
+        inputs[i].id = id;
+        labels[i].setAttribute("for", id);
+        labels[i].setAttribute("role", "tab");
+        blocks[i].setAttribute("role", "tabpanel");
+
+        if (!inputs[i].dataset.revealjsTabBound) {
+          inputs[i].dataset.revealjsTabBound = "true";
+          inputs[i].addEventListener("change", (function(index) {
+            return function(event) {
+              if (event.target.checked) activate(index, true);
+            };
+          })(i));
+        }
+      }
+
+      set.setAttribute("data-mkdocs-revealjs-tabs-ready", "true");
+      activate(activeIndex, false);
+    });
+  }
+
+  // ── Built-in adapters ───────────────────────────────────────────────────
+  function _rvRootMatches(root, selector) {
+    if (!root) return false;
+    if (root.matches && root.matches(selector)) return true;
+    return Boolean(root.querySelector && root.querySelector(selector));
+  }
+
+  function _rvRefreshMathsAdmonitions(root, context) {
+    var api = window.MkDocsMathsAdmonitions;
+    if (!api) return;
+
+    // MMA counters are scoped to one API processing operation. A Reveal deck
+    // must therefore be processed as one complete unit with initReveal(deck).
+    // Scoped refresh(currentSlide) calls would restart counters at 1.
+    var deck = context && context.deck;
+    var reason = context && context.reason;
+    if (deck && typeof api.initReveal === "function") {
+      if (reason === "initialize" || reason === "external-refresh") {
+        return api.initReveal(deck);
+      }
+      return;
+    }
+
+    if (reason === "initialize" && typeof api.refresh === "function") {
+      return api.refresh(root || document);
+    }
+  }
+
+  function _rvRefreshXTables(root) {
+    var scanRoot = root || document;
+    if (!_rvRootMatches(scanRoot, "table.xtable")) return;
+
+    var loaderPresent = Boolean(document.querySelector(
+      'script[src*="mkdocs-xtables"], script[data-mkdocs-xtables-loader]'
+    ));
+    if (!window.MkDocsXTables && !loaderPresent) return;
+
+    var apiPromise = window.MkDocsXTables
+      ? Promise.resolve(window.MkDocsXTables)
+      : _rvWaitForGlobal("MkDocsXTables", 10000);
+
+    return apiPromise.then(function(api) {
+      if (!api || typeof api.refresh !== "function") {
+        throw new Error("MkDocsXTables.refresh(root) is unavailable");
+      }
+      return api.refresh(scanRoot);
+    });
+  }
+
+  function _rvNormalizeTikzJaxFences(root) {
+    if (!root || !root.querySelectorAll) return [];
+    var changed = [];
+    root.querySelectorAll(
+      "pre > code.language-tikzjax, " +
+      "pre > code.tikzjax, " +
+      "pre > code.language-tikz, " +
+      "pre > code.tikz"
+    ).forEach(function(code) {
+      var pre = code.parentElement;
+      if (!pre) return;
+      var modified = false;
+      ["language-tikzjax", "tikzjax", "language-tikz", "tikz"]
+        .forEach(function(className) {
+          if (code.classList.contains(className) && !pre.classList.contains(className)) {
+            pre.classList.add(className);
+            modified = true;
+          }
+        });
+      if (modified) changed.push(pre);
+    });
+    return changed;
+  }
+
+  function _rvRefreshTikzJax(root) {
+    var scanRoot = root || document;
+    var normalized = _rvNormalizeTikzJaxFences(scanRoot);
+
+    if (typeof window.TikzJaxRefresh === "function") {
+      window.TikzJaxRefresh(scanRoot);
+      return;
+    }
+
+    if (!window.TikzJax) return;
+
+    // Current @rod2ik/tikzjax exposes TikzJaxConfigure and owns a centralized
+    // MutationObserver. HTML-island hydration and normalized-fence reinsertion
+    // are therefore sufficient; cloning every source would race that observer
+    // and could associate a render result with a detached loader.
+    if (typeof window.TikzJaxConfigure === "function") {
+      normalized.forEach(function(pre) {
+        if (pre.parentNode) pre.replaceWith(pre.cloneNode(true));
+      });
+      return;
+    }
+
+  }
+
+  _rvRegisterContentAdapter("maths-admonitions", {
+    priority: 10,
+    refresh: _rvRefreshMathsAdmonitions
+  });
+  _rvRegisterContentAdapter("xtables", {
+    priority: 20,
+    refresh: _rvRefreshXTables
+  });
+  _rvRegisterContentAdapter("tikzjax", {
+    priority: 30,
+    refresh: _rvRefreshTikzJax
+  });
+
+  // ── Visibility and layout lifecycle ─────────────────────────────────────
+  function _rvInstallContentLifecycle(deck, root) {
+    if (!root || !root.addEventListener) return;
+    var scheduled = false;
+    function scheduleLayout() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        deck.layout();
+      });
+    }
+
+    root.addEventListener("tikzjax-load-finished", scheduleLayout);
+    root.addEventListener("xtables:ready", scheduleLayout);
+    root.addEventListener("xtables:error", scheduleLayout);
+    root.addEventListener("mkdocs-revealjs-content-updated", scheduleLayout);
+    root.addEventListener("toggle", function(event) {
+      if (!event.target || event.target.tagName !== "DETAILS" || !event.target.open) return;
+      _rvScheduleContentRefresh(event.target, "details-shown", 0);
+      scheduleLayout();
+    }, true);
+
+    deck.on("slidechanged", function(event) {
+      var slide = event && event.currentSlide ? event.currentSlide : root;
+      _rvScheduleContentRefresh(slide, "slide-shown", 0);
+      scheduleLayout();
+    });
+  }
+
+  // ── Theme switcher ───────────────────────────────────────────────────────
+  var _SWAP_PAIRS = [["revealjs-theme-light", "revealjs-theme-dark"], ["revealjs-hljs-light", "revealjs-hljs-dark"], ["revealjs-hack-rv-light", "revealjs-hack-rv-dark"], ["revealjs-hack-hl-light", "revealjs-hack-hl-dark"]];
+  var _rvActiveThemeAssets = [];
+  var _rvThemeFinishToken = 0;
+
+  function _rvDeckRoots() {
+    return Array.from(document.querySelectorAll(".mkdocs-revealjs-deck"));
+  }
+
+  function _rvActivateThemeAsset(element, active) {
+    if (!element) return;
+    element.media = active ? "all" : "not all";
+  }
+
+  function _rvSyncScrollPageBackgrounds(viewport, previousBackground) {
+    if (!viewport) return;
+    var currentBackground = window.getComputedStyle(viewport).background;
+    if (!currentBackground) return;
+
+    viewport.querySelectorAll(".scroll-page").forEach(function(page) {
+      var pageBackground = window.getComputedStyle(page).background;
+      var managed = page.getAttribute("data-mkdocs-revealjs-theme-background") === "true";
+      var inheritedCurrent = !previousBackground && pageBackground === currentBackground;
+      var inheritedPrevious = previousBackground && pageBackground === previousBackground;
+      if (managed || inheritedCurrent || inheritedPrevious) {
+        page.style.background = currentBackground;
+        page.setAttribute("data-mkdocs-revealjs-theme-background", "true");
+      }
+    });
+  }
+
+  function _rvInstallScrollPageBackgroundSync(viewport) {
+    if (!viewport || typeof MutationObserver === "undefined") return;
+    var scheduled = false;
+    function schedule() {
+      if (scheduled) return;
+      scheduled = true;
+      window.requestAnimationFrame(function() {
+        scheduled = false;
+        _rvSyncScrollPageBackgrounds(viewport, "");
+      });
+    }
+    new MutationObserver(function(mutations) {
+      var hasNewScrollPage = mutations.some(function(mutation) {
+        return Array.from(mutation.addedNodes || []).some(function(node) {
+          return node && node.nodeType === 1 && (
+            node.classList.contains("scroll-page") ||
+            (typeof node.querySelector === "function" && node.querySelector(".scroll-page"))
+          );
+        });
+      });
+      if (hasNewScrollPage) schedule();
+    }).observe(viewport, { childList: true, subtree: true });
+  }
+
+  function _rvFinishThemeSwap(activeAssets, previousBackgrounds) {
+    var token = ++_rvThemeFinishToken;
+    function finish() {
+      if (token !== _rvThemeFinishToken) return;
+      _rvDeckRoots().forEach(function(viewport) {
+        var deck = _rvDeckForRoot(viewport);
+        if (deck && typeof deck.layout === "function") deck.layout();
+        var previous = previousBackgrounds && previousBackgrounds.get
+          ? (previousBackgrounds.get(viewport) || "")
+          : "";
+        _rvSyncScrollPageBackgrounds(viewport, previous);
+      });
+    }
+    function schedule() {
+      window.requestAnimationFrame(function() {
+        window.requestAnimationFrame(finish);
+      });
+    }
+    (activeAssets || []).forEach(function(asset) {
+      if (!asset || asset.tagName !== "LINK" || asset.sheet) return;
+      asset.addEventListener("load", schedule, { once: true });
+      asset.addEventListener("error", schedule, { once: true });
+    });
+    schedule();
+  }
+
+  function applyTheme(scheme) {
+    var previousBackgrounds = new Map();
+    _rvDeckRoots().forEach(function(viewport) {
+      previousBackgrounds.set(viewport, window.getComputedStyle(viewport).background);
+    });
+    var isDark = (scheme === "slate");
+    var activeAssets = [];
+    _SWAP_PAIRS.forEach(function(pair) {
+      var light = document.getElementById(pair[0]);
+      var dark  = document.getElementById(pair[1]);
+      _rvActivateThemeAsset(light, !isDark);
+      _rvActivateThemeAsset(dark, isDark);
+      var active = isDark ? dark : light;
+      if (active) activeAssets.push(active);
+    });
+    _rvActiveThemeAssets = activeAssets;
+    _rvFinishThemeSwap(activeAssets, previousBackgrounds);
+  }
+
+  applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+
+  new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+      if (mutation.attributeName === "data-md-color-scheme") {
+        applyTheme(document.body.getAttribute("data-md-color-scheme") || "default");
+      }
+    });
+  }).observe(document.body, {
+    attributes: true,
+    attributeFilter: ["data-md-color-scheme"]
+  });
+
+  // ── Reveal.js init ──────────────────────────────────────────────────────
+  function _rvReadDeckOptions(el) {
+    try {
+      var value = JSON.parse(el.getAttribute("data-reveal-options") || "{}");
+      return value && typeof value === "object" ? value : {};
+    } catch (error) {
+      console.warn("[revealjs] invalid deck options:", error);
+      return {};
+    }
+  }
+
+  function _rvArmRandomizedEvaluationFirstSlide(deck, root) {
+    if (!deck || !root || !root.querySelectorAll) return;
+
+    // Reveal can finish initialization before SuperQuiz has shuffled the
+    // evaluation slides. Arm the canonical SuperQuiz completion event before
+    // publishing mkdocs-revealjs-ready, while also accepting an already-finished
+    // randomization when SuperQuiz initialized first.
+    var randomizableQuestions = Array.from(root.querySelectorAll(
+      '.mkdocs-superquiz[data-display-mode="eval"]' +
+      '[data-randomize-questions="true"]'
+    ));
+    if (randomizableQuestions.length < 2) return;
+
+    var settled = false;
+    var timeoutId = null;
+    var randomizedListener = null;
+
+    function randomizationFinished() {
+      return randomizableQuestions.every(function(question) {
+        return question.isConnected &&
+          question.dataset.evalRandomizationApplied === "true";
+      });
+    }
+
+    function settleAtFirstRandomizedSlide() {
+      if (settled || !randomizationFinished()) return false;
+      settled = true;
+      if (timeoutId !== null) window.clearTimeout(timeoutId);
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+
+      if (!root.isConnected) return true;
+      // SuperQuiz has now physically reordered the top-level <section> nodes,
+      // renumbered the evaluation and refreshed the navigation. Rebuild Reveal's
+      // internal slide model and select index 0 *synchronously*: SuperQuiz may
+      // continue the same initialization task by mounting its navigation, which
+      // must observe the new current slide rather than the authored first slide.
+      if (typeof deck.sync === "function") deck.sync();
+      if (typeof deck.slide === "function") deck.slide(0, 0);
+      if (typeof deck.layout === "function") {
+        window.requestAnimationFrame(function() { deck.layout(); });
+      }
+      return true;
+    }
+
+    // SuperQuiz publishes the exact end of its synchronous randomize + DOM
+    // reorder + navigation renumber transaction. That event is the canonical
+    // synchronization point for Reveal evaluation decks.
+    randomizedListener = function(event) {
+      var detail = event && event.detail ? event.detail : {};
+      var eventRoot = detail.root || null;
+      var eventDeckId = String(detail.deckId || '');
+      var rootDeckId = String(root.dataset.revealjsDeckId || '');
+      if (!eventRoot && !eventDeckId) return;
+      if (eventRoot && eventRoot !== root) return;
+      if (!eventRoot && eventDeckId && rootDeckId && eventDeckId !== rootDeckId) return;
+      settleAtFirstRandomizedSlide();
+    };
+    document.addEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+
+    // Handles the case where SuperQuiz initialized before Reveal finished.
+    if (settleAtFirstRandomizedSlide()) return;
+
+    // Do not retain the listener forever if another plugin removes/replaces the
+    // evaluation before SuperQuiz initializes.
+    timeoutId = window.setTimeout(function() {
+      if (randomizedListener) {
+        document.removeEventListener('mkdocs-superquiz-eval-randomized', randomizedListener);
+      }
+    }, 5000);
+  }
+
+  function initRevealDeck(el) {
+    if (!el || el.dataset.revealjsInitialized === "true") return Promise.resolve(null);
+    el.dataset.revealjsInitialized = "true";
+    var options = _rvReadDeckOptions(el);
+    options.highlight = { highlightOnLoad: true };
+    options.plugins = [RevealMarkdown, RevealHighlight, RevealNotes, RevealMath];
+
+    var deck = new Reveal(el, options);
+    var deckId = el.dataset.revealjsDeckId || el.id || ("deck-" + (_rvDecks.size + 1));
+    _rvDecks.set(deckId, deck);
+    el._mkdocsRevealDeck = deck;
+    _rvInstallContentLifecycle(deck, el);
+    _rvInstallScrollPageBackgroundSync(el);
+    el.setAttribute("aria-busy", "true");
+
+    return deck.initialize()
+      .then(function() {
+        return _rvRefreshContent(el, "initialize");
+      })
+      .then(function() {
+        deck.layout();
+        _rvFinishThemeSwap(_rvActiveThemeAssets, new Map());
+    
+        el.removeAttribute("aria-busy");
+        window.requestAnimationFrame(function() {
+          _rvScheduleContentRefresh(el, "post-layout", 0);
+        });
+        window.setTimeout(function() {
+          _rvScheduleContentRefresh(el, "stabilized", 250);
+        }, 250);
+
+        // Arm this before publishing ready. SuperQuiz may already be initialized,
+        // or it may initialize after the Reveal deck. The completion event plus
+        // the immediate state check handles both orders.
+        _rvArmRandomizedEvaluationFirstSlide(deck, el);
+
+        document.dispatchEvent(new CustomEvent('mkdocs-revealjs-ready', {
+          detail: {
+            deck: deck,
+            deckId: deckId,
+            root: el,
+            mode: el.dataset.revealjsMode || "diapo"
+          }
+        }));
+
+        return deck;
+      })
+      .catch(function(error) {
+        el.removeAttribute("aria-busy");
+        console.error("[revealjs] initialization failed for " + deckId + ":", error);
+        return null;
+      });
+  }
+
+  function initReveal() {
+    var roots = _rvDeckRoots();
+    return Promise.all(roots.map(initRevealDeck));
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initReveal);
+  } else {
+    initReveal();
+  }
+})();
+</script>
+<!-- ─────────────────────────────────────── mkdocs-revealjs -->
+</body>
+</html>
