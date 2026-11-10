@@ -2,8 +2,6 @@ site_name: ECEG-6412 — Recent Trends in Communication Technologies
 site_description: MSc in Communication Engineering · Year 1, Semester I
 site_author: Dr. Tesfamichael Gebregziabher
 site_url: https://tesfamichael-g.github.io/ECEG-6412-Recent-Trends-in-Communication-Technologies
-/
-repo_name: tesfamichael-g/ECEG-6412
 
 theme:
   name: material
