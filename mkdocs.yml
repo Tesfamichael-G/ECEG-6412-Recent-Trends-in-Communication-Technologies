@@ -1,0 +1,141 @@
+site_name: ECEG-6412 — Recent Trends in Communication Technologies
+site_description: MSc in Communication Engineering · Year 1, Semester I
+site_author: Dr. Tesfamichael Gebregziabher
+site_url: https://tesfamichael-g.github.io/ECEG-6412/
+repo_name: tesfamichael-g/ECEG-6412
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.tracking
+    - content.code.copy
+    - search.suggest
+    - search.highlight
+    - toc.follow
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  icon:
+    logo: material/broadcast
+    repo: fontawesome/brands/github
+
+nav:
+  - Home: index.md
+  - Syllabus: syllabus.md
+  - Schedule: schedule.md
+  - Slides:
+      - Lecture 1 - Introduction: slides/lecture-01.md
+      - Lecture 2 - Modulation & Coding: slides/lecture-02.md
+      - Lecture 3 - GSM: slides/lecture-02.md
+      - Lecture 4 - UMTS: slides/lecture-03.md
+      - Lecture 5 - 4G/LTE/WiMAX: slides/lecture-04.md
+      - Lecture 6 - NGN: slides/lecture-05.md
+      - Lecture 7 - ML for Communications: slides/lecture-06.md
+      - Wired Technology Trends: slides/wired-trends.md
+  - Part I - Wireless System Basics:
+      - 1. Introduction: chapters/01-introduction.md
+      - 2. Modulation and Coding: chapters/02-modulation-coding.md
+  - Part II - Wired Technology Trends:
+      - Wired Access and Core Networks: chapters/wired-trends.md
+  - Part III - Wireless Network Trends:
+      - 3. GSM: chapters/03-gsm.md
+      - 4. UMTS: chapters/04-umts.md
+  - Part IV - Emerging Technologies:
+      - 5. Advanced Broadband Wireless: chapters/05-broadband-wireless.md
+      - 6. Next Generation Networks: chapters/06-ngn.md
+      - 7. Machine Learning for Communications: chapters/07-ml-communications.md
+  - Exam Bank: exam-bank.md
+  - Solutions:
+      - Overview: solutions/index.md
+      - Chapter 1 - Introduction: solutions/01-introduction.md
+      - Chapter 2 - Modulation & Coding: solutions/02-modulation-coding.md
+      - Chapter 3 - GSM: solutions/03-gsm.md
+      - Chapter 4 - UMTS: solutions/04-umts.md
+      - Chapter 5 - 4G/LTE/WiMAX: solutions/05-broadband-wireless.md
+      - Chapter 6 - NGN: solutions/06-ngn.md
+      - Chapter 7 - ML for Communications: solutions/07-ml-communications.md
+      - Wired Trends: solutions/wired-trends.md
+  - Assessment: assessment.md
+  - Resources: resources.md
+  - Feedback: feedback.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - tables
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.arithmatex:
+      generic: true
+      inline_syntax: ['dollar', 'round']
+      block_syntax: ['dollar', 'square']
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+
+plugins:
+  - search
+  - revealjs:
+      transition: slide
+      transitionSpeed: default
+      fragments: true
+      autoAnimate: true
+      autoAnimateEasing:   ease
+      autoAnimateDuration: 0.8
+      autoAnimateUnmatched: false
+      controls: true
+      progress: true
+      slideNumber: true
+      width: 960
+      height: 700
+      margin: 0.05
+      minScale: 0.1     # was 0.2 by default — allow smaller scale
+      maxScale: 1.5
+      highlight:
+        light: github
+        dark:  github-dark
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/tex-mml-chtml.js 
+  - slides/assets/quiz.js
+
+extra_css:
+  - stylesheets/extra.css
